@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: sans-serif;
+    font-family: "Poppins", sans-serif;
     background: rgb(250, 250, 250);
 }
 nav {
@@ -80,9 +80,6 @@ nav button {
     text-align: center;
     font-family: "Poppins", sans-serif;
 }
-.why-us span {
-    color: black;
-}
 .why-us h3 {
     margin-top: 10px;
     font-family: "Inter", sans-serif;
@@ -95,6 +92,7 @@ nav button {
     border-radius: 8px;
     color: black;
     padding: 20px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 .why-us div:hover {
     border: 1px solid black;
@@ -104,4 +102,35 @@ nav button {
 }
 .why-us h4 {
     margin-bottom: 5px;
+}
+.goals-banner img {
+    width: 100%;
+}
+.goals-banner {
+    position: relative;
+}
+.goals-banner p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #FF4500;
+    color: white;
+    padding: 10px 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    opacity: .8;
+}
+.our-goals {
+    text-align: center;
+    margin: 60px 0px;
+}
+.write-up {
+    padding: 20px;
+    text-align: left;
+    margin: 20px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+.write-up p {
+    margin: 5px;
 }
