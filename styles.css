@@ -40,14 +40,11 @@ nav button {
 }
 .hero {
     padding-top: 90px;
-    padding-inline: 20px;
+    padding-inline: 60px;
     font-family: "Poppins", sans-serif;
     text-align: center;
     display: grid;
     align-items: center;
-}
-.hero p {
-    padding-inline: 30px;
 }
 .hero h1 {
     margin-block-end: 10px;
