@@ -42,6 +42,7 @@ nav button {
     padding-top: 90px;
     padding-inline: 20px;
     font-family: "Montserrat", sans-serif;
+    text-align: center;
 }
 .hero p {
     padding-right: 60px;
@@ -50,7 +51,6 @@ nav button {
     margin-block-end: 10px;
     font-size: 1.3rem;
     font-family: "Inter", sans-serif;
-    text-align: center;
 }
 .hero button {
     background: #FF4500;
