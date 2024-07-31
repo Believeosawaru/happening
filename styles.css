@@ -45,7 +45,7 @@ nav button {
     text-align: center;
 }
 .hero p {
-    padding-right: 60px;
+    padding-inline: 30px;
 }
 .hero h1 {
     margin-block-end: 10px;
