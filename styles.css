@@ -41,7 +41,7 @@ nav button {
 .hero {
     padding-top: 90px;
     padding-inline: 20px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Poppins", sans-serif;
     text-align: center;
 }
 .hero p {
@@ -78,15 +78,15 @@ nav button {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     text-align: center;
-    font-family: "Inter", sans-serif;
+    font-family: "Poppins", sans-serif;
     /* border: 1px solid #FF4500; */
 }
 .why-us span {
-    font-family: "Montserrat", sans-serif;
     color: #FF4500;
 }
 .why-us h3 {
     margin-top: 10px;
+    font-family: "Inter", sans-serif;
 }
 .why-us p {
     text-align: left;
