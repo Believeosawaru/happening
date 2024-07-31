@@ -43,6 +43,8 @@ nav button {
     padding-inline: 20px;
     font-family: "Poppins", sans-serif;
     text-align: center;
+    display: grid;
+    align-items: center;
 }
 .hero p {
     padding-inline: 30px;
@@ -72,7 +74,8 @@ nav button {
     color: #FF4500;
 }
 .why-us {
-    background: #FFF8E1;
+    background: #FF4500;
+    color: white;
     padding: 20px;
     margin-inline: 20px;
     border-top-left-radius: 10px;
@@ -82,9 +85,9 @@ nav button {
     /* border: 1px solid #FF4500; */
 }
 .why-us span {
-    color: #FF4500;
+    color: #FFF8E1;
 }
-.why-us h3 {
+.why-us h2 {
     margin-top: 10px;
     font-family: "Inter", sans-serif;
 }
