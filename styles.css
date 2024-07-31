@@ -40,7 +40,7 @@ nav button {
 }
 .hero {
     padding-top: 90px;
-    padding-inline: 60px;
+    padding-inline: 20px;
     font-family: "Poppins", sans-serif;
     text-align: center;
     display: grid;
@@ -65,30 +65,37 @@ nav button {
     color: black;
 }
 .hero img {
-    width: 100%;
+    width: 450px;
 }
 .orange-txt {
     color: #FF4500;
 }
 .why-us {
-    background: #FF4500;
-    color: white;
+    background: linear-gradient(to bottom, #FFECB3, rgb(250, 250, 250));
+    color: black;
     padding: 20px;
     margin-inline: 20px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     text-align: center;
     font-family: "Poppins", sans-serif;
-    /* border: 1px solid #FF4500; */
 }
 .why-us span {
-    color: #FFF8E1;
+    color: black;
 }
-.why-us h2 {
+.why-us h3 {
     margin-top: 10px;
     font-family: "Inter", sans-serif;
 }
-.why-us p {
-    text-align: left;
-    margin-top: 10px;
+.why-us div {
+    border: 1px solid #FFF8E1;
+    background: rgb(250, 250, 250);
+    margin-block: 30px;
+    margin-inline: 20px;
+    border-radius: 8px;
+    color: black;
+    padding: 20px;
+}
+.why-us img {
+    width: 40%;
 }
