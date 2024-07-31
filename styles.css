@@ -16,6 +16,7 @@ nav {
     padding: 10px 20px;
     position: fixed;
     width: 100%;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 nav span {
     font-family: "Edu AU VIC WA NT Hand", cursive;
