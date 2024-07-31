@@ -65,7 +65,7 @@ nav button {
     color: black;
 }
 .hero img {
-    width: 450px;
+    width: 100%;
 }
 .orange-txt {
     color: #FF4500;
@@ -97,8 +97,7 @@ nav button {
     padding: 20px;
 }
 .why-us div:hover {
-    background: #FFECB3;
-    color: black;
+    border: 1px solid black;
 }
 .why-us img {
     width: 40%;
