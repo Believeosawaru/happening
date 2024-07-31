@@ -47,9 +47,9 @@ nav button {
 .hero p {
     padding-right: 60px;
 }
-.hero h3 {
+.hero h1 {
     margin-block-end: 10px;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-family: "Inter", sans-serif;
 }
 .hero button {
