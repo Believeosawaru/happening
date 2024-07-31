@@ -19,9 +19,9 @@
 <body>
     <header>
         <nav>
-            <span>Happening</span>
-            <button>Sign Up</button>
-            <i class="fa fa-bars"></i>
+            <span><a href="/">Happening</a></span>
+            <button><a href="sign-up.html">Sign Up</a></button>
+            <i class="fa fa-bars" onclick="openMenu();"></i>
         </nav>
 
         <div class="hero">
@@ -39,6 +39,16 @@
             </div>
         </div>
     </header>
+
+    <aside class="menu close-menu">
+        <p><a href="/">Home</a></p>
+        <p><a href="#about">About</a></p>
+        <p><a href="#goals">Our Goals</a></p>
+        <p><a href="log-in.html">Groups</a></p>
+        <p><a href="log-in.html">Events</a></p>
+        <button class="first-btn"><a href="sign-up.html">Sign Up</a></button>
+        <button><a href="log-in.html">Sign In</a></button>
+    </aside>
 
     <section class="why-us">
         <span class="orange-txt">What we do</span>
@@ -65,7 +75,7 @@
 
     <div class="goals-banner">
         <img src="images/connect.png" alt="">
-        <p>Home Of Networking</p>
+        <p>Networking</p>
     </div>
 
     <section class="our-goals">
@@ -75,11 +85,30 @@
        <p>
         In a world where event planning can often feel like juggling flaming torches, Happening is here to help you put out the flames and light up your events with ease and elegance. Our revolutionary social media platform is specifically designed to streamline and enhance every aspect of your event planning process.
        </p>
-
-        <p>
-            Imagine a place where collaboration is effortless, ideas flow freely, and every detail comes together seamlessly. Happening turns this vision into reality with a suite of tools tailored for modern event planners. From brainstorming sessions to final RSVPs, our platform provides an intuitive and interactive space where your team and guests can connect, communicate, and collaborate.
-        </p>
     </div>
     </section>
+
+    <footer>
+        <h3>Happening</h3>
+        <p>Join Our Growing Community Of Event Enthusiasts And Experience The Future Of Planning.</p>
+    
+        <h3 class="contact-h3">Contact Info</h3>
+        <p>001, Highway, New york.</br>
+         +1 901 403 273</br>
+        support@tubesmm.com</p>
+            
+        <div class="rights">
+        <p>
+            <a href="/">Happening</a> &#169;
+                2024, All Rights Reserved.
+        </p>
+        </div>
+
+        <span class="to-top scroller" onclick="headToTop();">
+            <i class="fa fa-arrow-up"></i>
+        </span>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
