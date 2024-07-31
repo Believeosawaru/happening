@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    background: rgb(250, 250, 250);
+}
+nav {
+    background: #FFECB3;
+    opacity: .8;
+    /* background: #FFF8E1; */
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+}
+nav span {
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-weight: bold;
+}
+nav span:hover, button:hover, nav i:hover {
+    cursor: pointer;
+}
+nav i {
+    position: absolute;
+    right: 20px;
+}
+nav button {
+    background: #FF4500;
+    color: white;
+    position: absolute;
+    right: 45px;
+    border: none;
+    border-radius: 9px;
+    padding: 3px 15px;
+    font-size: .7.1rem;
+}
+.hero {
+    padding-top: 90px;
+    padding-inline: 20px;
+    font-family: "Montserrat", sans-serif;
+}
+.hero h3 {
+    margin-block-end: 10px;
+    font-size: 1.3rem;
+    font-family: "Inter", sans-serif;
+}
+.hero button {
+    background: #FF4500;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    margin-block-start: 15px;
+    margin-block-end: 30px;
+    color: white;
+}
+#second-btn {
+    background: #FFF8E1;
+    color: black;
+    border: 1px solid #FF4500;
+}
+.hero img {
+    width: 100%;
+}
+.orange-txt {
+    color: #FF4500;
+}
+.why-us {
+    background: #FFF8E1;
+    padding: 20px;
+    margin-inline: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    /* border: 1px solid #FF4500; */
+}
+.why-us span {
+    font-family: "Montserrat", sans-serif;
+    color: #FF4500;
+}
+.why-us h3 {
+    margin-top: 10px;
+}
+.why-us p {
+    text-align: left;
+    margin-top: 10px;
+}
