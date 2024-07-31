@@ -50,6 +50,7 @@ nav button {
     margin-block-end: 10px;
     font-size: 1.3rem;
     font-family: "Inter", sans-serif;
+    text-align: center;
 }
 .hero button {
     background: #FF4500;
