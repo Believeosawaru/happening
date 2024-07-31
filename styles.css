@@ -96,6 +96,13 @@ nav button {
     color: black;
     padding: 20px;
 }
+.why-us div:hover {
+    background: #FFECB3;
+    color: black;
+}
 .why-us img {
     width: 40%;
+}
+.why-us h4 {
+    margin-bottom: 5px;
 }
