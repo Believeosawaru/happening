@@ -43,6 +43,9 @@ nav button {
     padding-inline: 20px;
     font-family: "Montserrat", sans-serif;
 }
+.hero p {
+    padding-right: 60px;
+}
 .hero h3 {
     margin-block-end: 10px;
     font-size: 1.3rem;
