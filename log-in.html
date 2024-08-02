@@ -12,25 +12,25 @@
     <link rel="stylesheet" href="auth.css">
 </head>
 <body>
-    <h2>Sign In</h2>
-    <p>Input Your Details To Login</p>
+    <h2>Sign Up</h2>
+    <p>Create Your Account In A Few Clicks</p>
 
     <div>
         <p id="success-sign-up"></p>
         <p id="failed"></p>
     </div>
 
-    <form action="/sign-in" id="sign-in" method="post">
-        <label for="email" id="email">Email</label> <br>
+    <form id="sign-in" action="/sign-in" method="post">
+        <label for="email">Email</label> <br>
         <input type="email" name="email" id="email" required> <br>
 
-        <label for="password" id="password">Password</label> <br>
+        <label for="password">Password</label> <br>
         <input type="password" name="password" id="password" required> <br>
 
-        <button type="submit" id="sign-in-btn">Sign Up</button>
+        <button type="submit" id="sign-in-btn">Sign In</button>
 
         <div>
-            <span>Already have an account? <a href="sign-up.html">Sign In</a></span>
+            <span>Already have an account? <a href="sign-up.html">Sign Up</a></span>
         </div>
     </form>
 
