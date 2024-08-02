@@ -228,6 +228,13 @@ aside button {
 .centered {
     text-align: center;
 }
+#our-goals {
+    margin-top: 50px;
+    margin-bottom: -60px;
+}
+.goals-banner img {
+    margin-top: 30px;
+}
 
 @media screen and (min-width: 900px) {
     .hero {
