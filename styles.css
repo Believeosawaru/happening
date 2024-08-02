@@ -93,7 +93,7 @@ nav button {
     border: 1px solid #FFF8E1;
     background: rgb(250, 250, 250);
     margin-block: 30px;
-    margin-inline: 10px;
+    margin-inline: 30px;
     border-radius: 8px;
     color: black;
     padding: 20px;
@@ -221,4 +221,73 @@ aside button {
 }
 .success-sign-up, .failed {
     border-radius: 6px;
+}
+.pc-menu, .pc-btn {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: 0px;
+        padding: 40px 0px 0px 130px;
+    }
+    .why-us {
+        font-size: 1.3rem;
+    }
+    .why-us h3 {
+        font-size: 1.6rem;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    .why-us .flexy {
+        display: flex;
+    }
+    .why-us img {
+        width: 30%;
+        margin-bottom: 20px;
+    }
+    #menu-bar {
+        display: none;
+    }
+    .goals-banner {
+        display: flex;
+        justify-content: center;
+    }
+    .goals-banner img {
+        width: 60%;
+        margin-block: 100px;
+        margin-inline: 50px;
+    }
+    .centered {
+        text-align: center;
+    }
+    .centered h3 {
+        font-size: 1.9rem;
+    }
+    .our-goals img {
+        width: 50%;
+    }
+    .write-up {
+        margin-inline: 220px;
+    }
+    .pc-menu {
+        display: block;
+        margin-left: 400px;
+    }
+    .pc-menu a {
+        margin-inline: 10px;
+    }
+    nav button {
+        margin-right: 200px;
+        border-radius: 7px;
+        padding: 4px 25px;
+    }
+    .pc-btn {
+        display: block;
+        margin-inline: 100px;
+        background: black;
+    }
 }

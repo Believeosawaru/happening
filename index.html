@@ -20,18 +20,30 @@
     <header>
         <nav>
             <span><a href="/">Happening</a></span>
+
+            <div class="pc-menu">
+                <a href="index.html">Home</a>
+                <a href="#about">About</a>
+                <a href="#our-goals">Our Goals</a>
+                <a href="log-in.html">Groups</a>
+                <a href="log-in.html">Events</a>
+            </div>
+
             <button><a href="sign-up.html">Sign Up</a></button>
-            <i class="fa fa-bars" onclick="openMenu();"></i>
+            <button class="pc-btn"><a href="log-in.html">Sign In</a></button>
+            <i class="fa fa-bars" id="menu-bar" onclick="openMenu();"></i>
         </nav>
 
         <div class="hero">
+            <div>
             <h1>Event <span class="orange-txt">Planning</span> On Social Media</h1>
 
             <p>We're the ultimate social media platform designed to transform the way you plan, organize and enjoy events</p>
             
             <div>
-                <button>Create An Event</button>
-            `   <button id="second-btn">Learn More</button>
+                <button><a href="sign-up.html">Create An Event</a></button>
+            `   <button id="second-btn"><a href="#our-goals">Learn More</a></button>
+            </div>
             </div>
 
             <div class="centered">
@@ -41,36 +53,40 @@
     </header>
 
     <aside class="menu close-menu">
-        <p><a href="/">Home</a></p>
+        <p><a href="index.html">Home</a></p>
         <p><a href="#about">About</a></p>
-        <p><a href="#goals">Our Goals</a></p>
+        <p><a href="#our-goals">Our Goals</a></p>
         <p><a href="log-in.html">Groups</a></p>
         <p><a href="log-in.html">Events</a></p>
         <button class="first-btn"><a href="sign-up.html">Sign Up</a></button>
         <button><a href="log-in.html">Sign In</a></button>
     </aside>
 
-    <section class="why-us">
+    <section class="why-us" id="about">
+        <section>
         <span class="orange-txt">What we do</span>
         <h3>We Make Planning Easier</h3>
+        </section>
 
-        <div>
-            <img src="images/group.svg" alt="">
-            <h4>Create A Group</h4>
-            <p>Create Groups With Colleagues and Friends For Easier Planning</p>
-        </div>
-
-        <div>
-            <img src="images/invite.svg" alt="">
-            <h4>Invite People</h4>
-            <p>Invite Colleagues and Friends To Join Your Group Easier Planning</p>
-        </div>
-
-        <div>
-            <img src="images/profile.svg" alt="">
-            <h4>Create A Profile</h4>
-            <p>Let Friends Find You And Add You To Their Group Via Your Unique Profile</p>
-        </div>
+        <section class="flexy">
+            <div>
+                <img src="images/group.svg" alt="">
+                <h4>Create A Group</h4>
+                <p>Create Groups With Colleagues and Friends For Easier Planning</p>
+            </div>
+    
+            <div>
+                <img src="images/invite.svg" alt="">
+                <h4>Invite People</h4>
+                <p>Invite Colleagues and Friends To Join Your Group Easier Planning</p>
+            </div>
+    
+            <div>
+                <img src="images/profile.svg" alt="">
+                <h4>Create A Profile</h4>
+                <p>Let Friends Find You And Add You To Their Group Via Your Unique Profile</p>
+            </div>
+        </section>
     </section>
 
     <div class="goals-banner">
@@ -78,10 +94,16 @@
         <p>Networking</p>
     </div>
 
+    <div class="centered" id="our-goals">
+        <span class="orange-txt">What We Want</span>
+        <h3>Our Goals</h3>
+    </div>
+
     <section class="our-goals">
-    <span class="orange-txt">What We Want</span>
-    <h3>Our Goals</h3>
+    <div>
     <img src="images/planning.jpg" alt="">
+    </div>
+
     <div class="write-up">
        <p>
         In a world where event planning can often feel like juggling flaming torches, Happening is here to help you put out the flames and light up your events with ease and elegance. Our revolutionary social media platform is specifically designed to streamline and enhance every aspect of your event planning process.
