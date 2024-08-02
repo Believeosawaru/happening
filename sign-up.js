@@ -61,6 +61,6 @@ document.getElementById("sign-up").addEventListener("submit", async (e) => {
     }
 
     } catch (error) {
-        console.log(error.message);
+        document.getElementById("failed").innerHTML = "There Was An Error, Please Reload The Page";
     }
 })
