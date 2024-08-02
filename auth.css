@@ -58,6 +58,19 @@ a {
 .sign-in-btn {
     margin-top: 10px;
 }
+.success-sign-up {
+    background: lightgreen;
+    color: black;
+    padding: 5px 10px;
+    margin-block: 20px;
+}
+.failed {
+    display: block;
+    background: #FF4500;
+    color: white;
+    padding: 5px 10px;
+    margin-block: 20px;
+}
 
 @media screen and (min-width: 900px) {
     body {
