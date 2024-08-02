@@ -54,11 +54,12 @@ nav button {
 .hero h1 {
     margin-block-end: 10px;
     font-size: 1.5rem;
-    font-family: "Inter", sans-serif;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.8rem;
 }
 .hero button {
     background: #FF4500;
-    padding: 5px 15px;
+    padding: 7px 20px;
     border-radius: 5px;
     border: none;
     margin-block-start: 15px;
@@ -79,7 +80,6 @@ nav button {
     background: linear-gradient(to bottom, #FFECB3, rgb(250, 250, 250));
     color: black;
     padding: 20px;
-    margin-inline: 20px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     text-align: center;
@@ -87,13 +87,13 @@ nav button {
 }
 .why-us h3 {
     margin-top: 10px;
-    font-family: "Inter", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 .why-us div {
     border: 1px solid #FFF8E1;
     background: rgb(250, 250, 250);
     margin-block: 30px;
-    margin-inline: 0px;
+    margin-inline: 10px;
     border-radius: 8px;
     color: black;
     padding: 20px;
@@ -129,6 +129,11 @@ nav button {
 .our-goals {
     text-align: center;
     margin: 60px 0px;
+}
+.our-goals img {
+    width: 90%;
+    border-radius: 8px;
+    margin-top: 30px;
 }
 .write-up {
     padding: 20px;
@@ -181,10 +186,10 @@ footer p {
 }
 aside {
     position: fixed;
-    width: 90%;
+    width: 80%;
     height: 100%;
     background: rgb(250, 250, 250);
-    top: 0;
+    top: 50px;
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
     transition: all, .2s ease-in-out;
     z-index: 1000000;
@@ -195,7 +200,7 @@ aside p {
 }
 aside button {
     border: none;
-    padding: 5px 20px;
+    padding: 7px 25px;
     margin-block: 20px;
     margin-inline: 5px;
     background: #FFECB3;
@@ -213,4 +218,7 @@ aside button {
 .open-menu {
     opacity: 1;
     left: 0;
+}
+.success-sign-up, .failed {
+    border-radius: 6px;
 }
