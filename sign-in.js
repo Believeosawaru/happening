@@ -5,9 +5,9 @@ const button = document.getElementById("sign-in-btn");
 function disableBtn() {
     button.disabled = true;
     button.style.backgroundColor = "#FFECB3";
-    button.style.color = "black"
+    button.style.color = "black";
 }
- 
+
 
 document.getElementById("sign-in").addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -27,6 +27,10 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
         });
 
     const data = await response.json();
+
+    if (data.token) {
+        localStorage.setItem("authToken", data.token);
+    }
 
     if (response.ok) {
         document.getElementById("success-sign-up").innerHTML = "Sign In Successful";
@@ -61,4 +65,4 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
     } catch (error) {
         console.log(error.message);
     }
-})
+});
