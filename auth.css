@@ -59,17 +59,19 @@ a {
     margin-top: 10px;
 }
 .success-sign-up {
-    background: lightgreen;
+    background: rgb(240, 240, 240);
     color: black;
     padding: 5px 10px;
     margin-block: 20px;
+    border-radius: 7px;
 }
 .failed {
     display: block;
-    background: #FF4500;
-    color: white;
+    background: rgb(240, 240, 240);
+    color: black;
     padding: 5px 10px;
     margin-block: 20px;
+    border-radius: 7px;
 }
 
 @media screen and (min-width: 900px) {
