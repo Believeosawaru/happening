@@ -21,7 +21,7 @@ async function fetchMessage() {
 
         document.getElementById("welcome-msg").textContent = message;
     } catch (error) {
-        res.send("Bad Network");
+        console.log(error.message);
     }
 }
 
