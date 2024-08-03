@@ -2,7 +2,7 @@ async function fetchMessage() {
     const token = localStorage.getItem("authToken");
 
     if (!token) {
-        res.send("User Not Authoried");
+        window.location.href = "log-in.html"
     }
 
     try {
