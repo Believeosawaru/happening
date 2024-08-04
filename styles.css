@@ -90,6 +90,9 @@ nav button {
     font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
 }
+#our-goals h3, .get-started h3 {
+    font-size: 1.4rem;
+}
 .why-us div {
     border: 1px solid #FFF8E1;
     background: rgb(250, 250, 250);
@@ -105,6 +108,7 @@ nav button {
 }
 .why-us img {
     width: 25%;
+    margin-bottom: 5px;
 }
 .why-us h4 {
     margin-bottom: 5px;
@@ -304,7 +308,7 @@ aside button {
         font-size: 1.3rem;
     }
     .why-us h3 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         margin-bottom: 5px;
         font-weight: bold;
     }
@@ -331,13 +335,16 @@ aside button {
         text-align: center;
     }
     .centered h3 {
-        font-size: 1.9rem;
+        font-size: 1.4rem;
     }
     .our-goals img {
         width: 50%;
     }
     .write-up {
-        margin-inline: 220px;
+        margin-inline: 260px;
+    }
+    .write-up button {
+        padding-inline: 30px;
     }
     .pc-menu {
         display: block;
@@ -358,13 +365,14 @@ aside button {
         color: black;
     }
     .get-started h3 {
-        font-size: 1.9rem;
+        font-size: 1.4rem;
     }
     .gridy {
         position: relative;
         grid-template-columns: auto auto auto auto;
         align-items: center;
         justify-items: center;
+        padding-top: 80px;
     }
     .gridy div {
         height: 150px;
