@@ -247,7 +247,7 @@ aside button {
     margin-block: 30px;
 }
 .gridy div {
-    height: 120px;
+    height: 160px;
     padding-block: 20px;
     padding-inline: 8px;
     background-color: rgb(250, 250, 250);
@@ -266,7 +266,7 @@ aside button {
 .gridy div span {
     background: #FF4500;
     color: white;
-    padding: 7px 12px;
+    padding: 3px 12px;
     border-radius: 50%;
     position: absolute;
     top: -1px;
@@ -363,6 +363,6 @@ aside button {
         margin-top: 40px;
     } 
     .gridy div span {
-        padding: 15px 20px;
+        padding: 12px 20px;
     }
 }
