@@ -35,7 +35,7 @@ async function fetchMessage() {
 
         document.getElementById("welcome-msg").textContent = message;
     } catch (error) {
-        console.log(error.message);
+        console.log(error);
     }
 }
 
