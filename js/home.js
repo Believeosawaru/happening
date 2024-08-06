@@ -23,7 +23,7 @@ async function fetchMessage() {
         const response = await fetch("https://happening-api.onrender.com/user/v1/home", {
             method: "GET",
             headers: {
-                "auth": `Bearer ${token}`
+                "Authorization": `Bearer ${token}`
             }
         });
 
