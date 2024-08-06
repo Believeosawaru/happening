@@ -23,12 +23,12 @@ async function fetchMessage() {
         const response = await fetch("https://happening-api.onrender.com/user/v1/home", {
             method: "GET",
             headers: {
-                "Auth": `Bearer ${token}`
+                "auth": `Bearer ${token}`
             }
         });
 
         if (!response.ok) {
-            res.send("Bad Network")
+            console.log("Bad Network")
         }
 
         const message = await response.text();
