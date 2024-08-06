@@ -1,6 +1,6 @@
 const signInUrl = "https://happening-api.onrender.com/api/v1/auth/sign-in";
 
-const button = document.getElementById("sign-in-btn");
+const button = document.getElementById("fg-pass-btn");
 
 function disableBtn() {
     button.disabled = true;
@@ -9,11 +9,10 @@ function disableBtn() {
 }
 
 
-document.getElementById("sign-in").addEventListener("submit", async (e) => {
+document.getElementById("forgot-password").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
 
     disableBtn();
 
@@ -23,7 +22,7 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({email, password})
+            body: JSON.stringify({email})
         });
 
     const data = await response.json();
@@ -39,7 +38,7 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "home.html"
+            window.location.href = "verify-account.html"
         }, 2000)
     } else {
         const keys = Object.keys(data);
