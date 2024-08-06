@@ -33,7 +33,8 @@ async function fetchMessage() {
 
         const message = await response.text();
 
-        document.getElementById("welcome-msg").textContent = message;
+        // document.getElementById("welcome-msg").textContent = message;
+        console.log(message)
     } catch (error) {
         console.log(error);
     }
