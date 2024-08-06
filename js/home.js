@@ -31,9 +31,9 @@ async function fetchMessage() {
             console.log("Bad Network")
         }
 
-        const message = await response.text();
+        const message = await response.json();
 
-        document.getElementById("welcome-msg").textContent = message.message;
+        document.getElementById("welcome-msg").textContent = message;
     } catch (error) {
         console.log(error);
     }
