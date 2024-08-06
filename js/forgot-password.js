@@ -1,4 +1,4 @@
-const signInUrl = "https://happening-api.onrender.com/api/v1/auth/sign-in";
+const signInUrl = "https://happening-api.onrender.com/api/v1/auth/forgot-password";
 
 const button = document.getElementById("fg-pass-btn");
 
