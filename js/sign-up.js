@@ -37,7 +37,7 @@ document.getElementById("sign-up").addEventListener("submit", async (e) => {
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "html/log-in.html"
+            window.location.href = "../html/log-in.html"
         }, 2000)
     } else {
         const keys = Object.keys(data);
