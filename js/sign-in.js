@@ -50,7 +50,7 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
             document.getElementById("failed").style.display = "block"
             document.getElementById("failed").innerHTML = value;
             document.getElementById("failed").classList.add("failed");
-
+            console.log(response)
             setTimeout(() => {
                 document.getElementById("failed").style.display = "none"
             }, 3500)
