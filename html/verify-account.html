@@ -3,37 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login || Sign-Up</title>
+    <title>Happening - Verify Your Account</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="../auth.css">
 </head>
 <body>
-    <h2>Sign In</h2>
-    <p>Enter Your Account Details</p>
+    <h2>Verify Your Account</h2>
+    <p>We've Sent You An Email</p>
 
     <div>
         <p id="success-sign-up"></p>
         <p id="failed"></p>
     </div>
 
-    <form id="sign-in" action="/sign-in" method="post">
-        <label for="email">Email</label> <br>
-        <input type="email" name="email" id="email" required> <br>
-
-        <label for="password">Password</label> <br>
-        <input type="password" name="password" id="password" required> <br>
-
-        <button type="submit" id="sign-in-btn">Sign In</button>
-
-        <div>
-            <span>Already have an account? <a href="sign-up.html">Sign Up</a></span>
-        </div>
+    <form action="">
+        <label for="">Input 6-digit Code</label> <br>
+        <input type="text" id="code" required>
+        <button>Submit</button>
     </form>
-
-    <script src="sign-in.js"></script>
 </body>
 </html>

@@ -1,3 +1,17 @@
+const menu = document.querySelector('.menu');
+
+function openMenu() {
+    if (menu.classList.contains('close-menu')) {
+        menu.classList.add('open-menu');
+
+        menu.classList.remove('close-menu');
+    } else {
+        menu.classList.add('close-menu');
+        
+        menu.classList.remove('open-menu');
+    }
+}
+
 async function fetchMessage() {
     const token = localStorage.getItem("authToken");
 
@@ -9,7 +23,7 @@ async function fetchMessage() {
         const response = await fetch("https://happening-api.onrender.com/user/v1/home", {
             method: "GET",
             headers: {
-                "auth": `Bearer ${token}`
+                "Auth": `Bearer ${token}`
             }
         });
 

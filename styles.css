@@ -115,10 +115,12 @@ nav button {
     font-size: 1.25rem;
 }
 .goals-banner img {
-    width: 100%;
+    width: 85%;
 }
 .goals-banner {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 .our-goals {
     text-align: center;
@@ -221,7 +223,7 @@ aside button {
     opacity: 1;
     left: 0;
 }
-.success-sign-up, .failed {
+.success-sign-up, .success, .failed {
     border-radius: 6px;
 }
 .pc-menu, .pc-btn {
@@ -294,6 +296,140 @@ aside button {
 .quick-links a {
     margin-left: 10px;
     display: block;
+}
+
+/*  User Dashboard */
+#welcome-msg {
+    text-align: left;
+}
+.user-dashboard {
+    margin-top: 50px;
+}
+.dashboard {
+    margin-block: 20px;
+    background: linear-gradient(to left, #FFECB3, rgb(250, 250, 250));
+    text-align: left;
+    padding: 30px 25px;
+    border-radius: 7px;
+}
+.dashboard p {
+    margin-top: 10px;
+}
+.dashboard button {
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+.plan-txt {
+    margin-top: 30px;
+}
+.user-menu {
+    background: linear-gradient(to top, #FFECB3, rgb(250, 250, 250));
+}
+form {
+    margin-block: 20px;
+    background: rgb(240, 240, 240);
+    padding: 30px 20px;
+    border-radius: 3px;
+}
+form input {
+    margin: 10px 0px 25px 0px;
+    width: 95%;
+    padding: 10px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid rgb(240, 240, 240);
+}
+form input:focus {
+    border: 2px solid #FF4500;
+}
+form button {
+    background: #FF4500;
+    color: white;
+    border: none;
+    padding: 10px 50px;
+    width: 95%;
+    margin-block: 20px;
+    border-radius: 6px;
+}
+form button:hover {
+    cursor: pointer;
+}
+form span {
+    text-align: center;
+}
+.success-sign-up, .success {
+    background: rgb(240, 240, 240);
+    color: black;
+    padding: 5px 10px;
+    margin-block: 20px;
+    border-radius: 7px;
+}
+.failed {
+    display: block;
+    background: rgb(240, 240, 240);
+    color: black;
+    padding: 5px 10px;
+    margin-block: 20px;
+    border-radius: 7px;
+}
+.no-ev-gr {
+    margin-top: 10px;
+}
+.small-txt {
+    font-size: .8rem;
+}
+select {
+    border: 1px solid #FF4500;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+select:hover {
+    background: #FFECB3;
+}
+.settings div {
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-block: 10px;
+    padding-inline: 10px;
+    margin-bottom: 10px;
+}
+.settings {
+    margin: 50px 0px;
+    background: linear-gradient(to left, #FFECB3, rgb(250, 250, 250));
+    padding-block: 30px;
+    border-radius: 8px;
+}
+.settings div:hover {
+    cursor: pointer;
+}
+.settings div span {
+    position: absolute;
+    right: 20px;
+    font-weight: bold;
+}
+.zero-margin {
+    margin-inline: 0px;
+}
+.log-out {
+    width: 70%;
+    border: none;
+    background: #FF4500;
+    padding: 8px;
+    border-radius: 7px;
+    color: white;
+    margin-bottom: 30px;
+}
+#bell {
+    right: 50px;
+}
+.alert {
+    background: #FF4500;
+    height: 5px;
+    width: 5px;
+    right: 9px;
+    border-radius: 10px;
+    /* display: none; */
 }
 
 @media screen and (min-width: 900px) {
@@ -383,5 +519,8 @@ aside button {
     } 
     .gridy div span {
         padding: 12px 20px;
+    }
+    .home-pc-menu button {
+        margin-right: 50px;
     }
 }
