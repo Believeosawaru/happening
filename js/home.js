@@ -34,7 +34,6 @@ async function fetchMessage() {
         const message = await response.json();
 
         document.getElementById("welcome-msg").textContent = message.message;
-        console.log(message)
     } catch (error) {
         console.log(error);
     }
