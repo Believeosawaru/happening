@@ -19,9 +19,7 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-
-    localStorage.setItem("email", email);
-
+    
     disableBtn();
 
     try {
@@ -32,14 +30,6 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
             },
             body: JSON.stringify({email, password})
         });
-
-        if (response.status === 403) {
-            return response.json().then(data => {
-                if (data.redirectUrl) {
-                    window.location.href = data.redirectUrl;
-                }
-            });
-        }
 
     const data = await response.json();
 
