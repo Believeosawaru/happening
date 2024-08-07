@@ -33,6 +33,8 @@ async function fetchMessage() {
             btnOne.disabled = true;
             btnTwo.disabled = true;
             menu.disabled = true;
+
+            window.location.href = "verify-account.html"
         }
 
         if (!response.ok) {
