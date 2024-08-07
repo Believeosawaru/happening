@@ -8,6 +8,11 @@ function disableBtn() {
     button.style.color = "black";
 }
 
+const token = localStorage.getItem("authToken");
+
+if (token) {
+    window.location.href = "home.html"
+}
 
 document.getElementById("sign-in").addEventListener("submit", async (e) => {
     e.preventDefault();
