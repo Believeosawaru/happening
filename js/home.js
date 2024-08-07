@@ -29,6 +29,8 @@ async function fetchMessage() {
             }
         });
 
+        console.log(response.status)
+
         if (response.status === 403) {
             btnOne.disabled = true;
             btnTwo.disabled = true;
