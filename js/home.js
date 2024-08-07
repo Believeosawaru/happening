@@ -34,6 +34,7 @@ async function fetchMessage() {
                 }
             });
         }
+        console.log(response.status)
 
         if (!response.ok) {
             console.log("Bad Network")
