@@ -17,6 +17,7 @@ function openMenu() {
 
 async function fetchMessage() {
     const token = localStorage.getItem("authToken");
+    console.log(token)
 
     if (!token) {
         window.location.href = "log-in.html"
@@ -32,11 +33,12 @@ async function fetchMessage() {
 
         console.log(response.status)
 
-        if (response.status === 403) {
+        if (response.status == 403) {
             btnOne.disabled = true;
             btnTwo.disabled = true;
             menu.disabled = true;
-            verifyDiv.style.display = "block"
+            verifyDiv.style.display = "block";
+            verifyDiv.style.backgroundColor = "green";
         }
 
         if (!response.ok) {
