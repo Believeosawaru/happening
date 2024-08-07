@@ -6,7 +6,7 @@ async function getEmail() {
     }
 
     try {
-        const response = await fetch("https://happening-api.onrender.com/send-on-load", {
+        const response = await fetch("https://happening-api.onrender.com/api/v1/auth/send-on-load", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
