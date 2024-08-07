@@ -1,5 +1,6 @@
 async function getEmail() {
     const token = localStorage.getItem("authToken");
+    console.log(token)
 
     if (!token) {
         window.location.href = "log-in.html"
