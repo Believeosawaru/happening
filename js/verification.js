@@ -14,6 +14,8 @@ document.getElementById("recover-password").addEventListener("submit", async (e)
 
     const email = localStorage.getItem("email");
 
+    console.log(email)
+
     disableBtn();
 
     try {
