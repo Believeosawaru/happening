@@ -1,4 +1,4 @@
-const signInUrl = "https://happening-api.onrender.com/api/v1/auth/recover-password";
+const signInUrl = "https://happening-api.onrender.com/api/v1/auth/verify-account";
 
 const button = document.getElementById("fg-pass-btn");
 
@@ -9,12 +9,10 @@ function disableBtn() {
 }
 
 
-document.getElementById("recover-password").addEventListener("submit", async (e) => {
+document.getElementById("verify-account").addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const email = localStorage.getItem("email");
     const code = document.getElementById("code").value;
-    const password = document.getElementById("password").value;
 
     disableBtn();
 
@@ -24,19 +22,27 @@ document.getElementById("recover-password").addEventListener("submit", async (e)
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({email, code, password})
+            body: JSON.stringify({code})
         });
 
     const data = await response.json();
 
+    if (response.status === 403) {
+        return response.json().then(data => {
+            if (data.redirectUrl) {
+                window.location.href = data.redirectUrl;
+            }
+        });
+    }
+
     if (response.ok) {
-        document.getElementById("success-sign-up").innerHTML = "Password Successsfully Changed";
+        document.getElementById("success-sign-up").innerHTML = "User Verified Successfully";
         document.getElementById("success-sign-up").classList.add("success-sign-up");
 
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "log-in.html"
+            window.location.href = "home.html"
         }, 2000)
     } else {
         const keys = Object.keys(data);

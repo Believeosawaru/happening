@@ -20,10 +20,11 @@
         <p id="failed"></p>
     </div>
 
-    <form action="">
-        <label for="">Input 6-digit Code</label> <br>
-        <input type="text" id="code" required>
-        <button>Submit</button>
+    <form action="/verify-account" id="verify-account" method="post">
+        <label for="code">Input 6-digit Code</label> <br>
+        <input type="text" id="code" required> <br>
     </form>
+
+    <script src="../js/verify-account.js"></script>
 </body>
 </html>
