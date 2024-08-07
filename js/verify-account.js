@@ -14,7 +14,7 @@ document.getElementById("verify-account").addEventListener("submit", async (e) =
 
     const code = document.getElementById("code").value;
     const email = localStorage.getItem("email");
-    const token = localStorage.getItem("token")
+    const token = localStorage.getItem("authToken")
 
     disableBtn();
 
