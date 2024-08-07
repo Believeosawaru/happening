@@ -28,14 +28,7 @@ document.getElementById("verify-account").addEventListener("submit", async (e) =
 
     const data = await response.json();
 
-    if (response.status === 403) {
-        return response.json().then(data => {
-            if (data.redirectUrl) {
-                window.location.href = data.redirectUrl;
-            }
-        });
-    }
-
+    
     if (response.ok) {
         document.getElementById("success-sign-up").innerHTML = "User Verified Successfully";
         document.getElementById("success-sign-up").classList.add("success-sign-up");
