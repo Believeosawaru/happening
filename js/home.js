@@ -27,15 +27,6 @@ async function fetchMessage() {
             }
         });
 
-        if (response.status === 403) {
-            return response.json().then(data => {
-                if (data.redirectUrl) {
-                    window.location.href = data.redirectUrl;
-                }
-            });
-        }
-        console.log(response.status)
-
         if (!response.ok) {
             console.log("Bad Network")
         }
