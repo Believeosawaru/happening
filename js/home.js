@@ -1,6 +1,7 @@
 const menu = document.querySelector('.menu');
 const btnOne = document.querySelector('.btn-1');
 const btnTwo = document.querySelector('.btn-2');
+const verifyDiv = document.querySelector('.not-verified');
 
 function openMenu() {
     if (menu.classList.contains('close-menu')) {
@@ -35,6 +36,7 @@ async function fetchMessage() {
             btnOne.disabled = true;
             btnTwo.disabled = true;
             menu.disabled = true;
+            verifyDiv.style.display = "block"
 
             window.location.href = "verify-account.html"
         }

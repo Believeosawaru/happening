@@ -420,6 +420,19 @@ select:hover {
     color: white;
     margin-bottom: 30px;
 }
+.not-verified {
+    text-align: left;
+    background: rgb(240, 240, 240);
+    padding: 10px;
+}
+.not-verified button {
+    border: none;
+    background: #FF4500;
+    padding: 8px 20px;
+    border-radius: 7px;
+    color: white;
+    margin-bottom: 30px;
+}
 #bell {
     right: 50px;
 }
@@ -430,6 +443,9 @@ select:hover {
     right: 9px;
     border-radius: 10px;
     /* display: none; */
+}
+.not-verified {
+    display: none;
 }
 
 @media screen and (min-width: 900px) {
