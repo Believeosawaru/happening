@@ -31,6 +31,14 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
             body: JSON.stringify({email, password})
         });
 
+        if (response.status === 403) {
+            return response.json().then(data => {
+                if (data.redirectUrl) {
+                    window.location.href = data.redirectUrl;
+                }
+            });
+        }
+
     const data = await response.json();
 
     if (data.token) {
