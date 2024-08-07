@@ -32,13 +32,13 @@ document.getElementById("forgot-password").addEventListener("submit", async (e) 
     }
 
     if (response.ok) {
-        document.getElementById("success-sign-up").innerHTML = "Sign In Successful";
+        document.getElementById("success-sign-up").innerHTML = "Code Sent Successfully";
         document.getElementById("success-sign-up").classList.add("success-sign-up");
 
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "verify-account.html"
+            window.location.href = "verify-forgot-password.html"
         }, 2000)
     } else {
         const keys = Object.keys(data);
