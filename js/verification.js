@@ -28,7 +28,7 @@ document.getElementById("recover-password").addEventListener("submit", async (e)
     const data = await response.json();
 
     if (response.ok) {
-        document.getElementById("success-sign-up").innerHTML = "Code Sent Successfully";
+        document.getElementById("success-sign-up").innerHTML = "Password Successsfully Changed";
         document.getElementById("success-sign-up").classList.add("success-sign-up");
 
         button.style.cursor = "wait";
