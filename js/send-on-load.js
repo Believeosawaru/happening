@@ -18,6 +18,8 @@ async function getEmail() {
         }
 
         const message = await response.json();
+
+        document.querySelector('.message').innerHTML = message;
     } catch (error) {
         console.log(error);
     }
