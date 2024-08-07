@@ -14,6 +14,7 @@ document.getElementById("verify-account").addEventListener("submit", async (e) =
 
     const code = document.getElementById("code").value;
     const email = localStorage.getItem("email");
+    const token = localStorage.getItem("token")
 
     disableBtn();
 
@@ -21,14 +22,14 @@ document.getElementById("verify-account").addEventListener("submit", async (e) =
         const response = await fetch(signInUrl, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Authorization": `Bearer ${token}`
             },
             body: JSON.stringify({code, email})
         });
 
     const data = await response.json();
 
-    
+
     if (response.ok) {
         document.getElementById("success-sign-up").innerHTML = "User Verified Successfully";
         document.getElementById("success-sign-up").classList.add("success-sign-up");
