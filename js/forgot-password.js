@@ -14,6 +14,8 @@ document.getElementById("forgot-password").addEventListener("submit", async (e) 
 
     const email = document.getElementById("email").value;
 
+    localStorage.setItem("email", email);
+
     disableBtn();
 
     try {
