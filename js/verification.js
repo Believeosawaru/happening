@@ -13,6 +13,8 @@ document.getElementById("recover-password").addEventListener("submit", async (e)
     e.preventDefault();
 
     const email = localStorage.getItem("email");
+    const code = document.getElementById("code").value;
+    const password = document.getElementById("password").value;
 
     console.log(email)
 
