@@ -1,4 +1,6 @@
 const menu = document.querySelector('.menu');
+const btnOne = document.querySelector('.btn-1');
+const btnTwo = document.querySelector('.btn-2');
 
 function openMenu() {
     if (menu.classList.contains('close-menu')) {
@@ -26,6 +28,12 @@ async function fetchMessage() {
                 "Authorization": `Bearer ${token}`
             }
         });
+
+        if (response.status === 403) {
+            btnOne.disabled = true;
+            btnTwo.disabled = true;
+            menu.disabled = true;
+        }
 
         if (!response.ok) {
             console.log("Bad Network")
