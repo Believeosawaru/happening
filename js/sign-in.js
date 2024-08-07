@@ -20,6 +20,8 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
+    localStorage.setItem("email", email);
+
     disableBtn();
 
     try {

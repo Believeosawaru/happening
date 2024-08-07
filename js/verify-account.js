@@ -13,6 +13,7 @@ document.getElementById("verify-account").addEventListener("submit", async (e) =
     e.preventDefault();
 
     const code = document.getElementById("code").value;
+    const email = localStorage.getItem("email");
 
     disableBtn();
 
@@ -22,7 +23,7 @@ document.getElementById("verify-account").addEventListener("submit", async (e) =
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({code})
+            body: JSON.stringify({code, email})
         });
 
     const data = await response.json();
