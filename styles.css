@@ -449,6 +449,9 @@ select:hover {
     right: 9px;
     border-radius: 10px;
 }
+.fade {
+    background: #FFECB3;
+}
 
 @media screen and (min-width: 900px) {
     .hero {
