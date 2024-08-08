@@ -232,6 +232,10 @@ aside button {
 .centered {
     text-align: center;
 }
+.center {
+    display: flex;
+    justify-content: center;
+}
 #our-goals {
     margin-top: 50px;
     margin-bottom: -60px;
@@ -421,9 +425,10 @@ select:hover {
     margin-bottom: 30px;
 }
 .not-verified {
-    text-align: left;
+    text-align: center;
     background: rgb(240, 240, 240);
     padding: 10px;
+    display: none;
 }
 .not-verified button {
     border: none;
@@ -431,7 +436,7 @@ select:hover {
     padding: 8px 20px;
     border-radius: 7px;
     color: white;
-    margin-bottom: 30px;
+    margin-block: 15px;
 }
 #bell {
     right: 50px;
@@ -442,10 +447,6 @@ select:hover {
     width: 5px;
     right: 9px;
     border-radius: 10px;
-    /* display: none; */
-}
-.not-verified {
-    display: none;
 }
 
 @media screen and (min-width: 900px) {

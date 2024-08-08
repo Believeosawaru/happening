@@ -35,7 +35,10 @@ async function fetchMessage() {
             btnTwo.disabled = true;
             menu.disabled = true;
             verifyDiv.style.display = "block";
-            verifyDiv.style.backgroundColor = "green";
+        }
+
+        if (response.status == 401) {
+            window.location.href = "log-in.html"
         }
 
         if (!response.ok) {
