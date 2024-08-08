@@ -81,8 +81,13 @@ form button a {
     color: white;
     text-decoration: none;
 }
-form div {
-    display: flex;
+#log-out {
+    background: none;
+    color: #FF4500;
+    text-decoration: underline;
+    padding: 1px 50px;
+    margin-block: 1px;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 900px) {
