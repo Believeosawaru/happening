@@ -13,10 +13,7 @@ document.getElementById("verify-account").addEventListener("submit", async (e) =
     e.preventDefault();
 
     const code = document.getElementById("code").value;
-    const email = localStorage.getItem("email");
-    const token = localStorage.getItem("authToken")
-
-    console.log(code)
+    const token = localStorage.getItem("authToken");
 
     disableBtn();
 
