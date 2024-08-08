@@ -26,7 +26,7 @@ document.getElementById("verify-account").addEventListener("submit", async (e) =
             headers: {
                 "Authorization": `Bearer ${token}`
             },
-            body: JSON.stringify({code, email})
+            body: JSON.stringify({code})
         });
 
     const data = await response.json();
