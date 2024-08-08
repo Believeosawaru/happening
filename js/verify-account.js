@@ -24,8 +24,10 @@ document.getElementById("verify-account").addEventListener("submit", async (e) =
         const response = await fetch(signInUrl, {
             method: "POST",
             headers: {
-                "Authorization": `Bearer ${token}`
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json"
             },
+            
             body: JSON.stringify({code})
         });
 
