@@ -429,6 +429,7 @@ select:hover {
     background: rgb(240, 240, 240);
     padding: 10px;
     display: none;
+    margin-block: 15px;
 }
 .not-verified button {
     border: none;

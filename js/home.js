@@ -1,6 +1,6 @@
 const menu = document.querySelector('.menu');
-const btnOne = document.querySelector('.btn-1');
-const btnTwo = document.querySelector('.btn-2');
+const userDashboard = document.querySelector('.user-dashboard');
+const pcMenu = document.querySelector('.pc-menu');
 const verifyDiv = document.querySelector('.not-verified');
 
 function openMenu() {
@@ -31,9 +31,9 @@ async function fetchMessage() {
         });
 
         if (response.status == 403) {
-            btnOne.disabled = true;
-            btnTwo.disabled = true;
-            menu.disabled = true;
+            pcMenu.style.display = "none";
+            userDashboard.style.display = "none";
+            menu.style.display = "none";
             verifyDiv.style.display = "block";
         }
 
