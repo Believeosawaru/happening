@@ -19,9 +19,6 @@ async function getEmail() {
         }
 
         const message = await response.json();
-
-        document.querySelector('.message').innerHTML = message.message;
-        console.log(message);
     } catch (error) {
         console.log(error);
     }
