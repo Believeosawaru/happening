@@ -17,7 +17,6 @@ function openMenu() {
 
 async function fetchMessage() {
     const token = localStorage.getItem("authToken");
-    console.log(token)
 
     if (!token) {
         window.location.href = "log-in.html"
@@ -30,8 +29,6 @@ async function fetchMessage() {
                 "Authorization": `Bearer ${token}`
             }
         });
-
-        console.log(response.status)
 
         if (response.status == 403) {
             btnOne.disabled = true;
