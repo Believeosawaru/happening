@@ -22,14 +22,18 @@ async function displayGroups() {
         if (response.ok) {
             const groupContainer = document.getElementById("hero");
 
+            texts = "";
+
             data.message.forEach((group) => {
-                groupContainer.innerHTML = `
+                texts += `
                 <h3>${group.name}</h3>
                 <p>${group.description}</p>
                 <p>${group.location}</p>
                 <p>${group.groupType}</p>
                 `
             });
+
+            groupContainer.innerHTML = texts;
 
         } else {
             const keys = Object.keys(data);
