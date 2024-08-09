@@ -45,8 +45,6 @@ async function displayGroups() {
                 document.getElementById("failed").style.display = "block"
                 document.getElementById("failed").innerHTML = value;
                 document.getElementById("failed").classList.add("failed");
-
-                console.log(value)
     
                 setTimeout(() => {
                     document.getElementById("failed").style.display = "none"
@@ -57,5 +55,19 @@ async function displayGroups() {
         console.log(error);
     }
 }
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const groupContainer = document.getElementById("hero");
+
+    groupContainer.addEventListener("click", (e) => {
+        const groupElement = e.target.closest(".groups");
+
+        if (groupElement) {
+            const groupId = groupElement.dataset.groupId;
+
+            window.location.href = `/group-details.html?groupId=${groupId}`
+        }
+    })
+})
 
 window.onload = displayGroups;
