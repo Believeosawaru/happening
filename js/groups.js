@@ -23,7 +23,7 @@ async function displayGroups() {
             const groupContainer = document.getElementById("groups");
 
             data.message.forEach((group) => {
-                groupContainer.innerHTML `
+                groupContainer.innerHTML = `
                 <h3>${group.name}</h3>
                 <p>${group.description}</p>
                 <p>${group.location}</p>
