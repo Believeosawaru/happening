@@ -26,10 +26,11 @@ async function displayGroups() {
 
             data.message.forEach((group) => {
                 texts += `
-                <h3>${group.name}</h3>
-                <p>${group.description}</p>
-                <p>${group.location}</p>
-                <p>${group.groupType}</p>
+                <div id="group-desc-div">
+                    <h3>${group.name}</h3>
+                    <p>&#x1F4CD ${group.location}</p>
+                    <p class="group-type">${group.groupType}</p>
+                </div>
                 `
             });
 

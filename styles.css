@@ -461,6 +461,16 @@ select:hover {
 .fade {
     background: #FFECB3;
 }
+.group-type {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+#group-desc-div {
+    position: relative;
+    background: rgb(240, 240, 240);
+    padding: 20px 15px;
+}
 
 @media screen and (min-width: 900px) {
     .hero {
