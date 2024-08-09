@@ -32,7 +32,6 @@ async function displayGroups() {
                     <p class="group-type">${group.groupType}</p>
                 </div>
                 `
-                document.getElementById("group-desc-div").dataset.groupId = group._id
             });
 
             groupContainer.innerHTML = texts;
