@@ -40,6 +40,8 @@ async function displayGroups() {
                 document.getElementById("failed").style.display = "block"
                 document.getElementById("failed").innerHTML = value;
                 document.getElementById("failed").classList.add("failed");
+
+                console.log(value)
     
                 setTimeout(() => {
                     document.getElementById("failed").style.display = "none"
