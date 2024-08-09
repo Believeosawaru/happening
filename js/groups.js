@@ -20,7 +20,7 @@ async function displayGroups() {
         const data = await response.json();
 
         if (response.ok) {
-            const groupContainer = document.getElementById("groups");
+            const groupContainer = document.getElementById("hero");
 
             data.message.forEach((group) => {
                 groupContainer.innerHTML = `
