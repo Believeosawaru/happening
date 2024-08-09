@@ -3,6 +3,8 @@ const logOutUrl = "https://happening-api.onrender.com/api/v1/auth/log-out";
 document.getElementById("log-out").addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    const token = localStorage.getItem("authToken");
+
     try {
         const response = await fetch(logOutUrl, {
             method: "POST",
@@ -10,8 +12,6 @@ document.getElementById("log-out").addEventListener("submit", async (e) => {
                 "Authorization": `Bearer ${token}`
             }
         });
-
-    const token = localStorage.getItem("authToken");
 
     if (!token || response.status === 401) {
         window.location.href = "log-in.html"
