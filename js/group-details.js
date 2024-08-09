@@ -1,13 +1,15 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const groupId = urlParams.get("groupId");
+    const token = localStorage.getItem("authToken");
 
     if (groupId) {
         try {
             const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}`, {
                 method: "GET",
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "Authurization": `Bearer ${token}`
                 }
             });
 
