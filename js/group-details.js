@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <p class="group-type">${result.group.groupType}</p>
 
                     <h3>Members: ${result.group.members.map((member) => {
-                        member.firstName 
+                        member.firstName
                         member.email
                     }).join(" ")}</h3>
                 `
