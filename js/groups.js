@@ -39,16 +39,24 @@ async function displayGroups() {
             document.addEventListener("DOMContentLoaded", async () => {
                 const groupContainer = document.getElementById("groups");
             
+                if (!groupContainer) {
+                    console.error('Element with id "groups" not found');
+                    return;
+                }
+            
                 groupContainer.addEventListener("click", (e) => {
                     const groupElement = e.target.closest(".groups");
             
                     if (groupElement) {
                         const groupId = groupElement.dataset.groupId;
-            
-                        window.location.href = `/group-details.html?groupId=${groupId}`
+                        console.log(`Group ID: ${groupId}`);
+                        window.location.href = `/group-details.html?groupId=${groupId}`;
+                    } else {
+                        console.log('No group element found');
                     }
-                })
-            })
+                });
+            });
+            
 
         } else {
             const keys = Object.keys(data);
