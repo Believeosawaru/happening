@@ -46,8 +46,6 @@ async function displayGroups() {
                 }, 3500)
               });
         }
-
-        document.getElementById("welcome-msg").textContent = message.message;
     } catch (error) {
         console.log(error);
     }
