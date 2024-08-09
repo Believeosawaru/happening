@@ -28,7 +28,7 @@ async function displayGroups() {
                 texts += `
                 <div id="group-desc-div">
                     <h3>${group.name}</h3>
-                    <p>&#x1F4CD ${group.location}</p>
+                    <p><i class="fa fa-location-dot"></i> ${group.location}</p>
                     <p class="group-type">${group.groupType}</p>
                 </div>
                 `
