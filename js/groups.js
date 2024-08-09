@@ -17,12 +17,12 @@ async function displayGroups() {
             window.location.href = "log-in.html"
         }
 
-        const result = await response.json();
+        const data = await response.json();
 
         if (response.ok) {
             const groupContainer = document.getElementById("groups");
 
-            result.message.forEach((group) => {
+            data.message.forEach((group) => {
                 groupContainer.innerHTML `
                 <h3>${group.name}</h3>
                 <p>${group.description}</p>
