@@ -41,8 +41,6 @@ document.getElementById("log-out").addEventListener("submit", async (e) => {
             setTimeout(() => {
                 document.getElementById("failed").style.display = "none"
             }, 3500)
-
-            button.disabled = false;
           });
     }
 
