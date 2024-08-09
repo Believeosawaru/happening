@@ -31,6 +31,7 @@ async function displayGroups() {
             //     `
             // })
             console.log(data.message)
+            console.log(typeof(data.message));
 
         } else {
             const keys = Object.keys(data);
