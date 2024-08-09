@@ -379,6 +379,15 @@ form span {
 .no-ev-gr {
     margin-top: 10px;
 }
+.no-ev-gr button {
+    background: #FF4500;
+    padding: 7px 20px;
+    border-radius: 5px;
+    border: none;
+    margin-block-start: 15px;
+    margin-block-end: 30px;
+    color: white;
+}
 .small-txt {
     font-size: .8rem;
 }
