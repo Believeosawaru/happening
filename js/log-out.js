@@ -44,9 +44,6 @@ document.getElementById("log-out").addEventListener("submit", async (e) => {
 
             button.disabled = false;
           });
-
-        button.style.backgroundColor = "#FF4500";
-        button.style.color = "white";
     }
 
     } catch (error) {
