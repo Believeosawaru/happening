@@ -26,11 +26,13 @@ async function displayGroups() {
 
             data.message.forEach((group) => {
                 texts += `
+                <a href="/group-details.html?groupId='${group._id}">
                 <div id="group-desc-div">
                     <h3>${group.name}</h3>
                     <p>&#x1F4CD; ${group.location}</p>
                     <p class="group-type">${group.groupType}</p>
                 </div>
+                </a>
                 `
             });
 
