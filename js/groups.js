@@ -36,21 +36,6 @@ async function displayGroups() {
 
             groupContainer.innerHTML = texts;
 
-            document.addEventListener("DOMContentLoaded", async () => {
-                const groupContainer = document.getElementById("groups");
-            
-                groupContainer.addEventListener("click", (e) => {
-                    const groupElement = e.target.closest(".groups");
-            
-                    if (groupElement) {
-                        const groupId = groupElement.dataset.groupId;
-            
-                        window.location.href = `/group-details.html?groupId=${groupId}`
-                    }
-                })
-            })
-            
-
         } else {
             const keys = Object.keys(data);
     
@@ -70,5 +55,19 @@ async function displayGroups() {
         console.log(error);
     }
 }
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const groupContainer = document.getElementById("groups");
+
+    groupContainer.addEventListener("click", (e) => {
+        const groupElement = e.target.closest(".groups");
+
+        if (groupElement) {
+            const groupId = groupElement.dataset.groupId;
+
+            window.location.href = `/group-details.html?groupId=${groupId}`
+        }
+    })
+})
 
 window.onload = displayGroups;
