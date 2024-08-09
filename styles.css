@@ -471,6 +471,7 @@ select:hover {
     text-align: left;
     background: rgb(240, 240, 240);
     padding: 20px 15px;
+    margin-block: 5px;
 }
 
 @media screen and (min-width: 900px) {
