@@ -1,6 +1,6 @@
 const logOutUrl = "https://happening-api.onrender.com/api/v1/auth/log-out";
 
-document.getElementById("sign-in").addEventListener("submit", async (e) => {
+document.getElementById("log-out").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     try {
@@ -10,6 +10,12 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
                 "Content-Type": "application/json"
             }
         });
+
+    const token = localStorage.getItem("authToken");
+
+    if (!token) {
+        window.location.href = "log-in.html"
+    }
 
     const data = await response.json();
 
@@ -31,7 +37,7 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
             document.getElementById("failed").style.display = "block"
             document.getElementById("failed").innerHTML = value;
             document.getElementById("failed").classList.add("failed");
-            
+
             setTimeout(() => {
                 document.getElementById("failed").style.display = "none"
             }, 3500)
