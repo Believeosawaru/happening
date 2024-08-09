@@ -472,6 +472,10 @@ select:hover {
     background: rgb(240, 240, 240);
     padding: 20px 15px;
     margin-block: 5px;
+    border-radius: 6px;
+}
+#group-desc-div:hover {
+    cursor: pointer;
 }
 
 @media screen and (min-width: 900px) {
