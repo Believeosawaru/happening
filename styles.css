@@ -468,6 +468,7 @@ select:hover {
 }
 #group-desc-div {
     position: relative;
+    text-align: left;
     background: rgb(240, 240, 240);
     padding: 20px 15px;
 }
