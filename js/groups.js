@@ -57,7 +57,7 @@ async function displayGroups() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const groupContainer = document.getElementById("hero");
+    const groupContainer = document.getElementById("groups");
 
     groupContainer.addEventListener("click", (e) => {
         const groupElement = e.target.closest(".groups");
