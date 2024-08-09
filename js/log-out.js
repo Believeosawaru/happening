@@ -4,7 +4,7 @@ document.getElementById("log-out").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     try {
-        const response = await fetch(signInUrl, {
+        const response = await fetch(logOutUrl, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
