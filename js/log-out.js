@@ -7,13 +7,13 @@ document.getElementById("log-out").addEventListener("submit", async (e) => {
         const response = await fetch(logOutUrl, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Authorization": `Bearer ${token}`
             }
         });
 
     const token = localStorage.getItem("authToken");
 
-    if (!token) {
+    if (!token || response.status === 401) {
         window.location.href = "log-in.html"
     }
 
