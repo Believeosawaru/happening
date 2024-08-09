@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (groupId) {
         try {
-            const response = await fetch(`/group/${groupId}`, {
+            const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
