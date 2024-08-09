@@ -1,6 +1,6 @@
 const signUpUrl = "https://happening-api.onrender.com/api/v1/user/create-group";
 
-const button = document.getElementById("sign-up-btn");
+const button = document.getElementById("create-group-btn");
 
 function disableBtn() {
     button.disabled = true;
@@ -9,13 +9,13 @@ function disableBtn() {
 }
  
 
-document.getElementById("sign-up").addEventListener("submit", async (e) => {
+document.getElementById("create-group").addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const firstName = document.getElementById("first-name").value;
-    const lastName = document.getElementById("last-name").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const name = document.getElementById("group-name").value;
+    const description = document.getElementById("group-desc").value;
+    const location = document.getElementById("location").value;
+    const groupType = document.getElementById("group-type").value;
 
     disableBtn();
 
@@ -25,19 +25,24 @@ document.getElementById("sign-up").addEventListener("submit", async (e) => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({firstName, lastName, email, password})
+            body: JSON.stringify({
+                name,
+                description,
+                location,
+                groupType
+            })
         });
 
     const data = await response.json();
 
     if (response.ok) {
-        document.getElementById("success-sign-up").innerHTML = "Sign Up Successful";
+        document.getElementById("success-sign-up").innerHTML = "Group Created Successfully";
         document.getElementById("success-sign-up").classList.add("success-sign-up");
 
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "log-in.html"
+            window.location.href = "groups.html"
         }, 2000)
     } else {
         const keys = Object.keys(data);
