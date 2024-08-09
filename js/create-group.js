@@ -8,6 +8,7 @@ function disableBtn() {
     button.style.color = "black"
 }
  
+const token = localStorage.getItem("authToken");
 
 document.getElementById("create-group").addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -23,6 +24,7 @@ document.getElementById("create-group").addEventListener("submit", async (e) => 
         const response = await fetch(signUpUrl, {
             method: "POST",
             headers: {
+                "Authorization": `Bearer ${token}`,
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
