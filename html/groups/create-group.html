@@ -48,15 +48,15 @@
             <h2>Create Group</h2>
         </div>
 
-        <form action="">
-            <label for="">Group Name</label> <br>
-            <input type="text" placeholder="What's The Name Of The Group?" required> <br>
+        <form action="/create-group" method="post" id="create-group">
+            <label for="name">Group Name</label> <br>
+            <input type="text" id="group-name" name="group-name" placeholder="What's The Name Of The Group?" required> <br>
 
-            <label for="">Group Description</label> <br>
-            <input type="text" placeholder="Describe What The Group Is About (Optional)"> <br>
+            <label for="description">Group Description</label> <br>
+            <input type="text" id="group-desc" name="group-desc" placeholder="Describe What The Group Is About (Optional)"> <br>
 
-            <label for="">Location</label> <br>
-            <input type="text" placeholder="What's Your Location? (Optional)"> <br>
+            <label for="location">Location</label> <br>
+            <input type="text" id="location" name="location" placeholder="What's Your Location? (Optional)"> <br>
 
             <span class="small-txt">
                 Group Type: <select name="group-type" id="group-type">
