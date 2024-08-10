@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <p>${result.data.description}</p>
                 <p class="group-type">${result.data.groupType}</p>
                 <p>${result.data.location}</p>
-                <p>${result.createdBy.firstName} ${result.createdBy.lastName}</p>
+                <p>Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}</p>
                 `;
 
             } else {
