@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}`, {
                 method: "GET",
                 headers: {
-                    "Authurization": `Bearer ${token}`
+                    "Authorization": `Bearer ${token}`
                 }
             });
 
