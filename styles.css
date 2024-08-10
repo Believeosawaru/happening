@@ -480,7 +480,7 @@ select:hover {
 #group-details-container {
     text-align: left;
     background: rgb(240, 240, 240);
-    color: white;
+    color: black;
     padding: 25px 20px;
     border-radius: 6px;
     position: relative;
