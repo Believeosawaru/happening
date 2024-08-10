@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             } else {
                 document.getElementById("failed").style.display = "block"
                 document.getElementById("failed").innerHTML = result.message;
+                console.log(result.message)
                 document.getElementById("failed").classList.add("failed");
             }
         } catch (error) {
