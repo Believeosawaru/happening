@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     const groupId = urlParams.get("groupId");
     const token = localStorage.getItem("authToken");
 
+    if (!token) {
+        window.location.href = "log-in.html"
+    }
+
     if (groupId) {
         try {
             const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}`, {
