@@ -477,6 +477,13 @@ select:hover {
 #group-desc-div:hover {
     cursor: pointer;
 }
+#group-details-container {
+    text-align: left;
+    background: #FF4500;
+    color: white;
+    padding: 25px 20px;
+    border-radius: 6px;
+}
 
 @media screen and (min-width: 900px) {
     .hero {

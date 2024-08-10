@@ -22,10 +22,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const groupDetailsCon = document.getElementById("group-details-container");
                 
                 groupDetailsCon.innerHTML = `
-                <p>${result.message.name}</p>
-                <p>${result.message.description}</p>
-                <p>${result.message.groupType}</p>
-                <p>${result.message.location}</p>
+                <h2>${result.data.name}</h2>
+                <p>${result.data.description}</p>
+                <p class="group-type">${result.message.groupType}</p>
+                <p>${result.data.location}</p>
+                <p>${result.createdBy.firstName} ${result.createdBy.lastName}</p>
                 `;
 
             } else {
