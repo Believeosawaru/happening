@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <p>Location: ${result.data.location}</p>
                 <p>Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}</p>
 
-                <button>Delete Group</button>
+                <div class="center"><button>Delete Group</button></div>
                 `;
 
             } else {

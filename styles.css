@@ -491,6 +491,7 @@ select:hover {
     border: none;
     border-radius: 8px;
     margin-block: 20px;
+    color: black;
 }
 
 @media screen and (min-width: 900px) {
