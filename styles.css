@@ -469,7 +469,8 @@ select:hover {
 #group-desc-div {
     position: relative;
     text-align: left;
-    background: rgb(240, 240, 240);
+    background: #FFECB3;
+    color: white;
     padding: 20px 15px;
     margin-block: 5px;
     border-radius: 6px;
@@ -484,6 +485,7 @@ select:hover {
     padding: 25px 20px;
     border-radius: 6px;
     position: relative;
+    border: 1px solid #FF4500;
 }
 #group-details-container p {
     margin-block: 10px;
