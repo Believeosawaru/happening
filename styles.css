@@ -492,7 +492,7 @@ select:hover {
     margin-block: 10px;
 }
 #faded-bg, .faded-bg {
-    background: linear-gradient(to bottom, #FFECB3, rgb(250, 250, 250));
+    background: linear-gradient(to top, #FFECB3, rgb(250, 250, 250));
 }
 
 @media screen and (min-width: 900px) {
