@@ -466,6 +466,11 @@ select:hover {
     right: 10px;
     bottom: 10px;
 }
+.created-by {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
 #group-desc-div {
     position: relative;
     text-align: left;
