@@ -479,7 +479,7 @@ select:hover {
 }
 #group-details-container {
     text-align: left;
-    background: #FFECB3;
+    background: rgb(240, 240, 240);
     color: white;
     padding: 25px 20px;
     border-radius: 6px;
