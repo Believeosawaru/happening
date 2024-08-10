@@ -17,8 +17,13 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (response.ok) {
                 const groupDetailsCon = document.getElementById("group-details-container");
                 
-                groupDetailsCon.innerHTML = result;
-                console.log(result)
+                groupDetailsCon.innerHTML = `
+                <p>${result.message.name}</p>
+                <p>${result.message.description}</p>
+                <p>${result.message.groupType}</p>
+                <p>${result.message.location}</p>
+                `;
+
             } else {
                 document.getElementById("failed").style.display = "block"
                 document.getElementById("failed").innerHTML = result.message;
