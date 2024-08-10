@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 groupDetailsCon.innerHTML = `
                 <h2>${result.data.name}</h2>
                 <p>${result.data.description}</p>
-                <p class="group-type">${result.data.groupType}</p>
+                <p class="group-type">${result.data.groupType} group</p>
                 <p>${result.data.location}</p>
                 <p>Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}</p>
                 `;
