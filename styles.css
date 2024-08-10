@@ -466,11 +466,6 @@ select:hover {
     right: 10px;
     bottom: 10px;
 }
-.created-by {
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-}
 #group-desc-div {
     position: relative;
     text-align: left;
@@ -489,6 +484,13 @@ select:hover {
     padding: 25px 20px;
     border-radius: 6px;
     position: relative;
+}
+#group-details-container button {
+    background: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 8px;
+    margin-block: 20px;
 }
 
 @media screen and (min-width: 900px) {
