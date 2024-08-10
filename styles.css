@@ -476,6 +476,9 @@ select:hover {
     border-radius: 6px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
+#group-desc-div h2 {
+    margin-bottom: 5px;
+}
 #group-desc-div:hover {
     cursor: pointer;
 }
