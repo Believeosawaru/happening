@@ -488,6 +488,7 @@ select:hover {
 #group-details h2 {
     font-family: "Oswald", sans-serif;
     text-align: center;
+    font-weight: bold;
 }
 #group-details-container p {
     margin-block: 10px;
