@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const groupDetailsCon = document.getElementById("group-details-container");
                 
                 groupDetailsCon.innerHTML = `
-                <h2>${result.data.name}</h2>
+                <h2 id="gd-h2">${result.data.name}</h2>
                 <p>Group Description: ${result.data.description}</p>
                 <p class="group-type">${result.data.groupType} group</p>
                 <p>Location: ${result.data.location}</p>

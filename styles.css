@@ -485,7 +485,7 @@ select:hover {
     border-radius: 6px;
     position: relative;
 }
-#group-details h2 {
+#gd-h2 {
     font-family: "Oswald", sans-serif;
     text-align: center;
     font-weight: bold;
