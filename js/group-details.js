@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const groupId = urlParams.get("groupId");
     const token = localStorage.getItem("authToken");
     console.log(token)
-    console.log(groupId)
+    console.log(typeof(groupId))
 
     if (groupId) {
         try {
