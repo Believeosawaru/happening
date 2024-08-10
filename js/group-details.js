@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const token = localStorage.getItem("authToken");
 
     if (!token) {
-        window.location.href = "/log-in.html"
+        window.location.href = "/html/log-in.html"
     }
 
     if (groupId) {
