@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const groupId = urlParams.get("groupId");
     const token = localStorage.getItem("authToken");
-    console.log(token)
-    console.log(typeof(groupId))
 
     if (groupId) {
         try {
