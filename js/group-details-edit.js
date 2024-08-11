@@ -27,6 +27,7 @@ const retreiveInfo = async () => {
     description = group.data.description;
     location = group.data.location;
     groupType = group.data.groupType;
+    console.log(name);
 } 
 
 const editGroupUrl = `https://happening-api.onrender.com/api/v1/user/edit-group-info/${groupId}`;
