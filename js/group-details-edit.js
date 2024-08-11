@@ -19,16 +19,15 @@ const retreiveInfo = async () => {
     const group = await info.json();
 
     if (info.ok) {
-    let name = document.getElementById("group-name").value;
-    let description = document.getElementById("group-desc").value;
-    let location = document.getElementById("location").value;
-    let groupType = document.getElementById("group-type").value;
+    let name = document.getElementById("group-name");
+    let description = document.getElementById("group-desc");
+    let location = document.getElementById("location");
+    let groupType = document.getElementById("group-type");
 
-    name = group.data.name;
-    description = group.data.description;
-    location = group.data.location;
-    groupType = group.data.groupType;
-    console.log(name);
+    name.value = group.data.name;
+    description.value = group.data.description;
+    location.value = group.data.location;
+    groupType.value = group.data.groupType;
     } else {
         console.log("Could'nt Fetch")
     }
