@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}
                 </p>
 
-                <span><i class="fa fa-pencil"></i></span>
+                <span class="edit-button"><i class="fa fa-pencil"></i></span>
                 `;
                 }
 
