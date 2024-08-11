@@ -69,8 +69,8 @@ if (groupId) {
             button.style.cursor = "wait";
     
             setTimeout(() => {
-                window.location.href = "groups.html"
-            }, 2000)
+                window.location.href = `group-details.html/${groupId}`
+            }, 1000)
         } else {
             const keys = Object.keys(data);
     
