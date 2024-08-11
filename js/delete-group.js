@@ -29,7 +29,7 @@ document.getElementById("delete-group").addEventListener("submit", async (e) => 
 
         setTimeout(() => {
             window.location.href = `groups.html`
-        }, 1000)
+        }, 1000000000)
     } else {
         const keys = Object.keys(data);
 
