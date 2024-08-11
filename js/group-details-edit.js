@@ -2,11 +2,6 @@ const urlParams = new URLSearchParams(window.location.search);
 const groupId = urlParams.get("groupId");
 const token = localStorage.getItem("authToken");
 
-let name = document.getElementById("group-name").value;
-let description = document.getElementById("group-desc").value;
-let location = document.getElementById("location").value;
-let groupType = document.getElementById("group-type").value;
-
 if (!token) {
     window.location.href = "/html/log-in.html"
 }
@@ -22,6 +17,11 @@ const retreiveInfo = async () => {
     });
 
     const group = await info.json();
+
+    let name = document.getElementById("group-name").value;
+    let description = document.getElementById("group-desc").value;
+    let location = document.getElementById("location").value;
+    let groupType = document.getElementById("group-type").value;
 
     name = group.data.name;
     description = group.data.description;
@@ -44,6 +44,11 @@ if (groupId) {
         e.preventDefault();
     
         disableBtn();
+
+        const name = document.getElementById("group-name").value;
+        const description = document.getElementById("group-desc").value;
+        const location = document.getElementById("location").value;
+        const groupType = document.getElementById("group-type").value;
     
         try {
             const response = await fetch(editGroupUrl, {
