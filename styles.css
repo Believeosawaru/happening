@@ -164,9 +164,13 @@ footer p {
     text-align: center;
     margin-top: 20px;
 }
-.rights a {
+.rights a, .del-group-a {
     font-weight: bold;
     text-decoration: underline;
+}
+.del-group-a {
+    color: #FF4500;
+    text-align: center;
 }
 .to-top {
     background: #FF4500;
