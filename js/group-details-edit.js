@@ -4,7 +4,7 @@ const token = localStorage.getItem("authToken");
 
 let name = document.getElementById("group-name").value;
 let description = document.getElementById("group-desc").value;
-let location = document.getElementById("location").value;
+// let location = document.getElementById("location").value;
 let groupType = document.getElementById("group-type").value;
 
 if (!token) {
