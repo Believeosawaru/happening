@@ -23,10 +23,22 @@ document.addEventListener("DOMContentLoaded", async () => {
                 
                 groupDetailsCon.innerHTML = `
                 <h2 id="gd-h2">${result.data.name}</h2>
-                <p>Group Description: ${result.data.description}</p>
-                <p class="group-type">${result.data.groupType} group</p>
-                <p>Location: ${result.data.location}</p>
-                <p>Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}</p>
+
+                <p>
+                Group Description: ${result.data.description}
+                </p>
+
+                <p class="group-type">
+                ${result.data.groupType} group
+                </p>
+
+                <p>
+                Location: ${result.data.location}
+                </p>
+                
+                <p>
+                Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}
+                </p>
                 `;
 
             } else {
