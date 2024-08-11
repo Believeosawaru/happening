@@ -18,6 +18,7 @@ const retreiveInfo = async () => {
 
     const group = await info.json();
 
+    if (info.ok) {
     let name = document.getElementById("group-name").value;
     let description = document.getElementById("group-desc").value;
     let location = document.getElementById("location").value;
@@ -28,6 +29,9 @@ const retreiveInfo = async () => {
     location = group.data.location;
     groupType = group.data.groupType;
     console.log(name);
+    } else {
+        console.log("Could'nt Fetch")
+    }
 } 
 
 const editGroupUrl = `https://happening-api.onrender.com/api/v1/user/edit-group-info/${groupId}`;
