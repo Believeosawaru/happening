@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (response.ok) {
                 const groupDetailsCon = document.getElementById("group-details-container");
                 
-                if (result.createdBy._id !== result.currentUser) {
+                if (result.createdBy._id !== result.currentUserId) {
                     groupDetailsCon.innerHTML = `
                 <h2 id="gd-h2">${result.data.name}</h2>
 
