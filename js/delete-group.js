@@ -1,4 +1,5 @@
-const token = localStorage.getItem("authToken")
+const token = localStorage.getItem("authToken");
+const delGroupUrl = "https://happening-api.onrender.com/api/v1/auth/forgot-password-code"
 
 if (!token) {
     window.location.href = "/html/log-in.html"
@@ -7,32 +8,18 @@ if (!token) {
 document.getElementById("delete-group").addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    disableBtn();
-
-    const name = document.getElementById("group-name").value;
-    const description = document.getElementById("group-desc").value;
-    const location = document.getElementById("location").value;
-    const groupType = document.getElementById("group-type").value;
-
     try {
-        const response = await fetch(editGroupUrl, {
+        const response = await fetch(delGroupUrl, {
             method: "DELETE",
             headers: {
-                "Authorization": `Bearer ${token}`,
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                name,
-                description,
-                location,
-                groupType
-            })
+                "Authorization": `Bearer ${token}`
+            }
         });
 
     const data = await response.json();
 
     if (response.ok) {
-        document.getElementById("success-sign-up").innerHTML = "Group Edited Successfully";
+        document.getElementById("success-sign-up").innerHTML = "Group Deleted Successfully";
         document.getElementById("success-sign-up").classList.add("success-sign-up");
 
         button.style.cursor = "wait";
