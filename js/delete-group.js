@@ -21,8 +21,6 @@ document.getElementById("delete-group").addEventListener("submit", async (e) => 
 
     const data = await response.json();
 
-    console.log(data)
-
     if (response.ok) {
         document.getElementById("success-sign-up").innerHTML = "Group Deleted Successfully";
         document.getElementById("success-sign-up").classList.add("success-sign-up");
