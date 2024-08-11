@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}
                 </p>
 
-                <span class="edit-button"><i class="fa fa-pencil"><a href="group-details-edit.html?groupId=${groupId}"></a></i></span>
+                <span class="edit-button"><a href="group-details-edit.html?groupId=${groupId}"><i class="fa fa-pencil"></i></a></span>
                 `;
                 }
 
