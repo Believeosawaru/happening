@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (response.ok) {
                 const groupDetailsCon = document.getElementById("group-details-container");
                 
-                groupDetailsCon.innerHTML = `
+                if (result.createdBy._id !== result.currentUser) {
+                    groupDetailsCon.innerHTML = `
                 <h2 id="gd-h2">${result.data.name}</h2>
 
                 <p>
@@ -40,6 +41,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}
                 </p>
                 `;
+                } else {
+                    console.log("Youre The Group Owner")
+                }
 
             } else {
                 document.getElementById("failed").style.display = "block"
