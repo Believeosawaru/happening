@@ -22,8 +22,6 @@ document.getElementById("delete-group").addEventListener("submit", async (e) => 
         document.getElementById("success-sign-up").innerHTML = "Group Deleted Successfully";
         document.getElementById("success-sign-up").classList.add("success-sign-up");
 
-        button.style.cursor = "wait";
-
         setTimeout(() => {
             window.location.href = `groups.html`
         }, 1000)
@@ -39,13 +37,8 @@ document.getElementById("delete-group").addEventListener("submit", async (e) => 
 
             setTimeout(() => {
                 document.getElementById("failed").style.display = "none"
-            }, 3500)
-
-            button.disabled = false;
+            }, 3500);
           });
-
-        button.style.backgroundColor = "#FF4500";
-        button.style.color = "white"
     }
 
     } catch (error) {
