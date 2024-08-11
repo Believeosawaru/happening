@@ -500,7 +500,7 @@ select:hover {
 .edit-button {
     position: absolute;
     top: 15px;
-    left: 20px;
+    right: 20px;
 }
 
 @media screen and (min-width: 900px) {
