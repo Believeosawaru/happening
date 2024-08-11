@@ -27,7 +27,6 @@ const retreiveInfo = async () => {
     name.value = group.data.name;
     description.value = group.data.description;
     location.value = group.data.location;
-    groupType.value = group.data.groupType;
     } else {
         console.log("Could'nt Fetch")
     }
@@ -78,7 +77,7 @@ if (groupId) {
             button.style.cursor = "wait";
     
             setTimeout(() => {
-                window.location.href = `group-details.html/${groupId}`
+                window.location.href = `group.html`
             }, 1000)
         } else {
             const keys = Object.keys(data);
