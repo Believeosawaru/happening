@@ -4,7 +4,7 @@ const token = localStorage.getItem("authToken");
 
 let name = document.getElementById("group-name").value;
 let description = document.getElementById("group-desc").value;
-// let location = document.getElementById("location").value;
+let location = document.getElementById("location").value;
 let groupType = document.getElementById("group-type").value;
 
 if (!token) {
@@ -13,7 +13,7 @@ if (!token) {
 
 
 const retreiveInfo = async () => {
-    const info = await fetch(groupInfoUrl, {
+    const info = await fetch(`https://happening-api.onrender.com/api/v1/user/group-details/${groupId}`, {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${token}`,
@@ -102,45 +102,3 @@ if (groupId) {
 }
 
 window.onload = retreiveInfo;
-
-
-/*  const urlParams = new URLSearchParams(window.location.search);
-    const groupId = urlParams.get("groupId");
-    const token = localStorage.getItem("authToken");
-
-    if (!token) {
-        window.location.href = "/html/log-in.html"
-    }
-
-    if (groupId) {
-        try {
-            const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}`, {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer ${token}`
-                },
-                body: JSON.stringify({
-                    name,
-                    description,
-                    location,
-                    groupType
-                })
-            });
-
-            const result = await response.json();
-
-            if (response.ok) {
-
-            } else {
-                document.getElementById("failed").style.display = "block"
-                document.getElementById("failed").innerHTML = result.message;
-                console.log(result.message)
-                document.getElementById("failed").classList.add("failed");
-            }
-        } catch (error) {
-            console.log(error);
-        }
-    } else {
-        window.location.href = "groups.html"
-    } */
