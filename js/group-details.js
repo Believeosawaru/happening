@@ -42,7 +42,27 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </p>
                 `;
                 } else {
-                    console.log("Youre The Group Owner")
+                    groupDetailsCon.innerHTML = `
+                <h2 id="gd-h2">${result.data.name}</h2>
+
+                <p>
+                Group Description: ${result.data.description}
+                </p>
+
+                <p>
+                Group Type: ${result.data.groupType} group
+                </p>
+
+                <p>
+                Location: ${result.data.location}
+                </p>
+
+                <p>
+                Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}
+                </p>
+
+                <span><i class="fa fa-pen"></i></span>
+                `;
                 }
 
             } else {
