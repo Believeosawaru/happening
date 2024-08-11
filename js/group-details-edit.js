@@ -33,6 +33,10 @@ const retreiveInfo = async () => {
 
 const editGroupUrl = `https://happening-api.onrender.com/api/v1/user/edit-group-info/${groupId}`;
 
+const delBtn = document.getElementById("group-del-link");
+
+delBtn.innerHTML = `<a href="delete-group.html/${groupId}" class="del-group-a">Delete Group</a>`
+
 const button = document.getElementById("edit-group-btn");
 
 function disableBtn() {
