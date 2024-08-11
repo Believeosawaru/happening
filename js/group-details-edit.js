@@ -56,7 +56,7 @@ if (groupId) {
     
         try {
             const response = await fetch(editGroupUrl, {
-                method: "POST",
+                method: "PUT",
                 headers: {
                     "Authorization": `Bearer ${token}`,
                     "Content-Type": "application/json"
