@@ -22,7 +22,6 @@ const retreiveInfo = async () => {
     let name = document.getElementById("group-name");
     let description = document.getElementById("group-desc");
     let location = document.getElementById("location");
-    let groupType = document.getElementById("group-type");
 
     name.value = group.data.name;
     description.value = group.data.description;
@@ -77,7 +76,7 @@ if (groupId) {
             button.style.cursor = "wait";
     
             setTimeout(() => {
-                window.location.href = `group.html`
+                window.location.href = `groups.html`
             }, 1000)
         } else {
             const keys = Object.keys(data);
