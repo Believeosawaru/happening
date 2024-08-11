@@ -35,9 +35,7 @@ const editGroupUrl = `https://happening-api.onrender.com/api/v1/user/edit-group-
 
 const delBtn = document.getElementById("group-del-link");
 
-delBtn.innerHTML = `<a href="delete-group.html/${groupId}" class="del-group-a">Delete Group</a>`
-
-const button = document.getElementById("edit-group-btn");
+delBtn.innerHTML = `<a href="group-details.html?groupId=${groupId}" class="del-group-a">Delete Group</a>`;
 
 function disableBtn() {
     button.disabled = true;
