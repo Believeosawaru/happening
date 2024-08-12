@@ -27,17 +27,20 @@ async function searchUsers() {
         const result = await response.json();
 
         if (response.ok) {
+            if (result.users.length === 0) {
+                document.getElementById("success-sign-up").style.display = "block"
+
+                document.getElementById("success-sign-up").innerHTML = "No User Found";
+        
+                document.getElementById("success-sign-up").classList.add("success-sign-up");
+            }
+
             searchResults.innerHTML = "";
 
             result.users.forEach(user => {
                 const p = document.createElement("p");
 
                 p.classList.add("p-user-details");
-
-                
-                if (result.users.length === 0) {
-                    p.textContent = "User Not Found";
-                }
 
                 p.textContent = `${user.firstName} ${user.lastName}`;
 
