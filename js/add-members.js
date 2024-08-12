@@ -17,7 +17,7 @@ async function searchUsers() {
 
     try {
         const response = await fetch(`https://happening-api.onrender.com/api/v1/user/search-users?query=${encodeURIComponent(query)}`, {
-            method: "POST",
+            method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
             }
