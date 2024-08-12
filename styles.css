@@ -516,6 +516,21 @@ select:hover {
     border: 1px solid #FF4500;
     background: #FFECB3;
 }
+#search-results {
+    background: rgb(240, 240, 240);
+    padding: 10px;
+}
+#search-results ul {
+    list-style-type: none;
+}
+#search-results ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+#search-results ul li:hover {
+    cursor: pointer;
+    background: #FFF8E1;
+}
 
 @media screen and (min-width: 900px) {
     .hero {

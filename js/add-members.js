@@ -2,8 +2,6 @@ const urlParams = new URLSearchParams(window.location.search);
 const groupId = urlParams.get("groupId");
 const token = localStorage.getItem("authToken");
 
-console.log(groupId)
-
 if (!token) {
     window.location.href = "/html/log-in.html"
 }
