@@ -35,6 +35,9 @@ async function searchUsers() {
                 document.getElementById("success-sign-up").classList.add("success-sign-up");
             }
 
+            
+            document.getElementById("success-sign-up").style.display = "none";
+            
             searchResults.innerHTML = "";
 
             result.users.forEach(user => {
@@ -77,11 +80,12 @@ async function addMemberToGroup(userId) {
 
         if (response.ok) {
         document.getElementById("search-input").value = "";
+
         const searchResults = document.getElementById("search-results").innerHTML = "";
 
         document.querySelector(".p-user-details").disabled = true;
 
-        document.getElementById("success-sign-up").style.display = "block"
+        document.getElementById("success-sign-up").style.display = "block";
 
         document.getElementById("success-sign-up").innerHTML = "Member Added Successfully";
 
@@ -92,6 +96,6 @@ async function addMemberToGroup(userId) {
             document.getElementById("success-sign-up").style.display = "none";
         }, 2000)
     } catch (error) {
-        
+        console.log(error);
     }
 }
