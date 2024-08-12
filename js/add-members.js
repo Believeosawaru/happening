@@ -26,7 +26,7 @@ async function searchUsers() {
 
         const result = await response.json();
 
-        console.log(response)
+        console.log(result)
 
         if (response.ok) {
             searchResults.innerHTML = "";
