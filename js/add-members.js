@@ -10,11 +10,6 @@ async function searchUsers() {
     const query = document.getElementById("search-input").value;
     const searchResults = document.getElementById("search-results");
 
-    // if (query.length < 3) {
-    //     searchResults.innerHTML = "";
-    //     return;
-    // }
-
     try {
         const response = await fetch(`https://happening-api.onrender.com/api/v1/user/search-users/${groupId}?query=${encodeURIComponent(query)}`, {
             method: "GET",
@@ -27,12 +22,6 @@ async function searchUsers() {
         const result = await response.json();
 
         if (response.ok) {
-            if (result.users.length === 0) {
-                document.getElementById("search-results").style.display = "block"
-
-                document.getElementById("search-results").innerHTML = "No User Found";
-            }
-
             searchResults.innerHTML = "";
 
             result.users.forEach(user => {
@@ -57,8 +46,6 @@ async function searchUsers() {
 }
 
 async function addMemberToGroup(userId) {
-    document.querySelector(".p-user-details").style.backgroundColor = "#FFECB3";
-
     try {
         const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/add-member`, {
             method: "POST",
