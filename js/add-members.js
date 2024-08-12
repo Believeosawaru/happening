@@ -43,7 +43,7 @@ async function searchUsers() {
             searchResults.innerHTML = `<li>${result.message}</li>`;
         }
     } catch (error) {
-        console.log("Error Searching For Users")
+        console.log(error)
     }
 }
 
