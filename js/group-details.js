@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 <span class="edit-button"><a href="group-details-edit.html?groupId=${groupId}"><i class="fa fa-pencil"></i></a></span>
 
-                <a href="">${result.groupLink}</a>
+                <a href="${result.groupLink}">Copy Group Link</a>
                 `;
                 }
 
