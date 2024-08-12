@@ -20,9 +20,9 @@ async function searchUsers() {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer ${token}`
-            },
-            body: JSON.stringify({groupId})
+                "Authorization": `Bearer ${token}`,
+                "Group-ID": `${groupId}`
+            }
         });
 
         const result = await response.json();
