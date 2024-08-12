@@ -64,8 +64,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <button><a href="add-members.html?groupId=${groupId}">Add Members</a></button>
 
                 <span class="edit-button"><a href="group-details-edit.html?groupId=${groupId}"><i class="fa fa-pencil"></i></a></span>
-
-                <a href="${result.groupLink}">Copy Group Link</a>
                 `;
                 }
 
@@ -82,5 +80,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         window.location.href = "groups.html"
     }
 })
+
+// <a href="${result.groupLink}">Copy Group Link</a>
 
 // /* <button><a href="add-members.html?groupId=${groupId}">Add Members</a></button> */
