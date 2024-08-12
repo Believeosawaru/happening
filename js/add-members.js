@@ -65,7 +65,7 @@ async function addMemberToGroup(userId) {
 
         if (response.ok) {
         document.querySelector(".p-user-details").style.backgroundColor = "#FFECB3";
-        
+
         document.getElementById("success-sign-up").style.display = "block"
 
         document.getElementById("success-sign-up").innerHTML = "Member Added Successfully";
@@ -74,7 +74,9 @@ async function addMemberToGroup(userId) {
         }
 
         setTimeout(() => {
-            document.getElementById("success-sign-up").style.display = "none"
+            document.getElementById("success-sign-up").style.display = "none";
+
+            window.location.href = "/html/log-in.html"
         }, 2000)
     } catch (error) {
         
