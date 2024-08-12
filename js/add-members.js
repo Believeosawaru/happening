@@ -31,7 +31,7 @@ async function searchUsers() {
             result.users.forEach(user => {
                 const li = document.createElement("li");
 
-                li.textContent = `${user.firstName} ${user.lastName} (${user.email})`;
+                li.textContent = `${user.firstName} ${user.lastName}`;
 
                 li.dataset.userId = user._id;
 
