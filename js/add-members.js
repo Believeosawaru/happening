@@ -10,13 +10,13 @@ async function searchUsers() {
     const query = document.getElementById("search-input").value;
     const searchResults = document.getElementById("search-results");
 
-    if (query.length < 3) {
-        searchResults.innerHTML = "";
-        return;
-    }
+    // if (query.length < 3) {
+    //     searchResults.innerHTML = "";
+    //     return;
+    // }
 
     try {
-        const response = await fetch(`https://happening-api.onrender.com/api/v1/user/search-users?query=${encodeURIComponent(query)}`, {
+        const response = await fetch(`https://happening-api.onrender.com/api/v1/user/search-users?query=${query}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
