@@ -61,6 +61,8 @@ async function searchUsers() {
 }
 
 async function addMemberToGroup(userId) {
+    document.querySelector(".p-user-details").style.backgroundColor = "#FFECB3";
+
     try {
         const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/add-member`, {
             method: "POST",
@@ -74,8 +76,8 @@ async function addMemberToGroup(userId) {
         const result = await response.json();
 
         if (response.ok) {
-        document.querySelector(".p-user-details").style.backgroundColor = "#FFECB3";
-
+        document.getElementById("search-input").value = "";
+        
         document.querySelector(".p-user-details").disabled = true;
 
         document.getElementById("success-sign-up").style.display = "block"
