@@ -42,6 +42,8 @@ async function searchUsers() {
 
                 p.classList.add("p-user-details");
 
+                document.getElementById("success-sign-up").style.display = "block"
+
                 p.textContent = `${user.firstName} ${user.lastName}`;
 
                 p.dataset.userId = user._id;
