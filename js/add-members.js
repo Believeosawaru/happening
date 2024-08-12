@@ -66,6 +66,8 @@ async function addMemberToGroup(userId) {
         if (response.ok) {
         document.querySelector(".p-user-details").style.backgroundColor = "#FFECB3";
 
+        document.querySelector(".p-user-details").disabled = true;
+
         document.getElementById("success-sign-up").style.display = "block"
 
         document.getElementById("success-sign-up").innerHTML = "Member Added Successfully";
