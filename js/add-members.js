@@ -2,6 +2,8 @@ const urlParams = new URLSearchParams(window.location.search);
 const groupId = urlParams.get("groupId");
 const token = localStorage.getItem("authToken");
 
+console.log(groupId)
+
 if (!token) {
     window.location.href = "/html/log-in.html"
 }
@@ -20,8 +22,7 @@ async function searchUsers() {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer ${token}`,
-                "Group-ID": `${groupId}`
+                "Authorization": `Bearer ${token}`
             }
         });
 
