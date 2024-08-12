@@ -77,7 +77,7 @@ async function addMemberToGroup(userId) {
 
         if (response.ok) {
         document.getElementById("search-input").value = "";
-        
+
         document.querySelector(".p-user-details").disabled = true;
 
         document.getElementById("success-sign-up").style.display = "block"
@@ -89,8 +89,6 @@ async function addMemberToGroup(userId) {
 
         setTimeout(() => {
             document.getElementById("success-sign-up").style.display = "none";
-
-            window.location.href = "groups.html"
         }, 2000)
     } catch (error) {
         
