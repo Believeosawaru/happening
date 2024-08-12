@@ -33,11 +33,10 @@ async function searchUsers() {
                 document.getElementById("success-sign-up").innerHTML = "No User Found";
         
                 document.getElementById("success-sign-up").classList.add("success-sign-up");
+            } else {
+                document.getElementById("success-sign-up")style.display = "none"
             }
 
-            
-            document.getElementById("success-sign-up").style.display = "none";
-            
             searchResults.innerHTML = "";
 
             result.users.forEach(user => {
