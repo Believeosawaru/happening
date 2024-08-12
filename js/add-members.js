@@ -61,10 +61,6 @@ async function addMemberToGroup(userId) {
         if (response.ok) {
         document.getElementById("search-input").value = "";
 
-        const searchResults = document.getElementById("search-results").innerHTML = "";
-
-        document.querySelector(".p-user-details").disabled = true;
-
         document.getElementById("success-sign-up").style.display = "block";
 
         document.getElementById("success-sign-up").innerHTML = "Member Added Successfully";
