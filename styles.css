@@ -520,14 +520,12 @@ select:hover {
     background: rgb(240, 240, 240);
     padding: 10px;
 }
-#search-results ul {
-}
-#search-results ul li {
+#search-results p {
     list-style-type: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 10px;
 }
-#search-results ul li:hover {
+#search-results p:hover {
     cursor: pointer;
     background: #FFF8E1;
 }

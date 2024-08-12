@@ -30,15 +30,15 @@ async function searchUsers() {
             searchResults.innerHTML = "";
 
             result.users.forEach(user => {
-                const li = document.createElement("li");
+                const p = document.createElement("p");
 
-                li.textContent = `${user.firstName} ${user.lastName}`;
+                p.textContent = `${user.firstName} ${user.lastName}`;
 
-                li.dataset.userId = user._id;
+                p.dataset.userId = user._id;
 
-                li.addEventListener("click", () => addMemberToGroup(user._id));
+                p.addEventListener("click", () => addMemberToGroup(user._id));
 
-                searchResults.appendChild(li);
+                searchResults.appendChild(p);
             });
         } else {
             searchResults.innerHTML = `<li>${result.message}</li>`;
