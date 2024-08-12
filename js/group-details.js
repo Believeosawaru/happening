@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}
                 </p>
 
-                // <button><a href="add-members.html?groupId=${groupId}">Add Members</a></button>
+                /* <button><a href="add-members.html?groupId=${groupId}">Add Members</a></button> */
 
                 <button>Add Members</button>
 
