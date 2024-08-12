@@ -32,6 +32,8 @@ async function searchUsers() {
             result.users.forEach(user => {
                 const p = document.createElement("p");
 
+                p.classList.add("p-user-details");
+
                 p.textContent = `${user.firstName} ${user.lastName}`;
 
                 p.dataset.userId = user._id;
@@ -62,10 +64,18 @@ async function addMemberToGroup(userId) {
         const result = await response.json();
 
         if (response.ok) {
+        document.querySelector(".p-user-details").style.backgroundColor = "#FFECB3";
+        
+        document.getElementById("success-sign-up").style.display = "block"
+
         document.getElementById("success-sign-up").innerHTML = "Member Added Successfully";
 
         document.getElementById("success-sign-up").classList.add("success-sign-up");
         }
+
+        setTimeout(() => {
+            document.getElementById("success-sign-up").style.display = "none"
+        }, 2000)
     } catch (error) {
         
     }

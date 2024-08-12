@@ -527,7 +527,7 @@ select:hover {
 }
 #search-results p:hover {
     cursor: pointer;
-    background: #FFECB3
+    background: #FFECB3;
 }
 
 @media screen and (min-width: 900px) {
