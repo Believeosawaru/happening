@@ -42,7 +42,7 @@ async function searchUsers() {
 
                 p.classList.add("p-user-details");
 
-                document.getElementById("success-sign-up").style.display = "block"
+                document.getElementById("success-sign-up").style.display = "none"
 
                 p.textContent = `${user.firstName} ${user.lastName}`;
 
