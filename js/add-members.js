@@ -19,8 +19,10 @@ async function searchUsers() {
         const response = await fetch(`https://happening-api.onrender.com/api/v1/user/search-users?query=${query}`, {
             method: "GET",
             headers: {
+                "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`
-            }
+            },
+            body: JSON.stringify({groupId})
         });
 
         const result = await response.json();
