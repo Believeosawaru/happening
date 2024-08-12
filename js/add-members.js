@@ -16,7 +16,7 @@ async function searchUsers() {
     // }
 
     try {
-        const response = await fetch(`https://happening-api.onrender.com/api/v1/user/search-users/${groupId}?query=${query}`, {
+        const response = await fetch(`https://happening-api.onrender.com/api/v1/user/search-users/${groupId}?query=${encodeURIComponent(query)}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -26,8 +26,6 @@ async function searchUsers() {
 
         const result = await response.json();
 
-        console.log(result)
-
         if (response.ok) {
             searchResults.innerHTML = "";
 
@@ -35,6 +33,11 @@ async function searchUsers() {
                 const p = document.createElement("p");
 
                 p.classList.add("p-user-details");
+
+                
+                if (result.users.length === 0) {
+                    p.textContent = "User Not Found";
+                }
 
                 p.textContent = `${user.firstName} ${user.lastName}`;
 
