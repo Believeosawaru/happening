@@ -76,7 +76,7 @@ async function addMemberToGroup(userId) {
         setTimeout(() => {
             document.getElementById("success-sign-up").style.display = "none";
 
-            window.location.href = "/html/log-in.html"
+            window.location.href = "groups.html"
         }, 2000)
     } catch (error) {
         
