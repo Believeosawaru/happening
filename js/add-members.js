@@ -28,11 +28,9 @@ async function searchUsers() {
 
         if (response.ok) {
             if (result.users.length === 0) {
-                document.getElementById("success-sign-up").style.display = "block"
+                document.getElementById("search-results").style.display = "block"
 
-                document.getElementById("success-sign-up").innerHTML = "No User Found";
-        
-                document.getElementById("success-sign-up").classList.add("success-sign-up");
+                document.getElementById("search-results").innerHTML = "No User Found";
             }
 
             searchResults.innerHTML = "";
@@ -41,8 +39,6 @@ async function searchUsers() {
                 const p = document.createElement("p");
 
                 p.classList.add("p-user-details");
-
-                document.getElementById("success-sign-up").style.display = "none"
 
                 p.textContent = `${user.firstName} ${user.lastName}`;
 
