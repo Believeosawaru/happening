@@ -47,24 +47,24 @@ async function searchUsers() {
     }
 }
 
-// async function addMemberToGroup(userId) {
-//     try {
-//         const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/add-member`, {
-//             method: "POST",
-//             headers: {
-//                 "Content-Type": "application/json"
-//             },
-//             body: JSON.stringify({ userId })
-//         });
+async function addMemberToGroup(userId) {
+    try {
+        const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/add-member`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ userId })
+        });
 
-//         const result = await response.json();
+        const result = await response.json();
 
-//         if (response.ok) {
-//         document.getElementById("success-sign-up").innerHTML = "Member Added Successfully";
+        if (response.ok) {
+        document.getElementById("success-sign-up").innerHTML = "Member Added Successfully";
 
-//         document.getElementById("success-sign-up").classList.add("success-sign-up");
-//         }
-//     } catch (error) {
+        document.getElementById("success-sign-up").classList.add("success-sign-up");
+        }
+    } catch (error) {
         
-//     }
-// }
+    }
+}
