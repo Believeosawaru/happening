@@ -51,7 +51,7 @@ async function searchUsers() {
                 searchResults.appendChild(p);
             });
         } else {
-            searchResults.innerHTML = `<li>${result.message}</li>`;
+            searchResults.innerHTML = `${result.message}`;
         }
     } catch (error) {
         console.log(error)
