@@ -52,7 +52,8 @@ async function addMemberToGroup(userId) {
         const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/add-member`, {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`
             },
             body: JSON.stringify({ userId })
         });
