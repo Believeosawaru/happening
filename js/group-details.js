@@ -104,7 +104,7 @@ const generateInviteLink = async () => {
         const data = await response.json();
 
         if (response.ok) {
-            document.querySelector(".group-link").innerHTML = `<i class="copy-i">Copy Link</i>`
+            document.querySelector(".group-link").innerHTML = `<i class="copy-i" onclick="copy('${data.data}')">Copy Link</i>`
         }
 
     } catch (error) {
@@ -112,7 +112,7 @@ const generateInviteLink = async () => {
     }
 }
 
-document.querySelector(".copy-i").addEventListener("click", () => {
+function copy() {
     navigator.clipboard.writeText("HEllo")
         .then(() => {
             console.log('Text copied to clipboard');
@@ -120,7 +120,7 @@ document.querySelector(".copy-i").addEventListener("click", () => {
         .catch(err => {
             console.error('Failed to copy text: ', err);
         });
-})
+}
 
 // <a href="${result.groupLink}">Copy Group Link</a>
 
