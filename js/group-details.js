@@ -101,6 +101,8 @@ const generateInviteLink = async () => {
 
         const data = await response.json();
 
+        console.log(data)
+
         if (data.inviteLink) {
             document.querySelector(".group-link").innerHTML = `${data.inviteLink}`
         }
