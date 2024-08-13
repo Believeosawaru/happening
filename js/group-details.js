@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </p>
                 `;
                 } else {
+                    const groupId = urlParams.get("groupId");
                     groupDetailsCon.innerHTML = `
                 <h2 id="gd-h2">${result.data.name}</h2>
 
