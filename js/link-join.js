@@ -18,7 +18,7 @@ async function joinGroup() {
         const data = await response.json();
 
         if (response.ok) {
-            document.querySelector(".success-sign-up").innerHTML = data;
+            document.getElementById("success-sign-up").innerHTML = data;
         } else {
             const keys = Object.keys(data);
     
