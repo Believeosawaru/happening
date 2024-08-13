@@ -70,6 +70,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <button onclick="generateInviteLink()">LInk</button>
 
                 <span class="edit-button"><a href="group-details-edit.html?groupId=${groupId}"><i class="fa fa-pencil"></i></a></span>
+
+                <p class="group-link"></p>
                 `;
                 }
 
