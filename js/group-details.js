@@ -83,10 +83,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </p>
 
                 <button><a href="add-members.html?groupId=${groupId}">Add Members</a></button>
+                
+                <button onclick="generateInviteLink(4749t49r9)">LInk</button>
 
                 <span class="edit-button"><a href="group-details-edit.html?groupId=${groupId}"><i class="fa fa-pencil"></i></a></span>
-
-                <span onclick="generateInviteLink(4749t49r9)">LInk</span>
                 `;
                 }
 
