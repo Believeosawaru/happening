@@ -534,7 +534,7 @@ select:hover {
     color: #FF4500;
     margin-inline: 6px;
     position: absolute;
-    bottom: 5px;
+    bottom: -10px;
 }
 .rel {
     position: relative;
