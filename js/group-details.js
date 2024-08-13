@@ -46,25 +46,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </p>
                 `;
                 } else {
-                    const generateInviteLink = async () => {
-                        console.log("jhgtfsa43EA5SDFYUI")
-                        try {
-                            const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/generate-link`, {
-                                method: "POST",
-                                headers: {
-                                    "Authorization": `Bearer ${token}`
-                                }
-                            });
-                    
-                            const data = await response.json();
-                    
-                            if (data.inviteLink) {
-                                document.querySelector(".group-link").innerHTML = `${data.inviteLink}`
-                            }
-                        } catch (error) {
-                            console.log(error)
-                        }
-                    }
                     groupDetailsCon.innerHTML = `
                 <h2 id="gd-h2">${result.data.name}</h2>
 
@@ -105,6 +86,29 @@ document.addEventListener("DOMContentLoaded", async () => {
         window.location.href = "groups.html"
     }
 })
+
+const generateInviteLink = async () => {
+    console.log("hbbvfweufe")
+    try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const groupId = urlParams.get("groupId");
+        
+        const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/generate-link`, {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.inviteLink) {
+            document.querySelector(".group-link").innerHTML = `${data.inviteLink}`
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 // <a href="${result.groupLink}">Copy Group Link</a>
 
