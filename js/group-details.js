@@ -88,7 +88,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 })
 
 const generateInviteLink = async () => {
-    console.log("hbbvfweufe")
     try {
         const urlParams = new URLSearchParams(window.location.search);
         const groupId = urlParams.get("groupId");
