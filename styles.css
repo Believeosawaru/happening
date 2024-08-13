@@ -529,6 +529,12 @@ select:hover {
     cursor: pointer;
     background: #FFECB3;
 }
+.group-link {
+    font-weight: bold;
+    color: #FF4500;
+    margin-inline: 6px;
+    margin-top: -20px;
+}
 
 @media screen and (min-width: 900px) {
     .hero {
