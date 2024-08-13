@@ -111,7 +111,7 @@ const generateInviteLink = async () => {
 }
 
 function copy(text) {
-    navigator.clipboard.writeText = text;
+    navigator.clipboard.writeText = "HEllo";
     console.log("Copy Successful");
 }
 
