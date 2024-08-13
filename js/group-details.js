@@ -1,3 +1,5 @@
+const token = localStorage.getItem("authToken");
+
 document.addEventListener("DOMContentLoaded", async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const groupId = urlParams.get("groupId");
@@ -82,8 +84,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         window.location.href = "groups.html"
     }
 })
-
-const authToken = localStorage.getItem("authToken");
 
 if (!token) {
     window.location.href = "/html/log-in.html";
