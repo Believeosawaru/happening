@@ -533,7 +533,7 @@ select:hover {
     font-weight: bold;
     color: #FF4500;
     margin-inline: 6px;
-    padding-top: -40px;
+    margin-top: -40px;
 }
 
 @media screen and (min-width: 900px) {
