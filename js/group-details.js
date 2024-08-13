@@ -116,6 +116,11 @@ function copy(text) {
     navigator.clipboard.writeText(text)
         .then(() => {
             console.log('Text copied to clipboard');
+            document.querySelector(".copy-s").style.display = "block";
+
+            setTimeout(() => {
+                document.querySelector(".copy-s").style.display = "none";
+            }, 1500)
         })
         .catch(err => {
             console.error('Failed to copy text: ', err);
