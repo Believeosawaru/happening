@@ -1,30 +1,12 @@
 const token = localStorage.getItem("authToken");
+const urlParams = new URLSearchParams(window.location.search);
+const groupId = urlParams.get("groupId");
 
-const generateInviteLink = async (groupId) => {
-    console.log("hello")
-    try {
-        const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/generate-link`, {
-            method: "POST",
-            headers: {
-                "Authorization": `Bearer ${token}`
-            }
-        });
-
-        const data = await response.json();
-
-        if (data.inviteLink) {
-            document.querySelector(".group-link").innerHTML = `${data.inviteLink}`
-        }
-    } catch (error) {
-        console.log(error)
-    }
+if (!token) {
+    window.location.href = "/html/log-in.html";
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const groupId = urlParams.get("groupId");
-    const token = localStorage.getItem("authToken");
-
     if (!token) {
         window.location.href = "/html/log-in.html"
     }
@@ -64,7 +46,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </p>
                 `;
                 } else {
-                    const groupId = urlParams.get("groupId");
                     groupDetailsCon.innerHTML = `
                 <h2 id="gd-h2">${result.data.name}</h2>
 
@@ -86,12 +67,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 <button><a href="add-members.html?groupId=${groupId}">Add Members</a></button>
                 
-                <button onclick="generateInviteLink(groupId)">LInk</button>
+                <button onclick="generateInviteLink()">LInk</button>
 
                 <span class="edit-button"><a href="group-details-edit.html?groupId=${groupId}"><i class="fa fa-pencil"></i></a></span>
                 `;
                 }
-                console.log(groupId)
+
             } else {
                 document.getElementById("failed").style.display = "block"
                 document.getElementById("failed").innerHTML = result.message;
@@ -106,8 +87,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 })
 
-if (!token) {
-    window.location.href = "/html/log-in.html";
+const generateInviteLink = async (groupId) => {
+    try {
+        const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/generate-link`, {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+
+        const data = await response.json();
+
+        if (data.inviteLink) {
+            document.querySelector(".group-link").innerHTML = `${data.inviteLink}`
+        }
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 // <a href="${result.groupLink}">Copy Group Link</a>
