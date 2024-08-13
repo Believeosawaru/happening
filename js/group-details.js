@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const generateInviteLink = async () => {
                 try {
-                    const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/generate-link`, {
+                    const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}`, {
                         method: "POST",
                         headers: {
                             "Authorization": `Bearer ${token}`
