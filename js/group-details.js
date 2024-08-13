@@ -22,9 +22,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const generateInviteLink = async () => {
                 try {
-                    const urlParams = new URLSearchParams(window.location.search);
-                    const groupId = urlParams.get("groupId");
-                    
                     const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/generate-link`, {
                         method: "POST",
                         headers: {
