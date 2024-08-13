@@ -111,8 +111,13 @@ const generateInviteLink = async () => {
 }
 
 function copy(text) {
-    navigator.clipboard.writeText = "HEllo";
-    console.log("Copy Successful");
+        navigator.clipboard.writeText("HEllo")
+        .then(() => {
+            console.log('Text copied to clipboard');
+        })
+        .catch(err => {
+            console.error('Failed to copy text: ', err);
+        });
 }
 
 // <a href="${result.groupLink}">Copy Group Link</a>
