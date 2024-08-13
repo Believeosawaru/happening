@@ -535,6 +535,17 @@ select:hover {
     margin-inline: 6px;
     margin-top: -40px;
 }
+.group-link:hover {
+    cursor: pointer;
+}
+.copy-s {
+    display: none;
+    text-align: center;
+    background: #FFECB3;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
 
 @media screen and (min-width: 900px) {
     .hero {
