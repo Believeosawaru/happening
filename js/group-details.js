@@ -102,12 +102,17 @@ const generateInviteLink = async () => {
         const data = await response.json();
 
         if (response.ok) {
-            document.querySelector(".group-link").innerHTML = `${data.data}`
+            document.querySelector(".group-link").innerHTML = `<i onclick="copy(${data.data})">Copy Link</i>`
         }
 
     } catch (error) {
         console.log(error)
     }
+}
+
+function copy(text) {
+    navigator.clipboard.writeText = text;
+    console.log("Copy Successful");
 }
 
 // <a href="${result.groupLink}">Copy Group Link</a>
