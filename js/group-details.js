@@ -1,6 +1,7 @@
 const token = localStorage.getItem("authToken");
 
 const generateInviteLink = async (groupId) => {
+    console.log("hello")
     try {
         const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/generate-link`, {
             method: "POST",
