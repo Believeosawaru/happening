@@ -533,7 +533,7 @@ select:hover {
     font-weight: bold;
     color: #FF4500;
     margin-inline: 6px;
-    margin-top: -40px;
+    margin-top: -1000px;
 }
 .group-link:hover {
     cursor: pointer;
@@ -545,6 +545,8 @@ select:hover {
     color: black;
     padding: 8px 20px;
     border-radius: 8px;
+    margin-inline: 50px;
+    margin-block: 15px;
 }
 
 @media screen and (min-width: 900px) {
