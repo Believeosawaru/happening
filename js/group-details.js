@@ -20,26 +20,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 }
             });
 
-            const generateInviteLink = async () => {
-                console.log("jhgtfsa43EA5SDFYUI")
-                try {
-                    const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/generate-link`, {
-                        method: "POST",
-                        headers: {
-                            "Authorization": `Bearer ${token}`
-                        }
-                    });
-            
-                    const data = await response.json();
-            
-                    if (data.inviteLink) {
-                        document.querySelector(".group-link").innerHTML = `${data.inviteLink}`
-                    }
-                } catch (error) {
-                    console.log(error)
-                }
-            }
-
             const result = await response.json();
 
             if (response.ok) {
@@ -66,6 +46,25 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </p>
                 `;
                 } else {
+                    const generateInviteLink = async () => {
+                        console.log("jhgtfsa43EA5SDFYUI")
+                        try {
+                            const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/generate-link`, {
+                                method: "POST",
+                                headers: {
+                                    "Authorization": `Bearer ${token}`
+                                }
+                            });
+                    
+                            const data = await response.json();
+                    
+                            if (data.inviteLink) {
+                                document.querySelector(".group-link").innerHTML = `${data.inviteLink}`
+                            }
+                        } catch (error) {
+                            console.log(error)
+                        }
+                    }
                     groupDetailsCon.innerHTML = `
                 <h2 id="gd-h2">${result.data.name}</h2>
 
