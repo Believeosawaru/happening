@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <span class="edit-button"><a href="group-details-edit.html?groupId=${groupId}"><i class="fa fa-pencil"></i></a></span>
                 `;
                 }
-
+                console.log(groupId)
             } else {
                 document.getElementById("failed").style.display = "block"
                 document.getElementById("failed").innerHTML = result.message;
