@@ -115,7 +115,6 @@ const generateInviteLink = async () => {
 function copy(text) {
     navigator.clipboard.writeText(text)
         .then(() => {
-            console.log('Text copied to clipboard');
             document.querySelector(".copy-s").style.display = "block";
 
             setTimeout(() => {

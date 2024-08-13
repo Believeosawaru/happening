@@ -533,7 +533,11 @@ select:hover {
     font-weight: bold;
     color: #FF4500;
     margin-inline: 6px;
-    margin-top: -1000px;
+    position: absolute;
+    bottom: 20px;
+}
+.rel {
+    position: relative;
 }
 .group-link:hover {
     cursor: pointer;
