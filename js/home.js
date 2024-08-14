@@ -108,8 +108,8 @@ async function fetchGroup() {
 }
 
 function onLoad() {
-    window.onload = fetchMessage;
-    window.onload = fetchGroup;
+    fetchMessage();
+    fetchGroup();
 }
 
 window.onload = onLoad;
