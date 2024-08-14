@@ -107,5 +107,9 @@ async function fetchGroup() {
     }
 }
 
-window.onload = fetchMessage;
-window.onload = fetchGroup;
+function onLoad() {
+    window.onload = fetchMessage;
+    window.onload = fetchGroup;
+}
+
+window.onload = onLoad;
