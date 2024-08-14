@@ -98,7 +98,9 @@ async function fetchGroup() {
         const message = await response.json();
 
         if (response.ok) {
-            document.querySelector(".latest-groups").innerHTML = message.message;
+            document.querySelector(".latest-groups").innerHTML = `
+            <a href="group-details.html?groupId=${message.message._id}">${message.message.name}</a>
+            `
         } else {
             console.log("Bad Network")
         }
