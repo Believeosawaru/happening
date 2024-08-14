@@ -29,7 +29,7 @@ async function displayGroups() {
                 <a href="group-details.html?groupId=${group._id}">
                 <div id="group-desc-div">
                     <h3>${group.name}</h3>
-                    <p class="del-group-a"><i class="fa fa-map"></i> ${group.location}</p>
+                    <p class="loc-i"><i class="fa fa-map"></i> ${group.location}</p>
                     <p class="group-type">${group.groupType}</p>
                 </div>
                 </a>
