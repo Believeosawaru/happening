@@ -99,7 +99,7 @@ async function fetchGroup() {
 
         if (response.ok) {
             document.querySelector(".latest-groups").innerHTML = `
-            <a href="groups/group-details.html?groupId=${message.message._id}">${message.message.name}</a>
+            <a class="del-group-a" href="groups/group-details.html?groupId=${message.message._id}">${message.message.name}</a>
             `
         } else {
             console.log("Bad Network")
