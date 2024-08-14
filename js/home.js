@@ -98,7 +98,7 @@ async function fetchGroup() {
         const message = await response.json();
 
         if (response.ok) {
-            document.querySelector(".latest-groups") = message.message;
+            document.querySelector(".latest-groups").innerHTML = message.message;
         } else {
             console.log("Bad Network")
         }
