@@ -61,4 +61,51 @@ async function fetchMessage() {
     }
 }
 
+async function fetchGroup() {
+    const token = localStorage.getItem("authToken");
+
+    if (!token) {
+        window.location.href = "log-in.html"
+    }
+
+    try {
+        const response = await fetch("https://happening-api.onrender.com/api/v1/user/home-groups", {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+
+        if (response.status == 403) {
+            pcMenu.style.display = "none";
+            userDashboard.style.display = "none";
+            menu.style.display = "none";
+            verifyDiv.style.display = "block";
+        }
+
+        if (response.status == 404) {
+            window.location.href = "log-in.html"
+        }
+
+        if (response.status == 401) {
+            window.location.href = "log-in.html"
+        }
+
+        if (!response.ok) {
+            console.log("Bad Network")
+        }
+
+        const message = await response.json();
+
+        if (response.ok) {
+            document.querySelector(".latest-groups") = message.message;
+        } else {
+            console.log("Bad Network")
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 window.onload = fetchMessage;
+window.onload = fetchGroup;
