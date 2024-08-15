@@ -2,7 +2,7 @@ const token = localStorage.getItem("authToken");
 const urlParams = new URLSearchParams(window.location.search);
 const groupId = urlParams.get("groupId");
 
-const button = document.getElementById("join-group");
+const button = document.getElementById("leave-group");
 
 function disableBtn() {
     button.disabled = true;
@@ -10,11 +10,11 @@ function disableBtn() {
     button.style.color = "black";
 }
 
-document.getElementById("join-group").addEventListener("click", async () => {
+document.getElementById("leave-group").addEventListener("click", async () => {
     disableBtn();
 
     try {
-        const response = await fetch(`https://happening-api.onrender.com/api/v1/user/join-group/${groupId}`, {
+        const response = await fetch(`https://happening-api.onrender.com/api/v1/user/leave-group/${groupId}`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -24,7 +24,7 @@ document.getElementById("join-group").addEventListener("click", async () => {
     const data = await response.json();
 
     if (response.ok) {
-        document.getElementById("success-sign-up").innerHTML = "You've Joined This Group";
+        document.getElementById("success-sign-up").innerHTML = "You've Left This Group";
         document.getElementById("success-sign-up").classList.add("success-sign-up");
 
         button.style.cursor = "wait";
