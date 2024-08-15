@@ -35,7 +35,7 @@ async function displayAllGroups() {
                     <h3>${group.name}</h3>
                     <p><span>Description:</span> ${group.description}</p>
                     <p><i class="fa fa-map loc-i"></i> ${group.location}</p>
-                    <button>Join Group</button>
+                    <button><a href="https://happening-khaki.vercel.app/html/groups/join-group.html?groupId=${group._id}"></a></button>
                     <p class="group-type">${group.groupType}</p>
                 </div>
                 `
