@@ -23,35 +23,37 @@ document.getElementById("leave-group").addEventListener("click", async () => {
 
     const data = await response.json();
 
-    if (response.ok) {
-        document.getElementById("success-sign-up").innerHTML = "You've Left This Group";
-        document.getElementById("success-sign-up").classList.add("success-sign-up");
+    console.log(data)
 
-        button.style.cursor = "wait";
+    // if (response.ok) {
+    //     document.getElementById("success-sign-up").innerHTML = "You've Left This Group";
+    //     document.getElementById("success-sign-up").classList.add("success-sign-up");
 
-        setTimeout(() => {
-            window.location.href = "groups.html"
-        }, 2000)
-    } else {
-        const keys = Object.keys(data);
+    //     button.style.cursor = "wait";
 
-        keys.forEach(key => {
-            const value = data[key]; 
+    //     setTimeout(() => {
+    //         window.location.href = "groups.html"
+    //     }, 2000)
+    // } else {
+    //     const keys = Object.keys(data);
+
+    //     keys.forEach(key => {
+    //         const value = data[key]; 
             
-            document.getElementById("failed").style.display = "block"
-            document.getElementById("failed").innerHTML = value;
-            document.getElementById("failed").classList.add("failed");
+    //         document.getElementById("failed").style.display = "block"
+    //         document.getElementById("failed").innerHTML = value;
+    //         document.getElementById("failed").classList.add("failed");
             
-            setTimeout(() => {
-                document.getElementById("failed").style.display = "none"
-            }, 3500)
+    //         setTimeout(() => {
+    //             document.getElementById("failed").style.display = "none"
+    //         }, 3500)
 
-            button.disabled = false;
-          });
+    //         button.disabled = false;
+    //       });
 
-        button.style.backgroundColor = "#FF4500";
-        button.style.color = "white";
-    }
+    //     button.style.backgroundColor = "#FF4500";
+    //     button.style.color = "white";
+    // }
 
     } catch (error) {
         console.log(error);
