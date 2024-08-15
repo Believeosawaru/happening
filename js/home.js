@@ -33,14 +33,6 @@ async function fetchMessage() {
             verifyDiv.style.display = "block";
         }
 
-        if (response.status == 404) {
-            window.location.href = "log-in.html"
-        }
-
-        if (response.status == 401) {
-            window.location.href = "log-in.html"
-        }
-
         if (!response.ok) {
             console.log("Bad Network")
         }
