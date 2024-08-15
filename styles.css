@@ -470,6 +470,9 @@ select:hover {
     right: 10px;
     bottom: 10px;
 }
+#all-groups p {
+    margin-bottom: 5px;
+}
 #group-desc-div {
     position: relative;
     text-align: left;
