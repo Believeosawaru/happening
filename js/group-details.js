@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}
                 </p>
 
-                <button><a href="https://happening-khaki.vercel.app/html/groups/leave-group.html?groupId=${group._id}">Leave Group</a></button>
+                <button><a href="https://happening-khaki.vercel.app/html/groups/leave-group.html?groupId=${result.data._id}">Leave Group</a></button>
                 `;
                 } else {
                     groupDetailsCon.innerHTML = `
