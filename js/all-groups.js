@@ -21,23 +21,23 @@ async function displayAllGroups() {
 
         if (response.ok) {
             console.log(data)
-            // const groupContainer = document.getElementById("all-groups");
+            const groupContainer = document.getElementById("all-groups");
 
-            // texts = "";
+            texts = "";
 
-            // data.message.forEach((group) => {
-            //     texts += `
-            //     <a href="group-details.html?groupId=${group._id}">
-            //     <div id="group-desc-div">
-            //         <h3>${group.name}</h3>
-            //         <p><i class="fa fa-map loc-i"></i> ${group.location}</p>
-            //         <p class="group-type">${group.groupType}</p>
-            //     </div>
-            //     </a>
-            //     `
-            // });
+            data.message.forEach((group) => {
+                texts += `
+                <a href="group-details.html?groupId=${group._id}">
+                <div id="group-desc-div">
+                    <h3>${group.name}</h3>
+                    <p><i class="fa fa-map loc-i"></i> ${group.location}</p>
+                    <p class="group-type">${group.groupType}</p>
+                </div>
+                </a>
+                `
+            });
 
-            // groupContainer.innerHTML = texts;
+            groupContainer.innerHTML = texts;
         } else {
             const keys = Object.keys(data);
     
