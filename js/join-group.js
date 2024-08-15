@@ -2,7 +2,7 @@ const token = localStorage.getItem("authToken");
 const urlParams = new URLSearchParams(window.location.search);
 const groupId = urlParams.get("groupId");
 
-const button = document.getElementById("sign-in-btn");
+const button = document.getElementById("join-group");
 
 function disableBtn() {
     button.disabled = true;
