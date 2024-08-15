@@ -31,6 +31,7 @@ async function displayAllGroups() {
                 <div id="group-desc-div">
                     <h3>${group.name}</h3>
                     <p><i class="fa fa-map loc-i"></i> ${group.location}</p>
+                    <button>Join Group</button>
                     <p class="group-type">${group.groupType}</p>
                 </div>
                 </a>
