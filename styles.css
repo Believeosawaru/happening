@@ -473,8 +473,8 @@ select:hover {
 #all-groups p {
     margin-bottom: 4px;
 }
-#all-groups h2 {
-    margin-bottom: 10px;
+#all-groups h3 {
+    margin-bottom: 7px;
 }
 #all-groups button {
     margin-block: 12px;
