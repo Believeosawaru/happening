@@ -20,6 +20,8 @@ async function joinGroup() {
         if (response.ok) {
             document.getElementById("success-sign-up").classList.add("success-sign-up")
             document.getElementById("success-sign-up").innerHTML = data.message;
+
+            window.location.href = "groups.html"
         } else {
             const keys = Object.keys(data);
     
