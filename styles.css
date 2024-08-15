@@ -471,10 +471,10 @@ select:hover {
     bottom: 10px;
 }
 #all-groups p {
-    margin-bottom: 7px;
+    margin-bottom: 4px;
 }
 #all-groups h2 {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
 }
 #all-groups button {
     margin-block: 12px;
