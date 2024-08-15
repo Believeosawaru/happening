@@ -25,10 +25,6 @@ async function displayAllGroups() {
 
             texts = "";
 
-            // https://happening-khaki.vercel.app/html/groups/join-link.html?groupToken=6be8d1bb9777d1c3619badfdfa4b77d6/
-
-            // https://happening-khaki.vercel.app/html/groups/join-link.html?groupToken=076d3b45e102549f74bec1b94a4a260a/
-
             data.message.forEach((group) => {
                 texts += `
                 <div id="group-desc-div">
