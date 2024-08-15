@@ -29,7 +29,7 @@ async function displayAllGroups() {
                 texts += `
                 <div id="group-desc-div">
                     <h3>${group.name}</h3>
-                    <p>Description: ${group.description}</p>
+                    <p><span>Description:</span> ${group.description}</p>
                     <p><i class="fa fa-map loc-i"></i> ${group.location}</p>
                     <button>Join Group</button>
                     <p class="group-type">${group.groupType}</p>

@@ -479,6 +479,9 @@ select:hover {
 #all-groups button {
     margin-block: 12px;
 }
+#all-groups span {
+    font-weight: bold;
+}
 #group-desc-div {
     position: relative;
     text-align: left;
