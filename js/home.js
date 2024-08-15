@@ -18,10 +18,6 @@ function openMenu() {
 async function fetchMessage() {
     const token = localStorage.getItem("authToken");
 
-    if (!token) {
-        window.location.href = "log-in.html"
-    }
-
     try {
         const response = await fetch("https://happening-api.onrender.com/api/v1/user/home", {
             method: "GET",
@@ -63,10 +59,6 @@ async function fetchMessage() {
 
 async function fetchGroup() {
     const token = localStorage.getItem("authToken");
-
-    if (!token) {
-        window.location.href = "log-in.html"
-    }
 
     try {
         const response = await fetch("https://happening-api.onrender.com/api/v1/user/home-groups", {
