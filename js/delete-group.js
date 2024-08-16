@@ -10,7 +10,7 @@ if (!token) {
 
 function disableBtn() {
     button.disabled = true;
-    button.style.color = "#FFECB3";
+    button.style.color = "#000";
 }
 
 const button = document.getElementById("delete-group");
@@ -50,7 +50,7 @@ document.getElementById("delete-group").addEventListener("submit", async (e) => 
             setTimeout(() => {
                 document.getElementById("failed").style.display = "none";
 
-                button.disabled = true;
+                button.disabled = false;
                 button.style.color = "#FFECB3";
             }, 3500);
           });
