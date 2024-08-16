@@ -43,7 +43,7 @@ function disableBtn() {
     button.style.color = "black"
 }
 
-const button = document.getElementById("group-del-link")
+const button = document.getElementById("edit-group-btn")
 
 if (groupId) {
     document.getElementById("edit-group").addEventListener("submit", async (e) => {
