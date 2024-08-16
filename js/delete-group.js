@@ -8,8 +8,17 @@ if (!token) {
     window.location.href = "/html/log-in.html"
 }
 
+function disableBtn() {
+    button.disabled = true;
+    button.style.color = "#FFECB3";
+}
+
+const button = document.getElementById("delete-group");
+
 document.getElementById("delete-group").addEventListener("submit", async (e) => {
     e.preventDefault();
+
+    disableBtn();
 
     try {
         const response = await fetch(delGroupUrl, {
@@ -39,7 +48,10 @@ document.getElementById("delete-group").addEventListener("submit", async (e) => 
             document.getElementById("failed").classList.add("failed");
 
             setTimeout(() => {
-                document.getElementById("failed").style.display = "none"
+                document.getElementById("failed").style.display = "none";
+
+                button.disabled = true;
+                button.style.color = "#FFECB3";
             }, 3500);
           });
     }
