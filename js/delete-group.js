@@ -8,12 +8,12 @@ if (!token) {
     window.location.href = "/html/log-in.html"
 }
 
+const button = document.getElementById("delete-group");
+
 function disableBtn() {
     button.disabled = true;
     button.style.color = "#000";
 }
-
-const button = document.getElementById("delete-group");
 
 document.getElementById("delete-group").addEventListener("submit", async (e) => {
     e.preventDefault();
