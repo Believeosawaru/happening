@@ -28,14 +28,16 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
 
     const data = await response.json();
 
-    if (data.token) {
-        localStorage.setItem("authToken", data.token);
-        console.log("token saved", data.token)
-    }
+    console.log(data)
 
-    if (data.message === "User Is Not Verified") {
-         window.location.href = "verify-account.html"
-    }
+    // if (data.token) {
+    //     localStorage.setItem("authToken", data.token);
+    //     console.log("token saved", data.token)
+    // }
+
+    // if (data.message === "User Is Not Verified") {
+    //      window.location.href = "verify-account.html"
+    // }
 
     if (response.ok) {
         document.getElementById("success-sign-up").innerHTML = "Sign In Successful";
