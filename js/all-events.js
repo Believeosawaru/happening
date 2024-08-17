@@ -36,7 +36,7 @@ async function displayAllEvents() {
                 `
             });
 
-            //                     <button><a href="https://happening-khaki.vercel.app/html/groups/join-group.html?groupId=${group._id}">Join Group</a></button>
+            // <button><a href="https://happening-khaki.vercel.app/html/groups/join-group.html?groupId=${group._id}">Join Group</a></button>
             // <p class="group-type">${group.groupType}</p>
 
             groupContainer.innerHTML = texts;
@@ -60,4 +60,4 @@ async function displayAllEvents() {
     }
 }
 
-window.onload = displayAllGroups;
+window.onload = displayAllEvents;
