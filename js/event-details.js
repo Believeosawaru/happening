@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </p>
 
                 <p>
-                Event Time: ${result.data.time} event
+                Event Time: ${formattedDate}
                 </p>
 
                 <p>
