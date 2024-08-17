@@ -6,6 +6,8 @@ if (!token) {
     window.location.href = "/html/log-in.html";
 }
 
+console.log(token)
+
 document.addEventListener("DOMContentLoaded", async () => {
     if (!token) {
         window.location.href = "/html/log-in.html"
