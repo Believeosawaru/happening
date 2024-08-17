@@ -21,8 +21,8 @@ const retreiveInfo = async () => {
     if (info.ok) {
     const eventTime = new Date(event.data.time);
     const year = eventTime.getUTCFullYear();
-    const month = (eventTime.getUTCMonth() + 1).toString().padStart(2, "0");
-    const day = (eventTime.getUTCDate() + 1).toString().padStart(2, "0");
+    const month = (eventTime.getUTCMonth()).toString().padStart(2, "0");
+    const day = (eventTime.getUTCDate()).toString().padStart(2, "0");
 
     const formattedDate = `${year}-${month}-${day}`
 
