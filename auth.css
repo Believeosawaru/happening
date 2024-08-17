@@ -81,7 +81,7 @@ form button a {
     color: white;
     text-decoration: none;
 }
-#log-out, #delete-group {
+#log-out, #delete-group, #delete-event {
     background: none;
     color: #FF4500;
     text-decoration: underline;
