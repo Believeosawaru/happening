@@ -19,7 +19,7 @@ const retreiveInfo = async () => {
     const event = await info.json();
 
     if (info.ok) {
-    const eventTime = new Date(info.data.time);
+    const eventTime = new Date(event.data.time);
     const formattedDate = eventTime.toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
