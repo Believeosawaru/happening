@@ -40,15 +40,14 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
     const data = await response.json();
 
     if (response.ok) {
-        // document.getElementById("success-sign-up").innerHTML = "Group Created Successfully";
-        // document.getElementById("success-sign-up").classList.add("success-sign-up");
+        document.getElementById("success-sign-up").innerHTML = "Group Created Successfully";
+        document.getElementById("success-sign-up").classList.add("success-sign-up");
 
-        // button.style.cursor = "wait";
+        button.style.cursor = "wait";
 
-        // setTimeout(() => {
-        //     window.location.href = "groups.html"
-        // }, 2000)
-        console.log(data)
+        setTimeout(() => {
+            window.location.href = "events.html"
+        }, 2000)
     } else {
         const keys = Object.keys(data);
 
