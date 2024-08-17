@@ -6,8 +6,6 @@ if (!token) {
     window.location.href = "/html/log-in.html";
 }
 
-console.log(token)
-
 document.addEventListener("DOMContentLoaded", async () => {
     if (!token) {
         window.location.href = "/html/log-in.html"
@@ -25,7 +23,14 @@ document.addEventListener("DOMContentLoaded", async () => {
             const result = await response.json();
 
             if (response.ok) {
-                const eventDetailsCon = document.getElementById("event-details-container");
+                const eventDetailsCon = document.getElementById("group-details-container");
+
+                const eventTime = new Date(result.data.time);
+                const formattedDate = eventTime.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                });
                 
                 if (result.createdBy._id !== result.currentUserId) {
                     eventDetailsCon.innerHTML = `
@@ -40,7 +45,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </p>
 
                  <p>
-                Event Time: ${result.data.time} event
+                Event Time: ${formattedDate}
                 </p>
 
                 <p>
