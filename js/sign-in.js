@@ -33,9 +33,9 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
         console.log("token saved", data.token)
     }
 
-    if (data.message === "User Is Not Verified") {
-         window.location.href = "verify-account.html"
-    }
+    // if (data.message === "User Is Not Verified") {
+    //      window.location.href = "verify-account.html"
+    // }
 
     if (response.ok) {
         document.getElementById("success-sign-up").innerHTML = "Sign In Successful";
