@@ -69,7 +69,7 @@ if (eventId) {
         const type = document.getElementById("event-type").value;
     
         try {
-            const response = await fetch(editGroupUrl, {
+            const response = await fetch(editEventUrl, {
                 method: "PUT",
                 headers: {
                     "Authorization": `Bearer ${token}`,
