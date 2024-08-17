@@ -20,8 +20,14 @@ async function displayAllEvents() {
         const data = await response.json();
 
         if (response.ok) {
-            console.log(data)
             const groupContainer = document.getElementById("all-events");
+
+            const eventTime = new Date(data.data.time);
+            const formattedDate = eventTime.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            });
 
             texts = "";
 
@@ -30,7 +36,7 @@ async function displayAllEvents() {
                 <div id="group-desc-div">
                     <h3>${event.name}</h3>
                     <p><span>Description:</span> ${event.description}</p>
-                    <p><span>Date:</span> ${event.time}</p>
+                    <p><span>Date:</span> ${formattedDate}</p>
                     <p><i class="fa fa-map loc-i"></i> ${event.location}</p>
                 </div>
                 `
