@@ -38,7 +38,7 @@ const retreiveInfo = async () => {
     date.value = formattedDate;
     type.value = event.data.type;
     } else {
-        console.log("Could'nt Fetch")
+        console.log("Could'nt Fetch");
     }
 } 
 
