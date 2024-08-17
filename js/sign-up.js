@@ -31,6 +31,10 @@ document.getElementById("sign-up").addEventListener("submit", async (e) => {
 
     const data = await response.json();
 
+    if (data.token) {
+        localStorage.setItem("authToken", data.token);
+    }
+
     if (response.ok) {
         document.getElementById("success-sign-up").innerHTML = "Sign Up Successful";
         document.getElementById("success-sign-up").classList.add("success-sign-up");
