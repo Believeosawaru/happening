@@ -30,6 +30,9 @@ document.getElementById("verify-account").addEventListener("submit", async (e) =
 
     const data = await response.json();
 
+    if (data.token) {
+        localStorage.setItem("authToken", data.token);
+    }
 
     if (response.ok) {
         document.getElementById("success-sign-up").innerHTML = "User Verified Successfully";
