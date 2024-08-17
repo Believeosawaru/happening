@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         window.location.href = "/html/log-in.html"
     }
 
-    if (groupId) {
+    if (eventId) {
         try {
             const response = await fetch(`https://happening-api.onrender.com/api/v1/user/event/${eventId}`, {
                 method: "GET",
