@@ -30,6 +30,7 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
 
     if (data.token) {
         localStorage.setItem("authToken", data.token);
+        console.log("token saved")
     }
 
     if (data.message === "User Is Not Verified") {
