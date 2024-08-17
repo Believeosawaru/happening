@@ -1,6 +1,6 @@
 const signUpUrl = "https://happening-api.onrender.com/api/v1/user/create-event";
 
-const button = document.getElementById("create-group-btn");
+const button = document.getElementById("create-event-btn");
 
 function disableBtn() {
     button.disabled = true;
