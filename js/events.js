@@ -37,7 +37,7 @@ async function displayEvents() {
                 <div id="group-desc-div">
                     <h3>${event.name}</h3>
                     <p><i class="fa fa-map loc-i"></i> ${event.location}</p>
-                    <p>${formattedDate}</p>
+                    <p>Date: ${formattedDate}</p>
                     <p class="group-type">${event.type}</p>
                 </div>
                 </a>
