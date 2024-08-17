@@ -49,6 +49,42 @@ async function fetchMessage() {
     }
 }
 
+async function fetchEvent() {
+    const token = localStorage.getItem("authToken");
+
+    try {
+        const response = await fetch("https://happening-api.onrender.com/api/v1/user/home-events", {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+
+        if (response.status == 403) {
+            pcMenu.style.display = "none";
+            userDashboard.style.display = "none";
+            menu.style.display = "none";
+            verifyDiv.style.display = "block";
+        }
+
+        if (!response.ok) {
+            console.log("Bad Network")
+        }
+
+        const message = await response.json();
+
+        if (response.ok) {
+            document.querySelector(".latest-events").innerHTML = `
+            <a class="del-group-a" href="events/event-details.html?eventId=${message.message._id}">${message.message.name}</a>
+            `
+        } else {
+            console.log("Bad Network")
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
 async function fetchGroup() {
     const token = localStorage.getItem("authToken");
 
@@ -87,6 +123,7 @@ async function fetchGroup() {
 
 function onLoad() {
     fetchMessage();
+    fetchEvent();
     fetchGroup();
 }
 
