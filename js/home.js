@@ -75,7 +75,7 @@ async function fetchEvent() {
 
         if (response.ok) {
             document.querySelector(".latest-events").innerHTML = `
-            <a class="del-group-a" href="events/event-details.html?eventId=${message.message._id}">${message.message.name}</a>
+            <a class="del-group-a" href="events/event-details.html?eventId=">${message.message.name}</a>
             `
         } else {
             console.log("Bad Network")
