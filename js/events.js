@@ -24,6 +24,9 @@ async function displayEvents() {
 
             texts = "";
 
+            if (data.message.length < 1) {
+                return;
+            } else {
             data.message.forEach((event) => {
                 const eventTime = new Date(event.time);
                 const formattedDate = eventTime.toLocaleDateString("en-US", {
@@ -45,8 +48,7 @@ async function displayEvents() {
             });
 
             eventContainer.innerHTML = texts;
-
-            
+        }            
 
         } else {
             const keys = Object.keys(data);
