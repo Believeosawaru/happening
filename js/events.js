@@ -24,6 +24,8 @@ async function displayEvents() {
 
             texts = "";
 
+            console.log(data)
+
             data.message.forEach((event) => {
                 texts += `
                 <a href="event-details.html?groupId=${event._id}">
