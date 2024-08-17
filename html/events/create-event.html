@@ -49,27 +49,32 @@
             <h2>Create Event</h2>
         </div>
 
-        <form action="">
-            <label for="">Event Name</label> <br>
-            <input type="text" placeholder="What's The Name Of The Event?" required> <br>
+        <div>
+            <p id="success-sign-up"></p>
+            <p id="failed"></p>
+        </div>
 
-            <label for="">Event Description</label> <br>
-            <input type="text" placeholder="Describe The Event (Optional)"> <br>
+        <form action="/create-event" id="create-event">
+            <label for="name">Event Name</label> <br>
+            <input type="text" id="event-name" placeholder="What's The Name Of The Event?" required> <br>
 
-            <label for="">Event Time</label> <br>
-            <input type="date" placeholder="Current Time"> <br>
+            <label for="sescription">Event Description</label> <br>
+            <input type="text" id="event-desc" placeholder="Describe The Event (Optional)"> <br>
 
-            <label for="">Location</label> <br>
-            <input type="text" placeholder="Where Is The Event Happening? (Optional)"> <br>
+            <label for="time">Event Time</label> <br>
+            <input type="date" id="event-time"> <br>
+
+            <label for="location">Location</label> <br>
+            <input type="text" id="event-loc" placeholder="Where Is The Event Happening? (Optional)"> <br>
 
             <span class="small-txt">
-                Event Type: <select name="" id="">
+                Event Type: <select name="event-type" id="event-type">
                     <option value="private">Private</option>
                     <option value="public">Public</option>
                 </select>
             </span>
 
-            <button type="submit">Create Group</button>
+            <button id="create-event-btn" type="submit">Create Event</button>
         </form>
     </header>
 
