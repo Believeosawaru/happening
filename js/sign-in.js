@@ -31,6 +31,10 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
         localStorage.setItem("authToken", data.token);
     }
 
+    if (data.message === "User Is Not Verified") {
+         window.location.href = "verify-account.html"
+    }
+
     if (response.ok) {
         document.getElementById("success-sign-up").innerHTML = "Sign In Successful";
         document.getElementById("success-sign-up").classList.add("success-sign-up");
