@@ -6,6 +6,7 @@ function disableBtn() {
     button.disabled = true;
     button.style.backgroundColor = "#FFECB3";
     button.style.color = "black"
+    button.innerHTML = "Signing Up...."
 }
  
 
@@ -58,6 +59,7 @@ document.getElementById("sign-up").addEventListener("submit", async (e) => {
 
         button.style.backgroundColor = "#FF4500";
         button.style.color = "white"
+        button.innerHTML = "Sign Up"
     }
 
     } catch (error) {
