@@ -20,21 +20,23 @@ const retreiveInfo = async () => {
 
     if (info.ok) {
     const eventTime = new Date(event.data.time);
-    const formattedDate = eventTime.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric"
-    });
+    const year = eventTime.getUTCFullYear();
+    const month = (eventTime.getUTCMonth() + 1).toString().padStart(2, "0");
+    const day = (eventTime.getUTCDate() + 1).toString().padStart(2, "0");
+
+    const formattedDate = `${year}-${month}-${day}`
 
     let name = document.getElementById("event-name");
     let description = document.getElementById("event-desc");
     let location = document.getElementById("location");
     let date = document.getElementById("event-time");
+    let type = document.getElementById("event-type");
 
     name.value = event.data.name;
     description.value = event.data.description;
     location.value = event.data.location;
     date.value = formattedDate;
+    type.value = event.data.type;
     } else {
         console.log("Could'nt Fetch")
     }
