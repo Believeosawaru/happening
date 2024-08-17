@@ -24,15 +24,20 @@ async function displayEvents() {
 
             texts = "";
 
-            console.log(data)
-
             data.message.forEach((event) => {
+                const eventTime = new Date(event.time);
+                const formattedDate = eventTime.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                });
+
                 texts += `
                 <a href="event-details.html?groupId=${event._id}">
                 <div id="group-desc-div">
                     <h3>${event.name}</h3>
                     <p><i class="fa fa-map loc-i"></i> ${event.location}</p>
-                    <p>${event.time}</p>
+                    <p>${formattedDate}</p>
                     <p class="group-type">${event.type}</p>
                 </div>
                 </a>
