@@ -22,10 +22,12 @@ const retreiveInfo = async () => {
     let name = document.getElementById("group-name");
     let description = document.getElementById("group-desc");
     let location = document.getElementById("location");
+    let groupType = document.getElementById("group-type");
 
     name.value = group.data.name;
     description.value = group.data.description;
     location.value = group.data.location;
+    groupType.value = group.data.groupType;
     } else {
         console.log("Could'nt Fetch")
     }
