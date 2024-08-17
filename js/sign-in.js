@@ -42,9 +42,9 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
 
         button.style.cursor = "wait";
 
-        // setTimeout(() => {
-        //     window.location.href = "home.html"
-        // }, 2000)
+        setTimeout(() => {
+            window.location.href = "home.html"
+        }, 2000)
     } else {
         const keys = Object.keys(data);
 
