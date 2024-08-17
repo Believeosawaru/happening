@@ -22,16 +22,16 @@ async function displayAllEvents() {
         if (response.ok) {
             const groupContainer = document.getElementById("all-events");
 
-            const eventTime = new Date(data.data.time);
+            texts = "";
+
+            data.message.forEach((event) => {
+            const eventTime = new Date(data.message.time);
             const formattedDate = eventTime.toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "long",
                 day: "numeric"
             });
 
-            texts = "";
-
-            data.message.forEach((event) => {
                 texts += `
                 <div id="group-desc-div">
                     <h3>${event.name}</h3>
