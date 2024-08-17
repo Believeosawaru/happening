@@ -19,6 +19,13 @@ const retreiveInfo = async () => {
     const event = await info.json();
 
     if (info.ok) {
+    const eventTime = new Date(info.data.time);
+    const formattedDate = eventTime.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    });
+
     let name = document.getElementById("event-name");
     let description = document.getElementById("event-desc");
     let location = document.getElementById("location");
@@ -27,7 +34,7 @@ const retreiveInfo = async () => {
     name.value = event.data.name;
     description.value = event.data.description;
     location.value = event.data.location;
-    date.value = event.group.time;
+    date.value = formattedDate;
     } else {
         console.log("Could'nt Fetch")
     }
