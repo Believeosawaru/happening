@@ -596,6 +596,9 @@ select:hover {
         margin: 0px;
         padding: 40px 0px 0px 130px;
     }
+    .home-hero {
+        display: grid;
+    }
     .why-us {
         font-size: 1.3rem;
     }
