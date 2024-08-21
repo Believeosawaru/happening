@@ -5,7 +5,8 @@ const button = document.getElementById("create-event-btn");
 function disableBtn() {
     button.disabled = true;
     button.style.backgroundColor = "#FFECB3";
-    button.style.color = "black"
+    button.style.color = "black";
+    button.innerHTML = "Creating Event...."
 }
  
 const token = localStorage.getItem("authToken");
@@ -66,7 +67,8 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
           });
 
         button.style.backgroundColor = "#FF4500";
-        button.style.color = "white"
+        button.style.color = "white";
+        button.innerHTML = "Create Event";
     }
 
     } catch (error) {

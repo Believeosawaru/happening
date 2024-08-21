@@ -5,7 +5,8 @@ const button = document.getElementById("create-group-btn");
 function disableBtn() {
     button.disabled = true;
     button.style.backgroundColor = "#FFECB3";
-    button.style.color = "black"
+    button.style.color = "black";
+    button.innerHTML = "Creating Event...."
 }
  
 const token = localStorage.getItem("authToken");
@@ -61,10 +62,12 @@ document.getElementById("create-group").addEventListener("submit", async (e) => 
             }, 3500)
 
             button.disabled = false;
+
           });
 
         button.style.backgroundColor = "#FF4500";
-        button.style.color = "white"
+        button.style.color = "white";
+        button.innerHTML = "Create Group"
     }
 
     } catch (error) {
