@@ -603,9 +603,11 @@ select:hover {
 }
 .flexo img {
     width: 30%;
+    border: 1px solid black;
 }
 .flexo-text {
     margin-left: -40px;
+    border: 1px solid black;
 }
 
 @media screen and (min-width: 900px) {
