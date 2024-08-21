@@ -602,7 +602,10 @@ select:hover {
     margin-bottom: 20px;
 }
 .flexo img {
-    width: 50%;
+    width: 30%;
+}
+.flexo-text {
+    margin-left: -40px;
 }
 
 @media screen and (min-width: 900px) {
