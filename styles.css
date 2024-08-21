@@ -594,6 +594,9 @@ select:hover {
     padding: 10px;
     border-radius: 7px;
 }
+.margin-bttm {
+    margin-bottom: 20px;
+}
 
 @media screen and (min-width: 900px) {
     .menu {
