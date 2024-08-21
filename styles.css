@@ -318,6 +318,7 @@ aside button {
 .dashboard {
     margin-block: 20px;
     background: linear-gradient(to left, #FFECB3, rgb(240, 240, 240));
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
     text-align: left;
     padding: 30px 25px;
     border-radius: 7px;
