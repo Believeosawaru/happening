@@ -501,7 +501,8 @@ select:hover {
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 #group-desc-div .flexo {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 #group-desc-div h2 {
     margin-bottom: 5px;
