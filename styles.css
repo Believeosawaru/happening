@@ -723,7 +723,7 @@ select:hover {
         grid-template-columns: auto auto;
     }
     #home a {
-        margin-inline: 20px;
-        width: 900px;
+       background: red;
+       opacity: .4;
     }
 }
