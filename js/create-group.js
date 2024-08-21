@@ -6,7 +6,7 @@ function disableBtn() {
     button.disabled = true;
     button.style.backgroundColor = "#FFECB3";
     button.style.color = "black";
-    button.innerHTML = "Creating Event...."
+    button.innerHTML = "Creating Group...."
 }
  
 const token = localStorage.getItem("authToken");
