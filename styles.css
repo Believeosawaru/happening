@@ -606,7 +606,7 @@ select:hover {
     border: 1px solid black;
 }
 .flexo-text {
-    margin-left: -40px;
+    margin-left: 0px;
     border: 1px solid black;
 }
 
