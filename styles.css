@@ -597,6 +597,12 @@ select:hover {
 .margin-bttm {
     margin-bottom: 20px;
 }
+#event-desc-div {
+    display: flex;
+}
+#event-desc-div img {
+    width: 50%;
+}
 
 @media screen and (min-width: 900px) {
     .menu {
