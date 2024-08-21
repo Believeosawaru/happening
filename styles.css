@@ -718,4 +718,8 @@ select:hover {
     #create-event {
         margin-inline: 200px;
     }
+    #hero {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
 }
