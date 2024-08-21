@@ -722,8 +722,8 @@ select:hover {
         display: grid;
         grid-template-columns: auto auto;
     }
-    #home a {
-       background: red;
-       opacity: .4;
+    #group-desc-div {
+        margin-inline: 20px;
+        width: 900px;
     }
 }
