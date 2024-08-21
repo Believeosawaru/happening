@@ -75,6 +75,7 @@ async function fetchEvent() {
 
         if (response.ok) {
             document.querySelector(".latest-events").innerHTML = `
+             &#x1F4C5;
             <a class="del-group-a" href="events/event-details.html?eventId=${message.message._id}">${message.message.name}</a>
             `
         } else {
@@ -111,6 +112,7 @@ async function fetchGroup() {
 
         if (response.ok) {
             document.querySelector(".latest-groups").innerHTML = `
+            &#x1F465; 
             <a class="del-group-a" href="groups/group-details.html?groupId=${message.message._id}">${message.message.name}</a>
             `
         } else {
