@@ -41,7 +41,7 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
     const data = await response.json();
 
     if (response.ok) {
-        document.getElementById("success-sign-up").innerHTML = "Group Created Successfully";
+        document.getElementById("success-sign-up").innerHTML = "Event Created Successfully";
         document.getElementById("success-sign-up").classList.add("success-sign-up");
 
         button.style.cursor = "wait";
