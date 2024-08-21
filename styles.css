@@ -722,7 +722,7 @@ select:hover {
         display: grid;
         grid-template-columns: auto auto;
     }
-    .group-desc-div {
+    #home a {
         margin-inline: 20px;
         width: 900px;
     }
