@@ -1,9 +1,9 @@
 async function displayEvents() {
     const token = localStorage.getItem("authToken");
 
-    // if (!token) {
-    //     window.location.href = "../log-in.html"
-    // }
+    if (!token) {
+        window.location.href = "../log-in.html"
+    }
 
     try {
         const response = await fetch("https://happening-api.onrender.com/api/v1/user/events", {
@@ -36,21 +36,17 @@ async function displayEvents() {
                 });
 
                 texts += `
-                <a href="event-details.html?eventId=${event._id}">
-                <div id="group-desc-div">
-                    <div class="flexo">
-                        <div>
+               <a href="event-details.html?eventId=${event._id}">
+                    <div id="event-desc-div">
                             <img src="../../images/calender.svg">
-                        </div>
-                    
-                        <div class="flexo-text">
-                            <h3>${event.name}</h3>
-                            <p><i class="fa fa-map loc-i"></i> ${event.location}</p>
-                            <p>Date: ${formattedDate}</p>
-                            <p class="group-type">${event.type}</p>
-                        </div> 
+                        
+                            <div class="flexo-text">
+                                <h3>${event.name}</h3>
+                                <p><i class="fa fa-map loc-i"></i> ${event.location}</p>
+                                <p>Date: ${formattedDate}</p>
+                                <p class="group-type">${event.type}</p>
+                            </div>
                     </div>
-                </div>
                 </a>
                 `
             });
