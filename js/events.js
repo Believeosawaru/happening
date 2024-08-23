@@ -1,9 +1,9 @@
 async function displayEvents() {
     const token = localStorage.getItem("authToken");
 
-    if (!token) {
-        window.location.href = "../log-in.html"
-    }
+    // if (!token) {
+    //     window.location.href = "../log-in.html"
+    // }
 
     try {
         const response = await fetch("https://happening-api.onrender.com/api/v1/user/events", {
