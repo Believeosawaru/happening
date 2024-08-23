@@ -614,6 +614,9 @@ select:hover {
 #event-desc-div div {
     margin-left: 25px;
 }
+#user-hero-img {
+    width: 50%;
+}
 
 @media screen and (min-width: 900px) {
     .menu {
