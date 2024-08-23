@@ -2,7 +2,7 @@ async function displayEvents() {
     const token = localStorage.getItem("authToken");
 
     if (!token) {
-        window.location.href = "log-in.html"
+        window.location.href = "../log-in.html"
     }
 
     try {
@@ -37,20 +37,16 @@ async function displayEvents() {
 
                 texts += `
                 <a href="event-details.html?eventId=${event._id}">
-                <div id="group-desc-div">
-                    <div class="flexo">
-                        <div>
+                    <div id="event-desc-div">
                             <img src="../../images/calender.svg">
-                        </div>
-                    
-                        <div class="flexo-text">
-                            <h3>${event.name}</h3>
-                            <p><i class="fa fa-map loc-i"></i> ${event.location}</p>
-                            <p>Date: ${formattedDate}</p>
-                            <p class="group-type">${event.type}</p>
-                        </div> 
+                        
+                            <div class="flexo-text">
+                                <h3>${event.name}</h3>
+                                <p><i class="fa fa-map loc-i"></i> ${event.location}</p>
+                                <p>Date: ${formattedDate}</p>
+                                <p class="group-type">${event.type}</p>
+                            </div>
                     </div>
-                </div>
                 </a>
                 `
             });

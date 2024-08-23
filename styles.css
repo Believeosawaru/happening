@@ -500,14 +500,21 @@ select:hover {
     border-radius: 6px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
-#group-desc-div .flexo {
-    display: grid;
-    grid-template-columns: auto auto;
+#event-desc-div {
+    display: flex;
+    position: relative;
+    text-align: left;
+    background: rgb(240, 240, 240);
+    color: black;
+    padding: 20px 15px;
+    margin-block: 5px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
-#group-desc-div h2 {
+#group-desc-div h2, #event-desc-div h2 {
     margin-bottom: 5px;
 }
-#group-desc-div:hover {
+#group-desc-div:hover, #event-desc-div:hover {
     cursor: pointer;
 }
 #group-details-container {
@@ -601,13 +608,11 @@ select:hover {
 .margin-bttm {
     margin-bottom: 20px;
 }
-.flexo img {
+#event-desc-div img {
     width: 30%;
-    border: 1px solid black;
 }
-.flexo-text {
-    margin-left: 0px;
-    border: 1px solid black;
+#event-desc-div div {
+    margin-left: 25px;
 }
 
 @media screen and (min-width: 900px) {
