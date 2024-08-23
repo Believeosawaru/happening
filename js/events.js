@@ -37,16 +37,20 @@ async function displayEvents() {
 
                 texts += `
                 <a href="event-details.html?eventId=${event._id}">
-                    <div id="event-desc-div">
+                <div id="group-desc-div">
+                    <div class="flexo">
+                        <div>
                             <img src="../../images/calender.svg">
-                        
-                            <div class="flexo-text">
-                                <h3>${event.name}</h3>
-                                <p><i class="fa fa-map loc-i"></i> ${event.location}</p>
-                                <p>Date: ${formattedDate}</p>
-                                <p class="group-type">${event.type}</p>
-                            </div>
+                        </div>
+                    
+                        <div class="flexo-text">
+                            <h3>${event.name}</h3>
+                            <p><i class="fa fa-map loc-i"></i> ${event.location}</p>
+                            <p>Date: ${formattedDate}</p>
+                            <p class="group-type">${event.type}</p>
+                        </div> 
                     </div>
+                </div>
                 </a>
                 `
             });
