@@ -753,7 +753,7 @@ select:hover {
         margin-inline: 20px;
         width: 350px;
     }
-    #group-details-container {
+    .rel {
         margin-top: 100px;
     }
 }
