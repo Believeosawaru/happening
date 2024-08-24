@@ -21,7 +21,7 @@ async function displayAllGroups() {
 
         if (response.ok) {
             console.log(data)
-            const groupContainer = document.getElementById("all-groups");
+            const groupContainer = document.getElementById("hero");
 
             texts = "";
 
