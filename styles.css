@@ -750,7 +750,7 @@ select:hover {
     .home-pc-menu button {
         margin-right: 50px;
     }
-    #create-event, #create-group, #success-sign-up, #failed {
+    #create-event, #create-group, #success-sign-up, #failed, #edit-group {
         margin-inline: 200px;
     }
     #hero {
