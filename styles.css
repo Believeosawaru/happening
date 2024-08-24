@@ -754,6 +754,6 @@ select:hover {
         width: 350px;
     }
     .rel {
-        margin-top: 100px;
+        padding-top: 100px;
     }
 }
