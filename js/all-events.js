@@ -42,8 +42,8 @@ async function displayAllEvents() {
                     
                         <div>
                             <h3>${event.name}</h3>
-                            <p><span>Description:</span> ${event.description}</p>
-                            <p><span>Location:</span> ${event.location}</p>
+                            <p><span>Description:</span> ${event.description || "None Specified"}</p>
+                            <p><span>Location:</span> ${event.location || "None Specified"}</p>
                             <p><span>Date:</span> ${formattedDate}</p>
                             <p><span>Type:</span> ${event.type}</p>
                         </div>
