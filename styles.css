@@ -519,10 +519,7 @@ select:hover {
 }
 #group-desc-div button {
     background: #FF4500;
-    padding: 5px 30px;
-    border-radius: 6px;
-    border: none;
-    margin: 0px;
+    margin: 10px 0px;
 }
 #group-desc-div:hover, #event-desc-div:hover {
     cursor: pointer;
