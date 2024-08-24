@@ -42,7 +42,8 @@ delBtn.innerHTML = `<a href="delete-group.html?groupId=${groupId}" class="del-gr
 function disableBtn() {
     button.disabled = true;
     button.style.backgroundColor = "#FFECB3";
-    button.style.color = "black"
+    button.style.color = "black";
+    button.innerHTML = "Editing Group...."
 }
 
 const button = document.getElementById("edit-group-btn")
@@ -102,7 +103,8 @@ if (groupId) {
               });
     
             button.style.backgroundColor = "#FF4500";
-            button.style.color = "white"
+            button.style.color = "white";
+            button.innerHTML = "Edit Group"
         }
     
         } catch (error) {
