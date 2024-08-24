@@ -8,11 +8,12 @@ if (!token) {
     window.location.href = "/html/log-in.html"
 }
 
-const button = document.getElementById("delete-group");
+const button = document.getElementById("delete-group-btn");
 
 function disableBtn() {
     button.disabled = true;
     button.style.color = "#000";
+    button.innerHTML = "Deleting Group...."
 }
 
 document.getElementById("delete-group").addEventListener("submit", async (e) => {
@@ -52,6 +53,7 @@ document.getElementById("delete-group").addEventListener("submit", async (e) => 
 
                 button.disabled = false;
                 button.style.color = "#FFECB3";
+                button.innerHTML = "Delete Group"
             }, 3500);
           });
     }
