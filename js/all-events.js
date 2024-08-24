@@ -36,7 +36,7 @@ async function displayAllEvents() {
                 <div id="event-desc-div">
                         <img src="../../images/calender.svg">
                     
-                        <div class="flexo-text">
+                        <div>
                             <h3>${event.name}</h3>
                             <p><span>Description:</span> ${event.description}</p>
                             <p><span>Location:</span> ${event.location}</p>
