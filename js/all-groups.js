@@ -20,10 +20,13 @@ async function displayAllGroups() {
         const data = await response.json();
 
         if (response.ok) {
-            console.log(data)
             const groupContainer = document.getElementById("hero");
 
             texts = "";
+
+            if (data.message.length < 1) {
+                return;
+            }
 
             data.message.forEach((group) => {
                 texts += `
