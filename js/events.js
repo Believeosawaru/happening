@@ -40,7 +40,7 @@ async function displayEvents() {
                     <div id="event-desc-div">
                             <img src="../../images/calender.svg">
                         
-                            <div class="flexo-text">
+                            <div>
                                 <h2>${event.name}</h2>
                                 <p><i class="fa fa-map loc-i"></i> ${event.location}</p>
                                 <p>Date: ${formattedDate}</p>
