@@ -31,7 +31,7 @@ async function displayAllGroups() {
             data.message.forEach((group) => {
                 texts += `
                 <div id="group-desc-div">
-                    <h3 id="space-bttm
+                    <h3 class="space-bttm
                     ">&#x1F465; ${group.name}</h3>
                     <p><span>Description:</span> ${group.description || "None Specified"}</p>
                     <p><i class="fa fa-map loc-i"></i> ${group.location || "None Specified"}</p>

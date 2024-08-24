@@ -591,10 +591,6 @@ select:hover {
 .space-bttm {
     margin-bottom: 15px;
 }
-#space-bttm {
-    margin-bottom: 10px;
-    color: red;
-}
 .success-sign-up {
     background: rgb(240, 240, 240);
     color: black;
