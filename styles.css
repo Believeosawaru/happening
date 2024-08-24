@@ -475,9 +475,6 @@ select:hover {
     right: 10px;
     bottom: 10px;
 }
-#event-type {
-    margin-top: 20px;
-}
 #all-groups p {
     margin-bottom: 4px;
 }
@@ -513,6 +510,9 @@ select:hover {
     margin-block: 5px;
     border-radius: 6px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+#event-desc-div span {
+    font-weight: bold;
 }
 #group-desc-div h2, #event-desc-div h2 {
     margin-bottom: 5px;

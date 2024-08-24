@@ -38,10 +38,10 @@ async function displayAllEvents() {
                     
                         <div class="flexo-text">
                             <h3>${event.name}</h3>
-                            <p>Description: ${event.description}</p>
-                            <p><i class="fa fa-map loc-i"></i> ${event.location}</p>
-                            <p>Date: ${formattedDate}</p>
-                            <p>Type: ${event.type}</p>
+                            <p><span>Description:</span> ${event.description}</p>
+                            <p><span>Location:</span> ${event.location}</p>
+                            <p><span>Date:</span> ${formattedDate}</p>
+                            <p><span>Type:</span> ${event.type}</p>
                         </div>
                 </div>
                 `
