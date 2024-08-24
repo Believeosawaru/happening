@@ -474,7 +474,7 @@ select:hover {
     position: absolute;
     right: 10px;
     bottom: 10px;
-    padding-top: 20px;
+    top: 20px;
 }
 #all-groups p {
     margin-bottom: 4px;
