@@ -522,6 +522,7 @@ select:hover {
     padding: 5px 30px;
     border-radius: 6px;
     border: none;
+    margin: 0px;
 }
 #group-desc-div:hover, #event-desc-div:hover {
     cursor: pointer;
