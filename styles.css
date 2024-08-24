@@ -761,4 +761,7 @@ select:hover {
         margin-inline: 20px;
         width: 350px;
     }
+    #group-details-container {
+        margin-inline: 200px;
+    }
 }
