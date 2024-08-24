@@ -475,6 +475,9 @@ select:hover {
     right: 10px;
     bottom: 10px;
 }
+#event-type {
+    margin-top: 20px;
+}
 #all-groups p {
     margin-bottom: 4px;
 }
