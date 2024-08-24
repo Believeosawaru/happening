@@ -37,7 +37,6 @@ async function displayAllEvents() {
                         <img src="../../images/calender.svg">
                     
                         <div>
-                            <h3>${event.name}</h3>
                             <p><span>Description:</span> ${event.description}</p>
                             <p><span>Location:</span> ${event.location}</p>
                             <p><span>Date:</span> ${formattedDate}</p>
