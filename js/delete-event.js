@@ -8,7 +8,7 @@ if (!token) {
     window.location.href = "/html/log-in.html"
 }
 
-const button = document.getElementById("delete-event");
+const button = document.getElementById("delete-event-btn");
 
 function disableBtn() {
     button.disabled = true;
