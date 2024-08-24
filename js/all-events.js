@@ -20,7 +20,7 @@ async function displayAllEvents() {
         const data = await response.json();
 
         if (response.ok) {
-            const groupContainer = document.getElementById("all-events");
+            const groupContainer = document.getElementById("hero");
 
             texts = "";
 
@@ -33,11 +33,16 @@ async function displayAllEvents() {
             });
 
                 texts += `
-                <div id="group-desc-div">
-                    <h3>${event.name}</h3>
-                    <p><span>Description:</span> ${event.description}</p>
-                    <p><span>Date:</span> ${formattedDate}</p>
-                    <p><i class="fa fa-map loc-i"></i> ${event.location}</p>
+                <div id="event-desc-div">
+                        <img src="../../images/calender.svg">
+                    
+                        <div class="flexo-text">
+                            <h3>${event.name}</h3>
+                            <p>${event.description}</p>
+                            <p><i class="fa fa-map loc-i"></i> ${event.location}</p>
+                            <p>Date: ${formattedDate}</p>
+                            <p class="group-type">${event.type}</p>
+                        </div>
                 </div>
                 `
             });
