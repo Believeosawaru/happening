@@ -51,6 +51,14 @@ nav button {
     display: grid;
     align-items: center;
 }
+.event-details-con {
+    padding-top: 90px;
+    padding-inline: 20px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
 .hero h1 {
     margin-block-end: 10px;
     font-size: 1.5rem;
