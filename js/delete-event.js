@@ -13,6 +13,7 @@ const button = document.getElementById("delete-event");
 function disableBtn() {
     button.disabled = true;
     button.style.color = "#000";
+    button.innerHTML = "Deleting Event...."
 }
 
 document.getElementById("delete-event").addEventListener("submit", async (e) => {
@@ -52,6 +53,7 @@ document.getElementById("delete-event").addEventListener("submit", async (e) => 
 
                 button.disabled = false;
                 button.style.color = "#FFECB3";
+                button.innerHTML = "Delete Event"
             }, 3500);
           });
     }
