@@ -65,7 +65,7 @@ nav button {
     font-family: "Oswald", sans-serif;
     font-size: 1.8rem;
 }
-.hero button {
+.hero button, .event-details-con {
     background: #FF4500;
     padding: 7px 20px;
     border-radius: 5px;
