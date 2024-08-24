@@ -41,7 +41,7 @@ async function displayAllEvents() {
                             <p>Description: ${event.description}</p>
                             <p><i class="fa fa-map loc-i"></i> ${event.location}</p>
                             <p>Date: ${formattedDate}</p>
-                            <p class="group-type" id="event-type">${event.type}</p>
+                            <p>Type: ${event.type}</p>
                         </div>
                 </div>
                 `
