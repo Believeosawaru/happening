@@ -776,4 +776,10 @@ select:hover {
     #search-results {
         margin-inline: 165px;
     }
+    .settings {
+        width: 70%;
+    }
+    .settings-btn {
+        margin: 10px 0px;
+    }
 }
