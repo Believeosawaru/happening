@@ -24,7 +24,7 @@ async function displayAllEvents() {
 
             texts = "";
 
-            if (data.messsage.length < 1) {
+            if (data.message.length < 1) {
                 return;
             }
 
