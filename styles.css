@@ -767,4 +767,7 @@ select:hover {
     #group-details-container {
         margin-inline: 200px;
     }
+    #add-members input, #search-results {
+        width: 75%;
+    }
 }
