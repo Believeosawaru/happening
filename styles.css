@@ -633,7 +633,11 @@ select:hover {
     width: 50%;
 }
 #add-members {
-    display: block;
+    display: grid;
+    align-items: center;
+}
+#add-members input {
+    width: 100%;
 }
 
 @media screen and (min-width: 900px) {
