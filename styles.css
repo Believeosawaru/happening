@@ -633,8 +633,7 @@ select:hover {
     width: 50%;
 }
 #add-members {
-    display: grid;
-    align-items: center;
+    display: block;
 }
 #add-members input {
     width: 100%;
@@ -773,5 +772,8 @@ select:hover {
     }
     #add-members input, #search-results {
         width: 75%;
+    }
+    #search-results {
+        margin-inline: 200px;
     }
 }
