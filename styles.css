@@ -632,6 +632,9 @@ select:hover {
 #user-hero-img {
     width: 50%;
 }
+#add-members {
+    display: block;
+}
 
 @media screen and (min-width: 900px) {
     .menu {
