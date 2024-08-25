@@ -779,5 +779,11 @@ select:hover {
     }
     .settings-btn {
         margin: 10px 0px;
+        width: 70%;
+        border: none;
+        background: #FF4500;
+        padding: 8px;
+        border-radius: 7px;
+        color: white;
     }
 }
