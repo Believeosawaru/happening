@@ -777,9 +777,17 @@ select:hover {
     #search-results {
         margin-inline: 165px;
     }
+    .settings {
+        margin: 50px 0px 20px 0px;
+        background: linear-gradient(to bottom, #FFECB3, rgb(250, 250, 250));
+        padding-block: 30px;
+        padding-inline: 10px;
+        border-radius: 8px;
+        width: 500px;
+    }
     .settings-btn {
-        margin: 10px 0px;
-        width: 70%;
+        margin: 0px;
+        width: 50%;
         border: none;
         background: #FF4500;
         padding: 8px;
