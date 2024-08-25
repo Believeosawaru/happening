@@ -24,6 +24,10 @@ async function searchUsers() {
         if (response.ok) {
             searchResults.innerHTML = "";
 
+            if (result.users.length < 1) {
+                searchResults.innerHTML = "User Not Found"
+            }
+
             result.users.forEach(user => {
                 const p = document.createElement("p");
 
