@@ -79,6 +79,13 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
     }
 });
 
+tinymce.init({
+    selector: '#editor',
+    plugins: 'link image code color',
+    toolbar: 'undo redo | formatselect | bold italic underline | forecolor backcolor | link image | code',
+    menubar: false
+  });
+
 function sanitizeDescInput() {
     const eventDesc = document.getElementById("event-desc");
     let sanitizedValue = eventDesc.value.replace(/<[^>]*>/g, '');
