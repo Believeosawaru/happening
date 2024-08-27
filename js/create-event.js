@@ -81,7 +81,7 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
 
 function sanitizeInput() {
     const eventDesc = document.getElementById("event-desc");
-    const sanitizedValue = eventDesc.value.replace(/<[^>]*>/g, '');
+    let sanitizedValue = eventDesc.value.replace(/<[^>]*>/g, '');
     sanitizedValue = sanitizedValue.replace(/https?:\/\/[^\s]+/g, '');
     eventDesc.value = sanitizedValue;
 }
