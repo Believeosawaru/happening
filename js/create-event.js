@@ -78,3 +78,9 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
         console.log(error);
     }
 });
+
+function sanitizeInput() {
+    const eventDesc = document.getElementById("event-desc");
+    const sanitizedValue = eventDesc.value.replace(/<[^>]*>/g, ''); // Remove HTML tags
+    eventDesc.value = sanitizedValue;
+}
