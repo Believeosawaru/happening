@@ -82,7 +82,7 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
 tinymce.init({
     selector: '#editor',
     plugins: 'color',
-    toolbar: 'undo redo | formatselect | bold italic underline | forecolor backcolor | link image | code',
+    toolbar: 'undo redo | formatselect | bold italic underline | forecolor backcolor',
     menubar: false
   });
 
