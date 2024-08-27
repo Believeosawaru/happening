@@ -56,7 +56,7 @@
 
         <form action="/create-event" id="create-event" method="post">
             <label for="name">Event Name</label> <br>
-            <input type="text" id="event-name" placeholder="What's The Name Of The Event?" onclick="sanitizeNameInput" required> <br>
+            <input type="text" id="event-name" placeholder="What's The Name Of The Event?" onclick="sanitizeNameInput()" required> <br>
 
             <label for="sescription">Event Description</label> <br>
             <input type="text" id="event-desc" placeholder="Describe The Event (Optional)" oninput="sanitizeDescInput();"> <br>
