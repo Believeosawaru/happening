@@ -125,4 +125,18 @@ if (eventId) {
     })
 }
 
+function sanitizeDescInput() {
+    const eventDesc = document.getElementById("event-desc");
+    let sanitizedValue = eventDesc.value.replace(/<[^>]*>/g, '');
+    sanitizedValue = sanitizedValue.replace(/(https?:\/\/|www\.)[^\s]+/g, '');
+    eventDesc.value = sanitizedValue;
+}
+
+function sanitizeNameInput() {
+    const eventDesc = document.getElementById("event-name");
+    let sanitizedValue = eventDesc.value.replace(/<[^>]*>/g, '');
+    sanitizedValue = sanitizedValue.replace(/(https?:\/\/|www\.)[^\s]+/g, '');
+    eventDesc.value = sanitizedValue;
+}
+
 window.onload = retreiveInfo;
