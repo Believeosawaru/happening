@@ -81,7 +81,7 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
 
 tinymce.init({
     selector: '#editor',
-    plugins: 'link image code color',
+    plugins: 'color',
     toolbar: 'undo redo | formatselect | bold italic underline | forecolor backcolor | link image | code',
     menubar: false
   });
