@@ -79,22 +79,6 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
     }
 });
 
-tinymce.init({
-    selector: '#editor',
-    plugins: '',
-    toolbar: '',
-    menubar: false,
-    valid_elements: '', // Allow only <p> tags (you can specify other tags if needed)
-    extended_valid_elements: '', // No extended elements
-    // Disable all HTML and link-related features
-    setup: function(editor) {
-        editor.on('init', function() {
-          // Remove existing content on initialization
-          editor.setContent('');
-        });
-      }
-  });
-
 function sanitizeDescInput() {
     const eventDesc = document.getElementById("event-desc");
     let sanitizedValue = eventDesc.value.replace(/<[^>]*>/g, '');
