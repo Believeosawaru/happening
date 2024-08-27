@@ -83,7 +83,10 @@ tinymce.init({
     selector: '#editor',
     plugins: 'color',
     toolbar: 'undo redo | formatselect | bold italic underline | forecolor backcolor',
-    menubar: false
+    menubar: false,
+    valid_elements: '', // Allow only <p> tags (you can specify other tags if needed)
+    extended_valid_elements: '', // No extended elements
+    // Disable all HTML and link-related features
   });
 
 function sanitizeDescInput() {
