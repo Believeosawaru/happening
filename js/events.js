@@ -42,9 +42,10 @@ async function displayEvents() {
                         
                             <div class="flexo-text">
                                 <h3>${event.name}</h3>
-                                <p><i class="fa fa-map loc-i"></i> ${event.location}</p>
+                                <p><i class="fa fa-map loc-i"></i> ${event.location || "None Specified"}</p>
                                 <p>Date: ${formattedDate}</p>
-                                <p class="group-type">${event.type}</p>
+                                <p>Type: ${event.type}</p>
+                                <p>Description: ${event.description || "None Specified"}</p>
                             </div>
                     </div>
                 </a>
