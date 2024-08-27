@@ -57,10 +57,10 @@
 
         <form action="/edit-event" method="post" id="edit-event">
             <label for="name">Event Name</label> <br>
-            <input type="text" id="event-name" name="event-name" placeholder="What's The Name Of The Group?" onclick="sanitizeNameInput()" required> <br>
+            <input type="text" id="event-name" name="event-name" placeholder="What's The Name Of The Group?" oninput="sanitizeNameInput()" required> <br>
 
             <label for="description">Event Description</label> <br>
-            <input type="text" id="event-desc" name="event-desc" placeholder="Describe What The Group Is About (Optional)" onclick="sanitizeDescInput()"> <br>
+            <input type="text" id="event-desc" name="event-desc" placeholder="Describe What The Group Is About (Optional)" oninput="sanitizeDescInput()"> <br>
 
             <label for="time">Event Time</label> <br>
             <input type="date" id="event-time"> <br>
