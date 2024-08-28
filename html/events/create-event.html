@@ -83,6 +83,7 @@
 
             <label for="location">Location</label> <br>
             <select id="location" name="location" required>
+                <option value="" disabled selected>Choose A Location</option>
                 <option value="online">Online</option>
                 <option value="inn-person">In Person</option>
             </select>
@@ -90,8 +91,7 @@
             
 
             <span class="small-txt">
-                Event Type: <select name="event-type" id="event-type" required>
-                    <option value="" disabled selected>Choose A Location</option>
+                Event Type: <select name="event-type" id="event-type">
                     <option value="private">Private</option>
                     <option value="public">Public</option>
                 </select>
