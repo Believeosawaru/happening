@@ -648,6 +648,10 @@ select:hover {
     border-radius: 7px;
     color: white;
 }
+form textarea {
+    resize: none;
+    padding-bottom: 50px;
+}
 
 @media screen and (min-width: 900px) {
     .menu {
