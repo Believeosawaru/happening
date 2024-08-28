@@ -16,7 +16,7 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
 
     const name = document.getElementById("event-name").value;
     const description = document.getElementById("event-desc").value;
-    const time = document.getElementById("event-time").value;
+    const time = document.getElementById("event-date").value;
     const location = document.getElementById("event-loc").value;
     const type = document.getElementById("event-type").value;
 
