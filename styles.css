@@ -674,7 +674,7 @@ form textarea {
 #location {
     width: 100%;
     margin-block: 15px;
-    padding: 15px 5px;
+    padding: 10px 5px;
 }
 
 @media screen and (min-width: 900px) {
