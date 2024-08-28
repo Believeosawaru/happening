@@ -657,13 +657,13 @@ form textarea {
 }
 .etime-ezone {
     display: flex;
+    margin-right: 15px;
 }
 .etime-ezone select, .etime-ezone input {
     width: 100%;
     margin-inline: 5px;
 }
 .etime-ezone select {
-    height: 70%;
     width: 30%;
     margin-top: 20px;
 }
