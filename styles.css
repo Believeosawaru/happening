@@ -665,6 +665,7 @@ form textarea {
 .etime-ezone select {
     height: 30%;
     width: 10%;
+    margin-top: 20px;
 }
 
 @media screen and (min-width: 900px) {
