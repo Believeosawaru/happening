@@ -671,6 +671,9 @@ form textarea {
     background: white;
     padding-block: 10px;
 }
+#location {
+    width: 100%;
+}
 
 @media screen and (min-width: 900px) {
     .menu {
