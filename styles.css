@@ -652,7 +652,9 @@ form textarea {
     resize: none;
     padding-bottom: 50px;
 }
-
+#event-date, #event-time {
+    background: white;
+}
 @media screen and (min-width: 900px) {
     .menu {
         display: none;
