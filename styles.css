@@ -655,6 +655,10 @@ form textarea {
 #event-date, #event-time {
     background: white;
 }
+.etime-ezone {
+    display: flex;
+}
+
 @media screen and (min-width: 900px) {
     .menu {
         display: none;
