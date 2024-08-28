@@ -662,6 +662,7 @@ form textarea {
 .etime-ezone select, .etime-ezone input {
     width: 100%;
     margin-inline: 5px;
+    padding-inline: 5px;
 }
 .etime-ezone select {
     width: 30%;
