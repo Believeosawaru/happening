@@ -65,19 +65,21 @@
             <input type="date" id="event-date" required> <br>
 
             <label for="time">Event Time</label> <br>
-            <input type="time" id="event-time" required>
-
-            <select id="timezone" name="timezone">
-                <!-- Time zone options can be populated dynamically via JavaScript or manually -->
-                <option value="GMT">GMT (UTC+0)</option>
-                <option value="CET">CET (UTC+1)</option>
-                <option value="EET">EET (UTC+2)</option>
-                <option value="MSK">MSK (UTC+3)</option>
-                <option value="IST">IST (UTC+5:30)</option>
-                <option value="CST">CST (UTC-6)</option>
-                <option value="PST">PST (UTC-8)</option>
-                <!-- Add more options as needed -->
-            </select> <br>
+            <div>
+                <input type="time" id="event-time" required>
+                <select id="timezone" name="timezone">
+                    <!-- Time zone options can be populated dynamically via JavaScript or manually -->
+                    <option value="GMT">GMT (UTC+0)</option>
+                    <option value="CET">CET (UTC+1)</option>
+                    <option value="EET">EET (UTC+2)</option>
+                    <option value="MSK">MSK (UTC+3)</option>
+                    <option value="IST">IST (UTC+5:30)</option>
+                    <option value="CST">CST (UTC-6)</option>
+                    <option value="PST">PST (UTC-8)</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <br>
 
             
 
