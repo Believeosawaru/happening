@@ -663,7 +663,7 @@ form textarea {
     margin-inline: 15px;
 }
 .etime-ezone select {
-    height: 10px;
+    height: 30%;
     width: 10%;
 }
 
