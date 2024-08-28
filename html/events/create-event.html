@@ -82,7 +82,11 @@
             </div>
 
             <label for="location">Location</label> <br>
-            <input type="text" id="event-loc" placeholder="Where Is The Event Happening? (Optional)"> <br>
+            <select id="location" name="location" required>
+                <option value="online">Online</option>
+                <option value="inn-person">In Person</option>
+            </select>
+            
 
             <span class="small-txt">
                 Event Type: <select name="event-type" id="event-type">
