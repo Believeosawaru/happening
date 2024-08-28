@@ -659,10 +659,12 @@ form textarea {
     display: flex;
 }
 .etime-ezone select, .etime-ezone input {
-    width: 30%;
+    width: 80%;
+    margin-inline: 15px;
 }
 .etime-ezone select {
     height: 10px;
+    width: 10%;
 }
 
 @media screen and (min-width: 900px) {
