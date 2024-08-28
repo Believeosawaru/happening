@@ -658,8 +658,8 @@ form textarea {
 .etime-ezone {
     display: flex;
 }
-.etime-ezone select {
-    width: 10%;
+.etime-ezone select, .etime-ezone input {
+    width: 30%;
 }
 
 @media screen and (min-width: 900px) {
