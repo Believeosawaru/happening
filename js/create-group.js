@@ -77,3 +77,17 @@ document.getElementById("create-group").addEventListener("submit", async (e) => 
         console.log(error);
     }
 })
+
+function sanitizeDescInput() {
+    const eventDesc = document.getElementById("group-desc");
+    let sanitizedValue = eventDesc.value.replace(/<[^>]*>/g, '');
+    sanitizedValue = sanitizedValue.replace(/(https?:\/\/|www\.)[^\s]+/g, '');
+    eventDesc.value = sanitizedValue;
+}
+
+function sanitizeNameInput() {
+    const eventDesc = document.getElementById("group-name");
+    let sanitizedValue = eventDesc.value.replace(/<[^>]*>/g, '');
+    sanitizedValue = sanitizedValue.replace(/(https?:\/\/|www\.)[^\s]+/g, '');
+    eventDesc.value = sanitizedValue;
+}
