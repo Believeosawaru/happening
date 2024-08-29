@@ -16,7 +16,7 @@ const apiUsername = 'believe_007';
 const selectElement = document.getElementById("event-location");
     
 document.getElementById('search-input').addEventListener('input', () => {
-    const input = this.value;
+    const input = document.getElementById('search-input').value;
 
     if (input.length >= 3) {
     searchLocations(input);
