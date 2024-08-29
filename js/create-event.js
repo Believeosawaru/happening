@@ -27,28 +27,23 @@ document.getElementById('search-input').addEventListener('input', () => {
     }
 });
 
-function searchLocations(query) {
-      // Fetch location data from GeoNames API based on the query
-      fetch(`https://restcountries.com/v3.1/name/${query}`)
+function searchLocations(input) {
+      const apiKey = 'your_geodb_cities_api_key'; 
+
+      fetch(`https://api.openweathermap.org/data/2.5/find?q=${input}&appid=${apiKey}`)
         .then(response => response.json())
         .then(data => {
-          const selectElement = document.getElementById('location-select');
-          // Clear previous results
-          selectElement.innerHTML = '<option value="">Select a country</option>';
+          const resultsDiv = document.getElementById('results-div');
 
-          if (data.length < 1) {
-            return;
-          } else {
-                data.forEach(country => {
-                    const option = document.createElement('option');
-                    option.value = country.cca3; // ISO 3166-1 alpha-3 code
-                    option.textContent = `${country.name.common} (${country.cca2})`;
-                    selectElement.appendChild(option);
-                });
-            }
+          resultsDiv.innerHTML = '';
+          
+          data.list.forEach(city => {
+            const pElement = document.createElement('p');
+            pElement.className = 'result';
+            pElement.textContent = `${city.name}, ${city.sys.country}`;
+            resultsDiv.appendChild(pElement);
+          });
         })
-
-
         .catch(error => console.error('Error fetching locations:', error));
     }
 
