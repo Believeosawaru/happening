@@ -10,18 +10,25 @@ function disableBtn() {
 }
  
 const token = localStorage.getItem("authToken");
-    
-const apiUsername = 'believe_007';
 
 const selectElement = document.getElementById("event-location");
+
+selectElement.addEventListener("change", () => {
+    if (selectElement.value === "in-person") {
+        document.querySelector(".on-p-div").style.display = "block"
+    } else {
+        document.querySelector(".on-p-div").style.display = "none"
+    }
+})
     
 document.getElementById('search-input').addEventListener('input', () => {
     const input = document.getElementById('search-input').value;
 
     if (input.length >= 1) {
     searchLocations(input);
-    } else {
-        console.log("No Results")
+    }
+    else {
+        return;
     }
 });
 
@@ -48,7 +55,7 @@ function searchLocations(input) {
           }
         })
         .catch(error => console.error('Error fetching locations:', error));
-    }
+}
 
 document.getElementById("create-event").addEventListener("submit", async (e) => {
     e.preventDefault();
