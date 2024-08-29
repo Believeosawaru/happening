@@ -12,6 +12,8 @@ function disableBtn() {
 const token = localStorage.getItem("authToken");
     
 const apiUsername = 'believe_007';
+
+const selectElement = document.getElementById("event-location");
     
 document.getElementById('search-input').addEventListener('input', () => {
     const input = this.value;
