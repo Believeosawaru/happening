@@ -21,9 +21,7 @@ document.getElementById('search-input').addEventListener('input', () => {
     if (input.length >= 1) {
     searchLocations(input);
     } else {
-    const selectElement = document.getElementById('location-select');
-
-    selectElement.innerHTML = '<option value="">Select a location</option>';
+        console.log("No Results")
     }
 });
 
