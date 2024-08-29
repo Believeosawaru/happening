@@ -29,21 +29,23 @@ document.getElementById('search-input').addEventListener('input', () => {
 
 function searchLocations(query) {
       // Fetch location data from GeoNames API based on the query
-      fetch(`https://api.geonames.org/searchJSON?q=${query}&maxRows=10&username=${apiUsername}`)
+      fetch(`https://restcountries.com/v3.1/name/${query}`)
         .then(response => response.json())
         .then(data => {
           const selectElement = document.getElementById('location-select');
           // Clear previous results
-          selectElement.innerHTML = '<option value="">Select a location</option>';
+          selectElement.innerHTML = '<option value="">Select a country</option>';
           
           // Populate the select field with new search results
-          data.geonames.forEach(location => {
+          data.forEach(country => {
             const option = document.createElement('option');
-            option.value = location.geonameId;
-            option.textContent = `${location.name}, ${location.countryName}`;
+            option.value = country.cca3; // ISO 3166-1 alpha-3 code
+            option.textContent = `${country.name.common} (${country.cca2})`;
             selectElement.appendChild(option);
           });
         })
+
+
         .catch(error => console.error('Error fetching locations:', error));
     }
 
