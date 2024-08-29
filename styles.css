@@ -683,7 +683,6 @@ form textarea {
 }
 #results-div {
     background: white;
-    margin-inline: 5px;
     height: 300px;
     overflow-y: scroll;
     border-radius: 8px;
