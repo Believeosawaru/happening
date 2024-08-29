@@ -33,10 +33,11 @@ function searchLocations(input) {
         .then(data => {
           const resultsDiv = document.getElementById('results-div');
 
+          resultsDiv.style.display = "block"
           resultsDiv.innerHTML = '';
 
           if (data.cities.length < 1) {
-            resultsDiv.innerHTML = "<span>No City Found</span>"
+            resultsDiv.innerHTML = "<p>No City Found</p>"
           } else {
             data.cities.forEach(city => {
                 const pElement = document.createElement('p');

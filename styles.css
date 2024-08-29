@@ -689,6 +689,7 @@ form textarea {
     border-radius: 6px;
     padding-inline: 10px;
     width: 95%;
+    display: none;
 }
 #results-div p {
     /* border-bottom: 1px solid #FF4500; */
