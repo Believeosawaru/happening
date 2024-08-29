@@ -11,25 +11,6 @@ function disableBtn() {
  
 const token = localStorage.getItem("authToken");
 
-const selectElement = document.getElementById("event-location");
-
-const apiUsername = 'your_geonames_username';
-    
-    // Fetch location data from GeoNames
-    fetch(`http://api.geonames.org/citiesJSON?formatted=true&lang=eng&username=${apiUsername}&style=full`)
-      .then(response => response.json())
-      .then(data => {
-        
-        // Populate the select field with locations
-        data.geonames.forEach(location => {
-          const option = document.createElement('option');
-          option.value = location.geonameId;
-          option.textContent = location.name;
-          selectElement.appendChild(option);
-        });
-      })
-      .catch(error => console.error('Error fetching locations:', error));
-
 selectElement.addEventListener('change', () => {
     const location = selectElement.value;
 
@@ -39,6 +20,42 @@ selectElement.addEventListener('change', () => {
         console.log("Nope")
     }
 });
+
+const selectElement = document.getElementById("event-location");
+    
+const apiUsername = 'believe_007';
+    
+document.getElementById('search-input').addEventListener('input', () => {
+    const input = this.value;
+
+    if (input.length >= 3) {
+    searchLocations(input);
+    } else {
+    const selectElement = document.getElementById('location-select');
+
+    selectElement.innerHTML = '<option value="">Select a location</option>';
+    }
+});
+
+function searchLocations(query) {
+      // Fetch location data from GeoNames API based on the query
+      fetch(`http://api.geonames.org/searchJSON?q=${query}&maxRows=10&username=${apiUsername}`)
+        .then(response => response.json())
+        .then(data => {
+          const selectElement = document.getElementById('location-select');
+          // Clear previous results
+          selectElement.innerHTML = '<option value="">Select a location</option>';
+          
+          // Populate the select field with new search results
+          data.geonames.forEach(location => {
+            const option = document.createElement('option');
+            option.value = location.geonameId;
+            option.textContent = `${location.name}, ${location.countryName}`;
+            selectElement.appendChild(option);
+          });
+        })
+        .catch(error => console.error('Error fetching locations:', error));
+    }
 
 document.getElementById("create-event").addEventListener("submit", async (e) => {
     e.preventDefault();
