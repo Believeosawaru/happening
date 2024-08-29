@@ -686,7 +686,7 @@ form textarea {
     height: 300px;
     overflow-y: scroll;
     border-radius: 8px;
-    padding-inline: 5px;
+    padding-inline: 10px;
 }
 #results-div p {
     border-bottom: 1px solid #FF4500;
