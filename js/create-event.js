@@ -18,7 +18,7 @@ const selectElement = document.getElementById("event-location");
 document.getElementById('search-input').addEventListener('input', () => {
     const input = document.getElementById('search-input').value;
 
-    if (input.length >= 3) {
+    if (input.length >= 1) {
     searchLocations(input);
     } else {
     const selectElement = document.getElementById('location-select');
@@ -29,7 +29,7 @@ document.getElementById('search-input').addEventListener('input', () => {
 
 function searchLocations(query) {
       // Fetch location data from GeoNames API based on the query
-      fetch(`http://api.geonames.org/searchJSON?q=${query}&maxRows=10&username=${apiUsername}`)
+      fetch(`https://api.geonames.org/searchJSON?q=${query}&maxRows=10&username=${apiUsername}`)
         .then(response => response.json())
         .then(data => {
           const selectElement = document.getElementById('location-select');
