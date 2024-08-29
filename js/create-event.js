@@ -10,18 +10,6 @@ function disableBtn() {
 }
  
 const token = localStorage.getItem("authToken");
-
-selectElement.addEventListener('change', () => {
-    const location = selectElement.value;
-
-    if (location === "in-person") {
-        console.log("Google maps")
-    } else {
-        console.log("Nope")
-    }
-});
-
-const selectElement = document.getElementById("event-location");
     
 const apiUsername = 'believe_007';
     
