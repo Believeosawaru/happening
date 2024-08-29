@@ -26,7 +26,7 @@ document.getElementById('search-input').addEventListener('input', () => {
 });
 
 function searchLocations(input) {
-      const apiKey = '0vwus3vv9iu2ylflfklyxa==y2bnzvxvlpz7wpqm'; 
+      const apiKey = '0Vwus3vV9IU2yLFLfKLYXA==Y2bNZVXVLpZ7Wpqm'; 
 
       fetch(`https://api.api-ninjas.com/v1/city?name=${input}`, {
         method: 'GET',
