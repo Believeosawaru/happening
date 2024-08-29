@@ -682,9 +682,11 @@ form textarea {
 }
 #results-div {
     background: white;
-    margin-inline: 15px;
+    margin-inline: 10px;
     height: 300px;
     overflow-y: scroll;
+    border-radius: 8px;
+    padding-inline: 5px;
 }
 #results-div p {
     border-bottom: 1px solid #FF4500;
