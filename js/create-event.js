@@ -35,14 +35,16 @@ function searchLocations(input) {
 
           resultsDiv.innerHTML = '';
 
-          console.log(data.cities)
-          
-          data.cities.forEach(city => {
-            const pElement = document.createElement('p');
-            pElement.className = 'result';
-            pElement.textContent = `${city.name}, ${city.country.name}`;
-            resultsDiv.appendChild(pElement);
-          });
+          if (data.cities.length < 1) {
+            resultsDiv.innerHTML = "<p>No City Found</p>"
+          } else {
+            data.cities.forEach(city => {
+                const pElement = document.createElement('p');
+                pElement.className = 'result';
+                pElement.textContent = `${city.name}, ${city.country.name}`;
+                resultsDiv.appendChild(pElement);
+              });
+          }
         })
         .catch(error => console.error('Error fetching locations:', error));
     }
