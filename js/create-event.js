@@ -26,13 +26,8 @@ document.getElementById('search-input').addEventListener('input', () => {
 });
 
 function searchLocations(input) {
-      const apiKey = '0Vwus3vV9IU2yLFLfKLYXA==Y2bNZVXVLpZ7Wpqm'; 
-
-      fetch(`https://api.api-ninjas.com/v1/city?name=${input}`, {
-        method: 'GET',
-        headers: {
-          'x-api-key': apiKey
-        }
+      fetch(`https://api.thecompaniesapi.com/v1/locations/cities?search=${input}`, {
+        method: 'GET'
       })
         .then(response => response.json())
         .then(data => {
