@@ -35,14 +35,17 @@ function searchLocations(query) {
           const selectElement = document.getElementById('location-select');
           // Clear previous results
           selectElement.innerHTML = '<option value="">Select a country</option>';
-          
-          // Populate the select field with new search results
-          data.forEach(country => {
-            const option = document.createElement('option');
-            option.value = country.cca3; // ISO 3166-1 alpha-3 code
-            option.textContent = `${country.name.common} (${country.cca2})`;
-            selectElement.appendChild(option);
-          });
+
+          if (data.length < 1) {
+            return;
+          } else {
+                data.forEach(country => {
+                    const option = document.createElement('option');
+                    option.value = country.cca3; // ISO 3166-1 alpha-3 code
+                    option.textContent = `${country.name.common} (${country.cca2})`;
+                    selectElement.appendChild(option);
+                });
+            }
         })
 
 
