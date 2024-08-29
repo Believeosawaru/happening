@@ -686,7 +686,7 @@ form textarea {
     background: white;
     height: 300px;
     overflow-y: scroll;
-    border-radius: 8px;
+    border-radius: 6px;
     padding-inline: 10px;
     width: 95%;
 }
