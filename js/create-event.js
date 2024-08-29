@@ -28,9 +28,14 @@ document.getElementById('search-input').addEventListener('input', () => {
 });
 
 function searchLocations(input) {
-      const apiKey = 'your_geodb_cities_api_key'; 
+      const apiKey = '0vwus3vv9iu2ylflfklyxa==y2bnzvxvlpz7wpqm'; 
 
-      fetch(`https://api.openweathermap.org/data/2.5/find?q=${input}&appid=${apiKey}`)
+      fetch(`https://api.api-ninjas.com/v1/city?name=${input}`, {
+        method: 'GET',
+        headers: {
+          'x-api-key': apiKey
+        }
+      })
         .then(response => response.json())
         .then(data => {
           const resultsDiv = document.getElementById('results-div');
@@ -40,7 +45,7 @@ function searchLocations(input) {
           data.list.forEach(city => {
             const pElement = document.createElement('p');
             pElement.className = 'result';
-            pElement.textContent = `${city.name}, ${city.sys.country}`;
+            pElement.textContent = `${city.name}, ${city.country}`;
             resultsDiv.appendChild(pElement);
           });
         })
