@@ -13,6 +13,23 @@ const token = localStorage.getItem("authToken");
 
 const selectElement = document.getElementById("event-location");
 
+const apiUsername = 'your_geonames_username';
+    
+    // Fetch location data from GeoNames
+    fetch(`http://api.geonames.org/citiesJSON?formatted=true&lang=eng&username=${apiUsername}&style=full`)
+      .then(response => response.json())
+      .then(data => {
+        
+        // Populate the select field with locations
+        data.geonames.forEach(location => {
+          const option = document.createElement('option');
+          option.value = location.geonameId;
+          option.textContent = location.name;
+          selectElement.appendChild(option);
+        });
+      })
+      .catch(error => console.error('Error fetching locations:', error));
+
 selectElement.addEventListener('change', () => {
     const location = selectElement.value;
 
