@@ -683,7 +683,7 @@ form textarea {
 #results-div p {
     border-bottom: 1px solid #FF4500;
     padding-block: 8px;
-    margin: 15px;
+    margin-block: 15px;
 }
 
 @media screen and (min-width: 900px) {
