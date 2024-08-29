@@ -36,7 +36,7 @@ function searchLocations(input) {
           resultsDiv.innerHTML = '';
 
           if (data.cities.length < 1) {
-            resultsDiv.innerHTML = "<p>No City Found</p>"
+            resultsDiv.innerHTML = "<span>No City Found</span>"
           } else {
             data.cities.forEach(city => {
                 const pElement = document.createElement('p');
