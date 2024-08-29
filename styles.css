@@ -674,7 +674,8 @@ form textarea {
 }
 #event-location {
     width: 95%;
-    margin-block: 15px;
+    margin-block-start: 15px;
+    margin-block-end: 25px;
     padding: 10px 5px;
 }
 #search-input, #event-location {
