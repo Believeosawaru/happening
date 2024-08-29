@@ -41,13 +41,15 @@ function searchLocations(input) {
           const resultsDiv = document.getElementById('results-div');
 
           resultsDiv.innerHTML = '';
+
+          console.log(data)
           
-          data.list.forEach(city => {
-            const pElement = document.createElement('p');
-            pElement.className = 'result';
-            pElement.textContent = `${city.name}, ${city.country}`;
-            resultsDiv.appendChild(pElement);
-          });
+        //   data.list.forEach(city => {
+        //     const pElement = document.createElement('p');
+        //     pElement.className = 'result';
+        //     pElement.textContent = `${city.name}, ${city.country}`;
+        //     resultsDiv.appendChild(pElement);
+        //   });
         })
         .catch(error => console.error('Error fetching locations:', error));
     }
