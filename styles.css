@@ -677,8 +677,9 @@ form textarea {
     margin-block: 15px;
     padding: 10px 5px;
 }
-#search-input {
+#search-input, #event-location {
     background: white;
+    border: none;
 }
 #results-div {
     background: white;
