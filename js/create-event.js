@@ -112,7 +112,7 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
     const loc = document.getElementById("event-location");
 
     if (loc.value === "in-person") {
-        return console.log("Pick A Location")
+        return console.log("Pick A Location");
     }
 
     try {
