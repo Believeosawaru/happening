@@ -83,7 +83,7 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
     const location = document.getElementById("event-location").value;
     const type = document.getElementById("event-type").value;
 
-    console.log(time)
+    console.log(time, timezone)
 
     // const eventTime = new Date(time);
 
