@@ -60,6 +60,8 @@ function searchLocations(input) {
 
                     selectElement.appendChild(optionElement);
 
+                    selectElement.value = optionElement.textContent;
+
                     document.querySelector(".on-p-div").style.display = "none"
                 })
 
