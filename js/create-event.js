@@ -80,7 +80,7 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
     const date = document.getElementById("event-date").value;
     const time = document.getElementById("event-time").value;
     const timezone = document.getElementById("timezone").value;
-    const location = document.getElementById("event-loc").value;
+    const location = document.getElementById("event-location").value;
     const type = document.getElementById("event-type").value;
 
     const eventTime = new Date(time);
