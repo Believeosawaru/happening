@@ -77,11 +77,43 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
 
     const name = document.getElementById("event-name").value;
     const description = document.getElementById("event-desc").value;
-    const time = document.getElementById("event-date").value;
+    const date = document.getElementById("event-date").value;
+    const time = document.getElementById("event-time").value;
+    const timezone = document.getElementById("timezone").value;
     const location = document.getElementById("event-loc").value;
     const type = document.getElementById("event-type").value;
 
+    const eventTime = new Date(time);
+
+    const timeFormatter = new Intl.DateTimeFormat("en-US", {
+        timeZone: timezone,
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    });
+
+    const parts = timeFormatter.formatToParts(eventTime);
+
+    const formattedDate = parts.reduce((acc, part) => {
+        if (part.type !== "literal") {
+            acc[part.type] = part.value;
+        }
+
+        return acc;
+    }, {});
+
+    const dateInUTC = new Date(`${formattedDate.year}-${formattedDate.month}-${formattedDate.day}T${formattedDate.hour}:${formattedDate.minute}:${formattedDate.second}Z`)
+
     disableBtn();
+
+    const loc = document.getElementById("event-location");
+
+    if (loc.value === "in-person") {
+        return console.log("Pick A Location")
+    }
 
     try {
         const response = await fetch(signUpUrl, {
@@ -93,7 +125,9 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
             body: JSON.stringify({
                 name,
                 description,
-                time,
+                date,
+                time: dateInUTC.toISOString(),
+                timezone,
                 location,
                 type
             })
