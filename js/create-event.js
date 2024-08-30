@@ -83,29 +83,31 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
     const location = document.getElementById("event-location").value;
     const type = document.getElementById("event-type").value;
 
-    const eventTime = new Date(time);
+    console.log(time)
 
-    const timeFormatter = new Intl.DateTimeFormat("en-US", {
-        timeZone: timezone,
-        year: "numeric",
-        month: "2-digit",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit"
-    });
+    // const eventTime = new Date(time);
 
-    const parts = timeFormatter.formatToParts(eventTime);
+    // const timeFormatter = new Intl.DateTimeFormat("en-US", {
+    //     timeZone: timezone,
+    //     year: "numeric",
+    //     month: "2-digit",
+    //     day: "2-digit",
+    //     hour: "2-digit",
+    //     minute: "2-digit",
+    //     second: "2-digit"
+    // });
 
-    const formattedDate = parts.reduce((acc, part) => {
-        if (part.type !== "literal") {
-            acc[part.type] = part.value;
-        }
+    // const parts = timeFormatter.formatToParts(eventTime);
 
-        return acc;
-    }, {});
+    // const formattedDate = parts.reduce((acc, part) => {
+    //     if (part.type !== "literal") {
+    //         acc[part.type] = part.value;
+    //     }
 
-    const dateInUTC = new Date(`${formattedDate.year}-${formattedDate.month}-${formattedDate.day}T${formattedDate.hour}:${formattedDate.minute}:${formattedDate.second}Z`)
+    //     return acc;
+    // }, {});
+
+    // const dateInUTC = new Date(`${formattedDate.year}-${formattedDate.month}-${formattedDate.day}T${formattedDate.hour}:${formattedDate.minute}:${formattedDate.second}Z`)
 
     disableBtn();
 
