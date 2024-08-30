@@ -40,16 +40,29 @@ function searchLocations(input) {
         .then(data => {
           const resultsDiv = document.getElementById('results-div');
 
-          resultsDiv.style.display = "block"
+          resultsDiv.style.display = "block";
           resultsDiv.innerHTML = '';
 
           if (data.cities.length < 1) {
-            resultsDiv.innerHTML = "<p>No City Found</p>"
+            resultsDiv.innerHTML = "<p>No City Found</p>";
           } else {
             data.cities.forEach(city => {
-                const pElement = document.createElement('p');
-                pElement.className = 'result';
+                const pElement = document.createElement("p");
+
+                pElement.className = "result";
+
                 pElement.textContent = `${city.name}, ${city.country.name}`;
+
+                pElement.addEventListener("click", () => {
+                    const optionElement = document.createElement("option");
+
+                    optionElement.textContent = pElement.textContent;
+
+                    selectElement.appendChild(optionElement);
+
+                    document.querySelector(".on-p-div").style.display = "none"
+                })
+
                 resultsDiv.appendChild(pElement);
               });
           }
