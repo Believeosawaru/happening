@@ -42,10 +42,12 @@ async function displayEvents() {
                         
                             <div class="flexo-text">
                                 <h3>${event.name}</h3>
-                                <p><i class="fa fa-map loc-i"></i> ${event.location || "None Specified"}</p>
-                                <p>Date: ${formattedDate}</p>
-                                <p>Type: ${event.type}</p>
-                                <p>Description: ${event.description || "None Specified"}</p>
+                                <p><span>Location:</span> ${event.location || "None Specified"}</p>
+                                <p><span>Date:</span> ${formattedDate}</p>
+                                <p><span>Time:</span> ${event.time}</p>
+                                <p><span>Time Zone:</span> ${event.timeZone}</p>
+                                <p><span>Type:</span> ${event.type}</p>
+                                <p><span>Description:</span> ${event.description || "None Specified"}</p>
                             </div>
                     </div>
                 </a>
