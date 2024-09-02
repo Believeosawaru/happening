@@ -705,7 +705,7 @@ form textarea {
     font-family: "Oswald", sans-serif;
 }
 .flexo-text p {
-    margin-block: 2px;
+    margin-block: 3px;
 }
 
 @media screen and (min-width: 900px) {
