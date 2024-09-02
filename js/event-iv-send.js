@@ -62,6 +62,8 @@ async function addMemberToGroup(userId) {
 
         const result = await response.json();
 
+        console.log(result)
+
         if (response.ok) {
         document.getElementById("search-input").value = "";
 
