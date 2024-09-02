@@ -69,7 +69,7 @@ async function addMemberToGroup(userId) {
 
         document.getElementById("success-sign-up").style.display = "block";
 
-        document.getElementById("success-sign-up").innerHTML = "Member Added Successfully";
+        document.getElementById("success-sign-up").innerHTML = "Invitation Successfully Sent!";
 
         const searchResults = document.getElementById("search-results").innerHTML = "";
 
