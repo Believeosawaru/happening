@@ -704,6 +704,9 @@ form textarea {
     font-size: 1.8rem;
     font-family: "Oswald", sans-serif;
 }
+.flexo-text p {
+    margin-block: 2px;
+}
 
 @media screen and (min-width: 900px) {
     .menu {
