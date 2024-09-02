@@ -249,7 +249,7 @@ const retreiveInfo = async () => {
 
     let name = document.getElementById("event-name");
     let description = document.getElementById("event-desc");
-    let location = document.getElementById("location");
+    let location = document.getElementById("event-location");
     let date = document.getElementById("event-date");
     let time = document.getElementById("event-time");
     let timezone = document.getElementById("timezone");
@@ -257,7 +257,7 @@ const retreiveInfo = async () => {
 
     name.value = event.data.name;
     description.value = event.data.description;
-    location.value = event.data.location;
+    location.appendChild = `<option>${event.data.location}</option>`;
     date.value = formattedDate;
     time.value = event.data.time;
     timezone.value = event.data.timeZone;
