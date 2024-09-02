@@ -68,7 +68,7 @@ async function addMemberToGroup(userId) {
         document.getElementById("search-input").value = "";
 
         document.getElementById("success-sign-up").style.display = "block";
-r
+
         document.getElementById("success-sign-up").innerHTML = result.message;
 
         const searchResults = document.getElementById("search-results").innerHTML = "";
