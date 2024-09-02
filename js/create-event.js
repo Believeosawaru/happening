@@ -187,15 +187,15 @@ selectElement.addEventListener("change", () => {
         document.getElementById("success-sign-up").innerHTML = "Choose A Location";
 
         button.style.backgroundColor = "#FFECB3";
-        button.disbled = true;
-        button.color = "black"
+        button.disabled = true;
+        button.style.color = "black"
     } else {
         document.getElementById("success-sign-up").innerHTML = "";
         document.getElementById("success-sign-up").style.display = "none";
 
         button.style.backgroundColor = "#FF4500";
-        button.disbled = false;
-        button.color = "white"
+        button.disabled = false;
+        button.style.color = "white"
     }
 })
     
