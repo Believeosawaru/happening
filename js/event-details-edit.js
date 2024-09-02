@@ -257,12 +257,12 @@ const retreiveInfo = async () => {
 
     const option = document.createElement("option");
     option.value = event.data.location;
-    option.name = event.data.location;
+    option.text = event.data.location;
 
     name.value = event.data.name;
     description.value = event.data.description;
     if (event.data.location !== "online") {
-        location.appendChild = option;
+        location.value = option;
         console.log("done")
     }
     date.value = formattedDate;
