@@ -90,7 +90,7 @@ form button a {
     font-weight: bold;
 }
 #black {
-    color: black;
+    color: #FF4500;
 }
 
 @media screen and (min-width: 900px) {
