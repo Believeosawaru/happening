@@ -510,7 +510,7 @@ select:hover {
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 #event-desc-div {
-    display: flex;
+    display: block;
     position: relative;
     text-align: left;
     background: rgb(240, 240, 240);

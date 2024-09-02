@@ -65,27 +65,27 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h2 id="gd-h2">${result.data.name}</h2>
 
                 <p>
-                Event Description: ${result.data.description}
+                <span>Event Description:</span> ${result.data.description}
                 </p>
 
                 <p>
-                Event Type: ${result.data.type} event
+                <span>Event Type:</span> ${result.data.type} event
                 </p>
 
                 <p>
-                Event Date: ${formattedDate}
+                <span>Event Date:</span> ${formattedDate}
                 </p>
 
                 <p>
-                Event Time: ${result.data.time} (${result.data.timeZone} UTC)
+                <span>Event Time:</span> ${result.data.time} (${result.data.timeZone} UTC)
                 </p>
 
                 <p>
-                Location: ${result.data.location}
+                <span>Location:</span> ${result.data.location}
                 </p>
 
                 <p>
-                Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}
+                <span>Created By:</span> ${result.createdBy.firstName} ${result.createdBy.lastName}
                 </p>
 
                 <span class="edit-button"><a href="event-details-edit.html?eventId=${eventId}"><i class="fa fa-pencil"></i></a></span>

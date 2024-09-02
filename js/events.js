@@ -37,8 +37,9 @@ async function displayEvents() {
 
                 texts += `
                <a href="event-details.html?eventId=${event._id}">
-               <img src="../../images/calender.svg">
                     <div id="event-desc-div">
+                            <img src="../../images/calender.svg">
+                        
                             <div class="flexo-text">
                                 <h3>${event.name}</h3>
                                 <p><span>Location:</span> ${event.location || "None Specified"}</p>
