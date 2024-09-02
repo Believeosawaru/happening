@@ -185,6 +185,7 @@ selectElement.addEventListener("change", () => {
 
     if (loc.value === "in-person") {
         document.getElementById("success-sign-up").style.display = "block";
+        document.getElementById("success-sign-up").classList.add("success-sign-up");
         document.getElementById("success-sign-up").innerHTML = "Choose A Location";
 
         button.style.backgroundColor = "#FFECB3";
