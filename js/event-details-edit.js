@@ -261,7 +261,7 @@ const retreiveInfo = async () => {
 
     name.value = event.data.name;
     description.value = event.data.description;
-    location.appendChild = option;
+    location.value = event.data.location;
     date.value = formattedDate;
     time.value = event.data.time;
     timezone.value = event.data.timeZone;
