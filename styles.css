@@ -625,7 +625,7 @@ select:hover {
     margin-bottom: 20px;
 }
 #event-desc-div img {
-    width: 30%;
+    width: 100%;
 }
 #event-desc-div div {
     margin-left: 25px;
