@@ -184,7 +184,11 @@ selectElement.addEventListener("change", () => {
     const loc = document.getElementById("event-location");
 
     if (loc.value === "in-person") {
-       button.disabled = "true";
+       button.addEventListener("click", () => {
+        document.getElementById("success-sign-up").innerHTML = "Choose A Location";
+
+        button.style.backgroundColor = "#FFECB3";
+       })
     }
 })
     
