@@ -45,7 +45,7 @@ document.getElementById("create-group").addEventListener("submit", async (e) => 
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "groups.html"
+            window.location.href = "option.html"
         }, 2000)
     } else {
         const keys = Object.keys(data);
