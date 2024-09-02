@@ -45,11 +45,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </p>
 
                  <p>
-                <span>Event Time:</span> ${formattedDate}
-                </p>
-
-                 <p>
-                <span>Event Time Zone:</span> ${result.data.timeZone}
+                <span>Event Time:</span> ${formattedDate} (${result.data.timeZone} UTC)
                 </p>
 
                 <p>
