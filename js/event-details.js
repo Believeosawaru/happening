@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (response.ok) {
                 const eventDetailsCon = document.getElementById("group-details-container");
 
-                const eventTime = new Date(result.data.time);
-                const formattedDate = eventTime.toLocaleDateString("en-US", {
+                const eventDate = new Date(result.data.date);
+                const formattedDate = eventDate.toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
                     day: "numeric"
@@ -37,23 +37,27 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h2 id="gd-h2">${result.data.name}</h2>
 
                 <p>
-                Event Description: ${result.data.description}
+                <span>Event Description:</span> ${result.data.description}
                 </p>
 
                 <p>
-                Event Type: ${result.data.type} event
+                <span>Event Type:</span> ${result.data.type} event
                 </p>
 
                  <p>
-                Event Time: ${formattedDate}
+                <span>Event Time:</span> ${formattedDate}
+                </p>
+
+                 <p>
+                <span>Event Time Zone:</span> ${result.data.timeZone}
                 </p>
 
                 <p>
-                Location: ${result.data.location}
+                <span>Location:</span> ${result.data.location}
                 </p>
 
                 <p>
-                Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}
+                <span>Created By:</span> ${result.createdBy.firstName} ${result.createdBy.lastName}
                 </p>
                 `;
                 } else {

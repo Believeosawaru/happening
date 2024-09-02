@@ -62,8 +62,36 @@
             <label for="description">Event Description</label> <br>
             <textarea name="event-desc" id="event-desc" placeholder="Describe The Event (Optional)" oninput="sanitizeDescInput();"></textarea> <br>
 
+            <label for="date">Event Date</label> <br>
+            <input type="date" id="event-date"> <br>
+
             <label for="time">Event Time</label> <br>
-            <input type="date" id="event-time"> <br>
+            <div class="etime-ezone">
+                <input type="time" id="event-time" required>
+
+                <select id="timezone" name="timezone" required>
+                    <option value="" disabled selected>Time Zone</option>
+                </select>
+            </div>
+
+            <label for="event-location">Location</label> <br>
+
+            <select id="event-location" name="event-location" required>
+                <option value="" disabled selected>Choose Event Location</option>
+                
+                <option value="online">Online</option>
+                
+                <option value="in-person">In Person</option>
+            </select>
+
+            <div class="on-p-div">
+                Choose a Location:
+                <input type="text" id="search-input" placeholder="Search For A City">
+                <div id="results-div">
+
+                </div>
+            </div>
+            <br>
 
             <label for="location">Location</label> <br>
             <input type="text" id="location" name="location" placeholder="What's Your Location? (Optional)"> <br>

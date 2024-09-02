@@ -6,6 +6,227 @@ if (!token) {
     window.location.href = "/html/log-in.html"
 }
 
+const timeZones = [
+    {
+        offset: "-12:00",
+        name: "UTC-12:00"
+    },
+    {
+        offset: "-12:00",
+        name: "UTC-12:00"
+    },
+    {
+        offset: "-11:00",
+        name: "UTC-11:00"
+    },
+    {
+        offset: "-10:00",
+        name: "UTC-10:00"
+    },
+    {
+        offset: "-09:00",
+        name: "UTC-09:00"
+    },
+    {
+        offset: "-08:00",
+        name: "UTC-08:00"
+    },
+    {
+        offset: "-07:00",
+        name: "UTC-07:00"
+    },
+    {
+        offset: "-06:00",
+        name: "UTC-06:00"
+    },
+    {
+        offset: "-05:00",
+        name: "UTC-05:00"
+    },
+    {
+        offset: "-04:00",
+        name: "UTC-04:00"
+    },
+    {
+        offset: "-03:00",
+        name: "UTC-03:00"
+    },
+    {
+        offset: "-03:30",
+        name: "UTC-03:30"
+    },
+    {
+        offset: "-02:00",
+        name: "UTC-02:00"
+    },
+    {
+        offset: "-01:00",
+        name: "UTC-01:00"
+    },
+    {
+        offset: "+00:00",
+        name: "UTC+00:00 (GMT)"
+    },
+    {
+        offset: "+01:00",
+        name: "UTC+01:00"
+    },
+    {
+        offset: "+02:00",
+        name: "UTC+02:00"
+    },
+    {
+        offset: "+03:00",
+        name: "UTC+03:00"
+    },
+    {
+        offset: "+03:30",
+        name: "UTC+03:30"
+    },
+    {
+        offset: "+04:00",
+        name: "UTC+04:00"
+    },
+    {
+        offset: "+04:30",
+        name: "UTC+04:30"
+    },
+    {
+        offset: "+05:00",
+        name: "UTC+05:00"
+    },
+    {
+        offset: "+05:30",
+        name: "UTC+05:30"
+    },
+    {
+        offset: "+05:45",
+        name: "UTC+05:45"
+    },
+    {
+        offset: "+06:00",
+        name: "UTC+06:30"
+    },
+    {
+        offset: "+07:00",
+        name: "UTC+07:00"
+    },
+    {
+        offset: "+08:00",
+        name: "UTC+08:00"
+    },
+    {
+        offset: "+08:45",
+        name: "UTC+08:45"
+    },
+    {
+        offset: "+09:00",
+        name: "UTC+09:00"
+    },
+    {
+        offset: "+09:30",
+        name: "UTC+09:30"
+    },
+    {
+        offset: "+10:00",
+        name: "UTC+10:00"
+    },
+    {
+        offset: "+10:30",
+        name: "UTC+10:30"
+    },
+    {
+        offset: "+11:00",
+        name: "UTC+11:00"
+    },
+    {
+        offset: "+12:00",
+        name: "UTC+12:00"
+    },
+    {
+        offset: "+12:45",
+        name: "UTC+12:45"
+    },
+    {
+        offset: "+13:00",
+        name: "UTC+13:00"
+    },
+    {
+        offset: "+14:00",
+        name: "UTC+14:00"
+    },
+]
+
+const select = document.getElementById("timezone");
+
+timeZones.forEach((zone) => {
+    const option = document.createElement("option");
+    option.value = zone.offset;
+    option.text = `${zone.name} (${zone.offset})`;
+
+    select.appendChild(option);
+});
+
+const selectElement = document.getElementById("event-location");
+
+selectElement.addEventListener("change", () => {
+    if (selectElement.value === "in-person") {
+        document.querySelector(".on-p-div").style.display = "block"
+    } else {
+        document.querySelector(".on-p-div").style.display = "none"
+    }
+});
+    
+document.getElementById('search-input').addEventListener('input', () => {
+    const input = document.getElementById('search-input').value;
+
+    if (input.length >= 1) {
+    searchLocations(input);
+    }
+    else {
+        return;
+    }
+});
+
+function searchLocations(input) {
+      fetch(`https://api.thecompaniesapi.com/v1/locations/cities?search=${input}`, {
+        method: 'GET'
+      })
+        .then(response => response.json())
+        .then(data => {
+          const resultsDiv = document.getElementById('results-div');
+
+          resultsDiv.style.display = "block";
+          resultsDiv.innerHTML = '';
+
+          if (data.cities.length < 1) {
+            resultsDiv.innerHTML = "<p>No City Found</p>";
+          } else {
+            data.cities.forEach(city => {
+                const pElement = document.createElement("p");
+
+                pElement.className = "result";
+
+                pElement.textContent = `${city.name}, ${city.country.name}`;
+
+                pElement.addEventListener("click", () => {
+                    const optionElement = document.createElement("option");
+
+                    optionElement.textContent = pElement.textContent;
+
+                    selectElement.appendChild(optionElement);
+
+                    selectElement.value = optionElement.textContent;
+
+                    document.querySelector(".on-p-div").style.display = "none"
+                })
+
+                resultsDiv.appendChild(pElement);
+              });
+          }
+        })
+        .catch(error => console.error('Error fetching locations:', error));
+}
 
 const retreiveInfo = async () => {
     const info = await fetch(`https://happening-api.onrender.com/api/v1/user/event-details/${eventId}`, {
@@ -19,10 +240,10 @@ const retreiveInfo = async () => {
     const event = await info.json();
 
     if (info.ok) {
-    const eventTime = new Date(event.data.time);
-    const year = eventTime.getUTCFullYear();
-    const month = (eventTime.getUTCMonth() + 1).toString().padStart(2, "0");
-    const day = (eventTime.getUTCDate()).toString().padStart(2, "0");
+    const eventDate = new Date(event.data.date);
+    const year = eventDate.getUTCFullYear();
+    const month = (eventDate.getUTCMonth() + 1).toString().padStart(2, "0");
+    const day = (eventDate.getUTCDate()).toString().padStart(2, "0");
 
     const formattedDate = `${year}-${month}-${day}`
 
@@ -64,8 +285,10 @@ if (eventId) {
 
         const name = document.getElementById("event-name").value;
         const description = document.getElementById("event-desc").value;
+        const date = document.getElementById("event-date").value;
         const time = document.getElementById("event-time").value;
-        const location = document.getElementById("location").value;
+        const timeZone = document.getElementById("timezone").value;
+        const location = document.getElementById("event-location").value;
         const type = document.getElementById("event-type").value;
     
         try {
@@ -78,7 +301,9 @@ if (eventId) {
                 body: JSON.stringify({
                     name,
                     description,
+                    date,
                     time,
+                    timeZone,
                     location,
                     type
                 })
