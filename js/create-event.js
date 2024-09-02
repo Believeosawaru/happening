@@ -180,6 +180,12 @@ selectElement.addEventListener("change", () => {
     } else {
         document.querySelector(".on-p-div").style.display = "none"
     }
+
+    const loc = document.getElementById("event-location");
+
+    if (loc.value === "in-person") {
+       button.disabled = "true";
+    }
 })
     
 document.getElementById('search-input').addEventListener('input', () => {
@@ -245,12 +251,6 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
     const type = document.getElementById("event-type").value;
 
     disableBtn();
-
-    const loc = document.getElementById("event-location");
-
-    if (loc.value === "in-person") {
-       button.disabled = "true";
-    }
 
     try {
         const response = await fetch(signUpUrl, {
