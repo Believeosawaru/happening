@@ -500,6 +500,7 @@ select:hover {
     font-weight: bold;
 }
 #group-desc-div {
+    position: relative;
     text-align: left;
     background: rgb(240, 240, 240);
     color: black;
