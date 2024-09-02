@@ -255,9 +255,13 @@ const retreiveInfo = async () => {
     let timezone = document.getElementById("timezone");
     let type = document.getElementById("event-type");
 
+    const option = document.createElement("option");
+    option.value = event.data.location;
+    option.name = event.data.location;
+
     name.value = event.data.name;
     description.value = event.data.description;
-    location.appendChild = `<option>${event.data.location}</option>`;
+    location.appendChild = option;
     date.value = formattedDate;
     time.value = event.data.time;
     timezone.value = event.data.timeZone;
