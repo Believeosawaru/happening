@@ -67,24 +67,19 @@
             <label for="time">Event Time</label> <br>
             <div class="etime-ezone">
                 <input type="time" id="event-time" required>
+
                 <select id="timezone" name="timezone" required>
-                    <!-- Time zone options can be populated dynamically via JavaScript or manually -->
                     <option value="" disabled selected>Time Zone</option>
-                    <option value="GMT">GMT (UTC+0)</option>
-                    <option value="CET">CET (UTC+1)</option>
-                    <option value="EET">EET (UTC+2)</option>
-                    <option value="MSK">MSK (UTC+3)</option>
-                    <option value="IST">IST (UTC+5:30)</option>
-                    <option value="CST">CST (UTC-6)</option>
-                    <option value="PST">PST (UTC-8)</option>
-                    <!-- Add more options as needed -->
                 </select>
             </div>
 
             <label for="event-location">Location</label> <br>
+
             <select id="event-location" name="event-location" required>
                 <option value="" disabled selected>Choose Event Location</option>
+                
                 <option value="online">Online</option>
+                
                 <option value="in-person">In Person</option>
             </select>
 
