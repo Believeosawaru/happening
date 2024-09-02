@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <span>Created By:</span> ${result.createdBy.firstName} ${result.createdBy.lastName}
                 </p>
 
-                <button>Send Invitation</button>
+                <button><a href="event-iv-send.html?eventId=${eventId}">Send Invitation</a></button>
 
                 <span class="edit-button"><a href="event-details-edit.html?eventId=${eventId}"><i class="fa fa-pencil"></i></a></span>
                 `;
