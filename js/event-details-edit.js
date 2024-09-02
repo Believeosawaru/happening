@@ -262,7 +262,7 @@ const retreiveInfo = async () => {
     name.value = event.data.name;
     description.value = event.data.description;
     if (event.data.location !== "online") {
-        location.value = option;
+        location.appendChild(option)
         console.log("done")
     }
     date.value = formattedDate;
