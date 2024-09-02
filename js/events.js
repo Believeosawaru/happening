@@ -44,7 +44,6 @@ async function displayEvents() {
                                 <p><span>Date:</span> ${formattedDate}</p>
                                 <p><span>Time:</span> ${event.time} (${event.timeZone} UTC)</p>
                                 <p><span>Type:</span> ${event.type}</p>
-                                <p><span>Description:</span> ${event.description || "None Specified"}</p>
                             </div>
                     </div>
                 </a>
