@@ -1,5 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
-const groupId = urlParams.get("eventId");
+const eventId = urlParams.get("eventId");
 const token = localStorage.getItem("authToken");
 
 if (!token) {
