@@ -702,7 +702,8 @@ form textarea {
     font-weight: bold;
     margin-block-start: 15px;
     margin-block-end: 5px;
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-family: "Oswald", sans-serif;
 }
 
 @media screen and (min-width: 900px) {
