@@ -261,7 +261,7 @@ const retreiveInfo = async () => {
 
     name.value = event.data.name;
     description.value = event.data.description;
-    if (data.value.location !== "online") {
+    if (event.data.location !== "online") {
         location.appendChild = option;
         console.log("done")
     }
