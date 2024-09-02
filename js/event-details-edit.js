@@ -250,13 +250,17 @@ const retreiveInfo = async () => {
     let name = document.getElementById("event-name");
     let description = document.getElementById("event-desc");
     let location = document.getElementById("location");
-    let date = document.getElementById("event-time");
+    let date = document.getElementById("event-date");
+    let time = document.getElementById("event-time");
+    let timezone = document.getElementById("timezone");
     let type = document.getElementById("event-type");
 
     name.value = event.data.name;
     description.value = event.data.description;
     location.value = event.data.location;
     date.value = formattedDate;
+    time.value = event.data.time;
+    timezone.value = event.data.timeZone;
     type.value = event.data.type;
     } else {
         console.log("Could'nt Fetch");
