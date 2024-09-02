@@ -38,12 +38,8 @@ async function displayEvents() {
                 texts += `
                <a href="event-details.html?eventId=${event._id}">
                     <div id="event-desc-div">
-                            <div class="center">
-                                <img src="../../images/calender.svg">
-                            </div>
-                        
                             <div class="flexo-text">
-                                <h3>${event.name}</h3>
+                                <h3>&#x1F4C5; ${event.name}</h3>
                                 <p><span>Location:</span> ${event.location || "None Specified"}</p>
                                 <p><span>Date:</span> ${formattedDate}</p>
                                 <p><span>Time:</span> ${event.time} (${event.timeZone} UTC)</p>
