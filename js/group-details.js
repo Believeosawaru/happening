@@ -48,33 +48,63 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <button><a href="https://happening-khaki.vercel.app/html/groups/leave-group.html?groupId=${result.data._id}">Leave Group</a></button>
                 `;
                 } else {
-                    groupDetailsCon.innerHTML = `
-                <h2 id="gd-h2">${result.data.name}</h2>
 
-                <p>
-                Group Description: ${result.data.description}
-                </p>
+                    if (result.data.inviteLink) {
+                        groupDetailsCon.innerHTML = `
+                            <h2 id="gd-h2">${result.data.name}</h2>
 
-                <p>
-                Group Type: ${result.data.groupType} group
-                </p>
+                            <p>
+                            Group Description: ${result.data.description}
+                            </p>
 
-                <p>
-                Location: ${result.data.location}
-                </p>
+                            <p>
+                            Group Type: ${result.data.groupType} group
+                            </p>
 
-                <p>
-                Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}
-                </p>
+                            <p>
+                            Location: ${result.data.location}
+                            </p>
 
-                <button><a href="add-members.html?groupId=${groupId}">Add Members</a></button>
-                
-                <button onclick="generateInviteLink()">Generate Link</button>
+                            <p>
+                            Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}
+                            </p>
 
-                <span class="edit-button"><a href="group-details-edit.html?groupId=${groupId}"><i class="fa fa-pencil"></i></a></span>
+                            <button><a href="add-members.html?groupId=${groupId}">Add Members</a></button>
 
-                <p class="group-link"></p>
-                `;
+                            <p class="group-link" id="group-iv-link">${result.data.inviteLink}</p>
+                        `;
+                    } else {
+                        groupDetailsCon.innerHTML = `
+                            <h2 id="gd-h2">${result.data.name}</h2>
+
+                            <p>
+                            Group Description: ${result.data.description}
+                            </p>
+
+                            <p>
+                            Group Type: ${result.data.groupType} group
+                            </p>
+
+                            <p>
+                            Location: ${result.data.location}
+                            </p>
+
+                            <p>
+                            Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}
+                            </p>
+
+                            <button><a href="add-members.html?groupId=${groupId}">Add Members</a></button>
+                            
+                            <button onclick="generateInviteLink()">Generate Link</button>
+
+                            <span class="edit-button"><a href="group-details-edit.html?groupId=${groupId}"><i class="fa fa-pencil"></i></a></span>
+
+                            <p class="group-link">
+                            <p class="copy-i" onclick="copy('${result.data.inviteLink}')"><i class="fa fa-copy"></i> Copy Link</p>
+                            </p>
+                        `;
+                    }
+                    
                 }
 
             } else {
