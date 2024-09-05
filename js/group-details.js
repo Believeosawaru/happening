@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 `;
                 } else {
 
-                    if (result.data.inviteLink) {
+                    if (result.data.inviteLink !== null) {
                         groupDetailsCon.innerHTML = `
                             <h2 id="gd-h2">${result.data.name}</h2>
 
