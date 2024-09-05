@@ -586,6 +586,9 @@ select:hover {
     margin-inline: 6px;
     padding-block: 5px;
 }
+#group-link:hover {
+    cursor: pointer;
+}
 .rel {
     position: relative;
 }
