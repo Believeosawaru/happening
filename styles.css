@@ -709,6 +709,10 @@ form textarea {
 .flexo-text p {
     margin-block: 3px;
 }
+#btn-link {
+    background: #FF4500;
+    display: flex;
+}
 
 @media screen and (min-width: 900px) {
     .menu {

@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}
                         </p>
 
-                        <div style="display: flex;">
+                        <div id="btn-link">
                              <button><a href="add-members.html?groupId=${groupId}">Add Members</a></button>
 
                             <p id="group-link" onclick="copy('${result.data.inviteLink}')">
