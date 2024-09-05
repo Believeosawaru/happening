@@ -96,13 +96,15 @@ document.addEventListener("DOMContentLoaded", async () => {
                         Created By: ${result.createdBy.firstName} ${result.createdBy.lastName}
                         </p>
 
-                        <button><a href="add-members.html?groupId=${groupId}">Add Members</a></button>
+                        <div>
+                             <button><a href="add-members.html?groupId=${groupId}">Add Members</a></button>
+
+                            <p id="group-link">
+                                <p class="copy-i" onclick="copy('${result.data.inviteLink}')"><i class="fa fa-copy"></i> Copy Link</p>
+                            </p>
+                        </div>
 
                         <span class="edit-button"><a href="group-details-edit.html?groupId=${groupId}"><i class="fa fa-pencil"></i></a></span>
-
-                        <p class="group-link">
-                            <p class="copy-i" onclick="copy('${result.data.inviteLink}')"><i class="fa fa-copy"></i> Copy Link</p>
-                        </p>
                     `;
                     }
                 }
