@@ -573,12 +573,17 @@ select:hover {
     cursor: pointer;
     background: #FFECB3;
 }
-.group-link, #group-link {
+.group-link {
     font-weight: bold;
     color: #FF4500;
     margin-inline: 6px;
     position: absolute;
     bottom: -5px;
+}
+#group-link {
+    font-weight: bold;
+    color: #FF4500;
+    margin-inline: 6px;
 }
 .rel {
     position: relative;
@@ -710,7 +715,6 @@ form textarea {
     margin-block: 3px;
 }
 #btn-link {
-    background: #FF4500;
     display: flex;
 }
 
