@@ -584,6 +584,7 @@ select:hover {
     font-weight: bold;
     color: #FF4500;
     margin-inline: 6px;
+    padding-block: 5px;
 }
 .rel {
     position: relative;
