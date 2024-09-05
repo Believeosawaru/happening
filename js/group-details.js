@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <button><a href="https://happening-khaki.vercel.app/html/groups/leave-group.html?groupId=${result.data._id}">Leave Group</a></button>
                 `;
                 } else {
-                    if (!groupDetailsCon.inviteLink) {
+                    if (!result.data.inviteLink) {
                         groupDetailsCon.innerHTML = `
                             <h2 id="gd-h2">${result.data.name}</h2>
 
