@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                             <p class="group-link" id="group-iv-link">${result.data.inviteLink}</p>
                         `;
-                    } else {
+                    } else if (result.data.inviteLink === null) {
                         groupDetailsCon.innerHTML = `
                             <h2 id="gd-h2">${result.data.name}</h2>
 
