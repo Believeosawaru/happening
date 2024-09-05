@@ -99,8 +99,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                         <div>
                              <button><a href="add-members.html?groupId=${groupId}">Add Members</a></button>
 
-                            <p id="group-link">
-                                <p class="copy-i" onclick="copy('${result.data.inviteLink}')"><i class="fa fa-copy"></i> Copy Link</p>
+                            <p id="group-link" onclick="copy('${result.data.inviteLink}')">
+                                <i class="fa fa-copy"></i> Copy Link
                             </p>
                         </div>
 
