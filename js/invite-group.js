@@ -73,6 +73,8 @@ async function addMemberToGroup(userId) {
         const searchResults = document.getElementById("search-results").innerHTML = "";
 
         document.getElementById("success-sign-up").classList.add("success-sign-up");
+        } else {
+            console.log(response)
         }
 
         setTimeout(() => {
