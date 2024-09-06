@@ -2,14 +2,14 @@ const token = localStorage.getItem("authToken");
 const urlParams = new URLSearchParams(window.location.search);
 const eventId = urlParams.get("eventId");
 
-if (!token) {
-    window.location.href = "/html/log-in.html";
-}
+// if (!token) {
+//     window.location.href = "/html/log-in.html";
+// }
 
 document.addEventListener("DOMContentLoaded", async () => {
-    if (!token) {
-        window.location.href = "/html/log-in.html"
-    }
+    // if (!token) {
+    //     window.location.href = "/html/log-in.html"
+    // }
 
     if (eventId) {
         try {
