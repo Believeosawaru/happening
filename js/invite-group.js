@@ -11,7 +11,8 @@ async function searchUsers() {
     const searchResults = document.getElementById("search-results");
 
     try {
-        const response = await fetch(`https://happening-api.onrender.com/api/v1/user/search-users/${groupId}?query=${encodeURIComponent(query)}`, {
+        const response = await fetch(`https://happening
+            -api.onrender.com/api/v1/user/group/search/email-users/${groupId}?query=${encodeURIComponent(query)}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
