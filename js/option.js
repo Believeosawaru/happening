@@ -8,5 +8,13 @@ if (groupId) {
 
         proceed.innerHTML = `<a href="invite-group.html?groupId=${groupId}">Proceed</a>`;
     }
+
+    function skip() {
+        const skipBtn = document.getElementById("delete-group-btn");
+
+        skipBtn.innerHTML = `<a href="groups.html" id="black" onclick="skip();">Skip For Later</a>`
+    }
+
     proceed();
+    skip();
 }
