@@ -730,6 +730,7 @@ form textarea {
 #desc button {
     background: #FF4500;
     margin: 10px 0px;
+    width: 100%;
 }
 #desc span {
     font-weight: bold;
