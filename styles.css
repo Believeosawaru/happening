@@ -741,7 +741,7 @@ form textarea {
 .event-date {
     background: rgba(0, 0, 0, 0.1);
     position: absolute;
-    top: 50px;
+    top: 60px;
     right: 15px;
     margin-bottom: 30px;
     padding: 5px;
