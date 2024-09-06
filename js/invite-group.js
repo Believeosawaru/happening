@@ -12,7 +12,7 @@ async function searchUsers() {
 
     try {
         const response = await fetch(`https://happening
-            -api.onrender.com/api/v1/user/group/search/email-users/${groupId}?query=${encodeURIComponent(query)}`, {
+            -api.onrender.com/api/v1/user/group/search/email-users/${groupId}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
