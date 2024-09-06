@@ -24,7 +24,7 @@ async function searchUsers() {
         if (response.ok) {
             searchResults.innerHTML = "";
 
-            if (result.users.length < 1) {
+            if (result.user.length < 1) {
                 searchResults.innerHTML = "User Not Found"
             }
 
