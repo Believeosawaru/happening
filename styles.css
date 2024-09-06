@@ -735,7 +735,7 @@ form textarea {
     border: none;
     margin-inline: 5px;
     margin-block-end: 4px;
-    border-radius: 9px;
+    border-radius: 7px;
 }
 
 @media screen and (min-width: 900px) {
