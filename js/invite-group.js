@@ -28,7 +28,7 @@ async function searchUsers() {
                 searchResults.innerHTML = "User Not Found"
             }
 
-            result.users.forEach(user => {
+            result.user.forEach(user => {
                 const p = document.createElement("p");
 
                 p.classList.add("p-user-details");
