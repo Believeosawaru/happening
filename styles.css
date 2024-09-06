@@ -721,11 +721,11 @@ form textarea {
 #btn-link {
     display: flex;
 }
-.desc {
+#desc {
     background: rgba(0, 0, 0, 0.1);
     padding: 10px 15px;
     border-radius: 6px;
-    margin-bottom: 300px;
+    margin-top: 30px;
 }
 #h2-p {
     background: #FF4500;
