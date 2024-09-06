@@ -45,13 +45,13 @@ document.getElementById("create-group").addEventListener("submit", async (e) => 
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "option.html"
+            window.location.href = `option.html/groupId=${data.data}`
         }, 2000)
     } else {
         const keys = Object.keys(data);
 
         keys.forEach(key => {
-            const value = data[key]; 
+            const value = data[key];
             
             document.getElementById("failed").style.display = "block"
             document.getElementById("failed").innerHTML = value;
