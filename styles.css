@@ -741,6 +741,8 @@ form textarea {
     background: rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 50px;
+    right: 15px;
+    margin-bottom: 30px;
 }
 
 @media screen and (min-width: 900px) {
