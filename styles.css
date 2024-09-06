@@ -737,7 +737,7 @@ form textarea {
     border-radius: 7px;
 }
 .event-date {
-    display: block;
+    display: flex;
 }
 .event-date p {
     background: rgba(0, 0, 0, 0.1);
