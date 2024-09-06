@@ -744,6 +744,9 @@ form textarea {
     right: 15px;
     margin-bottom: 30px;
 }
+#bttm-space {
+    margin-bottom: 40px;
+}
 
 @media screen and (min-width: 900px) {
     .menu {
