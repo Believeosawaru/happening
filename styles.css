@@ -725,8 +725,7 @@ form textarea {
     background: rgba(0, 0, 0, 0.1);
     padding: 10px 15px;
     border-radius: 6px;
-    margin-top: 60px;
-    margin-bottom: 50px;
+    margin-top: 65px;
 }
 #desc span {
     font-weight: bold;
@@ -744,7 +743,7 @@ form textarea {
 .event-date {
     background: rgba(0, 0, 0, 0.1);
     position: absolute;
-    top: 80px;
+    top: 75px;
     right: 20px;
     margin-bottom: 30px;
     padding: 5px 8px;
