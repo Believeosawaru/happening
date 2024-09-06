@@ -14,4 +14,7 @@ if (groupId) {
 
         skipBtn.innerHTML = `<a href="groups.html" id="black">Skip For Later</a>`
     }
+
+    proceed();
+    skip();
 }
