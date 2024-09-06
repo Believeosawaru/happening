@@ -63,10 +63,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                 } else {
                     eventDetailsCon.innerHTML = `
 
-                    <h2 id="gd-h2 bttm-space">${result.data.name} <span id="h2-p">${result.data.groupType}</span></h2>
+                    <h2 id="gd-h2 bttm-space">${result.data.name} <span id="h2-p">${result.data.type}</span></h2>
 
                     <p class="event-date">
-                         &#x1F4C5; ${result.data.date}
+                         &#x1F4C5; ${formattedDate}
                     </p>
     
                     <div id="desc">
