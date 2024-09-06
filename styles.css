@@ -741,7 +741,7 @@ form textarea {
     margin-block-end: 4px;
     border-radius: 7px;
 }
-.event-date {
+.event-time {
     background: rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 60px;
@@ -750,7 +750,7 @@ form textarea {
     padding: 5px 8px;
     border-radius: 3px;
 }
-.event-time {
+.event-date {
     background: rgba(0, 0, 0, 0.1);
     position: absolute;
     bottom: 10px;
