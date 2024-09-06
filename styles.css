@@ -708,7 +708,7 @@ form textarea {
 .on-p-div {
     display: none;
 }
-.flexo-text h3 {
+.flexo-text h3, .group-details-container h2 {
     color: #FF4500;
     font-weight: bold;
     margin-block-end: 5px;
