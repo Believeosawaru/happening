@@ -62,35 +62,25 @@ document.addEventListener("DOMContentLoaded", async () => {
                 `;
                 } else {
                     eventDetailsCon.innerHTML = `
-                <h2 id="gd-h2">${result.data.name}</h2>
 
-                <p>
-                <span>Event Description:</span> ${result.data.description}
-                </p>
+                    <h2 id="gd-h2 bttm-space">Bacon Party <span id="h2-p">Private</span></h2>
 
-                <p>
-                <span>Event Type:</span> ${result.data.type} event
-                </p>
-
-                <p>
-                <span>Event Date:</span> ${formattedDate}
-                </p>
-
-                <p>
-                <span>Event Time:</span> ${result.data.time} (${result.data.timeZone} UTC)
-                </p>
-
-                <p>
-                <span>Location:</span> ${result.data.location}
-                </p>
-
-                <p>
-                <span>Created By:</span> ${result.createdBy.firstName} ${result.createdBy.lastName}
-                </p>
-
-                <button><a href="event-iv-send.html?eventId=${eventId}">Send Invitation</a></button>
-
-                <span class="edit-button"><a href="event-details-edit.html?eventId=${eventId}"><i class="fa fa-pencil"></i></a></span>
+                    <p class="event-date">
+                         &#x1F4C5; September 2, 2024
+                    </p>
+    
+                    <div id="desc">
+                        <p><span>Event Description:</span> This is an event for bacon lovers, and a time for friends and family to catch up.</p>
+    
+                        <p><span>Location:</span> Benin, Nigeria</p>
+    
+                        <p><span>Time:</span> &#x23F0; 21:48 (+02:00 UTC)</p>
+    
+                        <button><a href="event-iv-send.html?eventId=${eventId}">Send Invitation</a></button>
+                    </div>
+    
+                     
+                    <span class="edit-button"><a href="event-details-edit.html?eventId=${eventId}"><i class="fa fa-pencil"></i></a></span>    
                 `;
                 }
 
