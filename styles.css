@@ -727,6 +727,9 @@ form textarea {
     border-radius: 6px;
     margin-top: 60px;
 }
+#desc span {
+    font-weight: bold;
+}
 #h2-p {
     background: rgba(0, 0, 0, 0.1);
     font-size: .6rem;
