@@ -738,6 +738,7 @@ form textarea {
 }
 .event-date {
     display: flex;
+    justify-content: center;
 }
 .event-date p {
     background: rgba(0, 0, 0, 0.1);
