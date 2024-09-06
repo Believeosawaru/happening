@@ -727,7 +727,7 @@ form textarea {
     padding: 10px 15px;
     border-radius: 6px;
 }
-.h2-p span {
+#h2-p {
     background: #FF4500;
     font-size: .8rem;
     color: white;
