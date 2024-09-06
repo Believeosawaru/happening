@@ -29,8 +29,8 @@ async function displayAllEvents() {
             }
 
             data.message.forEach((event) => {
-            const eventTime = new Date(event.time);
-            const formattedDate = eventTime.toLocaleDateString("en-US", {
+            const eventDate = new Date(event.date);
+            const formattedDate = eventDate.toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "long",
                 day: "numeric"
