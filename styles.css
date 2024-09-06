@@ -725,7 +725,6 @@ form textarea {
     background: rgba(0, 0, 0, 0.1);
     padding: 10px 15px;
     border-radius: 6px;
-    margin-top: 60px;
 }
 #h2-p {
     background: #FF4500;
@@ -738,11 +737,11 @@ form textarea {
     border-radius: 7px;
 }
 .event-date {
+    display: block;
+}
+.event-date p {
     background: rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    margin-bottom: 30px;
+    margin-inline: 5px;
     padding: 5px 8px;
     border-radius: 3px;
 }
