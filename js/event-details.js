@@ -63,18 +63,18 @@ document.addEventListener("DOMContentLoaded", async () => {
                 } else {
                     eventDetailsCon.innerHTML = `
 
-                    <h2 id="gd-h2 bttm-space">Bacon Party <span id="h2-p">Private</span></h2>
+                    <h2 id="gd-h2 bttm-space">${result.data.name} <span id="h2-p">${result.data.groupType}</span></h2>
 
                     <p class="event-date">
-                         &#x1F4C5; September 2, 2024
+                         &#x1F4C5; ${result.data.date}
                     </p>
     
                     <div id="desc">
-                        <p><span>Event Description:</span> This is an event for bacon lovers, and a time for friends and family to catch up.</p>
+                        <p><span>Event Description:</span> ${result.data.description}</p>
     
-                        <p><span>Location:</span> Benin, Nigeria</p>
+                        <p><span>Location:</span> ${result.data.location}</p>
     
-                        <p><span>Time:</span> &#x23F0; 21:48 (+02:00 UTC)</p>
+                        <p><span>Time:</span> &#x23F0; ${result.data.time}</p>
     
                         <button><a href="event-iv-send.html?eventId=${eventId}">Send Invitation</a></button>
                     </div>
