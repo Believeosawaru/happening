@@ -741,20 +741,11 @@ form textarea {
     margin-block-end: 4px;
     border-radius: 7px;
 }
-.event-time {
-    background: rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    margin-bottom: 30px;
-    padding: 5px 8px;
-    border-radius: 3px;
-}
 .event-date {
     background: rgba(0, 0, 0, 0.1);
     position: absolute;
-    bottom: 10px;
-    left: 20px;
+    top: 70px;
+    right: 20px;
     margin-bottom: 30px;
     padding: 5px 8px;
     border-radius: 3px;
