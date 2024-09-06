@@ -749,6 +749,16 @@ form textarea {
     padding: 5px 8px;
     border-radius: 3px;
 }
+.event-time {
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+    margin-bottom: 30px;
+    padding: 5px 8px;
+    border-radius: 3px;jihnok 
+
+}
 
 @media screen and (min-width: 900px) {
     .menu {
