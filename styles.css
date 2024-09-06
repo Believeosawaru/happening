@@ -727,6 +727,10 @@ form textarea {
     border-radius: 6px;
     margin-top: 65px;
 }
+#desc button {
+    background: #FF4500;
+    margin: 0px 10px;
+}
 #desc span {
     font-weight: bold;
 }
