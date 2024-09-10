@@ -1,4 +1,4 @@
-const signInUrl = "https://happening-api.onrender.com/api/v1/auth/sign-in";
+const signInUrl = "http://5.161.186.15/api/v1/auth/sign-in";
 
 const button = document.getElementById("sign-in-btn");
 
