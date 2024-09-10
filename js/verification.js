@@ -10,7 +10,7 @@ function disableBtn() {
 
 const email = localStorage.getItem("email");
 
-console.log("This is The email" + email)
+console.log(email)
 
 document.getElementById("recover-password").addEventListener("submit", async (e) => {
     e.preventDefault();
