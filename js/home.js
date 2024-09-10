@@ -121,8 +121,8 @@ async function fetchGroup() {
 
 function onLoad() {
     fetchMessage();
-    // fetchEvent();
-    // fetchGroup();
+    fetchEvent();
+    fetchGroup();
 }
 
 window.onload = onLoad;
