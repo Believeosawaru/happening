@@ -1,4 +1,4 @@
-const signInUrl = "http://5.161.186.15/api/v1/auth/recover-password";
+const signInUrl = "http://5.161.186.15/api/v1/auth/sign-in";
 
 const button = document.getElementById("fg-pass-btn");
 
