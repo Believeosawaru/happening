@@ -8,15 +8,15 @@ function disableBtn() {
     button.style.color = "black";
 }
 
+const email = localStorage.getItem("email");
+
+console.log(email)
 
 document.getElementById("recover-password").addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const email = localStorage.getItem("email");
     const code = document.getElementById("code").value;
     const password = document.getElementById("password").value;
-
-    console.log(email)
 
     disableBtn();
 
