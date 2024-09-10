@@ -19,7 +19,7 @@ async function fetchMessage() {
     const token = localStorage.getItem("authToken");
 
     try {
-        const response = await fetch("https://happening-api.onrender.com/api/v1/user/home", {
+        const response = await fetch("http://5.161.186.15/api/v1/user/home", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
