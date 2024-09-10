@@ -121,7 +121,8 @@ async function fetchGroup() {
 
 function onLoad() {
     fetchMessage();
-    console.log("On Load Function Dey Work Nau!!")
+    fetchEvent();
+    fetchGroup();
 }
 
 window.onload = onLoad;
