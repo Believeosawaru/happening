@@ -34,7 +34,7 @@ async function fetchMessage() {
         }
 
         if (!response.ok) {
-           console.log(response)
+           console.log(response.json());
         }
 
         const message = await response.json();
