@@ -16,6 +16,8 @@ document.getElementById("recover-password").addEventListener("submit", async (e)
     const code = document.getElementById("code").value;
     const password = document.getElementById("password").value;
 
+    console.log(email)
+
     disableBtn();
 
     try {
@@ -28,8 +30,6 @@ document.getElementById("recover-password").addEventListener("submit", async (e)
         });
 
     const data = await response.json();
-
-    console.log(email)
 
     if (response.ok) {
         document.getElementById("success-sign-up").innerHTML = "Password Successsfully Changed";
