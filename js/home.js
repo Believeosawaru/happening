@@ -33,10 +33,6 @@ async function fetchMessage() {
             verifyDiv.style.display = "block";
         }
 
-        if (!response.ok) {
-           console.log(response.message);
-        }
-
         const message = await response.json();
 
         if (response.ok) {
@@ -49,79 +45,79 @@ async function fetchMessage() {
     }
 }
 
-// async function fetchEvent() {
-//     const token = localStorage.getItem("authToken");
+async function fetchEvent() {
+    const token = localStorage.getItem("authToken");
 
-//     try {
-//         const response = await fetch("https://happening-api.onrender.com/api/v1/user/home-events", {
-//             method: "GET",
-//             headers: {
-//                 "Authorization": `Bearer ${token}`
-//             }
-//         });
+    try {
+        const response = await fetch("http://5.161.186.15/api/v1/user/home-events", {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
 
-//         if (response.status == 403) {
-//             pcMenu.style.display = "none";
-//             userDashboard.style.display = "none";
-//             menu.style.display = "none";
-//             verifyDiv.style.display = "block";
-//         }
+        if (response.status == 403) {
+            pcMenu.style.display = "none";
+            userDashboard.style.display = "none";
+            menu.style.display = "none";
+            verifyDiv.style.display = "block";
+        }
 
-//         if (!response.ok) {
-//             console.log("Bad Network")
-//         }
+        if (!response.ok) {
+            console.log("Bad Network")
+        }
 
-//         const message = await response.json();
+        const message = await response.json();
 
-//         if (response.ok) {
-//             document.querySelector(".latest-events").innerHTML = `
-//              &#x1F4C5;
-//             <a class="del-group-a" href="events/event-details.html?eventId=${message.message._id}">${message.message.name}</a>
-//             `
-//         } else {
-//             console.log("Bad Network")
-//         }
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+        if (response.ok) {
+            document.querySelector(".latest-events").innerHTML = `
+             &#x1F4C5;
+            <a class="del-group-a" href="events/event-details.html?eventId=${message.message._id}">${message.message.name}</a>
+            `
+        } else {
+            console.log("Bad Network")
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
 
-// async function fetchGroup() {
-//     const token = localStorage.getItem("authToken");
+async function fetchGroup() {
+    const token = localStorage.getItem("authToken");
 
-//     try {
-//         const response = await fetch("https://happening-api.onrender.com/api/v1/user/home-groups", {
-//             method: "GET",
-//             headers: {
-//                 "Authorization": `Bearer ${token}`
-//             }
-//         });
+    try {
+        const response = await fetch("http://5.161.186.15/api/v1/user/home-groups", {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
 
-//         if (response.status == 403) {
-//             pcMenu.style.display = "none";
-//             userDashboard.style.display = "none";
-//             menu.style.display = "none";
-//             verifyDiv.style.display = "block";
-//         }
+        if (response.status == 403) {
+            pcMenu.style.display = "none";
+            userDashboard.style.display = "none";
+            menu.style.display = "none";
+            verifyDiv.style.display = "block";
+        }
 
-//         if (!response.ok) {
-//             console.log("Bad Network")
-//         }
+        if (!response.ok) {
+            console.log("Bad Network")
+        }
 
-//         const message = await response.json();
+        const message = await response.json();
 
-//         if (response.ok) {
-//             document.querySelector(".latest-groups").innerHTML = `
-//             &#x1F465; 
-//             <a class="del-group-a" href="groups/group-details.html?groupId=${message.message._id}">${message.message.name}</a>
-//             `
-//         } else {
-//             console.log("Bad Network")
-//         }
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+        if (response.ok) {
+            document.querySelector(".latest-groups").innerHTML = `
+            &#x1F465; 
+            <a class="del-group-a" href="groups/group-details.html?groupId=${message.message._id}">${message.message.name}</a>
+            `
+        } else {
+            console.log("Bad Network")
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 function onLoad() {
     fetchMessage();
