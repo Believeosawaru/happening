@@ -2,7 +2,7 @@ const token = localStorage.getItem("authToken");
 const urlParams = new URLSearchParams(window.location.search);
 const groupId = urlParams.get("groupId");
 
-const delGroupUrl = `https://happening-api.onrender.com/api/v1/user/delete-group/${groupId}`
+const delGroupUrl = `http://5.161.186.15/api/v1/user/delete-group/${groupId}`
 
 if (!token) {
     window.location.href = "/html/log-in.html"

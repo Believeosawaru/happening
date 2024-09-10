@@ -6,7 +6,7 @@ async function displayEvents() {
     }
 
     try {
-        const response = await fetch("https://happening-api.onrender.com/api/v1/user/events", {
+        const response = await fetch("http://5.161.186.15/api/v1/user/events", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`

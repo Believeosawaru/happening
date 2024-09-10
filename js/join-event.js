@@ -8,7 +8,7 @@ async function joinEvent() {
     }
 
     try {
-        const response = await fetch(`https://happening-api.onrender.com/api/v1/user/join-event/${eventId}`, {
+        const response = await fetch(`http://5.161.186.15/api/v1/user/join-event/${eventId}`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`

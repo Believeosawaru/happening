@@ -6,7 +6,7 @@ async function displayGroups() {
     }
 
     try {
-        const response = await fetch("https://happening-api.onrender.com/api/v1/user/groups", {
+        const response = await fetch("http://5.161.186.15/api/v1/user/groups", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`

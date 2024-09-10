@@ -8,7 +8,7 @@ async function joinGroup() {
     }
 
     try {
-        const response = await fetch(`https://happening-api.onrender.com/api/v1/user/join-group/${groupToken}invite-link`, {
+        const response = await fetch(`http://5.161.186.15/api/v1/user/join-group/${groupToken}invite-link`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`

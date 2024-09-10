@@ -2,7 +2,7 @@ const token = localStorage.getItem("authToken");
 const urlParams = new URLSearchParams(window.location.search);
 const eventId = urlParams.get("eventId");
 
-const delEventUrl = `https://happening-api.onrender.com/api/v1/user/delete-event/${eventId}`
+const delEventUrl = `http://5.161.186.15/api/v1/user/delete-event/${eventId}`
 
 if (!token) {
     window.location.href = "/html/log-in.html"

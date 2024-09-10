@@ -51,7 +51,7 @@ async function searchUsers() {
 
 async function addMemberToGroup(userId) {
     try {
-        const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/add-member`, {
+        const response = await fetch(`http://5.161.186.15/api/v1/user/group/${groupId}/add-member`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -33,7 +33,7 @@ const retreiveInfo = async () => {
     }
 } 
 
-const editGroupUrl = `https://happening-api.onrender.com/api/v1/user/edit-group-info/${groupId}`;
+const editGroupUrl = `http://5.161.186.15/api/v1/user/edit-group-info/${groupId}`;
 
 const delBtn = document.getElementById("group-del-link");
 

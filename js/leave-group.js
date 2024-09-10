@@ -14,7 +14,7 @@ document.getElementById("leave-group").addEventListener("click", async () => {
     disableBtn();
 
     try {
-        const response = await fetch(`https://happening-api.onrender.com/api/v1/user/leave-group/${groupId}`, {
+        const response = await fetch(`http://5.161.186.15/api/v1/user/leave-group/${groupId}`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`

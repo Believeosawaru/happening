@@ -229,7 +229,7 @@ function searchLocations(input) {
 }
 
 const retreiveInfo = async () => {
-    const info = await fetch(`https://happening-api.onrender.com/api/v1/user/event-details/${eventId}`, {
+    const info = await fetch(`http://5.161.186.15/api/v1/user/event-details/${eventId}`, {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${token}`,

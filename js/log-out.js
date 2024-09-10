@@ -1,4 +1,4 @@
-const logOutUrl = "https://happening-api.onrender.com/api/v1/auth/log-out";
+const logOutUrl = "http://5.161.186.15/api/v1/auth/log-out";
 
 document.getElementById("log-out").addEventListener("submit", async (e) => {
     e.preventDefault();

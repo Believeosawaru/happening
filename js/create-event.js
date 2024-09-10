@@ -1,4 +1,4 @@
-const signUpUrl = "https://happening-api.onrender.com/api/v1/user/create-event";
+const signUpUrl = "http://5.161.186.15/api/v1/user/create-event";
 
 const button = document.getElementById("create-event-btn");
 

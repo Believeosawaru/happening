@@ -1,4 +1,4 @@
-const signUpUrl = "https://happening-api.onrender.com/api/v1/user/create-group";
+const signUpUrl = "http://5.161.186.15/api/v1/user/create-group";
 
 const button = document.getElementById("create-group-btn");
 
