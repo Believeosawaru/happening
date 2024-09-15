@@ -8,7 +8,7 @@ if (!token) {
 
 
 const retreiveInfo = async () => {
-    const info = await fetch(`https://happening-api.onrender.com/api/v1/user/group-details/${groupId}`, {
+    const info = await fetch(`http://5.161.186.15/api/v1/user/group-details/${groupId}`, {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${token}`,

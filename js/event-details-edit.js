@@ -276,7 +276,7 @@ const retreiveInfo = async () => {
     }
 } 
 
-const editEventUrl = `https://happening-api.onrender.com/api/v1/user/edit-event-info/${eventId}`;
+const editEventUrl = `http://5.161.186.15/api/v1/user/edit-event-info/${eventId}`;
 
 const delBtn = document.getElementById("event-del-link");
 

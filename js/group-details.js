@@ -128,7 +128,7 @@ const generateInviteLink = async () => {
         const urlParams = new URLSearchParams(window.location.search);
         const groupId = urlParams.get("groupId");
         
-        const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/generate-link`, {
+        const response = await fetch(`http://5.161.186.15/api/v1/user/group/${groupId}/generate-link`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`

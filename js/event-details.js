@@ -96,45 +96,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     } else {
         window.location.href = "groups.html"
     }
-})
-
-// const generateInviteLink = async () => {
-//     try {
-//         const urlParams = new URLSearchParams(window.location.search);
-//         const groupId = urlParams.get("groupId");
-        
-//         const response = await fetch(`https://happening-api.onrender.com/api/v1/user/group/${groupId}/generate-link`, {
-//             method: "POST",
-//             headers: {
-//                 "Authorization": `Bearer ${token}`
-//             }
-//         });
-
-//         const data = await response.json();
-
-//         if (response.ok) {
-//             document.querySelector(".group-link").innerHTML = `<p class="copy-i" onclick="copy('${data.data}')"><i class="fa fa-copy"></i> Copy Link</p>`
-//         }
-
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
-
-// function copy(text) {
-//     navigator.clipboard.writeText(text)
-//         .then(() => {
-//             document.querySelector(".copy-s").style.display = "block";
-
-//             setTimeout(() => {
-//                 document.querySelector(".copy-s").style.display = "none";
-//             }, 1500)
-//         })
-//         .catch(err => {
-//             console.error('Failed to copy text: ', err);
-//         });
-// }
-
-// <a href="${result.groupLink}">Copy Group Link</a>
-
-// /* <button><a href="add-members.html?groupId=${groupId}">Add Members</a></button> */
+});
