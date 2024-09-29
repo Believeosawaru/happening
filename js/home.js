@@ -109,7 +109,7 @@ async function fetchGroup() {
         if (response.ok) {
             setTimeout(() => {
                 document.querySelector(".pre-loader").style.display = "none";
-            }, 1500);
+            }, 3500);
             
             document.querySelector(".latest-groups").innerHTML = `
             &#x1F465; 
