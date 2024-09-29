@@ -319,14 +319,52 @@ aside button {
 /*  User Dashboard */
 #left {
     text-align: left;
+    font-family: "Oswald", sans-serif;
 }
 .user-dashboard {
     margin-top: 50px;
 }
+.user-dashboard h3 {
+    font-family: "Oswald", sans-serif;
+}
+.pre-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #333;
+    z-index: 10000000;
+    text-align: center;
+}
+.pre-loader h3 {
+    color: #FF4500;
+}
+.pre-loader div p {
+    margin-top: -30px;
+    font-size: .8rem;
+    font-weight: bold;
+}
+.dimmer {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+.dimmer-bold {
+    opacity: 1;
+}
+.dimmer-dull {
+    opacity: .5;
+}
 .dashboard {
     margin-block: 20px;
-    background: linear-gradient(to left, #FFECB3, rgb(240, 240, 240));
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    background: rgb(240, 240, 240);
+    /* linear-gradient(to left, #FFECB3, rgb(240, 240, 240)); */
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.1);
     text-align: left;
     padding: 30px 25px;
     border-radius: 7px;
@@ -337,10 +375,18 @@ aside button {
 .dashboard button {
     margin-top: 20px;
     margin-bottom: 0px;
+    border: 4px solid rgb(250, 250, 250);
+    box-shadow: 0px 0px 0px 1.5px rgba(0, 0, 0, 0.1);
+}
+.gd-color {
+    background: linear-gradient(to right, #FFECB3, #FFF8E1);
+    padding: 5px 8px;
+    border-radius: 8px;
 }
 .plan-txt {
     margin-top: 30px;
     font-size: 1.3rem;
+    font-family: "Oswald", sans-serif;
 }
 .user-menu {
     background: linear-gradient(to top, #FFECB3, rgb(250, 250, 250));
