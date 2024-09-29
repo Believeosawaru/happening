@@ -107,7 +107,10 @@ async function fetchGroup() {
         const message = await response.json();
 
         if (response.ok) {
-            document.querySelector(".pre-loader").style.display = "none";
+            setTimeout(() => {
+                document.querySelector(".pre-loader").style.display = "none";
+            }, 1500);
+            
             document.querySelector(".latest-groups").innerHTML = `
             &#x1F465; 
             <a class="del-group-a" href="groups/group-details.html?groupId=${message.message._id}">${message.message.name}</a>
