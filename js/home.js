@@ -109,9 +109,9 @@ async function fetchGroup() {
         if (message.message === "jwt malformed") {
             setTimeout(() => {
                 document.querySelector(".pre-loader").style.display = "none";
-            }, 3500);
 
-            window.location.href = "log-in.html"
+                window.location.href = "log-in.html"
+            }, 1500);
         }
 
         if (response.ok) {
