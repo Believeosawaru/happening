@@ -51,6 +51,12 @@ nav button {
     display: grid;
     align-items: center;
 }
+.hero h2, .hero h3 {
+    font-family: "Oswald", sans-serif;
+}
+.event-img {
+    border-radius: 20px;
+}
 .event-details-con {
     padding-top: 90px;
     padding-inline: 20px;
@@ -324,7 +330,7 @@ aside button {
 .user-dashboard {
     margin-top: 50px;
 }
-.user-dashboard h3 {
+.user-dashboard h3, .home-hero h2, #event-desc-div h3, #group-desc-div h3 {
     font-family: "Oswald", sans-serif;
 }
 .pre-loader {
@@ -569,6 +575,7 @@ select:hover {
 }
 #group-desc-div h2, #event-desc-div h2 {
     margin-bottom: 5px;
+    font-family: "Oswald", sans-serif;
 }
 #group-desc-div button {
     background: #FF4500;
@@ -674,6 +681,60 @@ select:hover {
     color: black;
     padding: 10px;
     border-radius: 7px;
+}
+#location {
+    width: 20px;
+}
+.public-events {
+    background: rgb(250, 250, 250);
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    padding: 15px;
+    border-radius: 10px;
+    margin-block: 20px;
+}
+.events-list {
+    width: 100%;
+    margin-block: 15px;
+    overflow-y: scroll;
+    height: 230px;
+}
+.events-list::-webkit-scrollbar {
+    width: 1em;
+}
+.events-list::-webkit-scrollbar-track {
+    background: rgb(240, 240, 240);
+    border-radius: 30px;
+    margin-top: 10px;
+}
+.events-list::-webkit-scrollbar-thumb {
+    background: #FF4500;
+    width: 90%;
+    border-radius: 30px;
+}
+.events-list::-webkit-scrollbar-thumb:hover {
+    background: red;
+}
+.events-list div {
+    background: rgb(240, 240, 240);
+    margin-inline-end: 15px;
+    padding: 10px;
+    width: 95%;
+    margin-block: 10px;
+    border-radius: 6px;
+}
+.dis-flex {
+    display: flex;
+}
+.dis-flex span {
+    margin-inline: 1px;
+}
+.events-list h3 {
+    color: #FF4500;
+    margin-bottom: 7px;
+}
+.events-list p {
+    margin-block: 5px;
 }
 .margin-bttm {
     margin-bottom: 20px;
