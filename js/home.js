@@ -106,6 +106,14 @@ async function fetchGroup() {
 
         const message = await response.json();
 
+        if (message === "Unauthorized Request") {
+            setTimeout(() => {
+                document.querySelector(".pre-loader").style.display = "none";
+            }, 3500);
+
+            window.location.href = "log-in.html"
+        }
+
         if (response.ok) {
             setTimeout(() => {
                 document.querySelector(".pre-loader").style.display = "none";

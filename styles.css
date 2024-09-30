@@ -352,7 +352,7 @@ aside button {
 }
 .dimmer {
     opacity: 1;
-    transition: opacity 1s ease;
+    transition: opacity .5s ease;
 }
 .dimmer-bold {
     opacity: 1;
