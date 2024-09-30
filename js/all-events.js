@@ -88,4 +88,4 @@ async function displayAllEvents() {
     }
 }
 
-// window.onload = displayAllEvents;
+window.onload = displayAllEvents;
