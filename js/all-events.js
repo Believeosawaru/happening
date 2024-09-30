@@ -20,7 +20,8 @@ async function displayAllEvents() {
         const data = await response.json();
 
         if (response.ok) {
-            const eventContainer = document.querySelector(".events-list");
+            const eventContainer = 
+            document.getElementById("hero")
 
             texts = "";
 
