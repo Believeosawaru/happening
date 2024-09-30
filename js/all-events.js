@@ -29,6 +29,12 @@ async function displayAllEvents() {
                 return;
             }
 
+            if (data.message === "jwt malformed") {
+                setTimeout(() => {
+                    window.location.href = "log-in.html"
+                }, 3500);
+            }
+
             data.message.forEach((event) => {
             const eventDate = new Date(event.date);
             const formattedDate = eventDate.toLocaleDateString("en-US", {
