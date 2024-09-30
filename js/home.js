@@ -106,7 +106,7 @@ async function fetchGroup() {
 
         const message = await response.json();
 
-        if (message === "jwt malformed") {
+        if (message.message === "jwt malformed") {
             setTimeout(() => {
                 document.querySelector(".pre-loader").style.display = "none";
             }, 3500);
