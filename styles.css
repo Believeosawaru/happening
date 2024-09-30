@@ -701,7 +701,7 @@ select:hover {
     height: 230px;
 }
 .events-list::-webkit-scrollbar {
-    width: 1em;
+    width: .7em;
 }
 .events-list::-webkit-scrollbar-track {
     background: rgb(240, 240, 240);
