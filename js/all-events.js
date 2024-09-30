@@ -20,8 +20,7 @@ async function displayAllEvents() {
         const data = await response.json();
 
         if (response.ok) {
-            const eventContainer = 
-            document.getElementById("hero")
+            const groupContainer = document.getElementById("hero");
 
             texts = "";
 
@@ -38,37 +37,22 @@ async function displayAllEvents() {
             });
 
                 texts += `
-               <div>
-                       <h3>${event.name}</h3>
-                       <p class="dis-flex">
-                            <span class="material-symbols-outlined">
-                            location_on
-                            </span> 
-                            <span>${event.location || "None Specified"}</span>
-                        </p>
-
-                       <p class="dis-flex">
-                            <span class="material-symbols-outlined">
-                            schedule
-                            </span>
-                            <span>${event.time} ${event.timeZone}</span>
-                       </p>
-
-                        <p class="dis-flex">
-                            <span class="material-symbols-outlined">
-                                calendar_month
-                            </span>
-                            <span>${formattedDate}</span>
-                        </p>
-                    </div>
-
+                <div id="event-desc-div">
+                            <div class="flexo-text">
+                                <h3>&#x1F4C5; ${event.name}</h3>
+                                <p><span>Location:</span> ${event.location || "None Specified"}</p>
+                                <p><span>Date:</span> ${formattedDate}</p>
+                                <p><span>Time:</span> ${event.time} (${event.timeZone} UTC)</p>
+                                <p><span>Type:</span> ${event.type}</p>
+                            </div>
+                </div>
                 `
             });
 
             // <button><a href="https://happening-khaki.vercel.app/html/groups/join-group.html?groupId=${group._id}">Join Group</a></button>
             // <p class="group-type">${group.groupType}</p>
 
-            eventContainer.innerHTML = texts;
+            groupContainer.innerHTML = texts;
         } else {
             const keys = Object.keys(data);
     
