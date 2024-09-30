@@ -39,7 +39,7 @@ async function displayAllEvents() {
 
                 texts += `
                <div>
-                       <h3>${event.name}</h3>
+                       <h2>${event.name}</h2>
                        <p class="dis-flex">
                             <span class="material-symbols-outlined">
                             location_on

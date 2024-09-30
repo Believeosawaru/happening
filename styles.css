@@ -730,7 +730,7 @@ select:hover {
 .dis-flex span {
     margin-inline: 1px;
 }
-.events-list h3 {
+.events-list h2 {
     color: #FF4500;
     margin-bottom: 7px;
 }
