@@ -19,6 +19,12 @@ async function displayAllEvents() {
 
         const data = await response.json();
 
+        if (data.message === "jwt malformed") {
+            setTimeout(() => {
+                window.location.href = "log-in.html"
+            }, 3500);
+        }
+
         if (response.ok) {
             const eventContainer = 
             document.getElementById("events-list")
@@ -29,11 +35,9 @@ async function displayAllEvents() {
                 return;
             }
 
-            if (data.message === "jwt malformed") {
-                setTimeout(() => {
-                    window.location.href = "log-in.html"
-                }, 3500);
-            }
+            setTimeout(() => {
+                document.querySelector(".pre-loader").style.display = "none";
+            }, 3500);
 
             data.message.forEach((event) => {
             const eventDate = new Date(event.date);
