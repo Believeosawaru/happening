@@ -387,7 +387,7 @@ aside button {
     padding: 6px 70px;
     border-radius: 6px;
     border: none;
-    margin-inline: 5px;
+    margin-right: 5px;
     color: white;
     margin-block: 20px;
 }
@@ -409,6 +409,7 @@ aside button {
 .choose-category div button:last-child {
     background: #FFECB3;
     color: black;
+    margin-left: 5px;
 }
 .choose-category h2 {
     margin-bottom: 15px;
