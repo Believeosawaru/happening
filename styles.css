@@ -379,7 +379,7 @@ aside button {
     color: #333;
     z-index: 10000000;
     display: none;
-    transition: top 1s ease;
+    transition: position 1s ease;
 }
 .cate-transition {
     top: 0px;
