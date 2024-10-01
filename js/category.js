@@ -16,7 +16,7 @@ document.getElementById("close").addEventListener("click", () => {
     document.querySelector(".choose-category").classList.remove("cate-transition");
 });
 
-document.getElementById("close-2").addEventListener("click", () => {
+document.querySelector(".close-2").addEventListener("click", () => {
     document.querySelector("#choose-online").classList.add("close-cate");
     document.querySelector("#choose-online").classList.remove("cate-transition");
 });
