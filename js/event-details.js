@@ -6,10 +6,6 @@ if (!token) {
     window.location.href = "/html/log-in.html";
 }
 
-setTimeout(() => {
-    document.querySelector(".pre-loader").style.display = "none";
-}, 3500);
-
 document.addEventListener("DOMContentLoaded", async () => {
     if (eventId) {
         try {
@@ -23,11 +19,15 @@ document.addEventListener("DOMContentLoaded", async () => {
             const result = await response.json();
 
             if (response.ok) {
-                if (data.message === "jwt malformed") {
+                if (result.message === "jwt malformed") {
                     setTimeout(() => {
                         window.location.href = "log-in.html"
                     }, 3500);
                 }
+
+                setTimeout(() => {
+                    document.querySelector(".pre-loader").style.display = "none";
+                }, 3500);
             
                 setTimeout(() => {
                     document.querySelector(".pre-loader").style.display = "none";
