@@ -368,18 +368,21 @@ aside button {
 }
 .choose-category {
     position: fixed;
-    top: 30px;
+    top: 3000px;
     border-radius: 20px;
     left: 0;
     right: 0;
     bottom: 0;
     padding: 30px;
     background: rgba(255, 255, 255, .95);
-    font-size: 24px;
+    font-size: 14px;
     color: #333;
     z-index: 10000000;
-    text-align: center;
     display: none;
+    transition: all 1s ease;
+}
+.cate-transition {
+    top: 30px;
 }
 .pre-loader h3 {
     color: #FF4500;
