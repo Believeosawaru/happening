@@ -368,7 +368,7 @@ aside button {
 }
 .choose-category {
     position: fixed;
-    top: 170px;
+    top: 250px;
     border-radius: 20px;
     left: 0;
     right: 0;
@@ -385,6 +385,7 @@ aside button {
 .cate-transition {
     visibility: visible;
     opacity: .95;
+    top: 170px;
 }
 .pre-loader h3 {
     color: #FF4500;
