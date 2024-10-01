@@ -421,6 +421,9 @@ aside button {
     top: 30px;
     right: 15px;
 }
+#close:hover {
+    cursor: pointer;
+}
 .close-cate {
     visibility: hidden;
     top: 350px;
