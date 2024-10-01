@@ -379,10 +379,10 @@ aside button {
     color: #333;
     z-index: 10000000;
     display: none;
-    transition: top .1s ease;
+    /* transition: margin-top .1s ease; */
 }
 .cate-transition {
-    top: 30px;
+    top: 0px;
 }
 .pre-loader h3 {
     color: #FF4500;
