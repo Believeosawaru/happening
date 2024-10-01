@@ -382,6 +382,18 @@ aside button {
     transition: all .5s ease;
     opacity: .2;
 }
+.choose-category button {
+    background: #FF4500;
+    padding: 6px 25px;
+    border-radius: 6px;
+    border: none;
+    margin-inline: 5px;
+    color: white;
+}
+.choose-category button:last-child {
+    background: #FFECB3;
+    color: black;
+}
 .choose-category h2 {
     margin-bottom: 15px;
 }
