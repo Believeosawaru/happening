@@ -35,10 +35,6 @@ async function displayPublicEvents() {
                 return;
             }
 
-            setTimeout(() => {
-                document.querySelector(".pre-loader").style.display = "none";
-            }, 3500);
-
             data.message.forEach((event) => {
             const eventDate = new Date(event.date);
             const formattedDate = eventDate.toLocaleDateString("en-US", {
