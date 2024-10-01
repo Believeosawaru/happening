@@ -391,6 +391,9 @@ aside button {
     color: white;
     margin-block: 20px;
 }
+.choose-category h3 {
+    margin-bottom: 15px;
+}
 .choose-category label {
     font-weight: bold;
     margin-top: 15px;
@@ -401,7 +404,7 @@ aside button {
     margin-block: 15px;
     border-radius: 6px;
     background: rgb(240, 240, 240);
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .choose-category div button:last-child {
     background: #FFECB3;
