@@ -1,5 +1,5 @@
 const publicCatButton = document.getElementById("right");
-const onlineCatButton = document.getElementById("right-2");
+const onlineCatButton = document.querySelector(".right-2");
 
 publicCatButton.addEventListener("click", () => {
     document.querySelector(".choose-category").classList.add("cate-transition");

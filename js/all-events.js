@@ -176,6 +176,8 @@ async function displayOnlineEvents() {
             // <p class="group-type">${group.groupType}</p>
 
             eventContainer.innerHTML = texts;
+
+            console.log("Done")
         } else {
             const keys = Object.keys(data);
     
