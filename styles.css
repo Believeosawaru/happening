@@ -385,7 +385,7 @@ aside button {
 .choose-category div button {
     background: #FF4500;
     padding: 10px 30px;
-    width: 90%;
+    width: 100%;
     border-radius: 6px;
     border: none;
     margin-right: 5px;
@@ -413,8 +413,13 @@ aside button {
 .cate-transition {
     visibility: visible;
     opacity: 1;
-    top: 10px;
+    top: 20px;
     box-shadow: 0px 0px 0px .5px rgba(0, 0, 0, 0.5);
+}
+#close {
+    position: absolute;
+    top: 30px;
+    right: 15px;
 }
 .close-cate {
     visibility: hidden;
