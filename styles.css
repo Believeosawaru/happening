@@ -374,7 +374,7 @@ aside button {
     right: 0;
     bottom: 0;
     padding: 30px;
-    background: rgba(255, 255, 255, 1);
+    background: rgb(255, 255, 255);
     font-size: 14px;
     color: #333;
     z-index: 10000000;
