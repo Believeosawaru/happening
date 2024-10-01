@@ -178,7 +178,14 @@ footer p {
     text-align: center;
     margin-top: 20px;
 }
-.rights a, .del-group-a {
+.rights a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+.del-group-a {
+    font-weight: light;
+}
+.del-group-a:active {
     font-weight: bold;
     text-decoration: underline;
 }
