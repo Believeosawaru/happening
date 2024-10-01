@@ -78,14 +78,14 @@
             <div class="online-events">
                 <h2>Online Events</h2>
 
-                <p class="dis-flex" id="right">
+                <p class="dis-flex" id="right right-2">
                     <span>Filters</span>
                     <span class="material-symbols-outlined">
                         swap_vert
                     </span>
                 </p>
 
-                <div class="events-list" id="events-list">
+                <div class="events-list" id="online-events-list">
                 </div>
             </div>
         </div>
@@ -99,7 +99,7 @@
     </div>
 
     <div class="choose-category" id="choose-public">
-        <h2>Find A Public Events</h2>
+        <h2>Find A Public Event</h2>
         <h3>Select at least one:</h3>
         
         <label for="date">Date:</label> <br>
@@ -123,14 +123,29 @@
         </span>
     </div>
 
-    <div class="choose-category" id="choose-online">
-        <h2>Filter Online Events</h2>
-        <label for="date">Date</label>
+    <div class="choose-category" id="choose-online"> 
+        <h2>Find An Online Event</h2>
+        <h3>Select at least one:</h3>
+        
+        <label for="date">Date:</label> <br>
         <input type="date" name="date" id="date"> <br>
 
-        <label for="time">Time</label>
+        <label for="time">Time:</label> <br>
         <input type="time" name="time" id="time"> <br>
-    </div>
+
+        <label for="location">Location:</label> <br>
+        <input type="text" name="location" id="keywords"> <br>
+
+        <label for="keywords">Keywords Or Categories:</label> <br>
+        <input type="text" name="keywords" id="keywords"> <br>
+
+        <div>
+            <button>Filter</button>
+        </div>
+
+        <span class="material-symbols-outlined" id="close">
+            close
+        </span></div>
 
     <script src="../../js/header.js"></script>
     <script src="../../js/all-events.js"></script>
