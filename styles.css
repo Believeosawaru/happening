@@ -182,6 +182,13 @@ footer p {
     font-weight: bold;
     text-decoration: underline;
 }
+#right {
+    position: absolute;
+    right: 50px;
+    background: rgb(240, 240, 240);
+    padding: 3px 10px;
+    border-radius: 6px;
+}
 .del-group-a {
     font-weight: light;
 }
