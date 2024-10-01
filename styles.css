@@ -384,7 +384,7 @@ aside button {
 }
 .choose-category div button {
     background: #FF4500;
-    padding: 6px 40px;
+    padding: 6px 70px;
     border-radius: 6px;
     border: none;
     margin-inline: 5px;
@@ -399,7 +399,7 @@ aside button {
     margin-top: 15px;
 }
 .choose-category input {
-    width: 90%;
+    width: 95%;
     padding: 10px;
     margin-block: 15px;
     border-radius: 6px;
