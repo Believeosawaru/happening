@@ -380,7 +380,7 @@ aside button {
     z-index: 10000000;
     visibility: hidden;
     transition: all .5s ease;
-    opacity: .2;
+    opacity: 0;
 }
 .choose-category div button {
     background: #FF4500;
