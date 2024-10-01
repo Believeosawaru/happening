@@ -391,9 +391,15 @@ aside button {
     color: white;
     margin-block: 20px;
 }
+.choose-category label {
+    font-weight: bold;
+    margin-block: 5px;
+}
 .choose-category input {
     width: 90%;
-    padding-block: 10px;
+    padding: 10px;
+    margin: 5px 15px;
+    border-radius: 6px;
 }
 .choose-category div button:last-child {
     background: #FFECB3;
