@@ -712,9 +712,6 @@ select:hover {
     margin-block-start: 40px;
     margin-block-end: 20px;
 }
-.public-events h2, .online-events h2 {
-    color: #FF4500;
-}
 .events-list {
     width: 100%;
     margin-block: 15px;
@@ -724,10 +721,10 @@ select:hover {
     margin-top: 40px;
 }
 .events-list::-webkit-scrollbar {
-    width: .7em;
+    width: .5em;
 }
 .events-list::-webkit-scrollbar-track {
-    background: rgb(240, 240, 240);
+    background: rgb(250, 250, 250);
     border-radius: 30px;
     margin-top: 15px;
 }
