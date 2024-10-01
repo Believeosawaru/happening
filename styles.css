@@ -384,11 +384,16 @@ aside button {
 }
 .choose-category div button {
     background: #FF4500;
-    padding: 6px 25px;
+    padding: 6px 40px;
     border-radius: 6px;
     border: none;
     margin-inline: 5px;
     color: white;
+    margin-block: 20px;
+}
+.choose-category input {
+    width: 90%;
+    padding-block: 10px;
 }
 .choose-category div button:last-child {
     background: #FFECB3;
