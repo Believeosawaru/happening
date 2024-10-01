@@ -2,15 +2,11 @@ const token = localStorage.getItem("authToken");
 const urlParams = new URLSearchParams(window.location.search);
 const eventId = urlParams.get("eventId");
 
-// if (!token) {
-//     window.location.href = "/html/log-in.html";
-// }
+if (!token) {
+    window.location.href = "/html/log-in.html";
+}
 
 document.addEventListener("DOMContentLoaded", async () => {
-    // if (!token) {
-    //     window.location.href = "/html/log-in.html"
-    // }
-
     if (eventId) {
         try {
             const response = await fetch(`http://5.161.186.15/api/v1/user/event/${eventId}`, {
@@ -23,6 +19,16 @@ document.addEventListener("DOMContentLoaded", async () => {
             const result = await response.json();
 
             if (response.ok) {
+                if (data.message === "jwt malformed") {
+                    setTimeout(() => {
+                        window.location.href = "log-in.html"
+                    }, 3500);
+                }
+            
+                setTimeout(() => {
+                    document.querySelector(".pre-loader").style.display = "none";
+                }, 3500);
+
                 const eventDetailsCon = document.getElementById("group-details-container");
 
                 const eventDate = new Date(result.data.date);

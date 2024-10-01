@@ -13,10 +13,6 @@ async function displayPublicEvents() {
             }
         });
 
-        if (response.status == 401) {
-            window.location.href = "/html/log-in.html"
-        }
-
         const data = await response.json();
 
         if (data.message === "jwt malformed") {
@@ -172,8 +168,6 @@ async function displayOnlineEvents() {
             // <p class="group-type">${group.groupType}</p>
 
             eventContainer.innerHTML = texts;
-
-            console.log("Done")
         } else {
             const keys = Object.keys(data);
     
