@@ -378,12 +378,14 @@ aside button {
     font-size: 14px;
     color: #333;
     z-index: 10000000;
-    display: none;
-    transition: position 1s ease;
+    visibility: hidden;
+    transition: all 1s ease;
+    opacity: .2;
 }
 .cate-transition {
     top: 0px;
-    display: block;
+    visibility: visible;
+    opacity: .95;
 }
 .pre-loader h3 {
     color: #FF4500;
