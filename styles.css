@@ -421,6 +421,12 @@ aside button {
     top: 10px;
     box-shadow: 0px 0px 0px .5px rgba(0, 0, 0, 0.5);
 }
+.close-cate {
+    visibility: hidden;
+    opacity: .3;
+    top: 350px;
+    box-shadow: 0px 0px 0px .5px rgba(0, 0, 0, 0.5);
+}
 .pre-loader h3, .choose-category h2 {
     color: #FF4500;
 }
