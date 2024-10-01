@@ -727,6 +727,7 @@ select:hover {
     background: rgb(250, 250, 250);
     border-radius: 30px;
     margin-top: 15px;
+    height: 10px;
 }
 .events-list::-webkit-scrollbar-thumb {
     background: #FF4500;
