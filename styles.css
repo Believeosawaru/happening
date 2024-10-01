@@ -366,6 +366,21 @@ aside button {
     z-index: 10000000;
     text-align: center;
 }
+.choose-category {
+    position: fixed;
+    top: 30px;
+    border-radius: 20px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+    background: rgba(255, 255, 255, .95);
+    font-size: 24px;
+    color: #333;
+    z-index: 10000000;
+    text-align: center;
+    display: none;
+}
 .pre-loader h3 {
     color: #FF4500;
 }
