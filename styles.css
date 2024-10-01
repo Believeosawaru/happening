@@ -368,7 +368,7 @@ aside button {
 }
 .choose-category {
     position: fixed;
-    top: 300px;
+    top: 30px;
     border-radius: 20px;
     left: 0;
     right: 0;
@@ -383,7 +383,6 @@ aside button {
     opacity: .2;
 }
 .cate-transition {
-    top: 0px;
     visibility: visible;
     opacity: .95;
 }
