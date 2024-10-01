@@ -348,7 +348,7 @@ aside button {
 .user-dashboard {
     margin-top: 50px;
 }
-.user-dashboard h3, .home-hero h2, #event-desc-div h3, #group-desc-div h3 {
+.user-dashboard h3, .choose-category h2, .home-hero h2, #event-desc-div h3, #group-desc-div h3 {
     font-family: "Oswald", sans-serif;
 }
 .pre-loader {
