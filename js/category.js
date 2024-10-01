@@ -5,8 +5,8 @@ catButton.addEventListener("click", () => {
     document.querySelector(".choose-category").classList.remove("close-cate");
 });
 
-function close() {
+document.getElementById("close").addEventListener("click", () => {
     document.querySelector(".choose-category").classList.add("close-cate");
     document.querySelector(".choose-category").classList.remove("cate-transition");
     console.log("DOne")
-}
+});
