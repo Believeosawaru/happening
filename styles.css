@@ -732,7 +732,8 @@ select:hover {
     background: rgb(240, 240, 240);
     width: 90%;
     border-radius: 30px;
-    height: 20px;
+    margin-block: 30px;
+    height: 1px;
 }
 .events-list::-webkit-scrollbar-thumb:hover {
     background: red;
