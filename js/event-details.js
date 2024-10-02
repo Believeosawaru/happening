@@ -28,10 +28,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 setTimeout(() => {
                     document.querySelector(".pre-loader").style.display = "none";
                 }, 3500);
-            
-                setTimeout(() => {
-                    document.querySelector(".pre-loader").style.display = "none";
-                }, 3500);
 
                 const eventDetailsCon = document.getElementById("group-details-container");
 
@@ -50,7 +46,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                  ${result.data.description}
                 </p>
 
-                <p class="dis-flex">
+                <p class="dis-flex event-date">
                  <span class="material-symbols-outlined">
                     calendar_month
                  </span>
