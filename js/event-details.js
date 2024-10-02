@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <div class="event-info">
                     <h3>About This Event</h3>
                     <p>
-                        ${result.data.description}
+                        As the autumn leaves begin to fall, Sarah and Jake are excitedly preparing for their upcoming marriage. Surrounded by family and friends, they’ll exchange vows in a charming countryside venue, filled with vibrant flowers and soft, golden light. Their love story, blossomed over years of laughter and adventures, will culminate in a celebration of commitment and joy. With heartfelt music, delicious food, and personal touches that reflect their journey together, the day promises to be unforgettable. As they embark on this new chapter, they look forward to a future filled with love, growth, and shared dreams.
                     </p>   
                 </div>`;
                 } else {
