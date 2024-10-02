@@ -671,7 +671,7 @@ select:hover {
     padding: 25px 20px;
     border-radius: 6px;
     position: relative;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5); */
 }
 #group-details-container p {
     margin-block: 10px;
@@ -829,7 +829,7 @@ select:hover {
 .related {
     text-align: right;
 }
-.event-info h2, .related h3 {
+.event-info h2, .related h3, .group-details-container h2 {
     font-family: "Oswald", sans-serif;
 }
 #org {
