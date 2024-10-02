@@ -40,52 +40,46 @@ document.addEventListener("DOMContentLoaded", async () => {
                 
                 if (result.createdBy._id !== result.currentUserId) {
                     eventDetailsCon.innerHTML = `
-                    <div id="group-details-container">
-                    <h2 id="gd-h2 bttm-space">
-                        ${result.data.name} <span id="h2-p">${result.data.type}</span>
-                    </h2>
-    
-                    <p class="dis-flex event-date">
-                     <span class="material-symbols-outlined">
-                        calendar_month
-                     </span>
-                     <span>${formattedDate}</span>
-                    </p>
-    
-                    <div id="desc">
-                        <p class="dis-flex">
-                            <span class="material-symbols-outlined">
-                             schedule
-                            </span>
-            
-                            <span>
-                             ${result.data.time} (${result.data.timeZone} UTC)
-                            </span>
-                            </p>
-            
-                            <p class="dis-flex">
-                                    <span class="material-symbols-outlined">
-                                    location_on
-                                    </span> 
-                                    <span>${result.data.location || "None Specified"}</span>
-                            </p>
-                    </div>
-                </div>
-    
-                <div class="event-info">
-                    <h2>About This Event</h2>
-                    <p class="dis-flex" id="org">
-                        <span class="material-symbols-outlined">
-                        person
-                        </span>
-                        <span>${result.createdBy.firstName} ${result.createdBy.lastName} <span id="h2-p">Organizer</span></span>
-                     </p>
-                    <p>
-                        ${result.data.description}
-                    </p>   
-                </div>
-                `;
+                  <h2 id="gd-h2 bttm-space">${result.data.name} <span id="h2-p">${result.data.type}</span></h2>
 
+                <p>
+                 ${result.data.description}
+                </p>
+
+                <p class="dis-flex event-date">
+                 <span class="material-symbols-outlined">
+                    calendar_month
+                 </span>
+                 <span>${formattedDate}</span>
+                </p>
+
+                <p class="dis-flex">
+                <span class="material-symbols-outlined">
+                 schedule
+                </span>
+
+                <span>
+                 ${result.data.time} (${result.data.timeZone} UTC)
+                </span>
+                </p>
+
+                <p class="dis-flex">
+                            <span class="material-symbols-outlined">
+                            location_on
+                            </span> 
+                            <span>${result.data.location || "None Specified"}</span>
+                        </p>
+                <p>
+
+                <p>Organizer: <br>
+                 <p class="dis-flex">
+                    <span class="material-symbols-outlined">
+                    person
+                    </span>
+                    <span>${result.createdBy.firstName} ${result.createdBy.lastName}</span>
+                 </p>
+                </p>
+                `;
                 } else {
                     eventDetailsCon.innerHTML = `
 
