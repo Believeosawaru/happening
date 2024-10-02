@@ -833,7 +833,7 @@ select:hover {
 .related {
     text-align: right;
 }
-.event-info h2, .related h3, #group-details-container h1 {
+.event-info h3, .related h3, #group-details-container h1 {
     font-family: "Oswald", sans-serif;
 }
 #org {
