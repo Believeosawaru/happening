@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 if (result.createdBy._id !== result.currentUserId) {
                     eventDetailsCon.innerHTML = `
                     <div id="group-details-container">
-
                     <h2 id="gd-h2 bttm-space">
                         ${result.data.name} <span id="h2-p">${result.data.type}</span>
                     </h2>
@@ -65,10 +64,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                             </p>
             
                             <p class="dis-flex">
-                                <span class="material-symbols-outlined">
-                                location_on
-                                </span> 
-                                <span>${result.data.location || "None Specified"}</span>
+                                    <span class="material-symbols-outlined">
+                                    location_on
+                                    </span> 
+                                    <span>${result.data.location || "None Specified"}</span>
                             </p>
                     </div>
     
@@ -85,7 +84,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <p>
                         ${result.data.description}
                     </p>   
-                    </div>`;
+                </div>
+                `;
+
                 } else {
                     eventDetailsCon.innerHTML = `
 
