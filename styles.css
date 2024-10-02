@@ -933,7 +933,6 @@ form textarea {
     display: flex;
 }
 #desc {
-    background: rgba(0, 0, 0, 0.1);
     padding: 10px 15px;
     border-radius: 6px;
     margin-top: 15px;
