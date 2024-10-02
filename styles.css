@@ -833,7 +833,8 @@ select:hover {
     font-family: "Oswald", sans-serif;
 }
 #org {
-    margin-top: 5px;
+    margin-top: 10px;
+    font-weight: bold;
 }
 .margin-bttm {
     margin-bottom: 20px;
@@ -937,9 +938,6 @@ form textarea {
     background: #FF4500;
     margin: 10px 0px;
     width: 100%;
-}
-#desc span {
-    font-weight: bold;
 }
 #h2-p {
     background: rgba(0, 0, 0, 0.1);
