@@ -41,11 +41,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                 if (result.createdBy._id !== result.currentUserId) {
                     eventDetailsCon.innerHTML = `
                     <div id="group-details-container">
-                    <div id="desc">
+
                       <h1 id="gd-h2 bttm-space">
-                        ${result.data.name} <span id="h2-p">${result.data.type}</span>
+                        <span class="gd-color">${result.data.name}</span> <span id="h2-p">${result.data.type}</span>
                     </h1>
-                    </div>
     
                     <p class="dis-flex event-date">
                      <span class="material-symbols-outlined">
