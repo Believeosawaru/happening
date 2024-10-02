@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </div>
     
                 <div class="event-info">
-                    <h3>About This Event</h3>
+                    <h2>About This Event</h2>
                     <p class="dis-flex" id="org">
                         <span class="material-symbols-outlined">
                         person
