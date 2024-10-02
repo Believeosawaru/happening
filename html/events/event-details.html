@@ -56,51 +56,6 @@
 
             
             <div id="event">
-                <div id="group-details-container">
-                    <h2 id="gd-h2 bttm-space">
-                        ${result.data.name} <span id="h2-p">${result.data.type}</span>
-                    </h2>
-    
-                    <p class="dis-flex event-date">
-                     <span class="material-symbols-outlined">
-                        calendar_month
-                     </span>
-                     <span>${formattedDate}</span>
-                    </p>
-    
-                    <div id="desc">
-                        <p class="dis-flex">
-                            <span class="material-symbols-outlined">
-                             schedule
-                            </span>
-            
-                            <span>
-                             ${result.data.time} (${result.data.timeZone} UTC)
-                            </span>
-                            </p>
-            
-                            <p class="dis-flex">
-                                    <span class="material-symbols-outlined">
-                                    location_on
-                                    </span> 
-                                    <span>${result.data.location || "None Specified"}</span>
-                            </p>
-                    </div>
-    
-                     <p class="dis-flex">
-                        <span class="material-symbols-outlined">
-                        person
-                        </span>
-                        <span>${result.createdBy.firstName} ${result.createdBy.lastName} <span id="h2-p">Organizer</span></span>
-                     </p>
-                </div>
-    
-                <div class="event-info">
-                    <h3>About This Event</h3>
-                    <p>
-                        ${result.data.description}
-                    </p>   
-                </div>
             </div>
 
             <section class="related">
@@ -110,16 +65,16 @@
         </div>
     </header>
 
-    <!-- <div class="pre-loader">
+    <div class="pre-loader">
         <div class="dimmer">
         <h3>Happening</h3> <br>
         <p>Connect, Interact and Plan Events</p>
         </div>
-    </div> -->
+    </div>
 
     <script src="../../js/header.js"></script>
-    <!-- <script src="../../js/preloader.js"></script>
-    <script src="../../js/event-details.js"></script> -->
+    <script src="../../js/preloader.js"></script>
+    <script src="../../js/event-details.js"></script>
 </body>
 </html>
 
