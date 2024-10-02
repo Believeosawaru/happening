@@ -50,9 +50,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                      </span>
                      <span>${formattedDate}</span>
                     </p>
-    
-                    <div id="desc">
-                        <p class="dis-flex">
+
+                    <p class="dis-flex">
                             <span class="material-symbols-outlined">
                              schedule
                             </span>
@@ -60,14 +59,17 @@ document.addEventListener("DOMContentLoaded", async () => {
                             <span>
                              ${result.data.time} (${result.data.timeZone} UTC)
                             </span>
-                            </p>
+                        </p>
             
-                            <p class="dis-flex">
-                                    <span class="material-symbols-outlined">
-                                    location_on
-                                    </span> 
-                                    <span>${result.data.location || "None Specified"}</span>
-                            </p>
+                        <p class="dis-flex">
+                            <span class="material-symbols-outlined">
+                            location_on
+                            </span> 
+                            <span>${result.data.location || "None Specified"}</span>
+                        </p>
+    
+                    <div id="desc">
+                        
                     </div>
     
                      <p class="dis-flex">
