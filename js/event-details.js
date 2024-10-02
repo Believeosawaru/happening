@@ -47,15 +47,14 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <h2 id="gd-h2">${result.data.name}</h2>
 
                 <p>
-                <span>Event Description:</span> ${result.data.description}
+                 ${result.data.description}
                 </p>
 
                 <p>
-                <span>Event Type:</span> ${result.data.type} event
-                </p>
-
-                 <p>
-                <span>Event Date:</span> ${formattedDate}
+                 <span class="material-symbols-outlined">
+                    calendar_month
+                 </span>
+                 ${formattedDate}
                 </p>
 
                 <p>
