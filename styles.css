@@ -823,9 +823,11 @@ select:hover {
 }
 .event-info {
     text-align: left;
-    padding: 10px;
+    padding: 15px;
+    margin-inline: 10px;
     margin-block: 30px;
-    background: rgb(240, 240, 240);
+    background: rgba(0, 0, 0, 0.1);
+
 }
 .related {
     text-align: right;
