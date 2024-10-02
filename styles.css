@@ -833,7 +833,7 @@ select:hover {
     font-family: "Oswald", sans-serif;
 }
 #org {
-    margin-top: 10px;
+    margin-block: 10px;
     font-weight: bold;
 }
 .margin-bttm {
