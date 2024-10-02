@@ -829,9 +829,9 @@ select:hover {
 }
 .event-info p {
     background: rgb(240, 240, 240);
-    border-radius: 12px;
+    border-radius: 8px;
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-    padding: 10px;
+    padding: 10px 15px;
 }
 .related {
     text-align: right;
