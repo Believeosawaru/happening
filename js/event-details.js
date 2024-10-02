@@ -44,29 +44,44 @@ document.addEventListener("DOMContentLoaded", async () => {
                 
                 if (result.createdBy._id !== result.currentUserId) {
                     eventDetailsCon.innerHTML = `
-                <h2 id="gd-h2">${result.data.name}</h2>
+                  <h2 id="gd-h2 bttm-space">${result.data.name} <span id="h2-p">${result.data.type}</span></h2>
 
                 <p>
                  ${result.data.description}
                 </p>
 
-                <p>
+                <p class="dis-flex">
                  <span class="material-symbols-outlined">
                     calendar_month
                  </span>
-                 ${formattedDate}
+                 <span>${formattedDate}</span>
                 </p>
 
-                <p>
-                <span>Event Time:</span> ${result.data.time} (${result.data.timeZone} UTC)
+                <p class="dis-flex">
+                <span class="material-symbols-outlined">
+                 schedule
+                </span>
+
+                <span>
+                 ${result.data.time} (${result.data.timeZone} UTC)
+                </span>
                 </p>
 
+                <p class="dis-flex">
+                            <span class="material-symbols-outlined">
+                            location_on
+                            </span> 
+                            <span>${result.data.location || "None Specified"}</span>
+                        </p>
                 <p>
-                <span>Location:</span> ${result.data.location}
-                </p>
 
-                <p>
-                <span>Created By:</span> ${result.createdBy.firstName} ${result.createdBy.lastName}
+                <p>Organizer: <br>
+                 <p class="dis-flex">
+                    <span class="material-symbols-outlined">
+                    person
+                    </span>
+                    <span>${result.createdBy.firstName} ${result.createdBy.lastName}</span>
+                 </p>
                 </p>
                 `;
                 } else {
