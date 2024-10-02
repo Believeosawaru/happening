@@ -824,13 +824,14 @@ select:hover {
 .event-info {
     text-align: left;
     padding: 15px;
-    margin-inline: 10px;
+    margin-inline: 5px;
     margin-block: 30px;
 }
 .event-info p {
     background: rgb(240, 240, 240);
     border-radius: 12px;
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    padding: 10px;
 }
 .related {
     text-align: right;
