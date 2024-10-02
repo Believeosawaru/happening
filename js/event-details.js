@@ -70,9 +70,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                                     <span>${result.data.location || "None Specified"}</span>
                             </p>
                     </div>
-                </div>
-    
-                <div class="event-info">
+
+                    <div class="event-info">
                     <h2>About This Event</h2>
                     <p class="dis-flex" id="org">
                         <span class="material-symbols-outlined">
@@ -83,6 +82,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <p>
                         ${result.data.description}
                     </p>   
+                </div>
                 </div>
                 `;
 
