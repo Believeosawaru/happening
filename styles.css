@@ -668,10 +668,10 @@ select:hover {
 #group-details-container {
     text-align: left;
     color: black;
-    padding: 1px 20px;
+    padding: 25px 20px;
     border-radius: 6px;
     position: relative;
-    /* box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5); */
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
 }
 #group-details-container p {
     margin-block: 10px;
@@ -829,7 +829,7 @@ select:hover {
 .related {
     text-align: right;
 }
-.event-info h2, .related h3, #group-details-container h1 {
+.event-info h2, .related h3 {
     font-family: "Oswald", sans-serif;
 }
 #org {
@@ -915,7 +915,7 @@ form textarea {
 .on-p-div {
     display: none;
 }
-.flexo-text h3 {
+.flexo-text h3, #group-details-container h2 {
     color: #FF4500;
     font-weight: bold;
     margin-block-end: 5px;
@@ -950,7 +950,13 @@ form textarea {
     border-radius: 7px;
 }
 .event-date {
-    font-weight: bold;
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    margin-bottom: 30px;
+    padding: 5px 8px;
+    border-radius: 3px;
 }
 
 @media screen and (min-width: 900px) {
