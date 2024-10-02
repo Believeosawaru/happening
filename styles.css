@@ -932,7 +932,8 @@ form textarea {
     background: rgba(0, 0, 0, 0.1);
     padding: 10px 15px;
     border-radius: 6px;
-    margin-top: 65px;
+    margin-top: 15px;
+    font-weight: bold;
 }
 #desc button {
     background: #FF4500;
