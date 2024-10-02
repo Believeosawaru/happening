@@ -827,7 +827,7 @@ select:hover {
     margin-inline: 10px;
     margin-block: 30px;
     background: rgba(0, 0, 0, 0.1);
-
+    border-radius: 8px;
 }
 .related {
     text-align: right;
