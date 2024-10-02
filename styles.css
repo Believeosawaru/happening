@@ -837,7 +837,7 @@ select:hover {
     font-family: "Oswald", sans-serif;
 }
 .event-info h3 {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 #org {
     margin-block: 10px;
