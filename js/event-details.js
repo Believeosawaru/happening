@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                             </p>
                     </div>
     
-                     <p class="dis-flex">
+                     <p class="dis-flex" id="org">
                         <span class="material-symbols-outlined">
                         person
                         </span>
