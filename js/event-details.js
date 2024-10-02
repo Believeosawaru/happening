@@ -68,14 +68,14 @@ document.addEventListener("DOMContentLoaded", async () => {
                         </span> 
                         <span>${result.data.location || "None Specified"}</span>
                     </p>
-                    </div>
-    
+
                      <p class="dis-flex">
                         <span class="material-symbols-outlined">
                         person
                         </span>
                         <span>${result.createdBy.firstName} ${result.createdBy.lastName} <span id="h2-p">Organizer</span></span>
                      </p>
+                    </div>
                 </div>
     
                 <div class="event-info">
