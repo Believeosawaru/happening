@@ -836,6 +836,9 @@ select:hover {
 .event-info h3, .related h3, #group-details-container h1 {
     font-family: "Oswald", sans-serif;
 }
+.event-info h3 {
+    margin-bottom: 8px;
+}
 #org {
     margin-block: 10px;
     font-weight: bold;
