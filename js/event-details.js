@@ -44,7 +44,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                         ${result.data.name} <span id="h2-p">${result.data.type}</span>
                     </h1>
     
-                    <p class="dis-flex event-date">
+                    <div id="desc">
+                                            <p class="dis-flex event-date">
                      <span class="material-symbols-outlined">
                         calendar_month
                      </span>
@@ -52,24 +53,21 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </p>
 
                     <p class="dis-flex">
-                            <span class="material-symbols-outlined">
-                             schedule
-                            </span>
+                        <span class="material-symbols-outlined">
+                            schedule
+                        </span>
+        
+                        <span>
+                            ${result.data.time} (${result.data.timeZone} UTC)
+                        </span>
+                    </p>
             
-                            <span>
-                             ${result.data.time} (${result.data.timeZone} UTC)
-                            </span>
-                        </p>
-            
-                        <p class="dis-flex">
-                            <span class="material-symbols-outlined">
-                            location_on
-                            </span> 
-                            <span>${result.data.location || "None Specified"}</span>
-                        </p>
-    
-                    <div id="desc">
-                        
+                    <p class="dis-flex">
+                        <span class="material-symbols-outlined">
+                        location_on
+                        </span> 
+                        <span>${result.data.location || "None Specified"}</span>
+                    </p>
                     </div>
     
                      <p class="dis-flex">
