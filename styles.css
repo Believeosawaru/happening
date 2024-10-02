@@ -667,12 +667,11 @@ select:hover {
 }
 #group-details-container {
     text-align: left;
-    background: rgb(240, 240, 240);
     color: black;
-    padding: 25px 20px;
+    padding: 1px 20px;
     border-radius: 6px;
     position: relative;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5); */
 }
 #group-details-container p {
     margin-block: 10px;
@@ -822,6 +821,21 @@ select:hover {
 .events-list p {
     margin-block: 5px;
 }
+.event-info {
+    text-align: left;
+    padding: 10px;
+    margin-block: 30px;
+}
+.related {
+    text-align: right;
+}
+.event-info h2, .related h3, #group-details-container h1 {
+    font-family: "Oswald", sans-serif;
+}
+#org {
+    margin-block: 10px;
+    font-weight: bold;
+}
 .margin-bttm {
     margin-bottom: 20px;
 }
@@ -901,7 +915,7 @@ form textarea {
 .on-p-div {
     display: none;
 }
-.flexo-text h3, #group-details-container h2 {
+.flexo-text h3 {
     color: #FF4500;
     font-weight: bold;
     margin-block-end: 5px;
@@ -925,9 +939,6 @@ form textarea {
     margin: 10px 0px;
     width: 100%;
 }
-#desc span {
-    font-weight: bold;
-}
 #h2-p {
     background: rgba(0, 0, 0, 0.1);
     font-size: .6rem;
@@ -939,13 +950,7 @@ form textarea {
     border-radius: 7px;
 }
 .event-date {
-    background: rgba(0, 0, 0, 0.1);
-    position: absolute;
-    top: 75px;
-    right: 20px;
-    margin-bottom: 30px;
-    padding: 5px 8px;
-    border-radius: 3px;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 900px) {
