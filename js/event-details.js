@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </h1>
     
                     <div id="desc">
-                                            <p class="dis-flex event-date">
+                    <p class="dis-flex event-date">
                      <span class="material-symbols-outlined">
                         calendar_month
                      </span>
