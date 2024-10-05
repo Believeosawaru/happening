@@ -668,7 +668,7 @@ select:hover {
 #group-details-container {
     text-align: left;
     color: black;
-    padding: 1px 10px;
+    padding: 1px 30px;
     border-radius: 6px;
     position: relative;
     /* box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5); */
@@ -823,7 +823,7 @@ select:hover {
 }
 .event-info {
     text-align: left;
-    padding: 15px;
+    padding: 15px 30px;
     margin-inline: 0px;
     margin-block: 30px;
     background: rgb(240, 240, 240);
