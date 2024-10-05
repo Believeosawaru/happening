@@ -839,10 +839,16 @@ select:hover {
     text-align: right;
 }
 .related-events {
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 1);
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+}
+.related-events div {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
     padding: 5px 8px;
     margin: 5px 10px;
     text-align: left;
+    border-radius: 10px;
 }
 .event-info h3, .related h3, #group-details-container h1 {
     font-family: "Oswald", sans-serif;
