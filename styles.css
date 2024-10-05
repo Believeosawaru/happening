@@ -850,7 +850,7 @@ select:hover {
     border-radius: 10px;
     width: 100%;
 }
-.event-info h3, .related h3, #group-details-container h1 {
+.event-info h3, .related h3, #group-details-container h1, .related-events h4 {
     font-family: "Oswald", sans-serif;
 }
 .event-info h3 {
