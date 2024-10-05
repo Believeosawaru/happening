@@ -840,7 +840,6 @@ select:hover {
 }
 .related-events {
     display: flex;
-    width: 100%;
     overflow-x: scroll;
 }
 .related-events div {
@@ -849,7 +848,7 @@ select:hover {
     margin: 5px 10px;
     text-align: left;
     border-radius: 10px;
-    min-width: 100%;
+    width: 100%;
 }
 .event-info h3, .related h3, #group-details-container h1 {
     font-family: "Oswald", sans-serif;
