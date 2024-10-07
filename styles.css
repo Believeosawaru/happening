@@ -905,14 +905,14 @@ select:hover {
     gap: 10px
 }
 .tags span {
-    background: rgba(240, 240, 240, .3);
+    background: rgba(240, 240, 240, 0);
     color: black;
     padding: 5px 8px;
     border-radius: 6px;
     margin-block: 5px;
     margin-inline: 10px;
 }
-.tags h3 {
+.tags-h3 {
     margin-inline: 15px;
     text-align: right;
     font-family: "Oswald", sans-serif;
