@@ -876,6 +876,9 @@ select:hover {
 .small-details span {
     font-size: .8rem;
 }
+.small-details p:last-child {
+    margin-top: 5px;
+}
 .event-info h3, .related h3, #group-details-container h1, .related-events h4 {
     font-family: "Oswald", sans-serif;
 }
