@@ -840,8 +840,7 @@ select:hover {
     margin-inline: 10px;
 }
 .related-events {
-    width: 90vw;
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.5);
+    width: 95vw;
     overflow-x: auto;
     white-space: nowrap;
     margin-inline: 20px;
@@ -860,9 +859,6 @@ select:hover {
 .slides h4 {
     color: #FF4500;
     margin-bottom: 5px;
-}
-#smal {
-    font-size: .9rem;
 }
 .event-info h3, .related h3, #group-details-container h1, .related-events h4 {
     font-family: "Oswald", sans-serif;
