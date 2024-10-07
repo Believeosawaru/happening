@@ -905,7 +905,8 @@ select:hover {
     color: white;
     padding: 5px 8px;
     border-radius: 6px;
-    margin: 10px;
+    margin-block: 30px;
+    margin-inline: 10px;
 }
 .event-info h3, .related h3, #group-details-container h1, .related-events h4 {
     font-family: "Oswald", sans-serif;
