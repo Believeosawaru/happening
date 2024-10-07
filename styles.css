@@ -842,6 +842,7 @@ select:hover {
     width: auto;
     overflow-x: auto;
     white-space: nowrap;
+    margin-inline: 30px;
 }
 .related-events div {
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
