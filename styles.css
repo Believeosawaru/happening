@@ -857,9 +857,6 @@ select:hover {
 .slides {
     display: inline-block;
 }
-.slides div {
-    position: relative;
-}
 .slides h4 {
     color: #FF4500;
     margin-bottom: 5px;
