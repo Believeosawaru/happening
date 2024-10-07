@@ -864,8 +864,6 @@ select:hover {
     margin-bottom: 5px;
 }
 .small-details {
-    position: fixed;
-    bottom: 10px;
     background: rgb(240, 240, 240);
     padding: 2px 5px;
 }
