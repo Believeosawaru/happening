@@ -912,6 +912,11 @@ select:hover {
     margin-block: 5px;
     margin-inline: 10px;
 }
+.tags h3 {
+    margin-inline: 15px;
+    text-align: right;
+    font-family: "Oswald", sans-serif;
+}
 .event-info h3, .related h3, #group-details-container h1, .related-events h4 {
     font-family: "Oswald", sans-serif;
 }
