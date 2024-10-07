@@ -18,17 +18,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const result = await response.json();
 
-            if (response.ok) {
-                if (result.message === "jwt malformed") {
-                    setTimeout(() => {
-                        window.location.href = "log-in.html"
-                    }, 3500);
-                }
-
+            if (data.message === "jwt malformed" || data.message === "jwt expired") {
                 setTimeout(() => {
-                    document.querySelector(".pre-loader").style.display = "none";
+                    window.location.href = "log-in.html"
                 }, 3500);
+            }
 
+            if (response.ok) {
                 const eventDetailsCon = document.getElementById("event");
 
                 const eventDate = new Date(result.data.date);
@@ -138,6 +134,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <button>Send Email Invitation</button>
                 </div>`;
                 }
+
+                setTimeout(() => {
+                    document.querySelector(".pre-loader").style.display = "none";
+                }, 3500);
 
             } else {
                 document.getElementById("failed").style.display = "block"

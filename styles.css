@@ -673,8 +673,20 @@ select:hover {
     position: relative;
     /* box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5); */
 }
+#group-details-container h1 {
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 20px;
+}
+#group-desc {
+    background: rgb(240, 240, 240);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
 #group-details-container p {
     margin-block: 10px;
+}
+#group-details-container button {
+    width: 100%;
 }
 #group-details-container a {
     cursor: pointer;
@@ -712,15 +724,19 @@ select:hover {
     margin-inline: 6px;
     position: absolute;
     bottom: -5px;
+    margin-top: -50px;
 }
 #group-link {
     font-weight: bold;
     color: #FF4500;
-    margin-inline: 6px;
-    padding-block: 5px;
 }
 #group-link:hover {
     cursor: pointer;
+}
+#group-loc {
+    position: absolute;
+    right: 30px;
+    top: 5px;
 }
 .rel {
     position: relative;
@@ -737,6 +753,22 @@ select:hover {
     border-radius: 8px;
     margin-inline: 50px;
     margin-block: 15px;
+}
+#two-btns button:last-child {
+    width: 60%;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    color: black;
+    margin-left: 10px;
+}
+#copy-i {
+    color: #FF4500;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
 }
 .space-bttm {
     margin-bottom: 15px;

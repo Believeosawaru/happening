@@ -13,7 +13,9 @@
      <!-- Google Fonts -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
      </head>
 <body>
@@ -51,33 +53,131 @@
             </div>
 
             
-            <div id="group-details-container">
-                <h2 id="gd-h2">${result.data.name}</h2>
-
-                <p>
-                Group Description: ${result.data.description}
-                </p>
-
-                <p>
-                Group Type: ${result.data.groupType} group
-                </p>
-
-                <p>
-                Location: Benin, Nigeria
-                </p>
-
-                <p>
-                Created By: Believe Osawaru
-                </p>
-
-                <button><a href="https://happening-khaki.vercel.app/html/groups/leave-group.html?groupId=${result.data._id}">Leave Group</a></button>
-            </div>
+            <div id="group-details-container"></div>
         </div>
     </header>
+
+    <div class="pre-loader">
+        <div class="dimmer">
+        <h3>Happening</h3> <br>
+        <p>Connect, Interact and Plan Events</p>
+        </div>
+    </div>
 
     <p class="copy-s">Copied Successfully!</p>
 
     <script src="../../js/header.js"></script>
-    <script src="../../js/group-details.js"></script>
+    <script src="../../js/preloader.js"></script> -->
+    <!-- <script src="../../js/group-details.js"></script>
 </body>
 </html>
+
+<!-- 
+                
+                <h1 id="gd-h2 bttm-space">
+                    Rant HQ <span id="h2-p">public</span>
+                </h1>
+
+                <p class="dis-flex" id="group-loc">
+                    <span class="material-symbols-outlined">
+                        location_on
+                        </span> 
+                        <span>New York</span>
+                </p>
+
+                <p id="group-desc">
+                    Welcome to RANT HQ! 🎤✨ This is your safe space to let loose and share your thoughts, frustrations, and rants about anything and everything. From everyday annoyances to the world’s biggest issues, no topic is too big or too small.
+
+                    Here, we encourage passionate discussions and the cathartic release of your feelings. Share your rants, engage with fellow members, and find solidarity in your grievances. Just remember to keep it respectful—everyone has a right to express their opinions!
+
+                    Join us to vent, connect, and maybe even find some humor in the chaos. Let’s turn those frustrations into fun! 🗣️💥
+                </p>
+
+                <p class="dis-flex">
+                    <span class="material-symbols-outlined">
+                    person
+                    </span>
+                    <span>Believe Osawaru
+                        <span id="h2-p">Admin</span></span>
+                </p>
+
+                <button><a href="https://happening-khaki.vercel.app/html/groups/leave-group.html?groupId=${result.data._id}">Leave Group</a></button>
+                
+             -->
+
+<!-- 
+            <h1 id="gd-h2 bttm-space">
+                Rant HQ <span id="h2-p">public</span>
+            </h1>
+
+            <p class="dis-flex" id="group-loc">
+                <span class="material-symbols-outlined">
+                    location_on
+                    </span> 
+                    <span>New York</span>
+            </p>
+
+            <p id="group-desc">
+                Welcome to RANT HQ! 🎤✨ This is your safe space to let loose and share your thoughts, frustrations, and rants about anything and everything. From everyday annoyances to the world’s biggest issues, no topic is too big or too small.
+
+                Here, we encourage passionate discussions and the cathartic release of your feelings. Share your rants, engage with fellow members, and find solidarity in your grievances. Just remember to keep it respectful—everyone has a right to express their opinions!
+
+                Join us to vent, connect, and maybe even find some humor in the chaos. Let’s turn those frustrations into fun! 🗣️💥
+            </p>
+
+            <p class="dis-flex">
+                <span class="material-symbols-outlined">
+                person
+                </span>
+                <span>Believe Osawaru
+                    <span id="h2-p">Admin</span></span>
+            </p>
+
+            <div class="dis-flex" id="two-btns">
+                <button><a href="https://happening-khaki.vercel.app/html/groups/leave-group.html?groupId=${result.data._id}">Generate Link</a></button>
+
+                <button>Add Members</button>
+            </div>
+
+            <p id="group-link">
+                <p id="copy-i" onclick="copy('${data.data}')">
+                    <i class="fa fa-copy"></i> 
+                    Copy Link
+                </p>
+            </p>
+             -->
+
+<!-- 
+            <h1 id="gd-h2 bttm-space">
+                Rant HQ <span id="h2-p">public</span>
+            </h1>
+
+            <p class="dis-flex" id="group-loc">
+                <span class="material-symbols-outlined">
+                    location_on
+                    </span> 
+                    <span>New York</span>
+            </p>
+
+            <p id="group-desc">
+                Welcome to RANT HQ! 🎤✨ This is your safe space to let loose and share your thoughts, frustrations, and rants about anything and everything. From everyday annoyances to the world’s biggest issues, no topic is too big or too small.
+
+                Here, we encourage passionate discussions and the cathartic release of your feelings. Share your rants, engage with fellow members, and find solidarity in your grievances. Just remember to keep it respectful—everyone has a right to express their opinions!
+
+                Join us to vent, connect, and maybe even find some humor in the chaos. Let’s turn those frustrations into fun! 🗣️💥
+            </p>
+
+            <p class="dis-flex">
+                <span class="material-symbols-outlined">
+                person
+                </span>
+                <span>Believe Osawaru
+                    <span id="h2-p">Admin</span></span>
+            </p>
+
+            <div class="dis-flex" id="two-btns">
+                <button><a href="https://happening-khaki.vercel.app/html/groups/leave-group.html?groupId=${result.data._id}"><i class="fa fa-copy"></i> Group Link</a></button>
+
+                <button>Add Members</button>
+            </div>
+             -->

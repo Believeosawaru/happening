@@ -15,7 +15,7 @@ async function displayPublicEvents() {
 
         const data = await response.json();
 
-        if (data.message === "jwt malformed") {
+        if (data.message === "jwt malformed" || data.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "log-in.html"
             }, 3500);
@@ -108,7 +108,7 @@ async function displayOnlineEvents() {
 
         const data = await response.json();
 
-        if (data.message === "jwt malformed") {
+        if (data.message === "jwt malformed" || data.message === "jwt malformed") {
             setTimeout(() => {
                 window.location.href = "log-in.html"
             }, 3500);
