@@ -838,7 +838,8 @@ select:hover {
 }
 .related h3 {
     text-align: right;
-    margin-inline: 10px;
+    margin-inline: 15px;
+    margin-block: 30px;
 }
 .related-events {
     width: 88vw;
