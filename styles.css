@@ -911,7 +911,7 @@ select:hover {
     padding: 5px 8px;
     border-radius: 6px;
     margin-block: 5px;
-    margin-inline: 10px;
+    margin-inline: 3px;
 }
 .tags-h3 {
     margin-inline: 25px;
