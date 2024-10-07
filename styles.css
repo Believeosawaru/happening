@@ -857,6 +857,9 @@ select:hover {
 .slides {
     display: inline-block;
 }
+.slides p {
+    font-size: .9rem;
+}
 .slides h4 {
     color: #FF4500;
     margin-bottom: 5px;
@@ -868,7 +871,6 @@ select:hover {
 }
 .small-details span {
     font-size: .8rem;
-    font-weight: bold;
 }
 .event-info h3, .related h3, #group-details-container h1, .related-events h4 {
     font-family: "Oswald", sans-serif;
