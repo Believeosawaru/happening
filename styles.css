@@ -837,6 +837,7 @@ select:hover {
 }
 .related h3 {
     text-align: right;
+    margin-inline: 10px;
 }
 .related-events {
     width: 80vw;
@@ -859,7 +860,7 @@ select:hover {
     color: #FF4500;
     margin-bottom: 5px;
 }
-.smal {
+#smal {
     font-size: .1rem;
 }
 .event-info h3, .related h3, #group-details-container h1, .related-events h4 {
