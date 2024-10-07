@@ -810,6 +810,8 @@ select:hover {
 }
 .dis-flex {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .dis-flex span {
     margin-inline: 1px;
@@ -875,9 +877,6 @@ select:hover {
 }
 .small-details span {
     font-size: .8rem;
-}
-.small-details span:last-child {
-    margin-top: 5px;
 }
 .event-info h3, .related h3, #group-details-container h1, .related-events h4 {
     font-family: "Oswald", sans-serif;
