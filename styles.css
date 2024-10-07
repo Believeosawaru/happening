@@ -850,7 +850,6 @@ select:hover {
     text-align: left;
     border-radius: 10px;
     display: inline-block;
-    line-height: 100px;
     width: 150px;
     height: 100px;
 }
