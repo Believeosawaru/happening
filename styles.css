@@ -831,8 +831,7 @@ select:hover {
 }
 .event-info p {
     border-radius: 8px;
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-    padding: 15px;
+    padding: 15px 0px;
     width: 100%;
     margin: 0;
 }
