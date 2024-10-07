@@ -41,9 +41,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                 if (result.createdBy._id !== result.currentUserId) {
                     eventDetailsCon.innerHTML = `
                     <div id="group-details-container">
+
                     <div class="center">
-                        <img src="../../images/default-event-img.jpg">
+                        <img src="../../images/default-event-img.jpg" id="event-img">
                     </div>
+
                     <h1 id="gd-h2 bttm-space">
                         ${result.data.name} <span id="h2-p">${result.data.type}</span>
                     </h1>
@@ -91,6 +93,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                 } else {
                     eventDetailsCon.innerHTML = `
                     <div id="group-details-container">
+
+                     <div class="center">
+                        <img src="../../images/default-event-img.jpg" id="event-img">
+                    </div>
+
                     <h1 id="gd-h2 bttm-space">
                         ${result.data.name} <span id="h2-p">${result.data.type}</span>
                     </h1>
