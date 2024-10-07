@@ -35,7 +35,7 @@ async function fetchMessage() {
 
         const message = await response.json();
 
-        if (message.message === "jwt malformed") {
+        if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "log-in.html"
             }, 3500);
@@ -75,7 +75,7 @@ async function fetchEvent() {
 
         const message = await response.json();
 
-        if (message.message === "jwt malformed") {
+        if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "log-in.html"
             }, 3500);
@@ -118,7 +118,7 @@ async function fetchGroup() {
 
         const message = await response.json();
 
-        if (message.message === "jwt malformed") {
+        if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "log-in.html"
             }, 3500);
