@@ -839,7 +839,7 @@ select:hover {
 .related h3 {
     text-align: right;
     margin-inline: 15px;
-    margin-block: 30px;
+    margin-block: 15px;
 }
 .related-events {
     width: 88vw;
