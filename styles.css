@@ -861,6 +861,11 @@ select:hover {
     display: inline-block;
     white-space: normal;
 }
+.edit-event {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 .slides {
     display: inline-block;
 }
@@ -1150,7 +1155,7 @@ form textarea {
     .home-pc-menu button {
         margin-right: 50px;
     }
-    #create-event, #create-group, #success-sign-up, #failed, #edit-group, #edit-event {
+    #create-event, #create-group, #success-sign-up, #failed, #edit-group {
         margin-inline: 200px;
     }
     #hero {
