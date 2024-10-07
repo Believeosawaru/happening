@@ -897,6 +897,15 @@ select:hover {
 .small-details span {
     font-size: .8rem;
 }
+.tags {
+    margin-block: 20px;
+}
+.tags span {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 8px;
+    border-radius: 6px;
+    margin-inline: 10px;
+}
 .event-info h3, .related h3, #group-details-container h1, .related-events h4 {
     font-family: "Oswald", sans-serif;
 }
