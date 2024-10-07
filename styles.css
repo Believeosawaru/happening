@@ -882,11 +882,11 @@ select:hover {
 }
 .slides p {
     font-size: .9rem;
-    margin-bottom: 5px;
+    margin-block: 5px;
 }
 .slides h4 {
     color: #FF4500;
-    margin-bottom: 5px;
+    margin-block: 5px;
 }
 .small-details {
     background: rgb(240, 240, 240);
