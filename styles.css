@@ -864,9 +864,11 @@ select:hover {
 .small-details {
     background: rgb(240, 240, 240);
     padding: 2px 5px;
+    margin: 5px 2px 0px 0px;
 }
 .small-details span {
-    font-size: .5rem;
+    font-size: .8rem;
+    font-weight: bold;
 }
 .event-info h3, .related h3, #group-details-container h1, .related-events h4 {
     font-family: "Oswald", sans-serif;
