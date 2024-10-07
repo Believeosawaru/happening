@@ -830,7 +830,7 @@ select:hover {
     background: rgb(240, 240, 240);
 }
 .event-info button {
-    margin-bottom: 0px;
+    margin-bottom: 5px;
 }
 .event-info p {
     border-radius: 8px;
