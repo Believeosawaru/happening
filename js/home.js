@@ -35,6 +35,12 @@ async function fetchMessage() {
 
         const message = await response.json();
 
+        if (message.message === "jwt malformed") {
+            setTimeout(() => {
+                window.location.href = "log-in.html"
+            }, 3500);
+        }
+
         if (response.ok) {
             document.getElementById("welcome-msg").textContent = message.message;
         } else {
@@ -68,6 +74,12 @@ async function fetchEvent() {
         }
 
         const message = await response.json();
+
+        if (message.message === "jwt malformed") {
+            setTimeout(() => {
+                window.location.href = "log-in.html"
+            }, 3500);
+        }
 
         if (response.ok) {
             document.querySelector(".latest-events").innerHTML = `
