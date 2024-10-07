@@ -899,13 +899,16 @@ select:hover {
 }
 .tags {
     margin-block: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px
 }
 .tags span {
     background: rgba(0, 0, 0, 0.5);
     color: white;
     padding: 5px 8px;
     border-radius: 6px;
-    margin-block: 300px;
+    margin-block: 10px;
     margin-inline: 10px;
     border: 1px solid red;
 }
