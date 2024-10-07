@@ -851,8 +851,6 @@ select:hover {
     text-align: left;
     border-radius: 10px;
     display: inline-block;
-    width: 250px;
-    height: 200px;
 }
 .slides {
     display: inline-block;
