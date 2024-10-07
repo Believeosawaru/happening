@@ -900,17 +900,17 @@ select:hover {
 .tags {
     margin-block: 20px;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 10px
 }
 .tags span {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+    background: rgba(240, 240, 240, 0.5);
+    color: black;
     padding: 5px 8px;
     border-radius: 6px;
-    margin-block: 10px;
+    margin-block: 5px;
     margin-inline: 10px;
-    border: 1px solid red;
 }
 .event-info h3, .related h3, #group-details-container h1, .related-events h4 {
     font-family: "Oswald", sans-serif;
