@@ -852,10 +852,12 @@ select:hover {
     text-align: left;
     border-radius: 10px;
     display: inline-block;
-    width: 80%;
 }
 .slides {
     display: inline-block;
+}
+.slides div {
+    width: 300px;
 }
 .slides h4 {
     color: #FF4500;
