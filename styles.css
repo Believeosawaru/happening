@@ -1018,6 +1018,7 @@ form textarea {
     margin-top: 15px;
     font-weight: bold;
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 #desc button {
     background: #FF4500;

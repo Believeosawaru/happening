@@ -121,12 +121,12 @@ document.addEventListener("DOMContentLoaded", async () => {
                         <span class="material-symbols-outlined">
                         person
                         </span>
-                        <span>ME<span id="h2-p">Organizer</span></span>
+                        <span>${result.createdBy.firstName} ${result.createdBy.lastName} <span id="h2-p">Organizer</span></span>
                      </p>
 
                      <span class="material-symbols-outlined" id="edit-event">
                         edit
-                    </span>
+                     </span>
                     </div>
                 </div>
     
