@@ -839,7 +839,7 @@ select:hover {
     text-align: right;
 }
 .related-events {
-    width: 90%;
+    width: 100vw;
     overflow-x: auto;
     white-space: nowrap;
     margin-inline: 30px;
