@@ -842,6 +842,7 @@ select:hover {
 .related-events {
     width: 88vw;
     overflow-x: auto;
+    white-space: nowrap;
     margin-inline: 20px;
 }
 .slides {
@@ -851,6 +852,7 @@ select:hover {
     text-align: left;
     border-radius: 10px;
     display: block;
+    white-space: normal;
 }
 .slides div {
     width: 300px;
