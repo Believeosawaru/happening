@@ -857,6 +857,9 @@ select:hover {
 .slides {
     display: inline-block;
 }
+.slides div {
+    width: 70%;
+}
 .slides p {
     font-size: .9rem;
 }
