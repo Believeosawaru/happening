@@ -145,6 +145,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             console.log(error);
         }
     } else {
-        window.location.href = "groups.html"
+        window.location.href = "events.html"
     }
 });
