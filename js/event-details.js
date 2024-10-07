@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const result = await response.json();
 
-            if (data.message === "jwt malformed" || data.message === "jwt expired") {
+            if (result.message === "jwt malformed" || result.message === "jwt expired") {
                 setTimeout(() => {
                     window.location.href = "log-in.html"
                 }, 3500);
