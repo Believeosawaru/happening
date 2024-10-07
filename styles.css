@@ -852,7 +852,7 @@ select:hover {
     text-align: left;
     border-radius: 10px;
     display: block;
-    white-space: auto;
+    white-space: none;
 }
 .slides div {
     width: 300px;
