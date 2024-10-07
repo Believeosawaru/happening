@@ -854,7 +854,7 @@ select:hover {
     display: inline-block;
 }
 .slides {
-    display: inline-block;
+    /* display: inline-block; */
 }
 .slides div {
     width: 300px;
