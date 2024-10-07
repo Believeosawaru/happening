@@ -24,6 +24,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             if (response.ok) {
                 const groupDetailsCon = document.getElementById("group-details-container");
+
+                 setTimeout(() => {
+                    document.querySelector(".pre-loader").style.display = "none";
+                }, 3500);
                 
                 if (result.createdBy._id !== result.currentUserId) {
                     groupDetailsCon.innerHTML = `

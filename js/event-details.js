@@ -27,6 +27,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (response.ok) {
                 const eventDetailsCon = document.getElementById("event");
 
+                setTimeout(() => {
+                    document.querySelector(".pre-loader").style.display = "none";
+                }, 3500);
+
                 const eventDate = new Date(result.data.date);
                 const formattedDate = eventDate.toLocaleDateString("en-US", {
                     year: "numeric",
@@ -134,11 +138,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <button>Send Email Invitation</button>
                 </div>`;
                 }
-
-                setTimeout(() => {
-                    document.querySelector(".pre-loader").style.display = "none";
-                }, 3500);
-
             } else {
                 document.getElementById("failed").style.display = "block"
                 document.getElementById("failed").innerHTML = result.message;
