@@ -905,7 +905,7 @@ select:hover {
     color: white;
     padding: 5px 8px;
     border-radius: 6px;
-    margin-block: 30px;
+    margin-block: 300px;
     margin-inline: 10px;
     border: 1px solid red;
 }
