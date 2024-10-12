@@ -19,7 +19,7 @@ async function userProfile() {
     const token = localStorage.getItem("authToken");
 
     try {
-        const response = await fetch("http://5.161.186.15/api/v1/user/home-events", {
+        const response = await fetch("http://5.161.186.15/api/v1/user/user-profile", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
