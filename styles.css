@@ -411,7 +411,13 @@ aside button {
     background: rgb(240, 240, 240);
     padding-block: 10px;
     border-radius: 8px;
-
+}
+#category {
+    margin-top: 10px;
+    width: 98%;
+    padding-block: 10px;
+    border: none;
+    background: rgb(240, 240, 240);
 }
 .user-profile h3 {
     font-family: "Oswald", sans-serif;

@@ -74,20 +74,6 @@
                 <div class="events-list" id="events-list">
                 </div>
             </div>
-
-            <div class="online-events">
-                <h2>Online Events</h2>
-
-                <p class="dis-flex right-2" id="right">
-                    <span>Filters</span>
-                    <span class="material-symbols-outlined">
-                        swap_vert
-                    </span>
-                </p>
-
-                <div class="events-list" id="online-events-list">
-                </div>
-            </div>
         </div>
     </header>
 
@@ -99,7 +85,7 @@
     </div>
 
     <div class="choose-category" id="choose-public">
-        <h2>Find A Public Event</h2>
+        <h2>Find An Event</h2>
         <h3>Select at least one:</h3>
         
         <label for="date">Date:</label> <br>
@@ -111,8 +97,13 @@
         <label for="location">Location:</label> <br>
         <input type="text" name="location" id="keywords"> <br>
 
-        <label for="keywords">Keywords Or Categories:</label> <br>
+        <label for="keywords">Keywords</label> <br>
         <input type="text" name="keywords" id="keywords"> <br>
+
+        <label for="category">Category</label> <br>
+        <select name="category" id="category">
+            <option value="Select A Category" disabled selected>Select A Category</option>
+        </select>
 
         <div>
             <button>Filter</button>
@@ -122,30 +113,6 @@
             close
         </span>
     </div>
-
-    <div class="choose-category" id="choose-online"> 
-        <h2>Find An Online Event</h2>
-        <h3>Select at least one:</h3>
-        
-        <label for="date">Date:</label> <br>
-        <input type="date" name="date" id="date"> <br>
-
-        <label for="time">Time:</label> <br>
-        <input type="time" name="time" id="time"> <br>
-
-        <label for="location">Location:</label> <br>
-        <input type="text" name="location" id="keywords"> <br>
-
-        <label for="keywords">Keywords Or Categories:</label> <br>
-        <input type="text" name="keywords" id="keywords"> <br>
-
-        <div>
-            <button>Filter</button>
-        </div>
-
-        <span class="material-symbols-outlined close-2" id="close">
-            close
-        </span></div>
 
     <script src="../../js/header.js"></script>
     <script src="../../js/all-events.js"></script>
