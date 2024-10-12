@@ -1,19 +1,19 @@
-const menu = document.querySelector('.menu');
-const userDashboard = document.querySelector('.user-dashboard');
-const pcMenu = document.querySelector('.pc-menu');
-const verifyDiv = document.querySelector('.not-verified');
+// const menu = document.querySelector('.menu');
+// const userDashboard = document.querySelector('.user-dashboard');
+// const pcMenu = document.querySelector('.pc-menu');
+// const verifyDiv = document.querySelector('.not-verified');
 
-function openMenu() {
-    if (menu.classList.contains('close-menu')) {
-        menu.classList.add('open-menu');
+// function openMenu() {
+//     if (menu.classList.contains('close-menu')) {
+//         menu.classList.add('open-menu');
 
-        menu.classList.remove('close-menu');
-    } else {
-        menu.classList.add('close-menu');
+//         menu.classList.remove('close-menu');
+//     } else {
+//         menu.classList.add('close-menu');
         
-        menu.classList.remove('open-menu');
-    }
-}
+//         menu.classList.remove('open-menu');
+//     }
+// }
 
 async function userProfile() {
     const token = localStorage.getItem("authToken");
