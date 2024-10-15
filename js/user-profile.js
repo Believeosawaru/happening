@@ -91,11 +91,11 @@ async function userProfile() {
                         <div>
                            <h2>${group.name}</h2>
 
-                        <p id="user-group-desc">
+                        <p>
                             ${group.description}
                         </p>
                         
-                        <p class="dis-flex" id="righty">
+                        <p class="dis-flex" id="user-group-loc">
                             <span class="material-symbols-outlined">
                             location_on
                             </span> 
