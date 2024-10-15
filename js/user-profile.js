@@ -47,7 +47,8 @@ async function userProfile() {
             let accum  = ``;
 
             events.forEach(event => {
-                const html = `  
+                const html = `
+                    <div>
                         <h3>${event.name}</h3>
 
                         <p class="dis-flex">
@@ -70,6 +71,7 @@ async function userProfile() {
                             </span>
                             <span>${event.date}</span>
                         </p>
+                    </div>
                 `;
 
                 accum += html;
