@@ -44,7 +44,8 @@ async function userProfile() {
             const events = message.data.events;
             const groups = message.data.groups;
 
-            let accum  = ``;
+            let eventsAccum  = ``;
+            let groupsAccum  = ``;
 
             events.forEach(event => {
                 const eventDate = new Date(event.date);
@@ -82,10 +83,31 @@ async function userProfile() {
                     </div>
                 `;
 
-                accum += html;
+                eventsAccum += html;
             });
 
-            document.getElementById("user-event").innerHTML = accum;
+            groups.forEach((group) => {
+                const html = `
+                        <h3>${group.name}</h3>
+
+                        <p>
+                            ${group.description}
+                        </p>
+                        
+                        <p class="dis-flex" id="righty">
+                            <span class="material-symbols-outlined">
+                            location_on
+                            </span> 
+                            <span>${group.location}</span>
+                        </p>
+                `;
+
+                groupsAccum += html;
+            });
+
+            document.getElementById("user-event").innerHTML = eventsAccum;
+            
+            document.getElementById("user-group").innerHTML = groupsAccum;
         } else {
             console.log(message)
         }
