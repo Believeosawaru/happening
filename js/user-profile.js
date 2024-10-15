@@ -88,7 +88,8 @@ async function userProfile() {
 
             groups.forEach((group) => {
                 const html = `
-                        <h3>${group.name}</h3>
+                        <div>
+                           <h3>${group.name}</h3>
 
                         <p>
                             ${group.description}
@@ -100,13 +101,14 @@ async function userProfile() {
                             </span> 
                             <span>${group.location}</span>
                         </p>
+                        </div>
                 `;
 
                 groupsAccum += html;
             });
 
             document.getElementById("user-event").innerHTML = eventsAccum;
-            
+
             document.getElementById("user-group").innerHTML = groupsAccum;
         } else {
             console.log(message)
