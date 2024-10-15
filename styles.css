@@ -409,12 +409,6 @@ aside button {
 .my-groups div {
     position: relative;
 }
-.my-groups #righty {
-    text-align: right;
-}
-#user-group-loc {
-    font-weight: bold;
-}
 .user-events .my-events div, .user-groups .my-groups div {
     padding-inline: 10px;
     margin-block: 10px;
