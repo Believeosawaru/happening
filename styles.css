@@ -382,7 +382,7 @@ aside button {
 }
 #edit-bio {
     position: absolute;
-    left: 15px;
+    right: 15px;
     top: 15px;
 }
 .user-events, .user-groups {
