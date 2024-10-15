@@ -378,6 +378,12 @@ aside button {
     padding: 15px;
     border-radius: 8px;
     background: rgb(240, 240, 240);
+    position: relative;
+}
+.user-bio span {
+    position: absolute;
+    left: 15px;
+    top: 15px;
 }
 .user-events, .user-groups {
     text-align: left;
