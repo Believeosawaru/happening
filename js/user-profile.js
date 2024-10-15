@@ -26,13 +26,6 @@ async function userProfile() {
             }
         });
 
-        if (response.status == 403) {
-            pcMenu.style.display = "none";
-            userDashboard.style.display = "none";
-            menu.style.display = "none";
-            verifyDiv.style.display = "block";
-        }
-
         const message = await response.json();
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
@@ -42,7 +35,11 @@ async function userProfile() {
         }
 
         if (response.ok) {
-           console.log(message)
+            setTimeout(() => {
+                document.querySelector(".pre-loader").style.display = "none";
+            }, 3500);
+
+            document.getElementById("user-name").innerHTML = `${message.data.firstName} ${message.data.lastName}`
         } else {
             console.log(message)
         }
