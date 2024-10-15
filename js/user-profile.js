@@ -41,7 +41,41 @@ async function userProfile() {
 
             document.getElementById("user-name").innerHTML = `${message.data.firstName} ${message.data.lastName}`;
 
-            console.log(message)
+            const events = message.data.events;
+            const groups = message.data.groups;
+
+            const accum  = ``;
+
+            events.forEach(event => {
+                const html = `  
+                        <h3>${event.name}</h3>
+
+                        <p class="dis-flex">
+                            <span class="material-symbols-outlined">
+                            location_on
+                            </span> 
+                            <span>${event.location}</span>
+                        </p>
+
+                        <p class="dis-flex">
+                            <span class="material-symbols-outlined">
+                            schedule
+                            </span>
+                            <span>${event.time} (${event.timeZone})</span>
+                        </p>
+
+                        <p class="dis-flex">
+                            <span class="material-symbols-outlined">
+                                calendar_month
+                            </span>
+                            <span>${event.date}</span>
+                        </p>
+                `;
+
+                accum += html;
+            });
+
+            document.getElementById("user-event").innerHTML = accum;
         } else {
             console.log(message)
         }
