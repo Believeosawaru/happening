@@ -91,7 +91,7 @@ async function userProfile() {
                         <div>
                            <h2>${group.name}</h2>
 
-                        <p>
+                        <p id="user-group-desc">
                             ${group.description}
                         </p>
                         
