@@ -380,7 +380,7 @@ aside button {
     background: rgb(240, 240, 240);
     position: relative;
 }
-.user-bio span {
+.user-bio #edit-bio {
     position: absolute;
     left: 15px;
     top: 15px;
