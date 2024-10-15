@@ -47,6 +47,14 @@ async function userProfile() {
             let accum  = ``;
 
             events.forEach(event => {
+                const eventDate = new Date(event.date);
+                
+                const formattedDate = eventDate.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                });
+
                 const html = `
                     <div>
                         <h3>${event.name}</h3>
@@ -69,7 +77,7 @@ async function userProfile() {
                             <span class="material-symbols-outlined">
                                 calendar_month
                             </span>
-                            <span>${event.date}</span>
+                            <span>${formattedDate}</span>
                         </p>
                     </div>
                 `;
