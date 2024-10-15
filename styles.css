@@ -410,9 +410,7 @@ aside button {
     position: relative;
 }
 .my-groups #righty {
-    position: absolute;
-    right: 25px;
-    bottom: 8px;
+    text-align: right;
 }
 .user-events .my-events div, .user-groups .my-groups div {
     padding-inline: 10px;
