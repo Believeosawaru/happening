@@ -403,6 +403,8 @@ aside button {
 .my-events div h2, .my-groups div h2 {
     color: #FF4500;
     margin: 0;
+    font-size: 1.2rem;
+    font-family: "Oswald", sans-serif;
 }
 .my-groups p {
     margin-bottom: 10px;
