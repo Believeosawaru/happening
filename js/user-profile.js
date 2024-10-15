@@ -44,7 +44,7 @@ async function userProfile() {
             const events = message.data.events;
             const groups = message.data.groups;
 
-            const accum  = ``;
+            let accum  = ``;
 
             events.forEach(event => {
                 const html = `  
