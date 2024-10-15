@@ -95,7 +95,7 @@ async function userProfile() {
                             ${group.description}
                         </p>
                         
-                        <p class="dis-flex" id="righty">
+                        <p class="dis-flex">
                             <span class="material-symbols-outlined">
                             location_on
                             </span> 
