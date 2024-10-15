@@ -400,12 +400,15 @@ aside button {
 .my-events h3, .my-groups h3 {
     margin-block: 15px;
 }
-.my-events div h3, .my-groups div h3 {
+.my-events div h2, .my-groups div h2 {
     color: #FF4500;
     margin: 0;
 }
 .my-groups p {
     margin-bottom: 10px;
+}
+.my-groups div {
+    position: relative;
 }
 .my-groups #righty {
     position: absolute;

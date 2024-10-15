@@ -58,7 +58,7 @@ async function userProfile() {
 
                 const html = `
                     <div>
-                        <h3>${event.name}</h3>
+                        <h2>${event.name}</h2>
 
                         <p class="dis-flex">
                             <span class="material-symbols-outlined">
@@ -89,7 +89,7 @@ async function userProfile() {
             groups.forEach((group) => {
                 const html = `
                         <div>
-                           <h3>${group.name}</h3>
+                           <h2>${group.name}</h2>
 
                         <p>
                             ${group.description}
