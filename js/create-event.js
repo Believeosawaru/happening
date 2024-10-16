@@ -242,7 +242,11 @@ function searchLocations(input) {
 
                     selectElement.value = optionElement.textContent;
 
-                    document.querySelector(".on-p-div").style.display = "none"
+                    document.querySelector(".on-p-div").style.display = "none";
+
+                    button.style.backgroundColor = "#FF4500";
+                    button.disabled = false;
+                    button.style.color = "white";
                 })
 
                 resultsDiv.appendChild(pElement);
