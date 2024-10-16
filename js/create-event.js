@@ -247,6 +247,7 @@ function searchLocations(input) {
                     button.style.backgroundColor = "#FF4500";
                     button.disabled = false;
                     button.style.color = "white";
+                    console.log("Showing")
                 })
 
                 resultsDiv.appendChild(pElement);
