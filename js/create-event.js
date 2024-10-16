@@ -192,7 +192,7 @@ selectElement.addEventListener("change", () => {
         button.disabled = false;
         button.style.color = "white"
     }
-})
+});
     
 document.getElementById('search-input').addEventListener('input', () => {
     const input = document.getElementById('search-input').value;
