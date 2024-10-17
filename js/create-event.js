@@ -289,9 +289,11 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
 
         button.style.cursor = "wait";
 
-        setTimeout(() => {
-            window.location.href = "events.html"
-        }, 2000)
+        console.log(data)
+
+        // setTimeout(() => {
+        //     window.location.href = "events.html"
+        // }, 2000)
     } else {
         const keys = Object.keys(data);
 
