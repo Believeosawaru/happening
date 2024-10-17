@@ -314,6 +314,7 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
         button.style.backgroundColor = "#FF4500";
         button.style.color = "white";
         button.innerHTML = "Create Event";
+        console.log(data)
     }
 
     } catch (error) {
