@@ -110,27 +110,54 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCedlvKW4R_g7eWonEYKsRTWSZc7vx-daE&v=beta"></script>
     <script>
       function initMap() {
-    const location = { lat: -34.397, lng: 150.644 }; // Example coordinates
+    // Default location (fallback if geolocation fails)
+    const defaultLocation = { lat: -34.397, lng: 150.644 };
 
+    // Create the map centered at the default location
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 8,
-        center: location,
+        center: defaultLocation,
     });
 
-    const marker = new google.maps.Marker({
-        position: location,
-        map: map,
-        draggable: true, // Makes the marker draggable
-    });
+    // Try to get the user's location
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const userLocation = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                };
 
-    // Event listener for marker drag end
-    marker.addListener('dragend', function(event) {
-        console.log("New location: ", event.latLng.lat(), event.latLng.lng());
-    });
+                // Update the map center and add a marker at user's location
+                map.setCenter(userLocation);
+
+                const marker = new google.maps.Marker({
+                    position: userLocation,
+                    map: map,
+                    draggable: true, // Makes the marker draggable
+                });
+
+                // Event listener for marker drag end
+                marker.addListener('dragend', function(event) {
+                    console.log("New location: ", event.latLng.lat(), event.latLng.lng());
+                });
+            },
+            () => {
+                // Handle error if geolocation fails
+                console.error("Geolocation service failed.");
+                // Optionally, you can set the map to the default location if geolocation fails
+            }
+        );
+    } else {
+        // Browser doesn't support Geolocation
+        console.error("Geolocation is not supported by this browser.");
+        // Optionally, you can set the map to the default location if geolocation is not supported
+    }
 }
 
 // Load the map
 window.addEventListener('load', initMap);
+
 
     </script>
 </body>
