@@ -209,7 +209,6 @@ let map;
 let marker;
 
 function initMap(location) {
-    console.log("wORTK")
     map = new google.maps.Map(document.getElementById("map"), {
         zoom: 8,
         center: location,
@@ -251,6 +250,7 @@ function searchLocations(input) {
                 pElement.textContent = `${city.name}, ${city.country.name}`;
 
                 pElement.addEventListener("click", () => {
+                    document.getElementById("map").style.display = "block";
                     const optionElement = document.createElement("option");
 
                     optionElement.textContent = pElement.textContent;

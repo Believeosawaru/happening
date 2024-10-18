@@ -25,6 +25,7 @@ nav {
 #map {
     width: 100%;
     height: 400px;
+    display: none;
 }
 nav span, footer h3 {
     font-family: "Edu AU VIC WA NT Hand", cursive;
