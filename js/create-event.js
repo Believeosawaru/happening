@@ -209,6 +209,7 @@ let map;
 let marker;
 
 function initMap(location) {
+    console.log("wORTK")
     map = new google.maps.Map(document.getElementById("map"), {
         zoom: 8,
         center: location,
