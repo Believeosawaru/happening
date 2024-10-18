@@ -324,7 +324,7 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
         console.log(error);
     }
 });
-const openMoney = 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;
+const openMoney = "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";
 
 async function assignCategory(name, description) {
     const prompt = `Based on the following title and description, assign one of the following categories:\n\n` +
