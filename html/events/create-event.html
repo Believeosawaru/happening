@@ -151,6 +151,10 @@ function initMap() {
         console.error("Geolocation is not supported by this browser.");
     }
 
+    // Search functionality
+    const searchButton = document.getElementById("searchButton");
+    const locationInput = document.getElementById("locationInput");
+
     searchButton.addEventListener("click", () => {
         const location = locationInput.value;
 
