@@ -235,12 +235,26 @@ function searchLocations(input) {
 
                     selectElement.value = optionElement.textContent;
 
+                    const location = pElement.textContent;
+
+                    document.querySelector("#map").style.display = "block"
+
+                    const geocoder = new google.maps.Geocoder();
+                    geocoder.geocode({ address: location }, (results, status) => {
+                        if (status === "OK") {
+                            const newLocation = results[0].geometry.location;
+                            map.setCenter(newLocation);
+                            marker.setPosition(newLocation);
+                        } else {
+                            alert("Location not found: " + status);
+                        }
+                    });
+
                     document.querySelector(".on-p-div").style.display = "none";
 
                     button.style.backgroundColor = "#FF4500";
                     button.disabled = false;
                     button.style.color = "white";
-                    console.log("Showing")
                 })
 
                 resultsDiv.appendChild(pElement);
