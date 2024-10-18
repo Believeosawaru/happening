@@ -151,8 +151,8 @@ function initMap() {
         console.error("Geolocation is not supported by this browser.");
     }
 
-    pElement.addEventListener("click", () => {
-        const location = pElement.textContent;
+    searchButton.addEventListener("click", () => {
+        const location = locationInput.value;
 
         const geocoder = new google.maps.Geocoder();
         geocoder.geocode({ address: location }, (results, status) => {
