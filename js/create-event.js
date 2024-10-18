@@ -227,61 +227,6 @@ function searchLocations(input) {
                 pElement.textContent = `${city.name}, ${city.country.name}`;
 
                 pElement.addEventListener("click", () => {
-
-                    function initMap() {
-                        const defaultLocation = { lat: 40.7128, lng: -74.0060 };
-                    
-                        const map = new google.maps.Map(document.getElementById("map"), {
-                            zoom: 8,
-                            center: defaultLocation,
-                        });
-                    
-                        let marker = new google.maps.Marker({
-                            position: defaultLocation,
-                            map: map,
-                            draggable: true,
-                        });
-                    
-                        // Event listener for marker drag end
-                        marker.addListener('dragend', function(event) {
-                            console.log("New location: ", event.latLng.lat(), event.latLng.lng());
-                        });
-                    
-                        // Try to get the user's location
-                        if (navigator.geolocation) {
-                            navigator.geolocation.getCurrentPosition(
-                                (position) => {
-                                    const userLocation = {
-                                        lat: position.coords.latitude,
-                                        lng: position.coords.longitude,
-                                    };
-                    
-                                    map.setCenter(userLocation);
-                                    marker.setPosition(userLocation);
-                                },
-                                () => {
-                                    console.error("Geolocation service failed.");
-                                }
-                            );
-                        } else {
-                            console.error("Geolocation is not supported by this browser.");
-                        }
-                    const location = pElement.textContent;
-            
-                    const geocoder = new google.maps.Geocoder();
-                    geocoder.geocode({ address: location }, (results, status) => {
-                        if (status === "OK") {
-                            const newLocation = results[0].geometry.location;
-                            map.setCenter(newLocation);
-                            marker.setPosition(newLocation);
-                        } else {
-                            alert("Location not found: " + status);
-                        }
-                    });
-                    }
-
-                    initMap();
-                    
                     const optionElement = document.createElement("option");
 
                     optionElement.textContent = pElement.textContent;
