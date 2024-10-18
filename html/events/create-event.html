@@ -103,6 +103,9 @@
         </form>
     </header>
 
+    <input type="text" id="locationInput" placeholder="Enter a location" />
+    <button id="searchButton">Search</button>
+
     <div id="map"></div>
 
     <script src="../../js/header.js"></script>
@@ -110,13 +113,22 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCedlvKW4R_g7eWonEYKsRTWSZc7vx-daE&v=beta"></script>
     <script>
       function initMap() {
-    // Default location (fallback if geolocation fails)
-    const defaultLocation = { lat: 40.7128, lng: -74.0060};
+    const defaultLocation = { lat: 40.7128, lng: -74.0060 };
 
-    // Create the map centered at the default location
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 8,
         center: defaultLocation,
+    });
+
+    let marker = new google.maps.Marker({
+        position: defaultLocation,
+        map: map,
+        draggable: true,
+    });
+
+    // Event listener for marker drag end
+    marker.addListener('dragend', function(event) {
+        console.log("New location: ", event.latLng.lat(), event.latLng.lng());
     });
 
     // Try to get the user's location
@@ -128,19 +140,8 @@
                     lng: position.coords.longitude,
                 };
 
-                // Update the map center and add a marker at user's location
                 map.setCenter(userLocation);
-
-                const marker = new google.maps.Marker({
-                    position: userLocation,
-                    map: map,
-                    draggable: true, // Makes the marker draggable
-                });
-
-                // Event listener for marker drag end
-                marker.addListener('dragend', function(event) {
-                    console.log("New location: ", event.latLng.lat(), event.latLng.lng());
-                });
+                marker.setPosition(userLocation);
             },
             () => {
                 console.error("Geolocation service failed.");
@@ -149,6 +150,25 @@
     } else {
         console.error("Geolocation is not supported by this browser.");
     }
+
+    // Search functionality
+    const searchButton = document.getElementById("searchButton");
+    const locationInput = document.getElementById("locationInput");
+
+    searchButton.addEventListener("click", () => {
+        const location = locationInput.value;
+
+        const geocoder = new google.maps.Geocoder();
+        geocoder.geocode({ address: location }, (results, status) => {
+            if (status === "OK") {
+                const newLocation = results[0].geometry.location;
+                map.setCenter(newLocation);
+                marker.setPosition(newLocation);
+            } else {
+                alert("Location not found: " + status);
+            }
+        });
+    });
 }
 
 // Load the map
