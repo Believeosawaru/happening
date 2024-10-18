@@ -326,9 +326,11 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
 });
 const openMoney = "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";
 
-async function assignCategory(name, description) {
+async function callOpenAI(name, description) {
+    const apiKey = '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';
+     // Replace with your actual API key
     const prompt = `Based on the following title and description, assign one of the following categories:\n\n` +
-                   `Categories: Music, Buisness, Sports, Arts, Food, Education, Kids, ` +
+                   `Categories: Music, Business, Sports, Arts, Food, Education, Kids, ` +
                    `Technology, Health, Fashion, Film, Nightlife, Literature, Travel, Nature, Charity, ` +
                    `Wellness, Culture\n\n` +
                    `Title: ${name}\n` +
@@ -338,7 +340,7 @@ async function assignCategory(name, description) {
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
         headers: {
-            'Authorization': `Bearer ${openMoney}`,
+            'Authorization': `Bearer ${apiKey}`,
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -349,15 +351,21 @@ async function assignCategory(name, description) {
     });
 
     if (!response.ok) {
-        throw new Error(`Error: ${response.statusText}`);
+        throw new Error(`Error: ${response.status} - ${response.statusText}`);
     }
 
     const data = await response.json();
-    const category = data.choices[0].message.content.trim();
-    console.log(category);
+    if (data.choices && data.choices.length > 0) {
+        const category = data.choices[0].message.content.trim();
+        console.log(category);
+    } else {
+        throw new Error('No category found in the response');
+    }
 }
 
-assignCategory("money", " wet")
+// Example usage
+callOpenAI('Event Title', 'A fun event for everyone');
+
 
 
 function sanitizeDescInput() {
