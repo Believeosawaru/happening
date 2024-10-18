@@ -86,12 +86,10 @@
             <div class="on-p-div">
                 Choose a Location:
                 <input type="text" id="search-input" placeholder="Search For A City">
-
                 <div id="results-div">
 
                 </div>
             </div>
-            <div id="map"></div>
             <br>
             
             <span class="small-txt">
@@ -108,13 +106,13 @@
     <input type="text" id="locationInput" placeholder="Enter a location" />
     <button id="searchButton">Search</button>
 
-    
+    <div id="map"></div>
 
     <script src="../../js/header.js"></script>
     <script src="../../js/create-event.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCedlvKW4R_g7eWonEYKsRTWSZc7vx-daE&v=beta"></script>
     <script>
-    function initMap() {
+      function initMap() {
     const defaultLocation = { lat: 40.7128, lng: -74.0060 };
 
     const map = new google.maps.Map(document.getElementById("map"), {
@@ -152,8 +150,29 @@
     } else {
         console.error("Geolocation is not supported by this browser.");
     }
+
+    // Search functionality
+    const searchButton = document.getElementById("searchButton");
+    const locationInput = document.getElementById("locationInput");
+
+    searchButton.addEventListener("click", () => {
+        const location = locationInput.value;
+
+        const geocoder = new google.maps.Geocoder();
+        geocoder.geocode({ address: location }, (results, status) => {
+            if (status === "OK") {
+                const newLocation = results[0].geometry.location;
+                map.setCenter(newLocation);
+                marker.setPosition(newLocation);
+            } else {
+                alert("Location not found: " + status);
+            }
+        });
+    });
 }
-    window.addEventListener('load', initMap);
+
+// Load the map
+window.addEventListener('load', initMap);
 
 
     </script>

@@ -237,8 +237,6 @@ function searchLocations(input) {
 
                     const location = pElement.textContent;
 
-                    document.querySelector("#map").style.display = "block"
-
                     const geocoder = new google.maps.Geocoder();
                     geocoder.geocode({ address: location }, (results, status) => {
                         if (status === "OK") {
