@@ -356,7 +356,7 @@ async function assignCategory(name, description) {
     console.log(category);
 }
 
-await assignCategory(money, wet)
+assignCategory(money, wet)
 
 
 function sanitizeDescInput() {
