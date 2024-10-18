@@ -227,7 +227,7 @@ function initMap(location) {
     });
 }
 
-window.addEventListener('load', initMap);
+initMap();
 
 function searchLocations(input) {
       fetch(`https://api.thecompaniesapi.com/v1/locations/cities?search=${input}`, {
