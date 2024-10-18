@@ -111,7 +111,7 @@
     <script>
       function initMap() {
     // Default location (fallback if geolocation fails)
-    const defaultLocation = { lat: -34.397, lng: 150.644 };
+    const defaultLocation = { lat: 40.7128, lng: -74.0060};
 
     // Create the map centered at the default location
     const map = new google.maps.Map(document.getElementById("map"), {
@@ -143,15 +143,11 @@
                 });
             },
             () => {
-                // Handle error if geolocation fails
-                console.error("Geolocation service failed.");
-                // Optionally, you can set the map to the default location if geolocation fails
+                // console.error("Geolocation service failed.");
             }
         );
     } else {
-        // Browser doesn't support Geolocation
         console.error("Geolocation is not supported by this browser.");
-        // Optionally, you can set the map to the default location if geolocation is not supported
     }
 }
 
