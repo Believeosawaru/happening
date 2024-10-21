@@ -34,9 +34,10 @@ nav span, footer h3 {
 }
 #follow-btn {
     background: #FF4500;
-    padding: 4px 25px;
+    padding: 5px 45px;
     border: none;
     border-radius: 6px;
+    color: white;
 }
 nav span:hover, button:hover, nav i:hover {
     cursor: pointer;
