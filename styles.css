@@ -38,6 +38,9 @@ nav span, footer h3 {
     border: none;
     border-radius: 6px;
     color: white;
+    border: 2px solid white;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    margin-block: 20px;
 }
 nav span:hover, button:hover, nav i:hover {
     cursor: pointer;
