@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                      <p class="dis-flex">
                         <span class="material-symbols-outlined">
-                        person
+                        person  
                         </span>
                         <span><a href="../user-profile.html?userId=${result.createdBy._id}">${result.createdBy.firstName} ${result.createdBy.lastName} </a><span id="h2-p">Organizer</span></span>
                      </p>
