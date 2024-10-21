@@ -124,6 +124,10 @@ async function fetchGroup() {
             }, 3500);
         }
 
+        if (message.message === "You're Not In Any Groups") {
+            return;
+        }
+
         if (response.ok) {
             setTimeout(() => {
                 document.querySelector(".pre-loader").style.display = "none";
