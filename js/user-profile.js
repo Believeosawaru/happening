@@ -41,79 +41,79 @@ async function userProfile() {
                 document.querySelector(".pre-loader").style.display = "none";
             }, 3500);
 
-            // document.getElementById("user-name").innerHTML = `${message.message}`;
+            document.getElementById("user-name").innerHTML = `${message.message}`;
 
             console.log(message)
 
-            // const events = message.data.events;
-            // const groups = message.data.groups;
+            const events = message.data.events;
+            const groups = message.data.groups;
 
-            // let eventsAccum  = ``;
-            // let groupsAccum  = ``;
+            let eventsAccum  = ``;
+            let groupsAccum  = ``;
 
-            // events.forEach(event => {
-            //     const eventDate = new Date(event.date);
+            events.forEach(event => {
+                const eventDate = new Date(event.date);
                 
-            //     const formattedDate = eventDate.toLocaleDateString("en-US", {
-            //         year: "numeric",
-            //         month: "long",
-            //         day: "numeric"
-            //     });
+                const formattedDate = eventDate.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                });
 
-            //     const html = `
-            //         <div>
-            //             <h2>${event.name}</h2>
+                const html = `
+                    <div>
+                        <h2>${event.name}</h2>
 
-            //             <p class="dis-flex">
-            //                 <span class="material-symbols-outlined">
-            //                 location_on
-            //                 </span> 
-            //                 <span>${event.location}</span>
-            //             </p>
+                        <p class="dis-flex">
+                            <span class="material-symbols-outlined">
+                            location_on
+                            </span> 
+                            <span>${event.location}</span>
+                        </p>
 
-            //             <p class="dis-flex">
-            //                 <span class="material-symbols-outlined">
-            //                 schedule
-            //                 </span>
-            //                 <span>${event.time} (${event.timeZone})</span>
-            //             </p>
+                        <p class="dis-flex">
+                            <span class="material-symbols-outlined">
+                            schedule
+                            </span>
+                            <span>${event.time} (${event.timeZone})</span>
+                        </p>
 
-            //             <p class="dis-flex">
-            //                 <span class="material-symbols-outlined">
-            //                     calendar_month
-            //                 </span>
-            //                 <span>${formattedDate}</span>
-            //             </p>
-            //         </div>
-            //     `;
+                        <p class="dis-flex">
+                            <span class="material-symbols-outlined">
+                                calendar_month
+                            </span>
+                            <span>${formattedDate}</span>
+                        </p>
+                    </div>
+                `;
 
-            //     eventsAccum += html;
-            // });
+                eventsAccum += html;
+            });
 
-            // groups.forEach((group) => {
-            //     const html = `
-            //             <div>
-            //                <h2>${group.name}</h2>
+            groups.forEach((group) => {
+                const html = `
+                        <div>
+                           <h2>${group.name}</h2>
 
-            //             <p>
-            //                 ${group.description}
-            //             </p>
+                        <p>
+                            ${group.description}
+                        </p>
                         
-            //             <p class="dis-flex">
-            //                 <span class="material-symbols-outlined">
-            //                 location_on
-            //                 </span> 
-            //                 <span>${group.location}</span>
-            //             </p>
-            //             </div>
-            //     `;
+                        <p class="dis-flex">
+                            <span class="material-symbols-outlined">
+                            location_on
+                            </span> 
+                            <span>${group.location}</span>
+                        </p>
+                        </div>
+                `;
 
-            //     groupsAccum += html;
-            // });
+                groupsAccum += html;
+            });
 
-            // document.getElementById("user-event").innerHTML = eventsAccum;
+            document.getElementById("user-event").innerHTML = eventsAccum;
 
-            // document.getElementById("user-group").innerHTML = groupsAccum;
+            document.getElementById("user-group").innerHTML = groupsAccum;
         } else {
             console.log(message)
         }
