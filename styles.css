@@ -32,6 +32,12 @@ nav span, footer h3 {
     font-family: "Edu AU VIC WA NT Hand", cursive;
     font-weight: bold;
 }
+#follow-btn {
+    background: #FF4500;
+    padding: 4px 25px;
+    border: none;
+    border-radius: 6px;
+}
 nav span:hover, button:hover, nav i:hover {
     cursor: pointer;
 }
