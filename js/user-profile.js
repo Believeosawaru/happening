@@ -124,9 +124,12 @@ async function userProfile() {
 async function followUser() {
     const text = document.getElementById("btn-text");
     const loader = document.getElementById("loader");
+    const btn = document.getElementById("follow-btn");
 
     text.style.display = "none";
     loader.style.display = "inline-block";
+
+    btn.disabled = "true";
 
     try {
         const response = await fetch(`http://5.161.186.15/api/v1/user/follow-user/${userId}`, {
@@ -147,10 +150,12 @@ async function followUser() {
         if (response.ok) {
             text.style.display = "block";
             loader.style.display = "inline";
-
-            text.innerHTML = "Following"
+            text.innerHTML = "Following";
+            btn.disabled = "true";
         } else {
-            console.log(message)
+            text.style.display = "block";
+            loader.style.display = "inline";
+            btn.disabled = "false";
         }
     } catch (error) {
         console.log(error);
