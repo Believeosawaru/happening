@@ -128,10 +128,33 @@ async function followUser() {
     text.style.display = "none";
     loader.style.display = "inline-block";
 
-    setTimeout(() => {
-        loader.style.display = "none";
-        text.style.display = "inline";
-    }, 3000)
+    try {
+        const response = await fetch(`http://5.161.186.15/api/v1/user/follow-user/${userId}`, {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+
+        const message = await response.json();
+
+        if (message.message === "jwt malformed" || message.message === "jwt expired") {
+            setTimeout(() => {
+                window.location.href = "log-in.html"
+            }, 3500);
+        }
+
+        if (response.ok) {
+            text.style.display = "block";
+            loader.style.display = "inline";
+
+            text.innerHTML = "Following"
+        } else {
+            console.log(message)
+        }
+    } catch (error) {
+        console.log(error);
+    }
 }
 
 window.onload = userProfile;
