@@ -39,7 +39,7 @@ async function userProfile() {
                 document.querySelector(".pre-loader").style.display = "none";
             }, 3500);
 
-            document.getElementById("user-name").innerHTML = `${message.id}`;
+            document.getElementById("user-name").innerHTML = `${message.message}`;
 
             // const events = message.data.events;
             // const groups = message.data.groups;
