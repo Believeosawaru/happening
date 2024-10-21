@@ -14,12 +14,14 @@
 //         menu.classList.remove('open-menu');
 //     }
 // }
+const urlParams = new URLSearchParams(window.location.search);
+const userId = urlParams.get("userId");
 
 async function userProfile() {
     const token = localStorage.getItem("authToken");
 
     try {
-        const response = await fetch("http://5.161.186.15/api/v1/user/user-profile", {
+        const response = await fetch(`http://5.161.186.15/api/v1/user/user-profile/${userId}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
