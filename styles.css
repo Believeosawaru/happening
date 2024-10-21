@@ -40,6 +40,24 @@ nav span, footer h3 {
     border: 5px solid white;
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
     margin-block: 5px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#follow-btn .loader {
+    border: 3px solid #F3F3F3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg) ;}
 }
 nav span:hover, button:hover, nav i:hover {
     cursor: pointer;

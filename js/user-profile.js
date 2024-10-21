@@ -121,4 +121,17 @@ async function userProfile() {
     }
 }
 
+async function followUser() {
+    const text = document.getElementById("btn-text");
+    const loader = document.getElementById("loader");
+
+    text.style.display = "none";
+    loader.style.display = "inline-block";
+
+    setTimeout(() => {
+        loader.style.display = "none";
+        text.style.display = "inline";
+    }, 3000)
+}
+
 window.onload = userProfile;
