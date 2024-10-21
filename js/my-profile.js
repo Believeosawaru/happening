@@ -39,7 +39,6 @@ async function userProfile() {
                 document.querySelector(".pre-loader").style.display = "none";
             }, 3500);
 
-            console.log(message)
             document.getElementById("user-name").innerHTML = `${message.data.firstName} ${message.data.lastName}`;
 
             const events = message.data.events;
