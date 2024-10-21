@@ -41,6 +41,8 @@ async function userProfile() {
 
             document.getElementById("user-name").innerHTML = `${message.message}`;
 
+            console.log(message)
+
             // const events = message.data.events;
             // const groups = message.data.groups;
 
