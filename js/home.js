@@ -42,6 +42,10 @@ async function fetchMessage() {
         }
 
         if (response.ok) {
+            setTimeout(() => {
+                document.querySelector(".pre-loader").style.display = "none";
+            }, 3500);
+            
             document.getElementById("welcome-msg").textContent = message.message;
         } else {
             console.log("Bad Network")
@@ -112,20 +116,12 @@ async function fetchGroup() {
             verifyDiv.style.display = "block";
         }
 
-        if (!response.ok) {
-            console.log("Bad Network")
-        }
-
         const message = await response.json();
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "log-in.html"
             }, 3500);
-        }
-
-        if (message.message === "You're Not In Any Groups") {
-            return;
         }
 
         if (response.ok) {
