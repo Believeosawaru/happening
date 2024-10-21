@@ -47,11 +47,11 @@ nav span, footer h3 {
     cursor: pointer;
 }
 #follow-btn .loader {
-    border: 3px solid #F3F3F3;
-    border-top: 3px solid #3498db;
+    border: 1px solid #F3F3F3;
+    border-top: 1px solid #3498db;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     animation: spin 1s linear infinite;
     margin-left: 10px;
 }
