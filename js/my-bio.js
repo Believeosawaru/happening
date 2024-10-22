@@ -23,7 +23,7 @@ async function myBio() {
             }, 3500);
 
             document.getElementById("bio").value = `${message.data.bio}`;
-            console.log(`done: ${bio}`)
+            console.log(`done: ${message.data.bio}`)
             
         } else {
             console.log(message)
