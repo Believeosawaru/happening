@@ -48,7 +48,7 @@ async function userProfile() {
             }
 
             document.getElementById("user-followers").innerHTML = `${message.data.followers}`;
-            document.getElementById("user-following").innerHTML = `${message.data.followings}`;
+            document.getElementById("user-following").innerHTML = `${message.data.following}`;
             
             document.getElementById("user-name").innerHTML = `${message.data.firstName} ${message.data.lastName}`;
 
