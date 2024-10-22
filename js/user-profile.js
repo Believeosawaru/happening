@@ -54,6 +54,8 @@ async function userProfile() {
 
             document.getElementById("user-bio").innerHTML = `${message.data.bio}`;
 
+            console.log("Shold Work")
+
             const events = message.data.events;
             const groups = message.data.groups;
 
