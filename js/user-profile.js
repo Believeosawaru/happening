@@ -161,14 +161,13 @@ async function followUser() {
 
         if (response.ok) {
             text.style.display = "block";
-            loader.style.display = "inline";
+            loader.style.display = "none";
             btn.disabled = "true";
             text.innerHTML = `<span onclick="unfollowUser()">Unfollow</span>`;
         } else {
             text.style.display = "block";
             loader.style.display = "inline";
             btn.disabled = "false";
-            console.log(message)
         }
     } catch (error) {
         console.log(error);
@@ -203,7 +202,7 @@ async function unfollowUser() {
 
         if (response.ok) {
             text.style.display = "block";
-            loader.style.display = "inline";
+            loader.style.display = "none";
             text.innerHTML = `<span onclick="followUser()">Follow</span>`;
             btn.disabled = "true";
         } else {
