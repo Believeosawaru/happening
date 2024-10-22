@@ -709,7 +709,7 @@ select:hover {
 }
 #bell {
     right: 50px;
-    margin-bottom: 20px;
+    bottom: 20px;
 }
 .alert {
     background: #FF4500;
