@@ -331,10 +331,11 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
 
         console.log(data)
 
-        // setTimeout(() => {
-        //     window.location.href = "events.html"
-        // }, 2000)
+        setTimeout(() => {
+            window.location.href = "events.html"
+        }, 2000)
     } else {
+        console.log(data)
         const keys = Object.keys(data);
 
         keys.forEach(key => {
