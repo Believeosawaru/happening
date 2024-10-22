@@ -45,6 +45,7 @@ async function userProfile() {
                 const btn = document.getElementById("follow-btn");
                 btn.innerHTML = `<span onclick="unfollowUser();">Unfollow</span>`;
                 btn.disabled = true;
+                btn.style.backgroundColor = "#FFECB3"
 
                 btn.addEventListener("click", () => {})
             }
@@ -164,6 +165,7 @@ async function followUser() {
             loader.style.display = "none";
             btn.disabled = "true";
             text.innerHTML = `<span onclick="unfollowUser()">Unfollow</span>`;
+            btn.style.backgroundColor = "#FFECB3"
         } else {
             text.style.display = "block";
             loader.style.display = "inline";
@@ -205,6 +207,7 @@ async function unfollowUser() {
             loader.style.display = "none";
             text.innerHTML = `<span onclick="followUser()">Follow</span>`;
             btn.disabled = "true";
+            btn.style.backgroundColor = "#FF4500"
         } else {
             text.style.display = "block";
             loader.style.display = "inline";
