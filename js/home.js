@@ -53,7 +53,7 @@ async function fetchMessage() {
             document.getElementById("welcome-msg").textContent = message.message;
 
             console.log(message)
-            if (message.data > 1) {
+            if (message.data > 0) {
                 document.getElementById("alert").style.display = "block";
                 console.log("NOtis")
             }
