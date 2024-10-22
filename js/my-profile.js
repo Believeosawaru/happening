@@ -41,6 +41,9 @@ async function userProfile() {
 
             document.getElementById("user-name").innerHTML = `${message.data.firstName} ${message.data.lastName}`;
 
+            document.getElementById("my-followers").innerHTML = `${message.data.followers}`;
+            document.getElementById("my-following").innerHTML = `${message.data.following}`;
+
             const events = message.data.events;
             const groups = message.data.groups;
 
