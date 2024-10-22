@@ -47,8 +47,8 @@ async function userProfile() {
                 btn.disabled = true;
             }
 
-            document.getElementById("user-followers").innerHTML = `${message.followers}`;
-            document.getElementById("user-following").innerHTML = `${message.followings}`;
+            document.getElementById("user-followers").innerHTML = `${message.data.followers}`;
+            document.getElementById("user-following").innerHTML = `${message.data.followings}`;
             
             document.getElementById("user-name").innerHTML = `${message.data.firstName} ${message.data.lastName}`;
 
