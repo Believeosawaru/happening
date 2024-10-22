@@ -51,11 +51,9 @@ async function fetchMessage() {
             }, 3500);
             
             document.getElementById("welcome-msg").textContent = message.message;
-
-            console.log(message)
+            
             if (message.data > 0) {
                 document.getElementById("alert").style.display = "block";
-                console.log("NOtis")
             }
         } else {
             console.log("Bad Network")
