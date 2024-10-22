@@ -212,7 +212,6 @@ async function unfollowUser() {
             text.style.display = "block";
             loader.style.display = "inline";
             btn.disabled = "false";
-            console.log(message)
         }
     } catch (error) {
         console.log(error);
