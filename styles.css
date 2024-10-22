@@ -710,7 +710,7 @@ select:hover {
 #noti-bell {
     position: absolute;
     top: 0px;
-    left: 0px;
+    right: 50px;
 }
 .alert {
     background: #FF4500;
