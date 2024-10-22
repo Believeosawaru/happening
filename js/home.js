@@ -53,7 +53,7 @@ async function fetchMessage() {
             document.getElementById("welcome-msg").textContent = message.message;
             
             if (message.data > 0) {
-                document.getElementById("alert").style.display = "block";
+                document.getElementById("alert").style.visibility = "visible";
             }
         } else {
             console.log("Bad Network")
