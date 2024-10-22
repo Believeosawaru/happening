@@ -18,9 +18,9 @@ async function myBio() {
         }
 
         if (response.ok) {
-            setTimeout(() => {
-                document.querySelector(".pre-loader").style.display = "none";
-            }, 3500);
+            // setTimeout(() => {
+            //     document.querySelector(".pre-loader").style.display = "none";
+            // }, 3500);
 
             document.getElementById("bio").value = `${message.data.bio}`;
             console.log(`done: ${message.data.bio}`)
