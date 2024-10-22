@@ -33,8 +33,9 @@ async function myBio() {
     }
 }
 
+const button = document.getElementById("bio");
+
 function disableBtn() {
-    const button = document.getElementById("bio");
     button.disabled = true;
     button.style.backgroundColor = "#FFECB3";
     button.style.color = "black";
