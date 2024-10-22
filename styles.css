@@ -716,6 +716,7 @@ select:hover {
     width: 5px;
     right: 9px;
     border-radius: 10px;
+    display: none;
 }
 .fade {
     background: #FFECB3;
