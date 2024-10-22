@@ -708,8 +708,8 @@ select:hover {
     margin-block: 15px;
 }
 #bell {
-    right: 50px;
-    top: 0px;
+    
+    left: 0px;
 }
 .alert {
     background: #FF4500;
