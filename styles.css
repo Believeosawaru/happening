@@ -707,6 +707,11 @@ select:hover {
     color: white;
     margin-block: 15px;
 }
+#noti-bell {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
 .alert {
     background: #FF4500;
     height: 5px;
