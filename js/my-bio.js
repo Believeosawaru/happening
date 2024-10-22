@@ -43,7 +43,7 @@ function disableBtn() {
 
 const bioUrl = "http://5.161.186.15/api/v1/user/my-bio";
 
-document.getElementById("create-event").addEventListener("submit", async (e) => {
+document.getElementById("update-bio").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const bio = document.getElementById("bio").value;
