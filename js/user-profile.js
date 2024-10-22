@@ -40,6 +40,12 @@ async function userProfile() {
             setTimeout(() => {
                 document.querySelector(".pre-loader").style.display = "none";
             }, 3500);
+
+            if (message.isFollowing) {
+                const btn = document.getElementById("follow-btn");
+                btn.innerHTML = "Following";
+                btn.disabled = true;
+            }
             
             document.getElementById("user-name").innerHTML = `${message.data.firstName} ${message.data.lastName}`;
 
