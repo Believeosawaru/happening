@@ -52,6 +52,8 @@ async function userProfile() {
             
             document.getElementById("user-name").innerHTML = `${message.data.firstName} ${message.data.lastName}`;
 
+            document.getElementById("user-bio").innerHTML = `${message.data.bio}`;
+
             const events = message.data.events;
             const groups = message.data.groups;
 
