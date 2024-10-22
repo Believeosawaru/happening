@@ -151,10 +151,12 @@ async function followUser() {
             loader.style.display = "inline";
             text.innerHTML = "Following";
             btn.disabled = "true";
+            console.log(message)
         } else {
             text.style.display = "block";
             loader.style.display = "inline";
             btn.disabled = "false";
+            console.log(message)
         }
     } catch (error) {
         console.log(error);
