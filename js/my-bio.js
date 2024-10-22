@@ -33,7 +33,7 @@ async function myBio() {
     }
 }
 
-const button = document.getElementById("bio");
+const button = document.getElementById("bio-btn");
 
 function disableBtn() {
     button.disabled = true;
