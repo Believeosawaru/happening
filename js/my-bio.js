@@ -33,4 +33,4 @@ async function myBio() {
     }
 }
 
-window.onload = userProfile;
+window.onload = myBio;
