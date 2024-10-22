@@ -43,8 +43,10 @@ async function userProfile() {
 
             if (message.isFollowing) {
                 const btn = document.getElementById("follow-btn");
-                btn.innerHTML = "Following";
+                btn.innerHTML = `<span onclick="unfollowUser();">Unfollow</span>`;
                 btn.disabled = true;
+
+                btn.addEventListener("click", () => {})
             }
 
             document.getElementById("user-followers").innerHTML = `${message.data.followers}`;
@@ -160,9 +162,50 @@ async function followUser() {
         if (response.ok) {
             text.style.display = "block";
             loader.style.display = "inline";
-            text.innerHTML = "Following";
             btn.disabled = "true";
+            text.innerHTML = `<span onclick="unfollowUser()">Unfollow</span>`;
+        } else {
+            text.style.display = "block";
+            loader.style.display = "inline";
+            btn.disabled = "false";
             console.log(message)
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+async function unfollowUser() {
+    const text = document.getElementById("btn-text");
+    const loader = document.getElementById("loader");
+    const btn = document.getElementById("follow-btn");
+
+    text.style.display = "none";
+    loader.style.display = "inline-block";
+
+    btn.disabled = "true";
+
+    try {
+        const response = await fetch(`http://5.161.186.15/api/v1/user/unfollow-user/${userId}`, {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`
+            }
+        });
+
+        const message = await response.json();
+
+        if (message.message === "jwt malformed" || message.message === "jwt expired") {
+            setTimeout(() => {
+                window.location.href = "log-in.html"
+            }, 3500);
+        }
+
+        if (response.ok) {
+            text.style.display = "block";
+            loader.style.display = "inline";
+            text.innerHTML = `<span onclick="followUser()">Follow</span>`;
+            btn.disabled = "true";
         } else {
             text.style.display = "block";
             loader.style.display = "inline";
