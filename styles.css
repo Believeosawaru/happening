@@ -707,9 +707,7 @@ select:hover {
     color: white;
     margin-block: 15px;
 }
-#noti-bell {
-    position: absolute;
-    top: 0px;
+#bell {
     right: 50px;
 }
 .alert {
