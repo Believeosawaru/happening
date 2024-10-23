@@ -41,8 +41,8 @@ async function userProfile() {
             }, 3500);
 
             if (message.isFollowing) {
-                const btn = document.getElementById("follow-btn");
-                btn.innerHTML = `<span id="btn-text" onclick="unfollowUser();">Unfollow</span>`;
+                const btnDiv = document.getElementById("fol-unfol-div");
+                btnDiv.innerHTML = `<button id="follow-btn yellow" onclick="unfollowUser();">Unfollow</button>`;
             }
 
             document.getElementById("user-followers").innerHTML = `${message.data.followers}`;
