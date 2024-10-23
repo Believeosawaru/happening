@@ -164,7 +164,7 @@ async function followUser() {
 
 async function unfollowUser() {
     try {
-        loader.style.display = "block";
+        loader.style.visibility = "visible";
 
         const response = await fetch(`http://5.161.186.15/api/v1/user/unfollow-user/${userId}`, {
             method: "GET",
