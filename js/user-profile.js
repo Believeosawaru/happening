@@ -130,10 +130,6 @@ async function userProfile() {
 }
 
 async function followUser() {
-    const btn = document.getElementById("follow-btn");
-
-    btn.disabled = "true";
-
     try {
         const response = await fetch(`http://5.161.186.15/api/v1/user/follow-user/${userId}`, {
             method: "GET",
@@ -161,15 +157,6 @@ async function followUser() {
 }
 
 async function unfollowUser() {
-    const text = document.getElementById("btn-text");
-    const loader = document.getElementById("loader");
-    const btn = document.getElementById("follow-btn");
-
-    text.style.display = "none";
-    loader.style.display = "inline-block";
-
-    btn.disabled = "true";
-
     try {
         const response = await fetch(`http://5.161.186.15/api/v1/user/unfollow-user/${userId}`, {
             method: "GET",
