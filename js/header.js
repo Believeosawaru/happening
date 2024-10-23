@@ -42,4 +42,4 @@ async function loadNotifications() {
     }
 }
 
-window.onload = loadNotifications;
+loadNotifications();
