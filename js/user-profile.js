@@ -45,8 +45,6 @@ async function userProfile() {
                 btn.innerHTML = `<span id="btn-text" onclick="unfollowUser();">Unfollow...</span>`;
                 btn.style.backgroundColor = "#FFECB3"
                 btn.style.color = "black";
-
-                btn.addEventListener("click", () => {})
             }
 
             document.getElementById("user-followers").innerHTML = `${message.data.followers}`;
