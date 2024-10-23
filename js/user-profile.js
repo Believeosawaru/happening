@@ -167,8 +167,8 @@ async function followUser() {
 
 async function unfollowUser() {
     try {
-        document.querySelector("#follow-btn").style.background = "#FFECB3";
-        document.querySelector("#follow-btn").style.color = "black";
+        document.querySelector("#yellow").style.background = "#FFECB3";
+        document.querySelector("#yellow").style.color = "black";
 
         const response = await fetch(`http://5.161.186.15/api/v1/user/unfollow-user/${userId}`, {
             method: "GET",
