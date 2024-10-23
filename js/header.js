@@ -33,7 +33,9 @@ async function loadNotifications() {
         }
 
         if (response.ok) {
-            console.log(data)
+            if (data.data > 0) {
+                document.getElementById("alert").style.visibility = "visible";
+            }
         } else {
             console.log("Error")
         }
