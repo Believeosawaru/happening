@@ -47,8 +47,7 @@ nav span, footer h3 {
     cursor: pointer;
 }
 #yellow {
-    background: #FFECB3;
-    color: black;
+    border: 1px solid #FF4500;
 }
 #follow-btn .loader {
     border: 1px solid #F3F3F3;
