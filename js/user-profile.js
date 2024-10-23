@@ -42,8 +42,7 @@ async function userProfile() {
 
             if (message.isFollowing) {
                 const btn = document.getElementById("follow-btn");
-                btn.innerHTML = `<span id="btn-text" onclick="unfollowUser();">Unfollow</span>`;
-                btn.disabled = true;
+                btn.innerHTML = `<span id="btn-text" onclick="unfollowUser();">Unfollow...</span>`;
                 btn.style.backgroundColor = "#FFECB3"
                 btn.style.color = "black";
 
