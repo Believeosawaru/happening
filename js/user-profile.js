@@ -185,7 +185,7 @@ async function unfollowUser() {
 
         if (response.ok) {
             const btnDiv = document.getElementById("fol-unfol-div");
-            btnDiv.innerHTML = `<button id="follow-btn" onclick="followUser();">Follow <div id="loader" class="loader"></div>`;
+            btnDiv.innerHTML = `<button id="follow-btn" onclick="followUser();">Follow <div id="loader" class="loader" style="display: none;"></div></button>`;
 
             loader.style.display = "none";
             
