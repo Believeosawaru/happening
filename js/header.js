@@ -13,7 +13,7 @@ function openMenu() {
 }
 
 const token = localStorage.getItem("authToken");
-
+console.log("WOEK")
 async function loadNotifications() {
     console.log("WOEK")
     try {
