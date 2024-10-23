@@ -147,10 +147,12 @@ async function followUser() {
         }
 
         if (response.ok) {
-            console.log("Follow User");
+            const btnDiv = document.getElementById("fol-unfol-div");
+            btnDiv.innerHTML = `<button id="yellow" onclick="unfollowUser();">Unfollow</button>`;
+            
             document.getElementById("user-followers").innerHTML++;
         } else {
-            console.log(message)
+            console.log("Error")
         }
     } catch (error) {
         console.log(error);
@@ -175,7 +177,10 @@ async function unfollowUser() {
         }
 
         if (response.ok) {
-           console.log("Unfollow User")
+            const btnDiv = document.getElementById("fol-unfol-div");
+            btnDiv.innerHTML = `<button id="follow-btn" onclick="followUser();">Follow</button>`;
+            
+            document.getElementById("user-followers").innerHTML--;
         } else {
             console.log(message)
         }
