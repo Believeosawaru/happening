@@ -17,6 +17,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const userId = urlParams.get("userId");
 const token = localStorage.getItem("authToken");
+const loader = document.getElementById("loader");
 
 async function userProfile() {
     try {
@@ -128,11 +129,10 @@ async function userProfile() {
         console.log(error);
     }
 }
-const loader = document.getElementById("loader");
 
 async function followUser() {
     try {
-        loader.classList.add("show")
+        loader.style.display = "block";
 
         const response = await fetch(`http://5.161.186.15/api/v1/user/follow-user/${userId}`, {
             method: "GET",
@@ -154,8 +154,6 @@ async function followUser() {
             btnDiv.innerHTML = `<button id="yellow" onclick="unfollowUser();">Unfollow <div id="loader" class="loader" style="display: none;"></div></button>`;
             
             document.getElementById("user-followers").innerHTML++;
-
-            loader.style.display = "none";
         } else {
             console.log("Error")
         }
@@ -166,16 +164,14 @@ async function followUser() {
 
 async function unfollowUser() {
     try {
-        loader.classList.add("show");
-        
+        loader.style.display = "block";
+
         const response = await fetch(`http://5.161.186.15/api/v1/user/unfollow-user/${userId}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
             }
         });
-
-        loader.style.display = "inline-block";
 
         const message = await response.json();
 

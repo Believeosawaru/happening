@@ -50,7 +50,6 @@ nav span, footer h3 {
     border: 1px solid #FF4500;
 }
 #follow-btn .loader {
-    display: none;
     border: 1px solid #F3F3F3;
     border-top: 1px solid #3498db;
     border-radius: 50%;
