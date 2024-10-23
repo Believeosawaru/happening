@@ -131,7 +131,7 @@ async function userProfile() {
 
 async function followUser() {
     try {
-        loader.style.display = "block";
+        loader.classlist.add("show")
 
         const response = await fetch(`http://5.161.186.15/api/v1/user/follow-user/${userId}`, {
             method: "GET",
@@ -165,7 +165,7 @@ async function followUser() {
 
 async function unfollowUser() {
     try {
-        loader.style.display = "block";
+        loader.classlist.add("show")
 
         const response = await fetch(`http://5.161.186.15/api/v1/user/unfollow-user/${userId}`, {
             method: "GET",
