@@ -32,7 +32,7 @@ nav span, footer h3 {
     font-family: "Edu AU VIC WA NT Hand", cursive;
     font-weight: bold;
 }
-#follow-btn {
+#follow-btn, #yellow {
     background: #FF4500;
     padding: 5px 45px;
     border: none;
@@ -54,10 +54,6 @@ nav span, footer h3 {
     height: 10px;
     animation: spin 1s linear infinite;
     margin-left: 10px;
-}
-.yellow {
-    background: #FFECB3;
-    color: black;
 }
 @keyframes spin {
     0% { transform: rotate(0deg); }
