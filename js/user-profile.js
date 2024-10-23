@@ -152,8 +152,6 @@ async function followUser() {
         if (response.ok) {
             const btnDiv = document.getElementById("fol-unfol-div");
             btnDiv.innerHTML = `<button id="yellow" onclick="unfollowUser();">Unfollow <div id="loader" class="loader";"></div></button>`;
-
-            loader.style.display = "none";
             
             document.getElementById("user-followers").innerHTML++;
         } else {
@@ -186,8 +184,6 @@ async function unfollowUser() {
         if (response.ok) {
             const btnDiv = document.getElementById("fol-unfol-div");
             btnDiv.innerHTML = `<button id="follow-btn" onclick="followUser();">Follow <div id="loader" class="loader"></div></button>`;
-
-            loader.style.display = "none";
             
             document.getElementById("user-followers").innerHTML--;
         } else {
