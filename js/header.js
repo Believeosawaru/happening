@@ -15,6 +15,7 @@ function openMenu() {
 const token = localStorage.getItem("authToken");
 
 async function loadNotifications() {
+    console.log("WOEK")
     try {
         const response = await fetch(`http://5.161.186.15/api/v1/user/my-notifications`, {
             method: "GET",
