@@ -131,16 +131,16 @@ async function userProfile() {
 
 async function followUser() {
     try {
+        const loader = document.getElementById("loader");
+
+        loader.style.display = "block";
+
         const response = await fetch(`http://5.161.186.15/api/v1/user/follow-user/${userId}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
             }
         });
-
-        const loader = document.getElementById("loader");
-
-        loader.style.display = "inline-block";
 
         const message = await response.json();
 
@@ -171,7 +171,7 @@ async function unfollowUser() {
                 "Authorization": `Bearer ${token}`
             }
         });
-        
+
         const loader = document.getElementById("loader");
 
         loader.style.display = "inline-block";
