@@ -33,8 +33,8 @@ async function loadNotifications() {
         }
 
         if (response.ok) {
-            if (data.data > 0) {
-                document.getElementById("alert").style.visibility = "visible";
+            if (data.data.length > 0) {
+                document.querySelector(".alert").style.visibility = "visible";
             }
         } else {
             console.log("Error")
