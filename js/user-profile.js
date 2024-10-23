@@ -42,7 +42,7 @@ async function userProfile() {
 
             if (message.isFollowing) {
                 const btn = document.getElementById("follow-btn");
-                btn.innerHTML = `<span id="btn-text" onclick="unfollowUser();">Unfollow...</span>`;
+                btn.innerHTML = `<span id="btn-text" onclick="unfollowUser();">Unfollow</span>`;
                 btn.style.backgroundColor = "#FFECB3"
                 btn.style.color = "black";
             }
@@ -159,7 +159,7 @@ async function followUser() {
 
         if (response.ok) {
             text.style.display = "block";
-            loader.style.display = "none";
+            loader.style.display = "inline";
             btn.disabled = "true";
             text.innerHTML = `<span id="btn-text" onclick="unfollowUser()">Unfollow</span>`;
             btn.style.backgroundColor = "#FFECB3";
