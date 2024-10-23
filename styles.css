@@ -55,7 +55,7 @@ nav span, footer h3 {
     animation: spin 1s linear infinite;
     margin-left: 10px;
 }
-#yellow {
+.yellow {
     background: #FFECB3;
     color: black;
 }
