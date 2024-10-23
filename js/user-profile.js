@@ -128,10 +128,11 @@ async function userProfile() {
         console.log(error);
     }
 }
+const loader = document.getElementById("loader");
 
 async function followUser() {
     try {
-        loader.classlist.add("show")
+        loader.classList.add("show")
 
         const response = await fetch(`http://5.161.186.15/api/v1/user/follow-user/${userId}`, {
             method: "GET",
@@ -165,14 +166,16 @@ async function followUser() {
 
 async function unfollowUser() {
     try {
-        loader.classlist.add("show")
-
+        loader.classList.add("show");
+        
         const response = await fetch(`http://5.161.186.15/api/v1/user/unfollow-user/${userId}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
             }
         });
+
+        loader.style.display = "inline-block";
 
         const message = await response.json();
 
