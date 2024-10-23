@@ -131,8 +131,8 @@ async function userProfile() {
 
 async function followUser() {
     try {
-        document.querySelector("#follow-btn").style.background = "#FF4500";
-        document.querySelector("#follow-btn").style.color = "white";
+        document.querySelector("#follow-btn").style.background = "#FFECB3";
+        document.querySelector("#follow-btn").style.color = "black";
 
         const response = await fetch(`http://5.161.186.15/api/v1/user/follow-user/${userId}`, {
             method: "GET",
@@ -155,9 +155,10 @@ async function followUser() {
             
             document.getElementById("user-followers").innerHTML++;
         } else {
-            document.querySelector("#follow-btn").style.background = "#FFECB3";
-            document.querySelector("#follow-btn").style.color = "black";
-            document.getElementById("fol-unfol-div").innerHTML = `<button id="yellow" onclick="unfollowUser();">Unfollow</button>`;
+            document.querySelector("#follow-btn").style.background = "#FF4500";
+            document.querySelector("#follow-btn").style.color = "white";
+            document.getElementById("fol-unfol-div");
+            btnDiv.innerHTML = `<button id="follow-btn" onclick="followUser();">Follow</button>`;
         }
     } catch (error) {
         console.log(error);
@@ -190,7 +191,10 @@ async function unfollowUser() {
             
             document.getElementById("user-followers").innerHTML--;
         } else {
-            console.log(message)
+            document.querySelector("#follow-btn").style.background = "#FFECB3";
+            document.querySelector("#follow-btn").style.color = "black";
+            document.getElementById("fol-unfol-div");
+            btnDiv.innerHTML = `<button id="yellow" onclick="unFollowUser();">Unfollow</button>`;
         }
     } catch (error) {
         console.log(error);
