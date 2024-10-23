@@ -149,7 +149,7 @@ async function followUser() {
         if (response.ok) {
             console.log("Follow User");
         } else {
-            console.log("Error")
+            console.log(message)
         }
     } catch (error) {
         console.log(error);
@@ -176,7 +176,7 @@ async function unfollowUser() {
         if (response.ok) {
            console.log("Unfollow User")
         } else {
-            console.log("Error")
+            console.log(message)
         }
     } catch (error) {
         console.log(error);
