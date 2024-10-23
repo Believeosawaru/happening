@@ -19,7 +19,6 @@ const userId = urlParams.get("userId");
 const token = localStorage.getItem("authToken");
 
 async function userProfile() {
-
     try {
         const response = await fetch(`http://5.161.186.15/api/v1/user/user-profile/${userId}`, {
             method: "GET",
@@ -43,9 +42,10 @@ async function userProfile() {
 
             if (message.isFollowing) {
                 const btn = document.getElementById("follow-btn");
-                btn.innerHTML = `<span onclick="unfollowUser();">Unfollow</span>`;
+                btn.innerHTML = `<span id="btn-text" onclick="unfollowUser();">Unfollow</span>`;
                 btn.disabled = true;
                 btn.style.backgroundColor = "#FFECB3"
+                btn.style.color = "black";
 
                 btn.addEventListener("click", () => {})
             }
@@ -164,8 +164,9 @@ async function followUser() {
             text.style.display = "block";
             loader.style.display = "none";
             btn.disabled = "true";
-            text.innerHTML = `<span onclick="unfollowUser()">Unfollow</span>`;
-            btn.style.backgroundColor = "#FFECB3"
+            text.innerHTML = `<span id="btn-text" onclick="unfollowUser()">Unfollow</span>`;
+            btn.style.backgroundColor = "#FFECB3";
+            btn.style.color = "black";
         } else {
             text.style.display = "block";
             loader.style.display = "inline";
