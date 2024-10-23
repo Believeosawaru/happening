@@ -17,7 +17,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const userId = urlParams.get("userId");
 const token = localStorage.getItem("authToken");
-const loader = document.getElementById("loader");
 
 async function userProfile() {
     try {
@@ -132,7 +131,8 @@ async function userProfile() {
 
 async function followUser() {
     try {
-        loader.style.visibility = "visible";
+        document.querySelector("#follow-btn").style.background = "#FF4500";
+        document.querySelector("#follow-btn").style.color = "white";
 
         const response = await fetch(`http://5.161.186.15/api/v1/user/follow-user/${userId}`, {
             method: "GET",
@@ -151,11 +151,13 @@ async function followUser() {
 
         if (response.ok) {
             const btnDiv = document.getElementById("fol-unfol-div");
-            btnDiv.innerHTML = `<button id="yellow" onclick="unfollowUser();">Unfollow <div id="loader" class="loader"></div></button>`;
+            btnDiv.innerHTML = `<button id="yellow" onclick="unfollowUser();">Unfollow</button>`;
             
             document.getElementById("user-followers").innerHTML++;
         } else {
-            console.log("Error")
+            document.querySelector("#follow-btn").style.background = "#FFECB3";
+            document.querySelector("#follow-btn").style.color = "black";
+            document.getElementById("fol-unfol-div").innerHTML = `<button id="yellow" onclick="unfollowUser();">Unfollow</button>`;
         }
     } catch (error) {
         console.log(error);
@@ -164,7 +166,8 @@ async function followUser() {
 
 async function unfollowUser() {
     try {
-        loader.style.visibility = "visible";
+        document.querySelector("#follow-btn").style.background = "#FFECB3";
+        document.querySelector("#follow-btn").style.color = "black";
 
         const response = await fetch(`http://5.161.186.15/api/v1/user/unfollow-user/${userId}`, {
             method: "GET",
