@@ -43,11 +43,6 @@ async function userProfile() {
             if (message.isFollowing) {
                 const btn = document.getElementById("follow-btn");
                 btn.innerHTML = `<span id="btn-text" onclick="unfollowUser();">Unfollow</span>`;
-                btn.style.backgroundColor = "#FFECB3"
-                btn.style.color = "black";
-
-                const loader = document.getElementById("loader");
-                loader.style.display = "inline-block";
             }
 
             document.getElementById("user-followers").innerHTML = `${message.data.followers}`;
@@ -135,12 +130,7 @@ async function userProfile() {
 }
 
 async function followUser() {
-    const text = document.getElementById("btn-text");
-    const loader = document.getElementById("loader");
     const btn = document.getElementById("follow-btn");
-
-    text.style.display = "none";
-    loader.style.display = "inline-block";
 
     btn.disabled = "true";
 
@@ -161,16 +151,9 @@ async function followUser() {
         }
 
         if (response.ok) {
-            text.style.display = "block";
-            loader.style.display = "inline";
-            btn.disabled = "true";
-            text.innerHTML = `<span id="btn-text" onclick="unfollowUser()">Unfollow</span>`;
-            btn.style.backgroundColor = "#FFECB3";
-            btn.style.color = "black";
+            console.log("Follow User");
         } else {
-            text.style.display = "block";
-            loader.style.display = "inline";
-            btn.disabled = "false";
+            console.log("Error")
         }
     } catch (error) {
         console.log(error);
@@ -204,15 +187,9 @@ async function unfollowUser() {
         }
 
         if (response.ok) {
-            text.style.display = "block";
-            loader.style.display = "none";
-            text.innerHTML = `<span onclick="followUser()">Follow</span>`;
-            btn.disabled = "true";
-            btn.style.backgroundColor = "#FF4500"
+           console.log("Unfollow User")
         } else {
-            text.style.display = "block";
-            loader.style.display = "inline";
-            btn.disabled = "false";
+            console.log("Error")
         }
     } catch (error) {
         console.log(error);
