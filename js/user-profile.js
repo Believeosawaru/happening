@@ -187,7 +187,7 @@ async function unfollowUser() {
             const btnDiv = document.getElementById("fol-unfol-div");
             btnDiv.innerHTML = `<button id="follow-btn" onclick="followUser();">Follow <div id="loader" class="loader";></div>`;
 
-            loader.style.display = "inline-block";
+            loader.style.display = "none";
             
             document.getElementById("user-followers").innerHTML--;
         } else {
