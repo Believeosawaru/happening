@@ -148,6 +148,7 @@ async function followUser() {
 
         if (response.ok) {
             console.log("Follow User");
+            document.getElementById("user-followers").innerHTML++;
         } else {
             console.log(message)
         }
