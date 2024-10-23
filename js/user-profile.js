@@ -131,8 +131,6 @@ async function userProfile() {
 
 async function followUser() {
     try {
-        const loader = document.getElementById("loader");
-
         loader.style.display = "block";
 
         const response = await fetch(`http://5.161.186.15/api/v1/user/follow-user/${userId}`, {
@@ -155,6 +153,8 @@ async function followUser() {
             btnDiv.innerHTML = `<button id="yellow" onclick="unfollowUser();">Unfollow <div id="loader" class="loader" style="display: none;"></div></button>`;
             
             document.getElementById("user-followers").innerHTML++;
+
+            loader.style.display = "none";
         } else {
             console.log("Error")
         }
@@ -165,16 +165,14 @@ async function followUser() {
 
 async function unfollowUser() {
     try {
+        loader.style.display = "block";
+
         const response = await fetch(`http://5.161.186.15/api/v1/user/unfollow-user/${userId}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
             }
         });
-
-        const loader = document.getElementById("loader");
-
-        loader.style.display = "inline-block";
 
         const message = await response.json();
 
