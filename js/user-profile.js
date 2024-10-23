@@ -42,7 +42,7 @@ async function userProfile() {
 
             if (message.isFollowing) {
                 const btnDiv = document.getElementById("fol-unfol-div");
-                btnDiv.innerHTML = `<button id="yellow" onclick="unfollowUser();">Unfollow</button>`;
+                btnDiv.innerHTML = `<button id="yellow" onclick="unfollowUser();">Unfollow <div id="loader" class="loader" style="display: none;"></div></button>`;
             }
 
             document.getElementById("user-followers").innerHTML = `${message.data.followers}`;
@@ -138,6 +138,10 @@ async function followUser() {
             }
         });
 
+        const loader = document.getElementById("loader");
+
+        loader.style.display = "inline-block";
+
         const message = await response.json();
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
@@ -148,7 +152,7 @@ async function followUser() {
 
         if (response.ok) {
             const btnDiv = document.getElementById("fol-unfol-div");
-            btnDiv.innerHTML = `<button id="yellow" onclick="unfollowUser();">Unfollow</button>`;
+            btnDiv.innerHTML = `<button id="yellow" onclick="unfollowUser();">Unfollow <div id="loader" class="loader" style="display: none;"></div></button>`;
             
             document.getElementById("user-followers").innerHTML++;
         } else {
@@ -167,6 +171,10 @@ async function unfollowUser() {
                 "Authorization": `Bearer ${token}`
             }
         });
+        
+        const loader = document.getElementById("loader");
+
+        loader.style.display = "inline-block";
 
         const message = await response.json();
 
@@ -178,7 +186,7 @@ async function unfollowUser() {
 
         if (response.ok) {
             const btnDiv = document.getElementById("fol-unfol-div");
-            btnDiv.innerHTML = `<button id="follow-btn" onclick="followUser();">Follow</button>`;
+            btnDiv.innerHTML = `<button id="follow-btn" onclick="followUser();">Follow <div id="loader" class="loader" style="display: none;"></div>`;
             
             document.getElementById("user-followers").innerHTML--;
         } else {
