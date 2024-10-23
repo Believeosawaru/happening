@@ -43,7 +43,7 @@ async function userProfile() {
 
             if (message.isFollowing) {
                 const btnDiv = document.getElementById("fol-unfol-div");
-                btnDiv.innerHTML = `<button id="yellow" onclick="unfollowUser();">Unfollow <div id="loader" class="loader" style="display: none;"></div></button>`;
+                btnDiv.innerHTML = `<button id="yellow" onclick="unfollowUser();">Unfollow <div id="loader" class="loader" style="visibility: hidden;"></div></button>`;
             }
 
             document.getElementById("user-followers").innerHTML = `${message.data.followers}`;
@@ -132,7 +132,7 @@ async function userProfile() {
 
 async function followUser() {
     try {
-        loader.style.display = "inline-block";
+        loader.style.visibility = "visible";
 
         const response = await fetch(`http://5.161.186.15/api/v1/user/follow-user/${userId}`, {
             method: "GET",
@@ -151,7 +151,7 @@ async function followUser() {
 
         if (response.ok) {
             const btnDiv = document.getElementById("fol-unfol-div");
-            btnDiv.innerHTML = `<button id="yellow" onclick="unfollowUser();">Unfollow <div id="loader" class="loader" style="display: none;"></div></button>`;
+            btnDiv.innerHTML = `<button id="yellow" onclick="unfollowUser();">Unfollow <div id="loader" class="loader" style="visibility: hidden;"></div></button>`;
             
             document.getElementById("user-followers").innerHTML++;
         } else {
@@ -164,7 +164,7 @@ async function followUser() {
 
 async function unfollowUser() {
     try {
-        loader.style.display = "inline-block";
+        loader.style.visibility = "visible";
 
         const response = await fetch(`http://5.161.186.15/api/v1/user/unfollow-user/${userId}`, {
             method: "GET",
@@ -183,7 +183,7 @@ async function unfollowUser() {
 
         if (response.ok) {
             const btnDiv = document.getElementById("fol-unfol-div");
-            btnDiv.innerHTML = `<button id="follow-btn" onclick="followUser();">Follow <div id="loader" class="loader" style="display: none;"></div>`;
+            btnDiv.innerHTML = `<button id="follow-btn" onclick="followUser();">Follow <div id="loader" class="loader" style="visibility: hidden;"></div>`;
             
             document.getElementById("user-followers").innerHTML--;
         } else {
