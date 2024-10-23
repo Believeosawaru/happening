@@ -132,7 +132,7 @@ async function userProfile() {
 
 async function followUser() {
     try {
-        loader.style.display = "block";
+        loader.style.display = "inline-block";
 
         const response = await fetch(`http://5.161.186.15/api/v1/user/follow-user/${userId}`, {
             method: "GET",
