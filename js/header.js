@@ -23,7 +23,7 @@ async function loadNotifications() {
             }
         });
 
-        const message = await response.json();
+        const data = await response.json();
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
@@ -32,7 +32,7 @@ async function loadNotifications() {
         }
 
         if (response.ok) {
-            document.getElementById("alert").style.display = "block";
+            console.log(data)
         } else {
             console.log("Error")
         }
