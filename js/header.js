@@ -12,7 +12,7 @@ function openMenu() {
     }
 }
 
-const token = localStorage.getItem("authToken");
+const userToken = localStorage.getItem("authToken");
 console.log("WOEK")
 async function loadNotifications() {
     console.log("WOEK")
@@ -20,13 +20,13 @@ async function loadNotifications() {
         const response = await fetch(`http://5.161.186.15/api/v1/user/my-notifications`, {
             method: "GET",
             headers: {
-                "Authorization": `Bearer ${token}`
+                "Authorization": `Bearer ${userToken}`
             }
         });
 
         const data = await response.json();
 
-        if (message.message === "jwt malformed" || message.message === "jwt expired") {
+        if (data.message === "jwt malformed" || data.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "log-in.html"
             }, 3500);
