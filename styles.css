@@ -32,7 +32,7 @@ nav span, footer h3 {
     font-family: "Edu AU VIC WA NT Hand", cursive;
     font-weight: bold;
 }
-#follow-btn, #yellow {
+#follow-btn #yellow {
     background: #FF4500;
     padding: 5px 45px;
     border: none;
@@ -50,7 +50,7 @@ nav span, footer h3 {
     background: #FFECB3;
     color: black;
 }
-#follow-btn .loader {
+#follow-btn .loader, #yellow .loader {
     border: 1px solid #F3F3F3;
     border-top: 1px solid #3498db;
     border-radius: 50%;
