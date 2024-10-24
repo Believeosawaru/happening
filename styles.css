@@ -726,7 +726,7 @@ select:hover {
     width: 100%;
 }
 #my-notifications div {
-    background: rgba(230, 230, 230, 0.1);
+    background: rgb(230, 230, 230);
     padding: 15px;
 }
 .alert {
