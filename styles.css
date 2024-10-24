@@ -725,6 +725,9 @@ select:hover {
     height: 95vw;
     width: 100%;
 }
+#my-notifications a {
+    background: rgba(240, 240, 240, 0.1);
+}
 .alert {
     background: #FF4500;
     height: 5px;
