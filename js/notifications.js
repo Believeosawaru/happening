@@ -27,7 +27,7 @@ async function loadNotifications() {
             data.data.forEach(notis => {
                 const eventDate = new Date(notis.timestamp);
                 const date = eventDate.toLocaleDateString();
-                const time = eventDate.toLocaleTimeString();
+                const time = eventDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
                 const html = `
                 <div>
