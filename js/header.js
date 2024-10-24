@@ -12,6 +12,10 @@ function openMenu() {
     }
 }
 
+document.getElementById("bell").addEventListener("click", () => {
+    window.location.href = "http://5.161.186.15/html/notifications.html"
+})
+
 const userToken = localStorage.getItem("authToken");
 
 async function loadNotifications() {

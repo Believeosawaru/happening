@@ -15,10 +15,6 @@ function openMenu() {
     }
 }
 
-function openNotifications() {
-    window.location.href = "notifications.html"
-}
-
 async function fetchMessage() {
     const token = localStorage.getItem("authToken");
 
