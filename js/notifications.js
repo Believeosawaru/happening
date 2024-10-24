@@ -1,11 +1,11 @@
-const userToken = localStorage.getItem("authToken");
+const token = localStorage.getItem("authToken");
 
 async function loadNotifications() {
     try {
         const response = await fetch(`http://5.161.186.15/api/v1/user/my-notifications`, {
             method: "GET",
             headers: {
-                "Authorization": `Bearer ${userToken}`
+                "Authorization": `Bearer ${token}`
             }
         });
 
@@ -21,7 +21,7 @@ async function loadNotifications() {
             setTimeout(() => {
                 document.querySelector(".pre-loader").style.display = "none";
             }, 3500);
-            
+
             console.log(data)
         } else {
             console.log("Error")
