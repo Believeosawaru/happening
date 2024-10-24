@@ -739,6 +739,13 @@ select:hover {
     position: absolute;
     right: 10px;
 }
+.user-profile .center {
+    position: relative;
+}
+#upload-icon {
+    position: absolute;
+    right: 0px;
+}
 .alert {
     background: #FF4500;
     height: 5px;
