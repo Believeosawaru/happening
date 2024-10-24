@@ -746,6 +746,7 @@ select:hover {
     position: absolute;
     right: 50px;
     width: 50%;
+    bottom: 10px;
 }
 .alert {
     background: #FF4500;
