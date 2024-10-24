@@ -744,7 +744,8 @@ select:hover {
 }
 #upload-icon {
     position: absolute;
-    right: 0px;
+    right: 50px;
+    width: 50%;
 }
 .alert {
     background: #FF4500;
