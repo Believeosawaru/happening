@@ -22,7 +22,37 @@ async function loadNotifications() {
                 document.querySelector(".pre-loader").style.display = "none";
             }, 3500);
 
-            console.log(data)
+            const accum = "";
+
+            data.data.forEach(notis => {
+                const eventDate = new Date(notis.timestamp);
+                const date = eventDate.toLocaleDateString();
+                const time = eventDate.toLocaleTimeString();
+
+                const html = `
+                <div>
+                    <h4>${notis.message}</h4>
+                    <div id="time-date-stamp">
+                        <p class="dis-flex"> 
+                            <span class="material-symbols-outlined">
+                            calendar_month
+                            </span>
+                            <span>${date}</span>
+                        </p>
+                        <p class="dis-flex"> 
+                            <span class="material-symbols-outlined">
+                            schedule
+                            </span>
+                            <span>${time}</span>
+                        </p>
+                    </div>
+                </div>
+            `;
+
+            accum += html
+            });
+
+            document.getElementById("my-notifications").innerHTML = accum;
         } else {
             console.log("Error")
         }
