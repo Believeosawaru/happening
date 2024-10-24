@@ -728,12 +728,12 @@ select:hover {
 #my-notifications div {
     background: rgb(230, 230, 230);
     padding: 15px;
-    margin-block: 5px;
+    margin-block: 10px;
     position: relative;
 }
 #time-date-stamp span:first-child {
     position: absolute;
-    left: 10px;
+    left: 7px;
 }
 #time-date-stamp span:last-child {
     position: absolute;
