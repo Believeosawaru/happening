@@ -24,6 +24,8 @@ async function loadNotifications() {
 
             let accum = "";
 
+            data.data.reverse();
+
             data.data.forEach(notis => {
                 const eventDate = new Date(notis.timestamp);
                 const date = eventDate.toLocaleDateString();
