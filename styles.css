@@ -727,6 +727,7 @@ select:hover {
 }
 #my-notifications a {
     background: rgba(240, 240, 240, 0.1);
+    border: 1px solid red;
 }
 .alert {
     background: #FF4500;
