@@ -409,6 +409,12 @@ aside button {
     padding: 10px;
     margin-bottom: 10px;
 }
+#upload-icon {
+    position: absolute;
+    right: 10px;
+    width: 50%;
+    bottom: 10px;
+}
 .user-bio {
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
     margin: 15px;
@@ -741,12 +747,6 @@ select:hover {
 }
 #relative {
     position: relative;
-}
-#upload-icon {
-    position: absolute;
-    right: 50px;
-    width: 50%;
-    bottom: 10px;
 }
 .alert {
     background: #FF4500;
