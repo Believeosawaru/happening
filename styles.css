@@ -418,6 +418,20 @@ aside button {
     background: rgb(240, 240, 240);
     position: relative;
 }
+#user-upload {
+    background: rgb(240, 240, 240);
+    padding: 15px;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    visibility: hidden;
+    margin-bottom: -100px;
+    transition: all 1s ease-in-out;
+}
+#u-u-add {
+    visibility: visible;
+    margin-bottom: 100px;
+}
 #edit-bio {
     position: absolute;
     right: 15px;

@@ -123,4 +123,8 @@ async function userProfile() {
     }
 }
 
+document.getElementById("user-image").addEventListener("click", () => {
+    document.getElementById("user-upload").classList.add("u-u-add")
+})
+
 window.onload = userProfile;
