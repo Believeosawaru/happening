@@ -715,13 +715,14 @@ select:hover {
 #bell {
     right: 50px;
 }
-.my-notis h3 {
+.my-notis-h3 {
     text-align: left;
+    margin-bottom: 20px;
 }
 #my-notifications {
     background: rgb(240, 240, 240);
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-    height: 100vw;
+    height: 95vw;
     width: 100%;
 }
 .alert {
