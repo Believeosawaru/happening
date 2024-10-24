@@ -739,7 +739,7 @@ select:hover {
     position: absolute;
     right: 10px;
 }
-.user-profile .center {
+#relative {
     position: relative;
 }
 #upload-icon {
