@@ -725,9 +725,9 @@ select:hover {
     height: 95vw;
     width: 100%;
 }
-#my-notifications a {
+#my-notifications div {
     background: rgba(240, 240, 240, 0.1);
-    border: 1px solid red;
+    padding: 15px;
 }
 .alert {
     background: #FF4500;
