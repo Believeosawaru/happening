@@ -731,11 +731,11 @@ select:hover {
     margin-block: 10px;
     position: relative;
 }
-#time-date-stamp span:first-child {
+#time-date-stamp p:first-child {
     position: absolute;
     left: 7px;
 }
-#time-date-stamp span:last-child {
+#time-date-stamp p:last-child {
     position: absolute;
     right: 10px;
 }
