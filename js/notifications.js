@@ -22,7 +22,7 @@ async function loadNotifications() {
                 document.querySelector(".pre-loader").style.display = "none";
             }, 3500);
 
-            const accum = "";
+            let accum = "";
 
             data.data.forEach(notis => {
                 const eventDate = new Date(notis.timestamp);
