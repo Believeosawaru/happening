@@ -418,7 +418,7 @@ aside button {
     background: rgb(240, 240, 240);
     position: relative;
 }
-#user-upload {
+.user-upload {
     background: red;
     padding: 15px;
     color: white;
