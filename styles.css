@@ -419,15 +419,18 @@ aside button {
     position: relative;
 }
 .user-upload {
-    background: red;
+    background: white;
     padding: 15px;
-    color: white;
+    color: black;
     position: absolute;
     bottom: 0px;
     visibility: hidden;
     width: 100%;
     margin-bottom: -100px;
     transition: all .3s ease-in-out;
+}
+.user-upload h3 {
+    color: #FF4500;
 }
 .u-u-add {
     visibility: visible;
