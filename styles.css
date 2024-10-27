@@ -422,7 +422,7 @@ aside button {
     background: rgb(230, 230, 230);
     padding: 15px;
     color: black;
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     visibility: hidden;
     width: 100%;
