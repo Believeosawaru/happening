@@ -426,7 +426,7 @@ aside button {
     bottom: 0px;
     visibility: hidden;
     /* margin-bottom: -100px; */
-    transition: all 1s ease-in-out;
+    transition: visibility .3s ease-in-out;
 }
 #u-u-add {
     visibility: visible;
