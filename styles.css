@@ -424,11 +424,11 @@ aside button {
     color: white;
     position: absolute;
     bottom: 10px;
-    /* visibility: hidden; */
+    visibility: hidden;
     /* margin-bottom: -100px; */
     transition: visibility .3s ease-in-out;
 }
-#u-u-add {
+.u-u-add {
     visibility: visible;
     /* margin-bottom: 100px; */
 }
