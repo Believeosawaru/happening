@@ -435,8 +435,10 @@ aside button {
 #file-button {
     background: #FF4500;
     border: none;
-    padding: 4px 30px;
+    padding: 5ffdpx 30px;
     border-radius: 6px;
+    color: white;
+    margin-block: 15px;
 }
 .u-u-add {
     visibility: visible;
