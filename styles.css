@@ -423,14 +423,15 @@ aside button {
     padding: 15px;
     color: white;
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     visibility: hidden;
-    /* margin-bottom: -100px; */
+    width: 100%;
+    margin-bottom: -100px;
     transition: visibility .3s ease-in-out;
 }
 .u-u-add {
     visibility: visible;
-    /* margin-bottom: 100px; */
+    margin-bottom: 100px;
 }
 #edit-bio {
     position: absolute;
