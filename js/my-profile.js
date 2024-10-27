@@ -131,9 +131,66 @@ document.querySelector("#close").addEventListener("click", () => {
     document.querySelector(".user-upload").classList.remove("u-u-add");
 })
 
-document.getElementById('file-button').addEventListener('click', function() {
+document.getElementById('file-button').addEventListener('click', () => {
     document.getElementById('photo-select').click();
 });
 
+const form = document.getElementById('photo-select');
+
+/* <script>
+    const form = document.getElementById('uploadForm');
+    const imageInput = document.getElementById('imageInput');
+
+    // Listen for changes on the file input
+    imageInput.addEventListener('change', async (e) => {
+        const file = e.target.files[0]; // Get the selected file
+
+        if (file) {
+            const formData = new FormData(form);
+
+            // Automatically call the upload function
+            const response = await fetch('/api/upload', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+            console.log(result); // Log the result or handle it as needed
+        }
+    });
+</script> */
+
+form.addEventListener("change", async (e) => {
+    const file = e.target.files[0];
+
+    if (file) {
+        const token = localStorage.getItem("authToken");
+        const formData = new FormData(form);
+    
+        try {
+            const response = await fetch("http://5.161.186.15/api/v1/user/upload", {
+                method: "POST",
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                    "body": formData
+                }
+            });
+    
+            const message = await response.json();
+    
+            if (message.message === "jwt malformed" || message.message === "jwt expired") {
+                setTimeout(() => {
+                    window.location.href = "log-in.html"
+                }, 3500);
+            }
+    
+            if (response.ok) {
+                console.log(message)
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+});
 
 window.onload = userProfile;
