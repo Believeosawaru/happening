@@ -127,6 +127,10 @@ document.getElementById("user-image").addEventListener("click", () => {
     document.querySelector(".user-upload").classList.add("u-u-add");
 });
 
+document.querySelector("#close").addEventListener("click", () => {
+    document.querySelector(".user-upload").classList.remove("u-u-add");
+})
+
 document.getElementById('file-button').addEventListener('click', function() {
     document.getElementById('photo-select').click();
 });
