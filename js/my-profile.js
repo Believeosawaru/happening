@@ -125,6 +125,11 @@ async function userProfile() {
 
 document.getElementById("user-image").addEventListener("click", () => {
     document.querySelector(".user-upload").classList.add("u-u-add");
-})
+});
+
+document.getElementById('file-button').addEventListener('click', function() {
+    document.getElementById('photo-select').click();
+});
+
 
 window.onload = userProfile;
