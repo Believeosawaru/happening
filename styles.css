@@ -429,8 +429,14 @@ aside button {
     margin-bottom: -100px;
     transition: all .3s ease-in-out;
 }
-.user-upload #file-button {
+.user-upload #file-button, #user-image {
     cursor: pointer;
+}
+#file-button {
+    background: #FF4500;
+    border: none;
+    padding: 4px 30px;
+    border-radius: 6px;
 }
 .u-u-add {
     visibility: visible;
