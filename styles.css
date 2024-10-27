@@ -427,11 +427,11 @@ aside button {
     visibility: hidden;
     width: 100%;
     margin-bottom: -100px;
-    transition: visibility .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 .u-u-add {
     visibility: visible;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
 }
 #edit-bio {
     position: absolute;
