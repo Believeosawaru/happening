@@ -419,7 +419,8 @@ aside button {
     position: relative;
 }
 .user-upload {
-    background: white;
+    background: rgb(240, 240, 240);
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
     padding: 15px;
     color: black;
     position: absolute;
