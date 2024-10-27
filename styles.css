@@ -423,8 +423,8 @@ aside button {
     padding: 15px;
     color: white;
     position: absolute;
-    bottom: 0px;
-    visibility: hidden;
+    bottom: 10px;
+    /* visibility: hidden; */
     /* margin-bottom: -100px; */
     transition: visibility .3s ease-in-out;
 }
