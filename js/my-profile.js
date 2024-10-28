@@ -165,7 +165,7 @@ form.addEventListener("change", async (e) => {
 
     if (file) {
         const token = localStorage.getItem("authToken");
-        const formData = new FormData(form);
+        const formData = new FormData();
 
         formData.append("profilePicture", file);
     
