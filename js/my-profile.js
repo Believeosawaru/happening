@@ -162,7 +162,7 @@ $$
     });
 </script> */
 
-formBtn.addEventListener("change", async (e) => {
+formInput.addEventListener("change", async (e) => {
     e.preventDefault();
 
     const token = localStorage.getItem("authToken");
