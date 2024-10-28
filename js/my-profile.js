@@ -131,7 +131,8 @@ document.querySelector("#close").addEventListener("click", () => {
     document.querySelector(".user-upload").classList.remove("u-u-add");
 })
 
-document.getElementById('file-button').addEventListener('click', () => {
+document.getElementById('file-button').addEventListener('click', (e) => {
+    e.preventDefault();
     document.getElementById('photo-select').click();
 });
 
