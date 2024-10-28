@@ -137,7 +137,7 @@ document.getElementById('file-button').addEventListener('click', (e) => {
 });
 
 const form = document.getElementById('uploadForm');
-const formBtn = document.getElementById('photo-select');
+const formInput = document.getElementById('photo-select');
 
 /* <script>
     const form = document.getElementById('uploadForm');
@@ -167,7 +167,7 @@ formBtn.addEventListener("change", async (e) => {
 
     const token = localStorage.getItem("authToken");
     const formData = new FormData(form);
-    const file = form.files[0];
+    const file = formInput.files[0];
 
     formData.append("profilePicture", file)
 
