@@ -87,9 +87,12 @@
     <footer class="user-upload">
         <h3>Profie Picture</h3>
 
-        <button id="file-button">Upload Picture</button>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <button id="file-button">Upload Picture</button>
 
-        <input type="file" id="photo-select" style="display: none;" accept="image/*">
+            <input type="file" id="photo-select" style="display: none;" accept="image/*">
+        </form>
+        
 
         <span class="material-symbols-outlined" id="close">
             close

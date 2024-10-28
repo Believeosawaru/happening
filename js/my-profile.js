@@ -135,7 +135,8 @@ document.getElementById('file-button').addEventListener('click', () => {
     document.getElementById('photo-select').click();
 });
 
-const form = document.getElementById('photo-select');
+const form = document.getElementById('uploadForm');
+const formBtn = document.getElementById('photo-select');
 
 /* <script>
     const form = document.getElementById('uploadForm');
@@ -160,7 +161,7 @@ const form = document.getElementById('photo-select');
     });
 </script> */
 
-form.addEventListener("change", async (e) => {
+formBtn.addEventListener("change", async (e) => {
     e.preventDefault();
 
     const token = localStorage.getItem("authToken");
