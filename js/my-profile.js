@@ -167,6 +167,9 @@ formBtn.addEventListener("change", async (e) => {
 
     const token = localStorage.getItem("authToken");
     const formData = new FormData(form);
+    const file = form.files[0];
+
+    formData.append("profilePicture", file)
 
     try {
         const response = await fetch("http://5.161.186.15/api/v1/user/upload", {
