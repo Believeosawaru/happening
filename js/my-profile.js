@@ -170,8 +170,8 @@ form.addEventListener("change", async (e) => {
         formData.append("profilePicture", file);
     
         try {
-            const response = await fetch("http://5.161.186.15/api/v1/user/home", {
-                method: "GET",
+            const response = await fetch("http://5.161.186.15/api/v1/user/upload", {
+                method: "POST",
                 headers: {
                     "Authorization": `Bearer ${token}`,
                     "body": formData
