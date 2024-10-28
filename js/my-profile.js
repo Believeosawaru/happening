@@ -177,6 +177,8 @@ formBtn.addEventListener("change", async (e) => {
             body: formData
         });
 
+        console.log(formData)
+
         const message = await response.json();
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
