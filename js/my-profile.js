@@ -174,7 +174,7 @@ form.addEventListener("change", async (e) => {
                 method: "POST",
                 headers: {
                     "Authorization": `Bearer ${token}`,
-                    // "body": formData
+                    "body": formData
                 }
             });
     
