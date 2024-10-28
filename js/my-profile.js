@@ -154,7 +154,7 @@ const formBtn = document.getElementById('photo-select');
                 method: 'POST',
                 body: formData
             });
-
+$$
             const result = await response.json();
             console.log(result); // Log the result or handle it as needed
         }
@@ -171,9 +171,9 @@ formBtn.addEventListener("change", async (e) => {
         const response = await fetch("http://5.161.186.15/api/v1/user/upload", {
             method: "POST",
             headers: {
-                "Authorization": `Bearer ${token}`,
-                "body": formData
-            }
+                "Authorization": `Bearer ${token}`
+            },
+            body: formData
         });
 
         const message = await response.json();
