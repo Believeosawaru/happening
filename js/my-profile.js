@@ -161,37 +161,33 @@ const form = document.getElementById('photo-select');
 </script> */
 
 form.addEventListener("change", async (e) => {
-    const file = e.target.files[0];
+    e.preventDefault();
 
-    if (file) {
-        const token = localStorage.getItem("authToken");
-        const formData = new FormData();
+    const token = localStorage.getItem("authToken");
+    const formData = new FormData(event.target);
 
-        formData.append("profilePicture", file);
-    
-        try {
-            const response = await fetch("http://5.161.186.15/api/v1/user/upload", {
-                method: "POST",
-                headers: {
-                    "Authorization": `Bearer ${token}`,
-                    "body": formData
-                }
-            });
-    
-            const message = await response.json();
-    
-            if (message.message === "jwt malformed" || message.message === "jwt expired") {
-                setTimeout(() => {
-                    window.location.href = "log-in.html"
-                }, 3500);
+    try {
+        const response = await fetch("http://5.161.186.15/api/v1/user/upload", {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "body": formData
             }
-    
-            if (response.ok) {
-                console.log(message)
-            }
-        } catch (error) {
-            console.log(error);
+        });
+
+        const message = await response.json();
+
+        if (message.message === "jwt malformed" || message.message === "jwt expired") {
+            setTimeout(() => {
+                window.location.href = "log-in.html"
+            }, 3500);
         }
+
+        if (response.ok) {
+            console.log(message)
+        }
+    } catch (error) {
+        console.log(error);
     }
 });
 
