@@ -192,6 +192,10 @@ formInput.addEventListener("change", async (e) => {
 
         if (response.ok) {
             console.log(message)
+
+            const imageUrl = message.data;
+            console.log(imageUrl)
+
         }
     } catch (error) {
         console.log(error);
