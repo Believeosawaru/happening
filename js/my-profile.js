@@ -191,11 +191,14 @@ formInput.addEventListener("change", async (e) => {
         }
 
         if (response.ok) {
-            console.log(message)
+            // console.log(message)
 
             const imageUrl = message.data;
             console.log(imageUrl)
 
+            const profileImage = document.getElementById("user-image");
+
+            profileImage.src = imageUrl;
         }
     } catch (error) {
         console.log(error);
