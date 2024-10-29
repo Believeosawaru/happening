@@ -198,7 +198,7 @@ formInput.addEventListener("change", async (e) => {
 
             const profileImage = document.getElementById("user-image");
 
-            profileImage.src = `http://5.161.186.15/uploads/${imageUrl}`;
+            profileImage.src = `http://5.161.186.15/backend/happening-api/uploads/${imageUrl}`;
         }
     } catch (error) {
         console.log(error);
