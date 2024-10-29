@@ -180,7 +180,7 @@ formInput.addEventListener("change", async (e) => {
             body: formData
         });
 
-        console.log(formData)
+        // console.log(formData)
 
         const message = await response.json();
 
