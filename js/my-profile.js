@@ -39,6 +39,12 @@ async function userProfile() {
                 document.querySelector(".pre-loader").style.display = "none";
             }, 3500);
 
+            if (message.data.profilePicture) {
+                const profileImage = document.getElementById("user-image");
+
+                profileImage.src = `http://5.161.186.15:5000/uploads/${message.data.profilePicture}`;
+            }
+
             document.getElementById("user-name").innerHTML = `${message.data.firstName} ${message.data.lastName}`;
 
             document.getElementById("my-followers").innerHTML = `${message.data.followers}`;
@@ -138,29 +144,6 @@ document.getElementById('file-button').addEventListener('click', (e) => {
 
 const form = document.getElementById('uploadForm');
 const formInput = document.getElementById('photo-select');
-
-/* <script>
-    const form = document.getElementById('uploadForm');
-    const imageInput = document.getElementById('imageInput');
-
-    // Listen for changes on the file input
-    imageInput.addEventListener('change', async (e) => {
-        const file = e.target.files[0]; // Get the selected file
-
-        if (file) {
-            const formData = new FormData(form);
-
-            // Automatically call the upload function
-            const response = await fetch('/api/upload', {
-                method: 'POST',
-                body: formData
-            });
-$$
-            const result = await response.json();
-            console.log(result); // Log the result or handle it as needed
-        }
-    });
-</script> */
 
 formInput.addEventListener("change", async (e) => {
     e.preventDefault();
