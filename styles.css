@@ -508,7 +508,6 @@ aside button {
 .choose-category {
     position: fixed;
     top: 350px;
-    border-radius: 20px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -538,7 +537,7 @@ aside button {
     font-weight: bold;
     margin-top: 15px;
 }
-.choose-category input {
+.choose-category input, .choose-category select {
     width: 98%;
     padding: 10px;
     margin-block: 15px;
