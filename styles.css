@@ -623,7 +623,7 @@ form {
     padding: 30px 20px;
     border-radius: 3px;
 }
-.filter-groups {
+#filter-groups {
     background: white;
     padding: 0px;
 }
