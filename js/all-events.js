@@ -104,30 +104,27 @@ document.getElementById("filter-event").addEventListener("submit", async (e) => 
     const keyword = document.getElementById("keyword").value;
     const category = document.getElementById("category").value;
 
+    const params = new URLSearchParams();
+    if (date) params.append("date", date)
+    if (time) params.append("time", time)
+    if (location) params.append("location", location)
+    if (keyword) params.append("keyword", keyword)
+    if (category) params.append("category", category)
+
     disableBtn();
 
     try {
-        const response = await fetch(signUpUrl, {
+        const response = await fetch(`http://5.161.186.15/api/v1/user/filter-events?${params.toString()}`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`,
-                "Content-Type": "application/json"
             }
         });
 
     const data = await response.json();
 
     if (response.ok) {
-        document.getElementById("success-sign-up").innerHTML = "Event Created Successfully";
-        document.getElementById("success-sign-up").classList.add("success-sign-up");
-
-        button.style.cursor = "wait";
-
         console.log(data)
-
-        setTimeout(() => {
-            window.location.href = "events.html"
-        }, 2000)
     } else {
         console.log(data)
         const keys = Object.keys(data);
