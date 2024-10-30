@@ -528,7 +528,8 @@ aside button {
     border: none;
     margin-right: 5px;
     color: white;
-    margin-block: 20px;
+    margin-block-start: 10px;
+    margin-block-end: 30px;
 }
 .choose-category h3 {
     margin-bottom: 15px;
@@ -537,7 +538,7 @@ aside button {
     font-weight: bold;
     margin-top: 15px;
 }
-.choose-category input, .choose-category select {
+.choose-category input {
     width: 98%;
     padding: 10px;
     margin-block: 15px;
