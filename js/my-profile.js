@@ -17,7 +17,6 @@
 
 async function userProfile() {
     const token = localStorage.getItem("authToken");
-    alert("message");
 
     try {
         const response = await fetch("http://5.161.186.15/api/v1/user/my-profile", {
