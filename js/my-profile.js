@@ -17,6 +17,7 @@
 
 async function userProfile() {
     const token = localStorage.getItem("authToken");
+    alert("message");
 
     try {
         const response = await fetch("http://5.161.186.15/api/v1/user/my-profile", {
@@ -173,7 +174,6 @@ formInput.addEventListener("change", async (e) => {
             }, 3500);
         }
 
-        alert(message)
         if (response.ok) {
             // console.log(message)
 
