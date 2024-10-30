@@ -101,7 +101,7 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
     const date = document.getElementById("date").value;
     const time = document.getElementById("time").value;
     const location = document.getElementById("location").value;
-    const keyword = document.getElementById("keyword").value;
+    const keyword = document.getElementById("keywords").value;
     const category = document.getElementById("category").value;
 
     const params = new URLSearchParams();
