@@ -105,12 +105,18 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
     const category = document.getElementById("category").value;
 
     const params = new URLSearchParams();
-    if (date) params.append("date", date)
-    if (time) params.append("time", time)
-    if (location) params.append("location", location)
-    if (keyword) params.append("keyword", keyword)
-    if (category) params.append("category", category)
+    if (date) params.append("date", date);
+    if (time) params.append("time", time);
+    if (location) params.append("location", location);
+    if (keyword) params.append("keyword", keyword);
+    if (category) params.append("category", category);
 
+    const token = localStorage.getItem("authToken");
+
+    if (!token) {
+        window.location.href = "/html/log-in.html"
+    }
+    
     try {
         const response = await fetch(`http://5.161.186.15/api/v1/user/filter-events?${params.toString()}`, {
             method: "POST",
