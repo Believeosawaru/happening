@@ -173,6 +173,7 @@ formInput.addEventListener("change", async (e) => {
             }, 3500);
         }
 
+        alert(message)
         if (response.ok) {
             // console.log(message)
 
