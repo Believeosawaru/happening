@@ -67,6 +67,10 @@ async function displayPublicEvents() {
                 `
             });
 
+            setTimeout(() => {
+                document.querySelector(".pre-loader").style.display = "none";
+            }, 3500);
+
             // <button><a href="https://happening-khaki.vercel.app/html/groups/join-group.html?groupId=${group._id}">Join Group</a></button>
             // <p class="group-type">${group.groupType}</p>
 
