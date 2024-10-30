@@ -109,7 +109,11 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
     if (time) params.append("time", time);
     if (location) params.append("location", location);
     if (keyword) params.append("keyword", keyword);
-    if (category) params.append("category", category);
+    if (category === "Select A Category") {
+        category = "";
+    } else {
+         params.append("category", category);
+    }
 
     const token = localStorage.getItem("authToken");
 
