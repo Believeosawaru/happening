@@ -88,26 +88,28 @@
         <h2>Find An Event</h2>
         <h3>Select at least one:</h3>
         
-        <label for="date">Date:</label> <br>
-        <input type="date" name="date" id="date"> <br>
+        <form id="filter-groups" action="/filter-groups" method="get">
+            <label for="date">Date:</label> <br>
+            <input type="date" name="date" id="date"> <br>
 
-        <label for="time">Time:</label> <br>
-        <input type="time" name="time" id="time"> <br>
+            <label for="time">Time:</label> <br>
+            <input type="time" name="time" id="time"> <br>
 
-        <label for="location">Location:</label> <br>
-        <input type="text" name="location" id="keywords"> <br>
+            <label for="location">Location:</label> <br>
+            <input type="text" name="location" id="keywords"> <br>
 
-        <label for="keywords">Keywords</label> <br>
-        <input type="text" name="keywords" id="keywords"> <br>
+            <label for="keywords">Keywords</label> <br>
+            <input type="text" name="keywords" id="keywords"> <br>
 
-        <label for="category">Category</label> <br>
-        <select name="category" id="category">
-            <option value="Select A Category" disabled selected>Select A Category</option>
-        </select>
+            <label for="category">Category</label> <br>
+            <select name="category" id="category">
+                <option value="Select A Category" disabled selected>Select A Category</option>
+            </select>
 
-        <div>
-            <button>Filter</button>
-        </div>
+            <div>
+            <button type="submit">Filter</button>
+            </div>
+        </form>
 
         <span class="material-symbols-outlined" id="close">
             close
