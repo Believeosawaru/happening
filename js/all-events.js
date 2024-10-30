@@ -111,8 +111,6 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
     if (keyword) params.append("keyword", keyword)
     if (category) params.append("category", category)
 
-    disableBtn();
-
     try {
         const response = await fetch(`http://5.161.186.15/api/v1/user/filter-events?${params.toString()}`, {
             method: "POST",
