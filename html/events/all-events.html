@@ -93,7 +93,7 @@
             <p id="failed"></p>
         </div>
         
-        <form id="filter-events" method="post">
+        <form id="filter-events" action="/filter-events" method="post">
             <label for="date">Date:</label> <br>
             <input type="date" name="date" id="date"> <br>
 
@@ -112,7 +112,7 @@
             </select>
 
             <div>
-            <button id="filter-submit">Filter</button>
+            <button type="submit" id="filter-submit">Filter</button>
             </div>
         </form>
 
