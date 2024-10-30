@@ -95,8 +95,8 @@ async function displayPublicEvents() {
     }
 }
 
-document.getElementById("filter-event").addEventListener("submit", async (e) => {
-    e.preventDefault();
+document.getElementById("filter-submit").addEventListener("click", async (e) => {
+    // e.preventDefault();
 
     const date = document.getElementById("date").value;
     const time = document.getElementById("time").value;
