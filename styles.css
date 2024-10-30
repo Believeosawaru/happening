@@ -625,6 +625,7 @@ form {
 #filter-groups {
     background: white;
     padding: 0px;
+    margin-block: 20px;
 }
 form input, textarea {
     margin: 10px 0px 25px 0px;
