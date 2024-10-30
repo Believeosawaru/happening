@@ -623,6 +623,10 @@ form {
     padding: 30px 20px;
     border-radius: 3px;
 }
+.filter-groups {
+    background: white;
+    padding: 0px;
+}
 form input, textarea {
     margin: 10px 0px 25px 0px;
     width: 95%;
