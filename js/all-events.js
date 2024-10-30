@@ -113,48 +113,48 @@ document.getElementById("filter-submit").addEventListener("click", async (e) => 
 
     disableBtn();
 
-    // try {
-    //     const response = await fetch(`http://5.161.186.15/api/v1/user/filter-events?${params.toString()}`, {
-    //         method: "POST",
-    //         headers: {
-    //             "Authorization": `Bearer ${token}`,
-    //         }
-    //     });
+    try {
+        const response = await fetch(`http://5.161.186.15/api/v1/user/filter-events?${params.toString()}`, {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+            }
+        });
 
-    // const data = await response.json();
+    const data = await response.json();
 
-    // if (response.ok) {
-    //     console.log(data)
-    // } else {
-    //     console.log(data)
-    //     const keys = Object.keys(data);
+    if (response.ok) {
+        console.log(data)
+    } else {
+        console.log(data)
+        const keys = Object.keys(data);
 
-    //     keys.forEach(key => {
-    //         const value = data[key]; 
+        keys.forEach(key => {
+            const value = data[key]; 
             
-    //         document.getElementById("failed").style.display = "block"
-    //         document.getElementById("failed").innerHTML = value;
-    //         document.getElementById("failed").classList.add("failed");
+            document.getElementById("failed").style.display = "block"
+            document.getElementById("failed").innerHTML = value;
+            document.getElementById("failed").classList.add("failed");
 
-    //         setTimeout(() => {
-    //             document.getElementById("failed").style.display = "none"
-    //         }, 3500)
+            setTimeout(() => {
+                document.getElementById("failed").style.display = "none"
+            }, 3500)
 
-    //         button.disabled = false;
-    //       });
+            button.disabled = false;
+          });
 
-    //     button.style.backgroundColor = "#FF4500";
-    //     button.style.color = "white";
-    //     button.innerHTML = "Create Event";
-    //     console.log(data)
-    // }
+        button.style.backgroundColor = "#FF4500";
+        button.style.color = "white";
+        button.innerHTML = "Create Event";
+        console.log(data)
+    }
 
-    // } catch (error) {
-    //     document.getElementById("failed").style.display = "block"
-    //     document.getElementById("failed").innerHTML = "There Was An Error, Please Reload The Page";
-    //     document.getElementById("failed").classList.add("failed");
-    //     console.log(error);
-    // }
+    } catch (error) {
+        document.getElementById("failed").style.display = "block"
+        document.getElementById("failed").innerHTML = "There Was An Error, Please Reload The Page";
+        document.getElementById("failed").classList.add("failed");
+        console.log(error);
+    }
 });
 
 // async function displayOnlineEvents() {
