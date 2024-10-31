@@ -51,6 +51,10 @@ async function displayEvents() {
             });
 
             eventContainer.innerHTML = texts;
+
+            setTimeout(() => {
+                document.querySelector(".pre-loader").style.display = "none";
+            }, 3500);
         }            
 
         } else {
