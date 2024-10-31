@@ -148,7 +148,7 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
                 });
     
                 accum += `<div>
-                            <h4>${event.name}</h4>
+                            <h3>${event.name}</h3>
                             <p>${event.description}</p>
                             <section class="small-details">
                                 <p class="dis-flex">

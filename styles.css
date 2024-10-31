@@ -1009,12 +1009,15 @@ select:hover {
     background: red;
 }
 .events-list div {
-    background: rgb(240, 240, 240);
     margin-inline-end: 15px;
     padding: 10px;
     width: 95%;
     margin-block: 10px;
     border-radius: 6px;
+}
+.events-list div h3 {
+    color: #FF4500;
+    font-family: "Oswald", sans-serif;
 }
 .dis-flex {
     display: flex;
