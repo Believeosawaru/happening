@@ -132,11 +132,52 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
     const data = await response.json();
 
     if (response.ok) {
-        console.log(data)
+        if (data.data.length > 0) {
+            const eventsList = document.getElementById("events-list");
+
+            let accum = "";
+            
+            data.data.forEach((event) => {
+                const eventDate = new Date(event.date);
+                const formattedDate = eventDate.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                });
+    
+                    accum += `
+                   <div>
+                           <h2>${event.name}</h2>
+                           <p class="dis-flex">
+                                <span class="material-symbols-outlined">
+                                location_on
+                                </span> 
+                                <span>${event.location || "None Specified"}</span>
+                            </p>
+    
+                           <p class="dis-flex">
+                                <span class="material-symbols-outlined">
+                                schedule
+                                </span>
+                                <span>${event.time} ${event.timeZone}</span>
+                           </p>
+    
+                            <p class="dis-flex">
+                                <span class="material-symbols-outlined">
+                                    calendar_month
+                                </span>
+                                <span>${formattedDate}</span>
+                            </p>
+                        </div>
+    
+                    `;
+            });
+
+            eventsList.innerHTML = accum;
+        }
     } else {
         console.log("Error")
     }
-
     } catch (error) {
         document.getElementById("failed").style.display = "block"
         document.getElementById("failed").innerHTML = "There Was An Error, Please Reload The Page";
