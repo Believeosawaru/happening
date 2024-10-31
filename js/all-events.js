@@ -147,32 +147,59 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
                     day: "numeric"
                 });
     
-                    accum += `
-                   <div>
-                           <h2>${event.name}</h2>
-                           <p class="dis-flex">
-                                <span class="material-symbols-outlined">
-                                location_on
-                                </span> 
-                                <span>${event.location || "None Specified"}</span>
-                            </p>
+                accum += `<div>
+                            <h4>${event.name}</h4>
+                            <p>${event.description}</p>
+                            <section class="small-details">
+                                <p class="dis-flex">
+                                    <span class="material-symbols-outlined">
+                                        calendar_month
+                                     </span>
+                                   <span>${formattedDate}</span>
+                                </p>
     
-                           <p class="dis-flex">
-                                <span class="material-symbols-outlined">
-                                schedule
-                                </span>
-                                <span>${event.time} ${event.timeZone}</span>
-                           </p>
+                                <p class="dis-flex">
+                                    <span class="material-symbols-outlined">
+                                    schedule
+                                    </span>
+                                    <span>${event.time}</span>
+                                </p>
     
-                            <p class="dis-flex">
-                                <span class="material-symbols-outlined">
-                                    calendar_month
-                                </span>
-                                <span>${formattedDate}</span>
-                            </p>
-                        </div>
+                                <p class="dis-flex">
+                                    <span class="material-symbols-outlined">
+                                        location_on
+                                    </span> 
+                                    <span>${event.location}</span>
+                                </p>
+                            </section>
+                        </div>`
+
+                //     accum += `
+                //    <div>
+                //            <h2>${event.name}</h2>
+                //            <p class="dis-flex">
+                //                 <span class="material-symbols-outlined">
+                //                 location_on
+                //                 </span> 
+                //                 <span>${event.location || "None Specified"}</span>
+                //             </p>
     
-                    `;
+                //            <p class="dis-flex">
+                //                 <span class="material-symbols-outlined">
+                //                 schedule
+                //                 </span>
+                //                 <span>${event.time} ${event.timeZone}</span>
+                //            </p>
+    
+                //             <p class="dis-flex">
+                //                 <span class="material-symbols-outlined">
+                //                     calendar_month
+                //                 </span>
+                //                 <span>${formattedDate}</span>
+                //             </p>
+                //         </div>
+    
+                //     `;
             });
 
             eventsList.innerHTML = accum;
