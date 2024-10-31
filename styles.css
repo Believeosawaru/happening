@@ -1009,6 +1009,7 @@ select:hover {
     background: red;
 }
 .events-list div {
+    background: white;
     margin-inline-end: 15px;
     padding: 10px;
     width: 95%;
