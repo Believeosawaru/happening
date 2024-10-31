@@ -134,27 +134,7 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
     if (response.ok) {
         console.log(data)
     } else {
-        console.log(data)
-        const keys = Object.keys(data);
-
-        keys.forEach(key => {
-            const value = data[key]; 
-            
-            document.getElementById("failed").style.display = "block"
-            document.getElementById("failed").innerHTML = value;
-            document.getElementById("failed").classList.add("failed");
-
-            setTimeout(() => {
-                document.getElementById("failed").style.display = "none"
-            }, 3500)
-
-            button.disabled = false;
-          });
-
-        button.style.backgroundColor = "#FF4500";
-        button.style.color = "white";
-        button.innerHTML = "Create Event";
-        console.log(data)
+        console.log("Error")
     }
 
     } catch (error) {
