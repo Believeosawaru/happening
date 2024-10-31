@@ -74,6 +74,7 @@ async function displayEvents() {
                     document.getElementById("failed").style.display = "none"
                 }, 3500)
               });
+              console.log(data)
         }
     } catch (error) {
         console.log(error);
