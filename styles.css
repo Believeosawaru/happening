@@ -520,6 +520,13 @@ aside button {
     transition: all .5s ease;
     opacity: 0;
 }
+#-no-results {
+    position: absolute;
+    right: 30px;
+    background: rgb(230, 230, 230);
+    border-radius: 4px;
+    padding: 4px 10px;
+}
 .choose-category div button {
     background: #FF4500;
     padding: 10px 30px;
