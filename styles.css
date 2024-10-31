@@ -522,10 +522,11 @@ aside button {
 }
 #no-results {
     position: absolute;
-    right: 30px;
+    right: 40px;
     background: rgb(230, 230, 230);
     border-radius: 4px;
     padding: 4px 10px;
+    visibility: hidden;
 }
 .choose-category div button {
     background: #FF4500;

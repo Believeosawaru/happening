@@ -133,6 +133,8 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
 
     if (response.ok) {
         if (data.data.length > 0) {
+            document.getElementById("no-results").style.visibility = "hidden";
+
             const eventsList = document.getElementById("events-list");
 
             let accum = "";
@@ -179,7 +181,7 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
 
             document.querySelector(".choose-category").classList.remove("cate-transition");
         } else {
-            
+            document.getElementById("no-results").style.visibility = "visible";
         }
     } else {
         console.log("Error")
