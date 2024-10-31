@@ -24,6 +24,10 @@ async function displayEvents() {
 
             texts = "";
 
+            setTimeout(() => {
+                document.querySelector(".pre-loader").style.display = "none";
+            }, 3500);
+
             if (data.message.length < 1) {
                 return;
             } else {
@@ -51,10 +55,6 @@ async function displayEvents() {
             });
 
             eventContainer.innerHTML = texts;
-
-            setTimeout(() => {
-                document.querySelector(".pre-loader").style.display = "none";
-            }, 3500);
         }            
 
         } else {
