@@ -148,7 +148,7 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
                 });
     
                 accum += `
-                    <a href="home.html">
+                    <a href="event-details.html?eventId=${event._id}">
                         <div>
                             <h3>${event.name}</h3>
                             <p>${event.description}</p>
