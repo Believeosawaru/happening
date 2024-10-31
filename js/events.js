@@ -24,8 +24,11 @@ async function displayEvents() {
 
             texts = "";
 
+            console.log("HMMM")
+
             setTimeout(() => {
                 document.querySelector(".pre-loader").style.display = "none";
+                console.log("HMMM")
             }, 3500);
 
             if (data.message.length < 1) {
