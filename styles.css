@@ -520,7 +520,7 @@ aside button {
     transition: all .5s ease;
     opacity: 0;
 }
-#-no-results {
+#no-results {
     position: absolute;
     right: 30px;
     background: rgb(230, 230, 230);
