@@ -24,11 +24,8 @@ async function displayEvents() {
 
             texts = "";
 
-            console.log("HMMM")
-
             setTimeout(() => {
                 document.querySelector(".pre-loader").style.display = "none";
-                console.log("HMMM")
             }, 3500);
 
             if (data.message.length < 1) {
@@ -74,7 +71,6 @@ async function displayEvents() {
                     document.getElementById("failed").style.display = "none"
                 }, 3500)
               });
-              console.log(data)
         }
     } catch (error) {
         console.log(error);
