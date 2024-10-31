@@ -147,7 +147,9 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
                     day: "numeric"
                 });
     
-                accum += `<div>
+                accum += `
+                    <a href="home.html">
+                        <div>
                             <h3>${event.name}</h3>
                             <p>${event.description}</p>
                             <section class="small-details">
@@ -172,7 +174,8 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
                                     <span>${event.location}</span>
                                 </p>
                             </section>
-                        </div>`
+                        </div>
+                        </a>`
 
                 //     accum += `
                 //    <div>
