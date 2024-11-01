@@ -1090,7 +1090,7 @@ select:hover {
     /* margin-left: -60px; */
 }
 .slides div {
-    width: 50%;
+    width: 100%;
 }
 .slides p {
     font-size: .9rem;
