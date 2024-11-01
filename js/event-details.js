@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const result = await response.json();
 
+            console.log(result);
+
             if (result.message === "jwt malformed" || result.message === "jwt expired") {
                 setTimeout(() => {
                     window.location.href = "log-in.html"
@@ -87,9 +89,16 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <div class="event-info">
                     <h3>About This Event</h3>
                     <p>
-                        As the autumn leaves begin to fall, Sarah and Jake are excitedly preparing for their upcoming marriage. Surrounded by family and friends, they’ll exchange vows in a charming countryside venue, filled with vibrant flowers and soft, golden light. Their love story, blossomed over years of laughter and adventures, will culminate in a celebration of commitment and joy. With heartfelt music, delicious food, and personal touches that reflect their journey together, the day promises to be unforgettable. As they embark on this new chapter, they look forward to a future filled with love, growth, and shared dreams.
+                        ${result.description}
                     </p>   
-                </div>`;
+                </div>
+
+                <h3 class="tags-h3">Event Category</h3>
+                <div class="tags">
+                    <span>${result.category}</span>
+                </div>       
+                
+                `;
                 } else {
                     eventDetailsCon.innerHTML = `
                     <div id="group-details-container">
@@ -143,11 +152,21 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <div class="event-info">
                     <h3>About This Event</h3>
                     <p>
-                        As the autumn leaves begin to fall, Sarah and Jake are excitedly preparing for their upcoming marriage. Surrounded by family and friends, they’ll exchange vows in a charming countryside venue, filled with vibrant flowers and soft, golden light. Their love story, blossomed over years of laughter and adventures, will culminate in a celebration of commitment and joy. With heartfelt music, delicious food, and personal touches that reflect their journey together, the day promises to be unforgettable. As they embark on this new chapter, they look forward to a future filled with love, growth, and shared dreams.
+                        ${result.description}
                     </p>   
                     <button><a href="event-iv-send.html?eventId=${eventId}">Send Email Invitation</a></button>
-                </div>`;
+                </div>
+
+                <h3 class="tags-h3">Event Category</h3>
+                <div class="tags">
+                    <span>${result.category}</span>
+                </div>           
+                `;
                 }
+
+                // result.relatedEvents.forEach(event => {
+                    
+                // });
             } else {
                 document.getElementById("failed").style.display = "block"
                 document.getElementById("failed").innerHTML = result.message;
