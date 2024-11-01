@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 `;
                 }
 
-                const accumTwo = "";
+                let accumTwo = "";
 
                 result.relatedEvents.forEach(event => {
                     const html = `
