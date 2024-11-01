@@ -1086,10 +1086,11 @@ select:hover {
     font-size: 1rem;
 }
 .slides {
-    display: flex;
+    display: inline-block;
+    margin-left: -60px;
 }
 .slides div {
-    width: 50%;
+    width: 65%;
 }
 .slides p {
     font-size: .9rem;
