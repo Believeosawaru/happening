@@ -1111,7 +1111,7 @@ select:hover {
     margin-block: 20px;
     margin-inline: 20px;
     display: flex;
-    justify-content: left;
+    justify-content: start;
 }
 .tags span {
     background: rgb(240, 240, 240);
