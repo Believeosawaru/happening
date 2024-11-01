@@ -164,9 +164,43 @@ document.addEventListener("DOMContentLoaded", async () => {
                 `;
                 }
 
-                // result.relatedEvents.forEach(event => {
-                    
-                // });
+                const accumTwo = "";
+
+                result.relatedEvents.forEach(event => {
+                    const html = `
+                        <div>
+                            <h4>${event.name}</h4>
+                            <p>${event.description}</p>
+                            <section class="small-details">
+                                <p class="dis-flex">
+                                    <span class="material-symbols-outlined">
+                                        calendar_month
+                                     </span>
+                                   <span> ${event.date}</span>
+                                </p>
+    
+                                <p class="dis-flex">
+                                    <span class="material-symbols-outlined">
+                                    schedule
+                                    </span>
+                                    <span>${event.time}</span>
+                                </p>
+    
+                                <p class="dis-flex">
+                                    <span class="material-symbols-outlined">
+                                        location_on
+                                    </span> 
+                                    <span>${event.location}</span>
+                                </p>
+                            </section>
+                        </div>
+                    `;
+
+                    accumTwo += html;
+                });
+
+                document.getElementById("slides").innerHTML = accumTwo;
+                
             } else {
                 document.getElementById("failed").style.display = "block"
                 document.getElementById("failed").innerHTML = result.message;
