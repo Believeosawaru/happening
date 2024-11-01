@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 let accumTwo = "";
 
                 if (result.relatedEvents < 1) {
-                   return document.getElementById("slides").innerHTML = "<h2>No Related Event</h2>";
+                   return document.getElementById("slides").innerHTML = `<h3 id="oswald">No Related Event</h3>`;
                 }
 
                 result.relatedEvents.forEach(event => {

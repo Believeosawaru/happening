@@ -1131,7 +1131,7 @@ select:hover {
     text-align: left;
     font-family: "Oswald", sans-serif;
 }
-.event-info h3, .related h3, #group-details-container h1, .related-events h4 {
+.event-info h3, .related h3, #group-details-container h1, .related-events h4, #oswald {
     font-family: "Oswald", sans-serif;
 }
 .event-info h3 {
