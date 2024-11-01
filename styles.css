@@ -1105,7 +1105,8 @@ select:hover {
     background: rgb(240, 240, 240);
     padding: 5px;
     margin: 5px 2px 0px 0px;
-    padding-inline-end: 20px;
+    border-radius: 6px;
+    padding-inline-end: 30px;
 }
 .small-details span {
     font-size: .8rem;
