@@ -176,6 +176,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     });
 
                     const html = `
+                       <a href="event-details.html?eventId=${event._id}">
                         <div>
                             <h4>${event.name}</h4>
                             <p>${event.description}</p>
@@ -202,6 +203,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 </p>
                             </section>
                         </div>
+                       </a>
                     `;
 
                     accumTwo += html;
