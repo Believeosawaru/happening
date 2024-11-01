@@ -1089,10 +1089,10 @@ select:hover {
     display: inline-block;
     margin-left: 30px;
 }
-.slides div {
-    /* width: 0%; */
-    padding-inline-end: 20px;
-}
+/* .slides div {
+    /* width: 0%; 
+    /* padding-inline-end: 20px; 
+} */
 .slides p {
     font-size: .9rem;
     margin-block: 5px;
