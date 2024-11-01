@@ -1,6 +1,6 @@
 const signUpUrl = "http://5.161.186.15/api/v1/user/create-group";
 
-const button = document.getElementById("create-group-btn");
+const button = document.getElementById("create-event-btn");
 
 function disableBtn() {
     button.disabled = true;
