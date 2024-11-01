@@ -1087,6 +1087,7 @@ select:hover {
 }
 .slides {
     display: inline-block;
+    margin-left: 30px;
 }
 .slides div {
     /* width: 0%; */
