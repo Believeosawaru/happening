@@ -1062,7 +1062,7 @@ select:hover {
     margin-block: 15px;
 }
 .related-events {
-    width: 94vw;
+    width: 100vw;
     overflow-x: auto;
     white-space: nowrap;
     /* margin-inline: 20px; */
@@ -1106,7 +1106,7 @@ select:hover {
     padding: 5px;
     margin: 5px 2px 0px 0px;
     border-radius: 6px;
-    padding-inline-end: 30px;
+    padding-inline-end: 45px;
 }
 .small-details span {
     font-size: .8rem;
