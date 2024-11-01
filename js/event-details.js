@@ -167,6 +167,14 @@ document.addEventListener("DOMContentLoaded", async () => {
                 let accumTwo = "";
 
                 result.relatedEvents.forEach(event => {
+                    const eventDate = new Date(event.date);
+
+                    const formattedDateTwo = eventDateTwo.toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric"
+                    });
+
                     const html = `
                         <div>
                             <h4>${event.name}</h4>
@@ -176,7 +184,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                     <span class="material-symbols-outlined">
                                         calendar_month
                                      </span>
-                                   <span> ${event.date}</span>
+                                   <span> ${formattedDateTwo}</span>
                                 </p>
     
                                 <p class="dis-flex">
