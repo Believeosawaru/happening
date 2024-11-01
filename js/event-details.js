@@ -166,6 +166,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 let accumTwo = "";
 
+                if (result.relatedEvents < 1) {
+                   return document.getElementById("slides").innerHTML = "<h2>No Related Event</h2>";
+                }
+
                 result.relatedEvents.forEach(event => {
                     const eventDate = new Date(event.date);
 
