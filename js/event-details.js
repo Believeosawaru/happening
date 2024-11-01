@@ -89,13 +89,13 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <div class="event-info">
                     <h3>About This Event</h3>
                     <p>
-                        ${result.description}
+                        ${result.data.description}
                     </p>   
                 </div>
 
                 <h3 class="tags-h3">Event Category</h3>
                 <div class="tags">
-                    <span>${result.category}</span>
+                    <span>${result.data.category}</span>
                 </div>       
                 
                 `;
@@ -152,14 +152,14 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <div class="event-info">
                     <h3>About This Event</h3>
                     <p>
-                        ${result.description}
+                        ${result.data.description}
                     </p>   
                     <button><a href="event-iv-send.html?eventId=${eventId}">Send Email Invitation</a></button>
                 </div>
 
                 <h3 class="tags-h3">Event Category</h3>
                 <div class="tags">
-                    <span>${result.category}</span>
+                    <span>${result.data.category}</span>
                 </div>           
                 `;
                 }
