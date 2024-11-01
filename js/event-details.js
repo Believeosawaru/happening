@@ -200,7 +200,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 });
 
                 document.getElementById("slides").innerHTML = accumTwo;
-                
             } else {
                 document.getElementById("failed").style.display = "block"
                 document.getElementById("failed").innerHTML = result.message;
