@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,10 +7,10 @@
 
     <link rel="stylesheet" href="../../styles.css">
 
-     <!-- Font awesome CDN -->
+     <!-- Font awesome CDN 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-     <!-- Google Fonts -->
+     <!-- Google Fonts 
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -77,5 +77,111 @@
 
     <script src="../../script.js"></script>
     <script src="../../js/create-group.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=0, initial-scale=1.0">
+    <title>Happening - Create A Group</title>
+
+    <link rel="stylesheet" href="../../styles.css">
+
+     <!-- Font awesome CDN -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+     </head>
+<body>
+    <header>
+        <nav>
+            <span><a href="../home.html">Happening</a></span>
+
+            <div class="pc-menu home-pc-menu">
+                <a href="../home.html">&#x1F3E0; Home</a>
+                <a href="events.html">&#x1F4C5; Events</a>
+                <a href="../groups/groups.html">&#x1F465; Groups</a>
+                <a href="../settings.html">&#x2699; Settings</a>
+                <a href="../tos.html">&#x1F4DC; Terms Of Service</a>
+                
+                <button class="first-btn"><a href="../log-out.html">Log Out</a></button>
+            </div>
+
+            <i class="fa fa-bell" id="bell"><i class="alert"></i></i>
+
+            <i class="fa fa-bars" id="menu-bar" onclick="openMenu();"></i>
+        </nav>
+
+        <aside class="menu close-menu user-menu">
+            <p><a href="../home.html">&#x1F3E0; Home</a></p>
+            <p><a href="events.html">&#x1F4C5; Events</a></p>
+            <p><a href="../groups/groups.html">&#x1F465; Groups</a></p>
+            <p><a href="../settings.html">&#x2699; Settings</a></p>
+            <p><a href="../tos.html">&#x1F4DC; Terms Of Service</a></p>
+            <button class="first-btn"><a href="../log-out.html">Log Out</a></button>
+        </aside>
+
+        <div class="hero home-hero">
+            <h2>Create Event</h2>
+        </div>
+
+        <div>
+            <p id="success-sign-up"></p>
+            <p id="failed"></p>
+        </div>
+
+        <form action="/create-event" id="create-event" method="post">
+            <label for="name">Group Name</label> <br>
+            <input type="text" id="event-name" placeholder="What's The Name Of The Event?" oninput="sanitizeNameInput()" required> <br>
+
+            <label for="description">Group Description</label> <br>
+            <textarea name="event-desc" id="event-desc" placeholder="Describe The Event (Optional)" oninput="sanitizeDescInput();"></textarea> <br>
+
+            <label for="event-location">Location</label> <br>
+
+            <select id="event-location" name="event-location" required>
+                <option value="" disabled selected>Choose Group Location</option>
+                
+                <option value="online">Online</option>
+                
+                <option value="in-person">In Person</option>
+            </select>
+
+            <div id="map"></div>
+
+            <div class="on-p-div">
+                Choose a Location:
+                <input type="text" id="search-input" placeholder="Search For A City">
+                <div id="results-div">
+
+                </div>
+            </div>
+            <br>
+            
+            <span class="small-txt">
+                Group Type: <select name="event-type" id="event-type">
+                    <option value="private">Private</option>
+                    <option value="public">Public</option>
+                </select>
+            </span>
+
+            <button id="create-event-btn" type="submit">Create Group</button>
+        </form>
+    </header>
+
+    <script src="../../js/header.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCedlvKW4R_g7eWonEYKsRTWSZc7vx-daE&v=beta"></script>
+    <script src="../../js/create-group.js"></script>
+    <script>
+
+// Load the map
+// window.addEventListener('load', initMap);
+    </script>
 </body>
 </html>
