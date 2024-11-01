@@ -1076,8 +1076,8 @@ select:hover {
     margin: 5px 10px;
     text-align: left;
     border-radius: 10px;
-    /* display: inline-block; */
-    /* white-space: normal; */
+    display: inline-block;
+    white-space: normal;
 }
 #edit-event {
     position: absolute;
