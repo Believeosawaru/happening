@@ -1065,7 +1065,7 @@ select:hover {
     width: 88vw;
     overflow-x: auto;
     white-space: nowrap;
-    margin-inline: 20px;
+    /* margin-inline: 20px; */
 }
 .related-events::-webkit-scrollbar {
     display: none;
