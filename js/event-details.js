@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 result.relatedEvents.forEach(event => {
                     const eventDate = new Date(event.date);
 
-                    const formattedDateTwo = eventDateTwo.toLocaleDateString("en-US", {
+                    const formattedDateTwo = eventDate.toLocaleDateString("en-US", {
                         year: "numeric",
                         month: "long",
                         day: "numeric"
