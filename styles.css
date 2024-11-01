@@ -1062,7 +1062,7 @@ select:hover {
     margin-block: 15px;
 }
 .related-events {
-    /* width: 88vw; */
+    width: 88vw;
     overflow-x: auto;
     white-space: nowrap;
     margin-inline: 20px;
@@ -1089,7 +1089,7 @@ select:hover {
     display: inline-block;
 }
 .slides div {
-    width: 100%;
+    width: 50%;
 }
 .slides p {
     font-size: .9rem;
