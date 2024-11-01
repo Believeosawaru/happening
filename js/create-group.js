@@ -14,10 +14,10 @@ const token = localStorage.getItem("authToken");
 document.getElementById("create-group").addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const name = document.getElementById("group-name").value;
-    const description = document.getElementById("group-desc").value;
+    const name = document.getElementById("event-name").value;
+    const description = document.getElementById("event-desc").value;
     const location = document.getElementById("location").value;
-    const groupType = document.getElementById("group-type").value;
+    const groupType = document.getElementById("event-type").value;
 
     disableBtn();
 
