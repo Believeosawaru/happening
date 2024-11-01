@@ -1089,7 +1089,7 @@ select:hover {
     display: inline-block;
 }
 .slides div {
-    width: 100%;
+    /* width: 0%; */
 }
 .slides p {
     font-size: .9rem;
