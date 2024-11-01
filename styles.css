@@ -1091,6 +1091,7 @@ select:hover {
 }
 .slides div {
     /* width: 0%; */
+    padding-inline-end: 20px;
 }
 .slides p {
     font-size: .9rem;
