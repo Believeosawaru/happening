@@ -1,6 +1,3 @@
-const menu = document.querySelector('.menu');
-const userDashboard = document.querySelector('.user-dashboard');
-const pcMenu = document.querySelector('.pc-menu');
 const verifyDiv = document.querySelector('.not-verified');
 
 function openMenu() {

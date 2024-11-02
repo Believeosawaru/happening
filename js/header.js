@@ -16,6 +16,33 @@ document.getElementById("bell").addEventListener("click", () => {
     window.location.href = "http://5.161.186.15/html/notifications.html"
 })
 
+document.querySelector("user-menu").innerHTML = `
+            <p><a class="dis-flex" href="./home.html"><span class="material-symbols-outlined">
+                home
+                </span> <span>Home</span></a></p>
+                
+            <p><a class="dis-flex" href="./events/events.html"><span class="material-symbols-outlined">
+                event_available
+                </span> <span>Events</span></a></p>
+
+            <p><a class="dis-flex" href="./groups/groups.html"><span class="material-symbols-outlined">
+                groups
+                </span> <span>Groups</span></a></p>
+
+            <p><a class="dis-flex" href="./settings.html"><span class="material-symbols-outlined">
+                settings
+                </span> <span>Settings</span></a></p>
+
+            <p><a class="dis-flex" href="./tos.html"><span class="material-symbols-outlined">
+                description
+                </span> <span>Terms Of Service</span></a></p>
+
+            <p><a class="dis-flex" href="./my-profile.html"><span class="material-symbols-outlined">
+                person
+                </span> <span>My Profile</span></a></p>
+            <button class="first-btn"><a href="log-out.html">Log Out</a></button>
+            `
+
 const userToken = localStorage.getItem("authToken");
 
 async function loadNotifications() {
