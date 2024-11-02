@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         <span class="material-symbols-outlined">
                         person
                         </span>
-                        <span>${result.data.createdBy}
+                        <span>${result.createdBy.firstName} ${result.createdBy.lastName}
                             <span id="h2-p">Admin</span></span>
                     </p>
 
