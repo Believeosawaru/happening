@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         <span id="h2-p">Admin</span></span>
                 </p>
 
-                <button><a href="https://happening-khaki.vercel.app/html/groups/leave-group.html?groupId=${result.data._id}">Leave Group</a></button>
+                <button><a href="https://5.161.186.15/html/groups/leave-group.html?groupId=${result.data._id}">Leave Group</a></button>
                 `;
                 } else {
                     if (result.data.inviteLink) {
@@ -87,9 +87,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </p>
 
                     <div class="dis-flex" id="two-btns">
-                        <button><a href="https://happening-khaki.vercel.app/html/groups/leave-group.html?groupId=${result.data._id}"><i class="fa fa-copy"></i> Group Link</a></button>
+                        <button onclick="copy(${result.data.inviteLink})"><i class="fa fa-copy"></i> Group Link</button>
 
-                        <button>Add Members</button>
+                        <button><a href="http://5.161.186.15/html/groups/add-members.html">Add Members</a></button>
                     </div>
                                 `;
                             } else {
@@ -116,16 +116,13 @@ document.addEventListener("DOMContentLoaded", async () => {
                             </p>
 
                             <div class="dis-flex" id="two-btns">
-                                <button><a href="https://happening-khaki.vercel.app/html/groups/leave-group.html?groupId=${result.data._id}">Generate Link</a></button>
+                                <button onclick="generateInviteLink();">Generate Link</button>
 
-                                <button>Add Members</button>
+                                <button><a href="http://5.161.186.15/html/groups/add-members?groupId=${result.data._id}">Add Members</a></button>
                             </div>
 
                             <p id="group-link">
-                                <p id="copy-i" onclick="copy('${data.data}')">
-                                    <i class="fa fa-copy"></i> 
-                                    Copy Link
-                                </p>
+                                
                             </p>
                     `;
                     }
