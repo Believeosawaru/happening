@@ -16,7 +16,7 @@ document.getElementById("create-group").addEventListener("submit", async (e) => 
 
     const name = document.getElementById("event-name").value;
     const description = document.getElementById("event-desc").value;
-    const location = document.getElementById("location").value;
+    const location = document.getElementById("event-location").value;
     const groupType = document.getElementById("event-type").value;
 
     disableBtn();
