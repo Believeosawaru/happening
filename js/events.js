@@ -20,6 +20,7 @@ async function displayEvents() {
         const data = await response.json();
 
         if (response.ok) {
+            console.log("jbdj ")
             const eventContainer = document.getElementById("hero");
 
             texts = "";
