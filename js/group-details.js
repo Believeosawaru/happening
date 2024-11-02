@@ -144,9 +144,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 const generateInviteLink = async () => {
     try {
-        const urlParams = new URLSearchParams(window.location.search);
-        const groupId = urlParams.get("groupId");
-        
         const response = await fetch(`http://5.161.186.15/api/v1/user/group/${groupId}/generate-link`, {
             method: "GET",
             headers: {
