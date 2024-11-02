@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <div class="dis-flex" id="two-btns">
                         <button onclick="copy(${result.data.inviteLink})"><i class="fa fa-copy"></i> Group Link</button>
 
-                        <button><a href="http://5.161.186.15/html/groups/add-members.html">Add Members</a></button>
+                        <button><a href="http://5.161.186.15/html/groups/add-members.html?groupId=${result.data._id}">Add Members</a></button>
                     </div>
                                 `;
                             } else {
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                             <div class="dis-flex" id="two-btns">
                                 <button onclick="generateInviteLink();">Generate Link</button>
 
-                                <button><a href="http://5.161.186.15/html/groups/add-members?groupId=${result.data._id}">Add Members</a></button>
+                                <button><a href="http://5.161.186.15/html/groups/add-members.html?groupId=${result.data._id}">Add Members</a></button>
                             </div>
 
                             <p id="group-link">
