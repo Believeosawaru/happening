@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     if (result.data.inviteLink) {
                         groupDetailsCon.innerHTML = `
                         <h1 id="gd-h2 bttm-space">
-                        Rant HQ <span id="h2-p">public</span>
+                        ${result.data.name} <span id="h2-p">public</span>
                     </h1>
 
                     <p class="dis-flex" id="group-loc">
@@ -71,18 +71,14 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </p>
 
                     <p id="group-desc">
-                        Welcome to RANT HQ! 🎤✨ This is your safe space to let loose and share your thoughts, frustrations, and rants about anything and everything. From everyday annoyances to the world’s biggest issues, no topic is too big or too small.
-
-                        Here, we encourage passionate discussions and the cathartic release of your feelings. Share your rants, engage with fellow members, and find solidarity in your grievances. Just remember to keep it respectful—everyone has a right to express their opinions!
-
-                        Join us to vent, connect, and maybe even find some humor in the chaos. Let’s turn those frustrations into fun! 🗣️💥
+                        ${result.data.description}
                     </p>
 
                     <p class="dis-flex">
                         <span class="material-symbols-outlined">
                         person
                         </span>
-                        <span>Believe Osawaru
+                        <span>${result.data.createdBy}
                             <span id="h2-p">Admin</span></span>
                     </p>
 
