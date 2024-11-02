@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </p>
 
                     <div class="dis-flex" id="two-btns">
-                        <button onclick="copy(${result.data.inviteLink})"><i class="fa fa-copy"></i> Group Link</button>
+                        <button onclick="copy('${result.data.inviteLink}')"><i class="fa fa-copy"></i> Group Link</button>
 
                         <button><a href="http://5.161.186.15/html/groups/add-members.html?groupId=${result.data._id}">Add Members</a></button>
                     </div>
