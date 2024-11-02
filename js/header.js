@@ -16,7 +16,7 @@ document.getElementById("bell").addEventListener("click", () => {
     window.location.href = "http://5.161.186.15/html/notifications.html"
 })
 
-document.querySelector("user-menu").innerHTML = `
+document.querySelector(".user-menu").innerHTML = `
             <p><a class="dis-flex" href="./home.html"><span class="material-symbols-outlined">
                 home
                 </span> <span>Home</span></a></p>
