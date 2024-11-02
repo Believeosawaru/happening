@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                             </p>
 
                             <div class="dis-flex" id="two-btns">
-                                <button onclick="generateInviteLink();">Generate Link</button>
+                                <button onclick="generateInviteLink();">Generate Link</button> <br>
 
                                 <button><a href="http://5.161.186.15/html/groups/add-members.html?groupId=${result.data._id}">Add Members</a></button>
                             </div>
