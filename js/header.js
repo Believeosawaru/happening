@@ -41,7 +41,7 @@ document.querySelector(".user-menu").innerHTML = `
                 person
                 </span> <span>My Profile</span></a></p>
             <button class="first-btn"><a href="log-out.html">Log Out</a></button>
-            `
+`;
 
 const userToken = localStorage.getItem("authToken");
 
