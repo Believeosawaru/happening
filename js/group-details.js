@@ -148,7 +148,7 @@ const generateInviteLink = async () => {
         const groupId = urlParams.get("groupId");
         
         const response = await fetch(`http://5.161.186.15/api/v1/user/group/${groupId}/generate-link`, {
-            method: "POST",
+            method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
             }
