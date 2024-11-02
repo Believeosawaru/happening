@@ -159,7 +159,7 @@ const generateInviteLink = async () => {
 }
 
 function copy(text) {
-    navigator.clipboard.writeText("hola")
+    navigator.clipboard.writeText(text)
         .then(() => {
             document.querySelector(".copy-s").style.display = "block";
 
