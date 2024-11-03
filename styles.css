@@ -1430,7 +1430,7 @@ form textarea {
     #public-events {
         width: 70%;
     }
-    .group-details-container h1 {
+    #group-details-container h1 {
         margin-left: 90px;
     }
     #desc, .event-info {
