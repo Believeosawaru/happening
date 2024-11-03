@@ -1430,4 +1430,7 @@ form textarea {
         color: red;
         display: none;
     }
+    body {
+        display: none;
+    }
 }
