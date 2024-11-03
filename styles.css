@@ -1431,7 +1431,10 @@ form textarea {
     #desc {
         margin-inline: 50px;
     }
-    .event-info, .tags, .tags-h3 {
+    .event-info {
         padding-inline: 280px;
+    }
+    .tags, .tags-h3 {
+        padding-inline: 270px;
     }
 }
