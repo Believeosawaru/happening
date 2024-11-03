@@ -1417,4 +1417,7 @@ form textarea {
     #event-img {
         width: 40%;
     }
+    .public-events h2 {
+        text-align: left;
+    }
 }
