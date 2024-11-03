@@ -1424,6 +1424,6 @@ form textarea {
         right: 100px;
     }
     #events-list {
-        padding: 0;
+        height: 200px;
     }
 }
