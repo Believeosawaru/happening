@@ -1429,6 +1429,9 @@ form textarea {
         margin-left: 50px;
     }
     #desc {
-        margin-inline: 30px;
+        margin-inline: 60px;
+    }
+    #event-info {
+        margin-inline: 150px;
     }
 }
