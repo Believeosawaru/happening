@@ -1425,12 +1425,9 @@ form textarea {
     #public-events {
         width: 70%;
     }
-    .bttm-space {
+    #group-details-container h1 {
         margin-left: 500px;
         color: red;
-        display: none;
-    }
-    body {
         display: none;
     }
 }
