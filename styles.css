@@ -1425,5 +1425,6 @@ form textarea {
     }
     #events-list {
         height: 200px;
+        width: 40%;
     }
 }
