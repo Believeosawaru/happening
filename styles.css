@@ -1389,7 +1389,7 @@ form textarea {
         width: 350px;
     }
     #group-details-container {
-        margin-inline: 600px;
+        margin-inline: 200px;
     }
     #add-members input, #search-results {
         width: 75%;
@@ -1415,7 +1415,7 @@ form textarea {
         color: white;
     }
     #event-img {
-        width: 70%;
+        width: 90%;
     }
     .public-events h2 {
         text-align: left;
@@ -1430,5 +1430,7 @@ form textarea {
     #public-events {
         width: 70%;
     }
-    #group-details-container
+    #desc, .event-info {
+        margin-inline: 50px;
+    }
 }
