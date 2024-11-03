@@ -1415,24 +1415,21 @@ form textarea {
         color: white;
     }
     #event-img {
-        width: 60%;
+        width: 70%;
     }
     .public-events h2 {
         text-align: left;
         margin-top: -50px;
     }
     .public-events #right {
-        right: 100px;
+        right: 300px;
     }
     .pc-center {
         display: flex;
         justify-content: center;
     }
     #public-events {
-        width: 60%;
-    }
-    #events-list {
-        height: 200px;
+        width: 70%;
     }
     .events-list::-webkit-scrollbar-track {
         background: rgb(250, 250, 250);
