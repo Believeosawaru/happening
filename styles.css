@@ -1432,6 +1432,7 @@ form textarea {
     }
     #gd-h2 {
         margin-left: 160px;
+        color: red;
     }
     #desc, .event-info {
         margin-inline: 50px;
