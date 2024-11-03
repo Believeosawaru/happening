@@ -1437,4 +1437,7 @@ form textarea {
     .tags, .tags-h3 {
         padding-inline: 270px;
     }
+    .related h3 {
+        margin-right: 50px;
+    }
 }
