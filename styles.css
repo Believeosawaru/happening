@@ -1430,7 +1430,4 @@ form textarea {
     #public-events {
         width: 70%;
     }
-    #desc, .event-info {
-        margin-inline: 50px;
-    }
 }
