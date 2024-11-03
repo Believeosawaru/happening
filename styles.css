@@ -1426,6 +1426,9 @@ form textarea {
     #public-events {
         width: 60%;
     }
+    #events-list {
+        height: 200px;
+    }
     .events-list::-webkit-scrollbar-track {
         background: rgb(250, 250, 250);
         border-radius: 30px;
