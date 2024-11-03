@@ -1444,6 +1444,9 @@ form textarea {
         background: rgb(240, 240, 240);
         padding-block: 20px;
     }
+    .slides div {
+        background: white;
+    }
     .small-details {
         padding-inline-end: 75px;
     }
