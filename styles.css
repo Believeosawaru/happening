@@ -952,9 +952,6 @@ select:hover {
 .space-bttm {
     margin-bottom: 15px;
 }
-.bttm-space {
-    margin-left: 500px;
-}
 .success-sign-up {
     background: rgb(240, 240, 240);
     color: black;
@@ -1433,7 +1430,10 @@ form textarea {
     #public-events {
         width: 70%;
     }
-    #desc, .event-info {
+    .event-info {
        width: 90%;
+    }
+    #bttm-space {
+        margin-left: 500px;
     }
 }

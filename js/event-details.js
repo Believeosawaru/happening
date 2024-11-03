@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     eventDetailsCon.innerHTML = `
                     <div id="group-details-container">
 
-                    <h1 id="gd-h2 bttm-space">
+                    <h1 id="bttm-space">
                         ${result.data.name} <span id="h2-p">${result.data.type}</span>
                     </h1>
 
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </div>
                 </div>
     
-                <div class="event-info">
+                <div class="event-info center">
                     <h3>About This Event</h3>
                     <p>
                         ${result.data.description}
