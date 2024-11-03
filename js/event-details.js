@@ -18,8 +18,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const result = await response.json();
 
-            console.log(result);
-
             if (result.message === "jwt malformed" || result.message === "jwt expired") {
                 setTimeout(() => {
                     window.location.href = "log-in.html"
@@ -219,7 +217,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             } else {
                 document.getElementById("failed").style.display = "block"
                 document.getElementById("failed").innerHTML = result.message;
-                console.log(result.message)
                 document.getElementById("failed").classList.add("failed");
             }
         } catch (error) {
