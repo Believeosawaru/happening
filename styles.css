@@ -1438,6 +1438,6 @@ form textarea {
         padding-inline: 270px;
     }
     .related h3 {
-        right: 50px;
+        margin-inline: 90px;
     }
 }
