@@ -1419,9 +1419,14 @@ form textarea {
     }
     .public-events h2 {
         text-align: left;
+        margin-top: -50px;
     }
     .public-events #right {
         right: 100px;
+    }
+    .pc-center {
+        display: flex;
+        justify-content: center;
     }
     #public-events {
         width: 60%;
