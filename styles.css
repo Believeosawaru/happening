@@ -1432,6 +1432,6 @@ form textarea {
         margin-inline: 60px;
     }
     .event-info {
-        margin-inline: 150px;
+        padding-inline: 200px;
     }
 }
