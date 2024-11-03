@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </div>
                 </div>
     
-                <div class="event-info center">
+                <div class="event-info">
                     <h3>About This Event</h3>
                     <p>
                         ${result.data.description}

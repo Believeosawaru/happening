@@ -1234,7 +1234,7 @@ form textarea {
     display: flex;
 }
 #desc {
-    padding: 10px 15px;
+    padding: 0px 15px;
     border-radius: 6px;
     margin-top: 15px;
     font-weight: bold;
