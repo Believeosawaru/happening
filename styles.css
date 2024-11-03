@@ -1423,7 +1423,7 @@ form textarea {
     .public-events #right {
         right: 100px;
     }
-    #public-list {
+    .public-events {
         height: 200px;
         width: 40%;
     }
