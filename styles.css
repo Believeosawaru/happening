@@ -1415,9 +1415,15 @@ form textarea {
         color: white;
     }
     #event-img {
-        width: 40%;
+        width: 60%;
     }
     .public-events h2 {
         text-align: left;
+    }
+    .public-events #right {
+        right: 100px;
+    }
+    #events-list {
+        padding: 0;
     }
 }
