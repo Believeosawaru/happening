@@ -1425,8 +1425,9 @@ form textarea {
     #public-events {
         width: 70%;
     }
-    #bttm-space {
+    .bttm-space {
         margin-left: 500px;
         color: red;
+        display: none;
     }
 }

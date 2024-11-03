@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     eventDetailsCon.innerHTML = `
                     <div id="group-details-container">
 
-                    <h1 id="bttm-space">
+                    <h1 class="bttm-space">
                         ${result.data.name} <span id="h2-p">${result.data.type}</span>
                     </h1>
 
