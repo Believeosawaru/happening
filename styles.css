@@ -1241,11 +1241,6 @@ form textarea {
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
     position: relative;
 }
-#desc button {
-    background: #FF4500;
-    margin: 10px 0px;
-    width: 100%;
-}
 #h2-p {
     background: rgba(0, 0, 0, 0.1);
     font-size: .6rem;
@@ -1429,5 +1424,9 @@ form textarea {
     }
     #public-events {
         width: 70%;
+    }
+    #bttm-space {
+        margin-left: 500px;
+        color: red;
     }
 }
