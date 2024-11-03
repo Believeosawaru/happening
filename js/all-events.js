@@ -28,7 +28,9 @@ async function displayPublicEvents() {
             texts = "";
 
             if (data.message.length < 1) {
-                return;
+                return setTimeout(() => {
+                    document.querySelector(".pre-loader").style.display = "none";
+                }, 3500);
             }
 
             data.message.forEach((event) => {
