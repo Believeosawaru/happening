@@ -1414,4 +1414,7 @@ form textarea {
         border-radius: 7px;
         color: white;
     }
+    .event-img {
+        width: 40%;
+    }
 }

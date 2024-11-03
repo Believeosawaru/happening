@@ -43,6 +43,29 @@ document.querySelector(".user-menu").innerHTML = `
             <button class="first-btn"><a href="log-out.html">Log Out</a></button>
 `;
 
+document.querySelector(".pc-menu").innerHTML = ` 
+                <a href="./home.html"><span class="material-symbols-outlined">
+                    home
+                    </span> Home</a>
+                    
+                <a href="./events/events.html"><span class="material-symbols-outlined">
+                    event_available
+                    </span>  Events</a>
+                    
+                <a href="./groups/groups.html"><span class="material-symbols-outlined">
+                    groups
+                    </span> Groups</a>
+                    
+                <a href="./settings.html"><span class="material-symbols-outlined">
+                    settings
+                    </span> Settings</a>
+                    
+                <a href="./my-profile.html"><span class="material-symbols-outlined">
+                    person
+                    </span> My Profile</a>
+                <button class="first-btn"><a href="../log-out.html">Log Out</a></button>
+`;
+
 const userToken = localStorage.getItem("authToken");
 
 async function loadNotifications() {
