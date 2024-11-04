@@ -95,10 +95,13 @@ nav button {
 .event-img {
     border-radius: 20px;
 }
-#event-img {
+#event-img, #group-img {
     border-radius: 20px;
     width: 100%;
 }
+#group-img {
+    margin-top: 30px;
+}    
 .event-details-con {
     padding-top: 90px;
     padding-inline: 0px;
@@ -914,11 +917,12 @@ select:hover {
 }
 #group-loc {
     position: absolute;
-    right: 30px;
+    right: 34px;
     top: 60px;
     background: rgb(230, 230, 230);
     padding: 3px 10px;
     border-radius: 5px;
+    opacity: .6;
 }
 .rel {
     position: relative;
@@ -1420,7 +1424,7 @@ form textarea {
         border-radius: 7px;
         color: white;
     }
-    #event-img {
+    #event-img , #group-img{
         width: 90%;
     }
     .public-events h2 {
