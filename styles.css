@@ -1254,6 +1254,12 @@ form textarea {
 .event-date {
     font-weight: bold;
 }
+pre {
+    font-family: inherit;
+    background: inherit;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
 
 @media screen and (min-width: 900px) {
     .menu {
