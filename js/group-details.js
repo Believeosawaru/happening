@@ -105,7 +105,16 @@ document.addEventListener("DOMContentLoaded", async () => {
                             <img src="../../images/group-image.jpg" id="group-img">
                             </div>
 
-                            <p id="group-desc">${result.data.description.replace(/\n/g, "<br>")}</p>
+                             <div class="event-info">
+                                <h3>About This Group</h3>
+                                <p>
+                                ${result.data.description.replace(/\n/g, "<br>")}
+                                </p>
+                                <span class="material-symbols-outlined" id="edit-event">
+                                <a href="event-details-edit.html?eventId=${result.data._id}" id="edit-event-pen">
+                                        edit
+                                </span>
+                             </div>
 
                             <p class="dis-flex">
                                 <span class="material-symbols-outlined">
