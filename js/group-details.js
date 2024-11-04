@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <div class="dis-flex" id="two-btns">
                         <button onclick="copy('${result.data.inviteLink}')"><i class="fa fa-copy"></i> Group Link</button>
 
-                        <button><a href="http://5.161.186.15/html/groups/add-members.html?groupId=${result.data._id}">Add Members</a></button>
+                        <button><a href="http://5.161.186.15/html/groups/add-members.html?groupId=${result.data._id}">+ Members</a></button>
                     </div>
                                 `;
                             } else {
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                             </p>
 
                             <div class="center">
-                            <img src="../../images/group-image.jpg" id="event-img">
+                            <img src="../../images/group-image.jpg" id="group-img">
                             </div>
 
                             <p id="group-desc">${result.data.description.replace(/\n/g, "<br>")}</p>
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                             <div class="dis-flex" id="two-btns">
                                 <button onclick="generateInviteLink();">Generate Link</button> <br>
 
-                                <button><a href="http://5.161.186.15/html/groups/add-members.html?groupId=${result.data._id}">Add Members</a></button>
+                                <button><a href="http://5.161.186.15/html/groups/add-members.html?groupId=${result.data._id}">+ Members</a></button>
                             </div>
 
                             <p id="group-link">
