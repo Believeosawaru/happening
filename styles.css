@@ -915,7 +915,10 @@ select:hover {
 #group-loc {
     position: absolute;
     right: 30px;
-    top: 5px;
+    top: 60px;
+    background: rgb(230, 230, 230);
+    padding: 3px 10px;
+    border-radius: 5px;
 }
 .rel {
     position: relative;
