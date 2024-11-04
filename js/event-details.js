@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <div class="event-info">
                     <h3>About This Event</h3>
                     <p>
-                        ${result.data.description}
+                    ${result.data.description.replace(/\n/g, "<br>")}
                     </p>   
                 </div>
 
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <div class="event-info">
                     <h3>About This Event</h3>
                     <p>
-                        ${result.data.description}
+                    ${result.data.description.replace(/\n/g, "<br>")}
                     </p>   
                     <button><a href="event-iv-send.html?eventId=${eventId}">Send Email Invitation</a></button>
                 </div>
