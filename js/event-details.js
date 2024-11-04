@@ -144,8 +144,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                      <span class="material-symbols-outlined" id="edit-event">
                      <a href="event-details-edit.html?eventId=${result.data._id}" id="edit-event-pen">
                             edit
+                        </a>
                         </span>
-                     </a>
                     </div>
                 </div>
     
