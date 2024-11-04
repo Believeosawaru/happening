@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 </p>
 
                                 <span class="material-symbols-outlined" id="edit-group-pen">
-                                <a href="event-details-edit.html?eventId=${result.data._id}">
+                                <a href="group-details-edit.html?groupId=${result.data._id}">
                                         edit
                                 </a>
                                 </span>

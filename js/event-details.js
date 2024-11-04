@@ -141,8 +141,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                         <span>${result.createdBy.firstName} ${result.createdBy.lastName} <span id="h2-p">Organizer</span></span>
                      </p>
 
-                     <span class="material-symbols-outlined" id="edit-event">
-                     <a href="event-details-edit.html?eventId=${result.data._id}" id="edit-event-pen">
+                     <span class="material-symbols-outlined" id="edit-event-pen">
+                     <a href="event-details-edit.html?eventId=${result.data._id}">
                             edit
                         </a>
                         </span>
