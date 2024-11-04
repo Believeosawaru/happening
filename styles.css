@@ -1256,6 +1256,7 @@ form textarea {
 }
 pre {
     font-family: inherit;
+    color: red;
     background: inherit;
     word-wrap: break-word;
     white-space: pre-wrap;
