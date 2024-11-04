@@ -94,18 +94,20 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 ${result.data.name} <span id="h2-p">${result.data.groupType}</span>
                             </h1>
 
-                            <p class="dis-flex" id="group-loc">
+                            <div id="group-loc-div">
+                                <span class="dis-flex" id="group-loc">
                                 <span class="material-symbols-outlined">
                                     location_on
                                     </span> 
                                     <span>${result.data.location}</span>
-                            </p>
+                                </span>
+                            </div>
 
                             <div class="center">
                             <img src="../../images/group-image.jpg" id="group-img">
                             </div>
 
-                             <div class="event-info">
+                             <div class="group-info">
                                 <h3>About This Group</h3>
                                 <p>
                                 ${result.data.description.replace(/\n/g, "<br>")}
