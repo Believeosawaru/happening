@@ -116,6 +116,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 <a href="event-details-edit.html?eventId=${result.data._id}" id="edit-group-pen">
                                         edit
                                 </span>
+                                </a>
                              </div>
 
                             <p class="dis-flex">
