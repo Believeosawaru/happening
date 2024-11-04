@@ -1064,6 +1064,9 @@ select:hover {
     background: rgb(240, 240, 240);
     border-radius: 6px;
 }
+.group-info h3 {
+    color: #FF4500;
+}
 .event-info button {
     margin-bottom: 5px;
 }
@@ -1465,8 +1468,11 @@ form textarea {
     #desc {
         margin-inline: 50px;
     }
-    .event-info, .group-info {
+    .event-info {
         padding-inline: 280px;
+    }
+    .group-info {
+        margin-inline: 50px;
     }
     .tags, .tags-h3 {
         padding-inline: 270px;
@@ -1488,6 +1494,6 @@ form textarea {
         margin-right: 50px;
     }
     #two-btns button {
-        padding-block: 15px;
+        padding-block: 10px;
     }
 }
