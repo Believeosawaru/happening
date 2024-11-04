@@ -42,9 +42,16 @@ document.addEventListener("DOMContentLoaded", async () => {
                         <span>${result.data.location}</span>
                 </p>
 
-                <p id="group-desc">
-                ${result.data.description.replace(/\n/g, "<br>")}
-                </p>
+               <div class="center">
+                            <img src="../../images/group-image.jpg" id="group-img">
+                            </div>
+
+                             <div class="group-info">
+                                <h3>About This Group</h3>
+                                <p>
+                                ${result.data.description.replace(/\n/g, "<br>")}
+                                </p>
+                             </div>
 
                 <p class="dis-flex">
                     <span class="material-symbols-outlined">
@@ -70,9 +77,22 @@ document.addEventListener("DOMContentLoaded", async () => {
                             <span>New York</span>
                     </p>
 
-                    <p id="group-desc">
-                    ${result.data.description.replace(/\n/g, "<br>")}
-                    </p>
+                    <div class="center">
+                            <img src="../../images/group-image.jpg" id="group-img">
+                            </div>
+
+                             <div class="group-info">
+                                <h3>About This Group</h3>
+                                <p>
+                                ${result.data.description.replace(/\n/g, "<br>")}
+                                </p>
+
+                                <span class="material-symbols-outlined" id="edit-group-pen">
+                                <a href="group-details-edit.html?groupId=${result.data._id}">
+                                        edit
+                                </a>
+                                </span>
+                             </div>
 
                     <p class="dis-flex">
                         <span class="material-symbols-outlined">
