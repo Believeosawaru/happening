@@ -124,6 +124,31 @@ document.addEventListener("DOMContentLoaded", async () => {
                     }
                 }
 
+                const accumTwo = ``;
+
+                result.relatedEvents.forEach(group => {
+                    const html = `
+                       <a href="group-details.html?eventId=${group._id}">
+                        <div>
+                            <h4>${group.name}</h4>
+                            <p>${group.description}</p>
+                            <section class="small-details">
+                                <p class="dis-flex">
+                                    <span class="material-symbols-outlined">
+                                        location_on
+                                    </span> 
+                                    <span>${group.location}</span>
+                                </p>
+                            </section>
+                        </div>
+                       </a>
+                    `;
+
+                    accumTwo += html;
+                });
+
+                document.getElementById("slides").innerHTML = accumTwo;
+
             } else {
                 document.getElementById("failed").style.display = "block"
                 document.getElementById("failed").innerHTML = result.message;
