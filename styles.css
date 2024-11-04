@@ -1465,7 +1465,7 @@ form textarea {
     #desc {
         margin-inline: 50px;
     }
-    .event-info {
+    .event-info, .group-info {
         padding-inline: 280px;
     }
     .tags, .tags-h3 {
@@ -1483,5 +1483,11 @@ form textarea {
     }
     .small-details {
         padding-inline-end: 75px;
+    }
+    #group-loc-div {
+        margin-right: 50px;
+    }
+    #two-btns button {
+        padding-block: 15px;
     }
 }
