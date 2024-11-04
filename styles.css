@@ -110,7 +110,7 @@ nav button {
     text-align: center;
     display: grid;
     align-items: center;
-    background: red;
+    background: white;
 }
 .hero h1 {
     margin-block-end: 10px;
