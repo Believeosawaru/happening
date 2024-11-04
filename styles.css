@@ -1066,6 +1066,7 @@ select:hover {
 }
 .group-info h3 {
     color: #FF4500;
+    font-family: "Oswald", sans-serif;
 }
 .event-info button {
     margin-bottom: 5px;
