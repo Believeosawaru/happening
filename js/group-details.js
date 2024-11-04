@@ -101,6 +101,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                                     <span>${result.data.location}</span>
                             </p>
 
+                            <div class="center">
+                            <img src="../../images/group-image.jpg" id="event-img">
+                            </div>
+
                             <p id="group-desc">${result.data.description.replace(/\n/g, "<br>")}</p>
 
                             <p class="dis-flex">
