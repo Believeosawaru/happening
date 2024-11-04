@@ -1254,7 +1254,7 @@ form textarea {
 .event-date {
     font-weight: bold;
 }
-pre {
+#preform {
     font-family: inherit;
     color: red;
     background: inherit;

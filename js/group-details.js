@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                     <span>${result.data.location}</span>
                             </p>
 
-                            <p id="group-desc"><pre>${result.data.description}</pre></p>
+                            <p id="group-desc"><pre id="preform">${result.data.description}</pre></p>
 
                             <p class="dis-flex">
                                 <span class="material-symbols-outlined">
