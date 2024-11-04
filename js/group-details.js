@@ -126,7 +126,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 const accumTwo = ``;
 
-                result.relatedEvents.forEach(group => {
+                if (result.relatedGroups < 1) {
+                    return document.getElementById("slides").innerHTML = `<h3 id="oswald">No Related Event</h3>`;
+                 }
+
+                result.relatedGroups.forEach(group => {
                     const html = `
                        <a href="group-details.html?eventId=${group._id}">
                         <div>
