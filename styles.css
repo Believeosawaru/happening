@@ -1061,6 +1061,7 @@ select:hover {
     margin-inline: 0px;
     margin-block: 15px;
     background: rgb(240, 240, 240);
+    border-radius: 6px;
 }
 .event-info button {
     margin-bottom: 5px;
