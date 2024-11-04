@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </p>
 
                 <p id="group-desc">
-                    <pre>${result.data.description}</pre>
+                    ${result.data.description}
                 </p>
 
                 <p class="dis-flex">
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </p>
 
                     <p id="group-desc">
-                        <pre>${result.data.description}</pre>
+                        ${result.data.description}
                     </p>
 
                     <p class="dis-flex">
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                     <span>${result.data.location}</span>
                             </p>
 
-                            <p id="group-desc"><pre id="preform">${result.data.description}</pre>byuhj</p>
+                            <p id="group-desc">${result.data.description.replace(/\n/g, "<br>")}</p>
 
                             <p class="dis-flex">
                                 <span class="material-symbols-outlined">
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                        <a href="group-details.html?eventId=${group._id}">
                         <div>
                             <h4>${group.name}</h4>
-                            <p><pre>${group.description}</pre></p>
+                            <p>${group.description}</p>
                             <section class="small-details">
                                 <p class="dis-flex">
                                     <span class="material-symbols-outlined">
