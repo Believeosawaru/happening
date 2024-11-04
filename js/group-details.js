@@ -112,11 +112,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 <p>
                                 ${result.data.description.replace(/\n/g, "<br>")}
                                 </p>
-                                <span class="material-symbols-outlined" id="edit-group">
-                                <a href="event-details-edit.html?eventId=${result.data._id}" id="edit-group-pen">
-                                        edit
-                                </span>
-                                </a>
+
+                                
                              </div>
 
                             <p class="dis-flex">
