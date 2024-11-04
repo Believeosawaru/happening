@@ -1058,6 +1058,7 @@ select:hover {
 .group-info {
     text-align: left;
     padding: 15px;
+    position: relative;
     margin-inline: 0px;
     margin-block: 15px;
     background: rgb(240, 240, 240);
