@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                  setTimeout(() => {
                     document.querySelector(".pre-loader").style.display = "none";
-                }, 3500);
+                }, 350);
                 
                 if (result.createdBy._id !== result.currentUserId) {
                     groupDetailsCon.innerHTML = `

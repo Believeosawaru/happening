@@ -53,7 +53,7 @@ async function displayAllGroups() {
     
                 setTimeout(() => {
                     document.getElementById("failed").style.display = "none"
-                }, 3500)
+                }, 350)
               });
         }
     } catch (error) {

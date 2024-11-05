@@ -14,16 +14,11 @@ async function myBio() {
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "log-in.html"
-            }, 3500);
+            }, 350);
         }
 
         if (response.ok) {
-            // setTimeout(() => {
-            //     document.querySelector(".pre-loader").style.display = "none";
-            // }, 3500);
-
             document.getElementById("bio").value = `${message.data.bio}`;
-            console.log(`done: ${message.data.bio}`)
             
         } else {
             console.log(message)

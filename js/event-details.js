@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             if (result.message === "jwt malformed" || result.message === "jwt expired") {
                 setTimeout(() => {
                     window.location.href = "log-in.html"
-                }, 3500);
+                }, 350);
             }
 
             if (response.ok) {
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 setTimeout(() => {
                     document.querySelector(".pre-loader").style.display = "none";
-                }, 3500);
+                }, 350);
 
                 const eventDate = new Date(result.data.date);
                 const formattedDate = eventDate.toLocaleDateString("en-US", {

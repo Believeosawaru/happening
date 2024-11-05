@@ -26,7 +26,7 @@ async function displayEvents() {
 
             setTimeout(() => {
                 document.querySelector(".pre-loader").style.display = "none";
-            }, 3500);
+            }, 350);
 
             if (data.message.length < 1) {
                 return;

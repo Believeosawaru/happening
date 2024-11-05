@@ -18,7 +18,7 @@ async function displayPublicEvents() {
         if (data.message === "jwt malformed" || data.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "log-in.html"
-            }, 3500);
+            }, 350);
         }
 
         if (response.ok) {
@@ -30,7 +30,7 @@ async function displayPublicEvents() {
             if (data.message.length < 1) {
                 return setTimeout(() => {
                     document.querySelector(".pre-loader").style.display = "none";
-                }, 3500);
+                }, 350);
             }
 
             data.message.forEach((event) => {
@@ -74,7 +74,7 @@ async function displayPublicEvents() {
 
             setTimeout(() => {
                 document.querySelector(".pre-loader").style.display = "none";
-            }, 3500);
+            }, 350);
 
             // <button><a href="https://happening-khaki.vercel.app/html/groups/join-group.html?groupId=${group._id}">Join Group</a></button>
             // <p class="group-type">${group.groupType}</p>
@@ -92,7 +92,7 @@ async function displayPublicEvents() {
     
                 setTimeout(() => {
                     document.getElementById("failed").style.display = "none"
-                }, 3500)
+                }, 350)
               });
         }
     } catch (error) {

@@ -31,13 +31,13 @@ async function userProfile() {
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "log-in.html"
-            }, 3500);
+            }, 350);
         }
 
         if (response.ok) {
             setTimeout(() => {
                 document.querySelector(".pre-loader").style.display = "none";
-            }, 3500);
+            }, 350);
 
             if (message.data.profilePicture) {
                 const profileImage = document.getElementById("user-image");
@@ -170,7 +170,7 @@ formInput.addEventListener("change", async (e) => {
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "log-in.html"
-            }, 3500);
+            }, 350);
         }
 
         if (response.ok) {

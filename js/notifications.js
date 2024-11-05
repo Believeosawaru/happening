@@ -20,7 +20,7 @@ async function loadNotifications() {
         if (response.ok) {
             setTimeout(() => {
                 document.querySelector(".pre-loader").style.display = "none";
-            }, 3500);
+            }, 350);
 
             let accum = "";
 
