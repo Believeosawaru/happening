@@ -177,11 +177,8 @@ timeZones.forEach((zone) => {
 
     if (zone.name == formattedOffset) {
         option.selected = true;
-        console.log("true");
     }
-
-    console.log(zone.name, formattedOffset)
-
+    
     select.appendChild(option);
 });
 
