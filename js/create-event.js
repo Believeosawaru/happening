@@ -170,20 +170,20 @@ const formattedOffset = `UTC${offsetSign}${String(offsetHours).padStart(2, "0")}
 
 const select = document.getElementById("timezone");
 
-timeZones.forEach((zone) => {
+timeZones.forEach((zone) => {$
     const option = document.createElement("option");
     option.value = zone.offset;
     option.text = `${zone.name} (${zone.offset})`;
 
+    if (zone.name == formattedOffset) {
+        option.selected = true;
+        console.log("true");
+    }
+
+    console.log(zone.name, formattedOffset)
+
     select.appendChild(option);
 });
-
-const option = document.createElement("option");
-option.value = formattedOffset;
-option.text = `${formattedOffset}`;
-
-select.appendChild(option);
-// select.appendChild = formattedOffset;
 
 const selectElement = document.getElementById("event-location");
 
