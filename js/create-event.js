@@ -170,7 +170,7 @@ const formattedOffset = `UTC${offsetSign}${String(offsetHours).padStart(2, "0")}
 
 const select = document.getElementById("timezone");
 
-timeZones.forEach((zone) => {$
+timeZones.forEach((zone) => {
     const option = document.createElement("option");
     option.value = zone.offset;
     option.text = `${zone.name} (${zone.offset})`;
