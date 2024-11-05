@@ -82,7 +82,7 @@ async function loadNotifications() {
         if (data.message === "jwt malformed" || data.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "log-in.html"
-            }, 3500);
+            }, 350);
         }
 
         if (response.ok) {

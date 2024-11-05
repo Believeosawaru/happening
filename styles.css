@@ -1271,6 +1271,12 @@ form textarea {
     box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
     position: relative;
 }
+#labels span {
+    background: rgb(230, 230, 230);
+    border-radius: 10px;
+    padding: 4px 10px;
+    margin-inline: 3px;
+}
 #h2-p {
     background: rgba(0, 0, 0, 0.1);
     font-size: .6rem;
