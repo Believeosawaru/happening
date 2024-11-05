@@ -17,53 +17,53 @@ document.getElementById("bell").addEventListener("click", () => {
 })
 
 document.querySelector(".user-menu").innerHTML = `
-            <p><a class="dis-flex" href="./home.html"><span class="material-symbols-outlined">
+            <p><a class="dis-flex" href="http://5.161.186.15/html/home.html"><span class="material-symbols-outlined">
                 home
                 </span> <span>Home</span></a></p>
                 
-            <p><a class="dis-flex" href="./events/events.html"><span class="material-symbols-outlined">
+            <p><a class="dis-flex" href="http://5.161.186.15/html/events/events.html"><span class="material-symbols-outlined">
                 event_available
                 </span> <span>Events</span></a></p>
 
-            <p><a class="dis-flex" href="./groups/groups.html"><span class="material-symbols-outlined">
+            <p><a class="dis-flex" href="http://5.161.186.15/html/groups/groups.html"><span class="material-symbols-outlined">
                 groups
                 </span> <span>Groups</span></a></p>
 
-            <p><a class="dis-flex" href="./settings.html"><span class="material-symbols-outlined">
+            <p><a class="dis-flex" href="http://5.161.186.15/html/settings.html"><span class="material-symbols-outlined">
                 settings
                 </span> <span>Settings</span></a></p>
 
-            <p><a class="dis-flex" href="./tos.html"><span class="material-symbols-outlined">
+            <p><a class="dis-flex" href="http://5.161.186.15/html/tos.html"><span class="material-symbols-outlined">
                 description
                 </span> <span>Terms Of Service</span></a></p>
 
-            <p><a class="dis-flex" href="./my-profile.html"><span class="material-symbols-outlined">
+            <p><a class="dis-flex" href="http://5.161.186.15/html/my-profile.html"><span class="material-symbols-outlined">
                 person
                 </span> <span>My Profile</span></a></p>
-            <button class="first-btn"><a href="log-out.html">Log Out</a></button>
+            <button class="first-btn"><a href="http://5.161.186.15/html/log-out.html">Log Out</a></button>
 `;
 
 document.querySelector(".pc-menu").innerHTML = ` 
-                <a href="./home.html"><span class="material-symbols-outlined">
+                <a href="http://5.161.186.15/html/home.html"><span class="material-symbols-outlined">
                     home
                     </span> Home</a>
                     
-                <a href="./events/events.html"><span class="material-symbols-outlined">
+                <a href="http://5.161.186.15/html/events/events.html"><span class="material-symbols-outlined">
                     event_available
                     </span>  Events</a>
                     
-                <a href="./groups/groups.html"><span class="material-symbols-outlined">
+                <a href="http://5.161.186.15/html/groups/groups.html"><span class="material-symbols-outlined">
                     groups
                     </span> Groups</a>
                     
-                <a href="./settings.html"><span class="material-symbols-outlined">
+                <a href="http://5.161.186.15/html/settings.html"><span class="material-symbols-outlined">
                     settings
                     </span> Settings</a>
                     
-                <a href="./my-profile.html"><span class="material-symbols-outlined">
+                <a href="http://5.161.186.15/html/my-profile.html"><span class="material-symbols-outlined">
                     person
                     </span> My Profile</a>
-                <button class="first-btn"><a href="../log-out.html">Log Out</a></button>
+                <button class="first-btn"><a href="http://5.161.186.15/html/log-out.html">Log Out</a></button>
 `;
 
 const userToken = localStorage.getItem("authToken");

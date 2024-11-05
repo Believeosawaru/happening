@@ -160,7 +160,7 @@ const timeZones = [
         offset: "+14:00",
         name: "UTC+14:00"
     },
-]
+];
 
 const select = document.getElementById("timezone");
 
@@ -171,6 +171,12 @@ timeZones.forEach((zone) => {
 
     select.appendChild(option);
 });
+
+const timezoneOffset = new Date().getTimezoneOffset();
+const timezoneName = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+console.log(`Timezone Offset: ${timezoneOffset} minutes`);
+console.log(`Timezone Name: ${timezoneName}`);
 
 const selectElement = document.getElementById("event-location");
 
