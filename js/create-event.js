@@ -162,6 +162,12 @@ const timeZones = [
     },
 ];
 
+const timezoneOffset = new Date().getTimezoneOffset();
+const offsetHours = Math.floor(Math.abs(timezoneOffset) / 60);
+const offsetMinutes = Math.abs(timezoneOffset) % 60;
+const offsetSign = timezoneOffset <= 0 ? "+" : "-";
+const formattedOffset = `UTC${offsetSign}${String(offsetHours).padStart(2, "0")}:${String(offsetMinutes).padStart(2, "0")}`
+
 const select = document.getElementById("timezone");
 
 timeZones.forEach((zone) => {
@@ -172,14 +178,7 @@ timeZones.forEach((zone) => {
     select.appendChild(option);
 });
 
-const timezoneOffset = new Date().getTimezoneOffset();
-const offsetHours = Math.floor(Math.abs(timezoneOffset) / 60);
-const offsetMinutes = Math.abs(timezoneOffset) % 60;
-const offsetSign = timezoneOffset <= 0 ? "+" : "-";
-const formattedOffset = `UTC${offsetSign}${String(offsetHours).padStart(2, "0")}:${String(offsetMinutes).padStart(2, "0")}`
-
-
-console.log(`Timezone Offset: ${formattedOffset}`);
+select.value = formattedOffset;
 
 const selectElement = document.getElementById("event-location");
 
