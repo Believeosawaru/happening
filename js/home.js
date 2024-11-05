@@ -35,13 +35,13 @@ async function fetchMessage() {
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "log-in.html"
-            }, 3500);
+            }, 350);
         }
 
         if (response.ok) {
             setTimeout(() => {
                 document.querySelector(".pre-loader").style.display = "none";
-            }, 3500);
+            }, 350);
             
             document.getElementById("welcome-msg").textContent = message.message;
             
@@ -85,7 +85,7 @@ async function fetchEvent() {
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "log-in.html"
-            }, 3500);
+            }, 350);
         }
 
         if (response.ok) {
@@ -124,13 +124,13 @@ async function fetchGroup() {
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "log-in.html"
-            }, 3500);
+            }, 350);
         }
 
         if (response.ok) {
             setTimeout(() => {
                 document.querySelector(".pre-loader").style.display = "none";
-            }, 3500);
+            }, 350);
             
             document.querySelector(".latest-groups").innerHTML = `
             &#x1F465; 
