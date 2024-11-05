@@ -80,8 +80,6 @@ async function fetchEvent() {
 
         const message = await response.json();
 
-        console.log(message)
-
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "log-in.html"
