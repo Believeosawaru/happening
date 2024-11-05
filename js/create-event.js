@@ -179,6 +179,7 @@ timeZones.forEach((zone) => {
 });
 
 select.value = formattedOffset;
+console.log("p")
 
 const selectElement = document.getElementById("event-location");
 
