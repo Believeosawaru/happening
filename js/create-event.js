@@ -182,7 +182,7 @@ const option = document.createElement("option");
 option.value = formattedOffset;
 option.text = `${formattedOffset}`;
 
-select.value(option);
+select.value = option;
 // select.appendChild = formattedOffset;
 
 const selectElement = document.getElementById("event-location");
