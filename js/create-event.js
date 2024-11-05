@@ -175,13 +175,14 @@ timeZones.forEach((zone) => {
     option.value = zone.offset;
     option.text = `${zone.name} (${zone.offset})`;
 
-    if (zone === formattedOffset) {
-        option.selected = true;
-    }
-
     select.appendChild(option);
 });
 
+const option = document.createElement("option");
+option.value = formattedOffset;
+option.text = `${formattedOffset}`;
+
+select.appendChild(option);
 // select.appendChild = formattedOffset;
 
 const selectElement = document.getElementById("event-location");
