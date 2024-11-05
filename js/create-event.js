@@ -178,7 +178,12 @@ const select = document.getElementById("timezone");
 //     select.appendChild(option);
 // });
 
-select.appendChild = formattedOffset;
+const option = document.createElement("option");
+option.value = formattedOffset;
+option.text = `${formattedOffset}`;
+
+select.appendChild(option);
+// select.appendChild = formattedOffset;
 
 const selectElement = document.getElementById("event-location");
 
