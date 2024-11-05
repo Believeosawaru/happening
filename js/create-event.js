@@ -173,10 +173,13 @@ timeZones.forEach((zone) => {
 });
 
 const timezoneOffset = new Date().getTimezoneOffset();
-const timezoneName = Intl.DateTimeFormat().resolvedOptions().timeZone;
+const offsetHours = Math.floor(Math.abs(timezoneOffset) / 60);
+const offsetMinutes = Math.abs(timezoneOffset) % 60;
+const offsetSign = timezoneOffset <= 0 ? "+" : "-";
+const formattedOffset = `UTC${offsetSign}${String(offsetHours).padStart(2, "0")}:${String(offsetMinutes).padStart(2, "0")}`
 
-console.log(`Timezone Offset: ${timezoneOffset} minutes`);
-console.log(`Timezone Name: ${timezoneName}`);
+
+console.log(`Timezone Offset: ${formattedOffset}`);
 
 const selectElement = document.getElementById("event-location");
 
