@@ -35,6 +35,8 @@ emailInput.addEventListener("keypress", (e) => {
 
             emails.push(email)
 
+            console.log(emails)
+
             emailInput.value = "";
         } else  {
             alert("Please Enter A Valid Email Address");
