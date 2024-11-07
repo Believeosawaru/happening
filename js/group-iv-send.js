@@ -1,5 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
-const eventId = urlParams.get("eventId");
+const groupId = urlParams.get("groupId");
 const token = localStorage.getItem("authToken");
 
 if (!token) {
@@ -44,7 +44,7 @@ emailInput.addEventListener("keypress", (e) => {
 
 async function sendInvite() {
     try {
-        const response = await fetch(`http://5.161.186.15/api/v1/user/event/${eventId}/send-invite`, {
+        const response = await fetch(`http://5.161.186.15/api/v1/user/group/${groupId}/send-invite`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

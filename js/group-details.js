@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 <p>
                                 ${result.data.description.replace(/\n/g, "<br>")}
                                 </p>
+                                <button><a href="group-iv-send.html?groupId=${groupId}">Send Email Invitation</a></button>
                              </div>
 
                 <p class="dis-flex">
