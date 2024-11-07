@@ -172,8 +172,11 @@ function copy(text) {
     const textarea = document.createElement("textarea");
     textarea.style.display = "none";
     textarea.value = text;
+    textarea.style.position = "fixed";
     document.body.appendChild(textarea);
     textarea.select();
+    textarea.focus();
+    textarea.setSelectionRange(0, textarea.value.length)
 
     document.execCommand("copy");
 
@@ -182,7 +185,7 @@ function copy(text) {
     setTimeout(() => {
         document.querySelector(".copy-s").style.display = "none";
     }, 1500)
-    
+
     document.body.removeChild(textarea);
 }
 
