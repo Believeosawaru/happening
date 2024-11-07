@@ -177,6 +177,12 @@ function copy(text) {
 
     document.execCommand("copy");
 
+    document.querySelector(".copy-s").style.display = "block";
+
+    setTimeout(() => {
+        document.querySelector(".copy-s").style.display = "none";
+    }, 1500)
+    
     document.body.removeChild(textarea);
 }
 
