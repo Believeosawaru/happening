@@ -170,12 +170,12 @@ function copy(text) {
     //     });
 
     const textarea = document.createElement("textarea");
-    textarea.style.display = "none";
+    // textarea.style.display = "none";
     textarea.value = text;
     textarea.style.position = "fixed";
     document.body.appendChild(textarea);
-    textarea.select();
     textarea.focus();
+    textarea.select();
     textarea.setSelectionRange(0, textarea.value.length)
 
     try {
