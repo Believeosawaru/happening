@@ -69,12 +69,14 @@ document.addEventListener("DOMContentLoaded", async () => {
                         ${result.data.name} <span id="h2-p">public</span>
                     </h1>
 
-                    <p class="dis-flex" id="group-loc">
-                        <span class="material-symbols-outlined">
-                            location_on
-                            </span> 
-                            <span>New York</span>
-                    </p>
+                    <div class="group-loc-div">
+                        <p class="dis-flex" id="group-loc">
+                            <span class="material-symbols-outlined">
+                                location_on
+                                </span> 
+                                <span>New York</span>
+                        </p>
+                    </div>
 
                     <div class="center">
                             <img src="../../images/group-image.jpg" id="group-img">
