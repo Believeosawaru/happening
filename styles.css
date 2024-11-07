@@ -1481,7 +1481,6 @@ form textarea {
     .public-events #right {
         position: absolute;
         left: 50px;
-        background: greenyellow;
     }
     .pc-center {
         display: flex;
