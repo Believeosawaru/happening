@@ -242,11 +242,25 @@ function copy(text) {
     //     });
 
     const textarea = document.createElement("textarea");
+    // textarea.style.display = "none";
     textarea.value = text;
+    textarea.style.position = "fixed";
     document.body.appendChild(textarea);
+    textarea.focus();
     textarea.select();
+    textarea.setSelectionRange(0, textarea.value.length)
 
-    document.execCommand("copy");
+    try {
+        const success = document.execCommand("copy");
+
+        if (!success) {
+            console.log("Copy Failed")
+        } else {
+            console.log("copy")
+        }
+    } catch (error) {
+        console.log(error)
+    }
 
     document.querySelector(".copy-s").style.display = "block";
 
