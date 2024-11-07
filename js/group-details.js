@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 <p>
                                 ${result.data.description.replace(/\n/g, "<br>")}
                                 </p>
-                                <button><a href="group-iv-send.html?groupId=${groupId}">Send Email Invitation</a></button>
                              </div>
 
                 <p class="dis-flex">
@@ -65,8 +64,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <button><a href="https://5.161.186.15/html/groups/leave-group.html?groupId=${result.data._id}">Leave Group</a></button>
                 `;
                 } else {
-                    if (result.data.inviteLink) {
-                        groupDetailsCon.innerHTML = `
+                    groupDetailsCon.innerHTML = `
                         <h1 id="gd-h2 bttm-space">
                         ${result.data.name} <span id="h2-p">public</span>
                     </h1>
@@ -87,6 +85,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 <p>
                                 ${result.data.description.replace(/\n/g, "<br>")}
                                 </p>
+
+                                <button><a href="group-iv-send.html?groupId=${groupId}">Send Email Invitation</a></button>
 
                                 <span class="material-symbols-outlined" id="edit-group-pen">
                                 <a href="group-details-edit.html?groupId=${result.data._id}">
@@ -109,57 +109,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                         <button><a href="http://5.161.186.15/html/groups/add-members.html?groupId=${result.data._id}">+ Members</a></button>
                     </div>
                                 `;
-                            } else {
-                                groupDetailsCon.innerHTML = `
-                            <h1 id="gd-h2 bttm-space">
-                                ${result.data.name} <span id="h2-p">${result.data.groupType}</span>
-                            </h1>
-
-                            <div id="group-loc-div">
-                                <span class="dis-flex" id="group-loc">
-                                <span class="material-symbols-outlined">
-                                    location_on
-                                    </span> 
-                                    <span>${result.data.location}</span>
-                                </span>
-                            </div>
-
-                            <div class="center">
-                            <img src="../../images/group-image.jpg" id="group-img">
-                            </div>
-
-                             <div class="group-info">
-                                <h3>About This Group</h3>
-                                <p>
-                                ${result.data.description.replace(/\n/g, "<br>")}
-                                </p>
-
-                                <span class="material-symbols-outlined" id="edit-group-pen">
-                                <a href="group-details-edit.html?groupId=${result.data._id}">
-                                        edit
-                                </a>
-                                </span>
-                             </div>
-
-                            <p class="dis-flex">
-                                <span class="material-symbols-outlined">
-                                person
-                                </span>
-                                <span>${result.createdBy.firstName} ${result.createdBy.lastName}
-                                    <span id="h2-p">Admin</span></span>
-                            </p>
-
-                            <div class="dis-flex" id="two-btns">
-                                <button onclick="generateInviteLink();">Generate Link</button> <br>
-
-                                <button><a href="http://5.161.186.15/html/groups/add-members.html?groupId=${result.data._id}">+ Members</a></button>
-                            </div>
-
-                            <p id="group-link">
-                                
-                            </p>
-                    `;
-                    }
                 }
 
                 const accumTwo = ``;
@@ -203,27 +152,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     } else {
         window.location.href = "groups.html"
     }
-})
-
-const generateInviteLink = async () => {
-    try {
-        const response = await fetch(`http://5.161.186.15/api/v1/user/group/${groupId}/generate-link`, {
-            method: "GET",
-            headers: {
-                "Authorization": `Bearer ${token}`
-            }
-        });
-
-        const data = await response.json();
-
-        if (response.ok) {
-            document.querySelector(".group-link").innerHTML = `<p class="copy-i" onclick="copy('${data.data}')"><i class="fa fa-copy"></i> Copy Link</p>`
-        }
-
-    } catch (error) {
-        console.log(error)
-    }
-}
+});
 
 function copy(text) {
     navigator.clipboard.writeText(text)
