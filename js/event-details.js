@@ -155,6 +155,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     ${result.data.description.replace(/\n/g, "<br>")}
                     </p>   
                     <button><a href="event-iv-send.html?eventId=${eventId}">Send Email Invitation</a></button>
+                    <button onclick="copy('http://5.161.186.15/html/events/join-event.html?name=${result.data.slug}')"><i class="fa fa-copy"></i> Event Link</button>
                 </div>
 
                 <h3 class="tags-h3">Event Category</h3>
@@ -226,3 +227,27 @@ document.addEventListener("DOMContentLoaded", async () => {
         window.location.href = "events.html"
     }
 });
+
+function copy(text) {
+    // navigator.clipboard.writeText(text)
+    //     .then(() => {
+    //         document.querySelector(".copy-s").style.display = "block";
+
+    //         setTimeout(() => {
+    //             document.querySelector(".copy-s").style.display = "none";
+    //         }, 1500)
+    //     })
+    //     .catch(err => {
+    //         console.error('Failed to copy text: ', err);
+    //     });
+
+    const textarea = document.createElement("textarea");
+    textarea.style.display = "none";
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+
+    document.execCommand("copy");
+
+    document.body.removeChild(textarea);
+}

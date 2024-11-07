@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </p>
 
                     <div class="dis-flex" id="two-btns">
-                        <button onclick="copy('${result.data.inviteLink}')"><i class="fa fa-copy"></i> Group Link</button>
+                        <button onclick="copy('http://5.161.186.15/html/events/join-group.html?name=${result.data.slug}')"><i class="fa fa-copy"></i> Group Link</button>
 
                         <button><a href="http://5.161.186.15/html/groups/add-members.html?groupId=${result.data._id}">+ Members</a></button>
                     </div>
@@ -157,17 +157,27 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function copy(text) {
-    navigator.clipboard.writeText(text)
-        .then(() => {
-            document.querySelector(".copy-s").style.display = "block";
+    // navigator.clipboard.writeText(text)
+    //     .then(() => {
+    //         document.querySelector(".copy-s").style.display = "block";
 
-            setTimeout(() => {
-                document.querySelector(".copy-s").style.display = "none";
-            }, 1500)
-        })
-        .catch(err => {
-            console.error('Failed to copy text: ', err);
-        });
+    //         setTimeout(() => {
+    //             document.querySelector(".copy-s").style.display = "none";
+    //         }, 1500)
+    //     })
+    //     .catch(err => {
+    //         console.error('Failed to copy text: ', err);
+    //     });
+
+    const textarea = document.createElement("textarea");
+    textarea.style.display = "none";
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+
+    document.execCommand("copy");
+
+    document.body.removeChild(textarea);
 }
 
 // <a href="${result.groupLink}">Copy Group Link</a>
