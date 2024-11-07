@@ -101,8 +101,6 @@ async function sendInvite() {
         console.log(result)
 
         if (response.ok) {
-        document.getElementById("search-input").value = "";
-
         document.getElementById("success-sign-up").style.display = "block";
 
         document.getElementById("success-sign-up").innerHTML = result.message;
