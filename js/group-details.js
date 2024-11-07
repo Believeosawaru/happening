@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </p>
 
                     <div class="dis-flex" id="two-btns">
-                        <button onclick="copy('http://5.161.186.15/html/events/join-group.html?name=${result.data.slug}')"><i class="fa fa-copy"></i> Group Link</button>
+                        <button onclick="copy('http://5.161.186.15/html/groups/join-group.html?name=${result.data.slug}')"><i class="fa fa-copy"></i> Group Link</button>
 
                         <button><a href="http://5.161.186.15/html/groups/add-members.html?groupId=${result.data._id}">+ Members</a></button>
                     </div>
