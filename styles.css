@@ -1055,7 +1055,7 @@ select:hover {
     border-radius: 6px;
 }
 .group-info button {
-    margin: 0px;
+    margin-block: 5px;
 }
 .group-info h3 {
     color: #FF4500;
