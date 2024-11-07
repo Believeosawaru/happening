@@ -24,11 +24,11 @@ function addEmailLabel(email) {
 
 const emails = [];
 
-emailInput.addEventListener("keypress", (e) => {
-    if (e.key === ",") {
-        e.preventDefault();
+emailInput.addEventListener("input", () => {
+    const value = emailInput.value.trim();
 
-        const email = emailInput.value.trim();
+    if (value.endsWith(",")) {
+        const email = value.slice(0, -1).trim();
 
         if (isValidEmail(email)) {
             addEmailLabel(email);
