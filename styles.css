@@ -891,7 +891,7 @@ select:hover {
 }
 #send-iv-btn {
     width: 100%;
-    padding-block: 20px;
+    padding-block: 10px;
 }
 .group-link {
     font-weight: bold;
