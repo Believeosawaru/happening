@@ -256,7 +256,7 @@ function copy(text) {
         if (!success) {
             console.log("Copy Failed")
         } else {
-            console.log("copy")
+            return;
         }
     } catch (error) {
         console.log(error)
