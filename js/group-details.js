@@ -178,7 +178,17 @@ function copy(text) {
     textarea.focus();
     textarea.setSelectionRange(0, textarea.value.length)
 
-    document.execCommand("copy");
+    try {
+        const success = document.execCommand("copy");
+
+        if (!success) {
+            console.log("Copy Failed")
+        } else {
+            console.log("copy")
+        }
+    } catch (error) {
+        console.log(error)
+    }
 
     document.querySelector(".copy-s").style.display = "block";
 
