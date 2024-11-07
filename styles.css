@@ -1054,6 +1054,9 @@ select:hover {
     background: rgb(240, 240, 240);
     border-radius: 6px;
 }
+.group-info button {
+    margin: 0px;
+}
 .group-info h3 {
     color: #FF4500;
     font-family: "Oswald", sans-serif;
