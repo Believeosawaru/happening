@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         ${result.data.name} <span id="h2-p">public</span>
                     </h1>
 
-                    <div class="group-loc-div">
+                    <div id="group-loc-div">
                         <p class="dis-flex" id="group-loc">
                             <span class="material-symbols-outlined">
                                 location_on
