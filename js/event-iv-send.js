@@ -81,37 +81,37 @@ emailInput.addEventListener("keypress", (e) => {
 //     }
 // }
 
-// async function addMemberToGroup(userId) {
-//     try {
-//         const response = await fetch(`http://5.161.186.15/api/v1/user/event/${eventId}/send-invite`, {
-//             method: "POST",
-//             headers: {
-//                 "Content-Type": "application/json",
-//                 "Authorization": `Bearer ${token}`
-//             },
-//             body: JSON.stringify({ userId })
-//         });
+async function SendInvite(userId) {
+    try {
+        const response = await fetch(`http://5.161.186.15/api/v1/user/event/${eventId}/send-invite`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`
+            },
+            body: JSON.stringify({ userId })
+        });
 
-//         const result = await response.json();
+        const result = await response.json();
 
-//         console.log(result)
+        console.log(result)
 
-//         if (response.ok) {
-//         document.getElementById("search-input").value = "";
+        if (response.ok) {
+        document.getElementById("search-input").value = "";
 
-//         document.getElementById("success-sign-up").style.display = "block";
+        document.getElementById("success-sign-up").style.display = "block";
 
-//         document.getElementById("success-sign-up").innerHTML = result.message;
+        document.getElementById("success-sign-up").innerHTML = result.message;
 
-//         document.getElementById("search-results").innerHTML = "";
+        document.getElementById("search-results").innerHTML = "";
 
-//         document.getElementById("success-sign-up").classList.add("success-sign-up");
-//         }
+        document.getElementById("success-sign-up").classList.add("success-sign-up");
+        }
 
-//         setTimeout(() => {
-//             document.getElementById("success-sign-up").style.display = "none";
-//         }, 2000)
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+        setTimeout(() => {
+            document.getElementById("success-sign-up").style.display = "none";
+        }, 2000)
+    } catch (error) {
+        console.log(error);
+    }
+}
