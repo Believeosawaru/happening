@@ -35,8 +35,6 @@ emailInput.addEventListener("keypress", (e) => {
 
             emails.push(email)
 
-            console.log(emails)
-
             emailInput.value = "";
         } else  {
             alert("Please Enter A Valid Email Address");
@@ -87,7 +85,7 @@ emailInput.addEventListener("keypress", (e) => {
 //     }
 // }
 
-async function SendInvite(userId) {
+async function SendInvite() {
     try {
         const response = await fetch(`http://5.161.186.15/api/v1/user/event/${eventId}/send-invite`, {
             method: "POST",
@@ -95,7 +93,7 @@ async function SendInvite(userId) {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`
             },
-            body: JSON.stringify({ userId })
+            body: JSON.stringify({ emails })
         });
 
         const result = await response.json();
