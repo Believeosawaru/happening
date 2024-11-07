@@ -62,8 +62,6 @@ async function sendInvite() {
 
         document.getElementById("success-sign-up").innerHTML = result.message;
 
-        document.getElementById("search-results").innerHTML = "";
-
         document.getElementById("success-sign-up").classList.add("success-sign-up");
         }
 
