@@ -10,7 +10,7 @@ const emailInput = document.getElementById("email-input");
 const emailContainer = document.getElementById("labels");
 
 function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email.trim());
 }
 
