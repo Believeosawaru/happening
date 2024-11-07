@@ -242,7 +242,6 @@ function copy(text) {
     //     });
 
     const textarea = document.createElement("textarea");
-    textarea.style.display = "none";
     textarea.value = text;
     document.body.appendChild(textarea);
     textarea.select();
