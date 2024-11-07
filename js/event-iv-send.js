@@ -85,7 +85,7 @@ emailInput.addEventListener("keypress", (e) => {
 //     }
 // }
 
-async function SendInvite() {
+async function sendInvite() {
     try {
         const response = await fetch(`http://5.161.186.15/api/v1/user/event/${eventId}/send-invite`, {
             method: "POST",
