@@ -1479,7 +1479,8 @@ form textarea {
         text-align: left;
     }
     .public-events #right {
-        right: 300px;
+        position: absolute;
+        left: 50px;
     }
     .pc-center {
         display: flex;
