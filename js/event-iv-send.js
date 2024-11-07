@@ -22,6 +22,8 @@ function addEmailLabel(email) {
     emailContainer.appendChild(label);
 }
 
+const emails = [];
+
 emailInput.addEventListener("keypress", (e) => {
     if (e.key === ",") {
         e.preventDefault();
@@ -30,6 +32,8 @@ emailInput.addEventListener("keypress", (e) => {
 
         if (isValidEmail(email)) {
             addEmailLabel(email);
+
+            emails.push(email)
 
             emailInput.value = "";
         } else  {
