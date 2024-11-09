@@ -44,7 +44,7 @@ document.querySelector(".user-menu").innerHTML = `
 `;
 
 document.querySelector(".pc-menu").innerHTML = ` 
-                <a href="http://5.161.186.15/html/home.html"><span class="material-symbols-outlined">
+                <a href="http://5.161.186.15/api/v1/user/events"><span class="material-symbols-outlined">
                     home
                     </span> Home</a>
                     
