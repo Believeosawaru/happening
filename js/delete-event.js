@@ -5,7 +5,7 @@ const eventId = urlParams.get("eventId");
 const delEventUrl = `http://5.161.186.15/api/v1/user/delete-event/${eventId}`
 
 if (!token) {
-    window.location.href = "log-in"
+    window.location.href = "http://5.161.186.15/log-in"
 }
 
 const button = document.getElementById("delete-event-btn");
@@ -36,7 +36,7 @@ document.getElementById("delete-event").addEventListener("submit", async (e) => 
         document.getElementById("success-sign-up").classList.add("success-sign-up");
 
         setTimeout(() => {
-            window.location.href = `events`
+            window.location.href = `http://5.161.186.15/events`
         }, 1000)
     } else {
         const keys = Object.keys(data);

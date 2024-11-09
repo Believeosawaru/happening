@@ -4,7 +4,7 @@ async function joinEvent() {
     const eventId = urlParams.get("eventId");
 
     if (!token) {
-        window.location.href = "log-in.html"
+        window.location.href = "http://5.161.186.15/log-in"
     }
 
     try {
@@ -22,7 +22,7 @@ async function joinEvent() {
 
             document.getElementById("success-sign-up").innerHTML = data.message;
 
-            window.location.href = "events.html"
+            window.location.href = "http://5.161.186.15/events/events"
         } else {
             const keys = Object.keys(data);
     

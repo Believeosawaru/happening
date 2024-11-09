@@ -2,7 +2,7 @@ async function displayEvents() {
     const token = localStorage.getItem("authToken");
 
     if (!token) {
-        window.location.href = "../log-in.html"
+        window.location.href = "http://5.161.186.15/log-in"
     }
 
     try {

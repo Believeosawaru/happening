@@ -30,7 +30,7 @@ async function userProfile() {
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "log-in.html"
+                window.location.href = "http://5.161.186.15/log-in"
             }, 350);
         }
 
@@ -169,7 +169,7 @@ formInput.addEventListener("change", async (e) => {
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "log-in.html"
+                window.location.href = "http://5.161.186.15/log-in"
             }, 350);
         }
 

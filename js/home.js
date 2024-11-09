@@ -34,7 +34,7 @@ async function fetchMessage() {
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "log-in.html"
+                window.location.href = "http://5.161.186.15/log-in"
             }, 350);
         }
 
@@ -82,14 +82,14 @@ async function fetchEvent() {
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "log-in.html"
+                window.location.href = "http://5.161.186.15/log-in"
             }, 350);
         }
 
         if (response.ok) {
             document.querySelector(".latest-events").innerHTML = `
              &#x1F4C5;
-            <a class="del-group-a" href="events/event-details.html?eventId=${message.message._id}">${message.message.name}</a>
+            <a class="del-group-a" href="http://5.161.186.15/events/event-details?eventId=${message.message._id}">${message.message.name}</a>
             `
         } else {
             console.log("Bad Network")
@@ -121,7 +121,7 @@ async function fetchGroup() {
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "log-in.html"
+                window.location.href = "http://5.161.186.15/log-in"
             }, 350);
         }
 
@@ -132,7 +132,7 @@ async function fetchGroup() {
             
             document.querySelector(".latest-groups").innerHTML = `
             &#x1F465; 
-            <a class="del-group-a" href="groups/group-details.html?groupId=${message.message._id}">${message.message.name}</a>
+            <a class="del-group-a" href="http://5.161.186.15/groups/group-details?groupId=${message.message._id}">${message.message.name}</a>
             `
         } else {
             console.log(message)

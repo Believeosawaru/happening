@@ -33,7 +33,7 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
     }
 
     if (data.message === "User Is Not Verified") {
-         window.location.href = "verify-account.html"
+         window.location.href = "http://5.161.186.15/verify-account"
     }
 
     if (response.ok) {
@@ -43,7 +43,7 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "home.html"
+            window.location.href = "http://5.161.186.15/home"
         }, 2000)
     } else {
         const keys = Object.keys(data);

@@ -13,7 +13,7 @@ async function myBio() {
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "log-in.html"
+                window.location.href = "http://5.161.186.15/log-in"
             }, 350);
         }
 
@@ -67,7 +67,7 @@ document.getElementById("update-bio").addEventListener("submit", async (e) => {
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "my-profile.html"
+            window.location.href = "http://5.161.186.15/my-profile"
         }, 2000)
     } else {
         const keys = Object.keys(data);

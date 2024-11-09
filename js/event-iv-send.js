@@ -3,7 +3,7 @@ const eventId = urlParams.get("eventId");
 const token = localStorage.getItem("authToken");
 
 if (!token) {
-    window.location.href = "/html/log-in.html";
+    window.location.href = "http://5.161.186.15/log-in";
 }
 
 const emailInput = document.getElementById("email-input");

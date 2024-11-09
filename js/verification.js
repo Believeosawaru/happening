@@ -38,7 +38,7 @@ document.getElementById("recover-password").addEventListener("submit", async (e)
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "log-in.html"
+            window.location.href = "http://5.161.186.15/log-in"
         }, 2000)
     } else {
         const keys = Object.keys(data);

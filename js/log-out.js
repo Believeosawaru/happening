@@ -14,7 +14,7 @@ document.getElementById("log-out").addEventListener("submit", async (e) => {
         });
 
     if (!token || response.status === 401) {
-        window.location.href = "log-in.html"
+        window.location.href = "http://5.161.186.15/log-in"
     }
 
     const data = await response.json();
@@ -26,7 +26,7 @@ document.getElementById("log-out").addEventListener("submit", async (e) => {
         document.getElementById("success-sign-up").classList.add("success-sign-up");
 
         setTimeout(() => {
-            window.location.href = "sign-up.html"
+            window.location.href = "http://5.161.186.15/sign-up"
         }, 1000)
     } else {
         const keys = Object.keys(data);

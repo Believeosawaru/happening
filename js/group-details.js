@@ -3,12 +3,12 @@ const urlParams = new URLSearchParams(window.location.search);
 const groupId = urlParams.get("groupId");
 
 if (!token) {
-    window.location.href = "/html/log-in.html";
+    window.location.href = "http://5.161.186.15/log-in";
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
     if (!token) {
-        window.location.href = "/html/log-in.html"
+        window.location.href = "http://5.161.186.15/log-in"
     }
 
     if (groupId) {
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         <span id="h2-p">Admin</span></span>
                 </p>
 
-                <button><a href="https://5.161.186.15/html/groups/leave-group.html?groupId=${result.data._id}">Leave Group</a></button>
+                <button><a href="http://5.161.186.15/groups/leave-group?groupId=${result.data._id}">Leave Group</a></button>
                 `;
                 } else {
                     groupDetailsCon.innerHTML = `
@@ -88,10 +88,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 ${result.data.description.replace(/\n/g, "<br>")}
                                 </p>
 
-                                <button><a href="group-iv-send.html?groupId=${groupId}">Send Email Invitation</a></button>
+                                <button><a href="http://5.161.186.15/groups/group-iv-send?groupId=${groupId}">Send Email Invitation</a></button>
 
                                 <span class="material-symbols-outlined" id="edit-group-pen">
-                                <a href="group-details-edit.html?groupId=${result.data._id}">
+                                <a href="http://5.161.186.15/groups/group-details-edit?groupId=${result.data._id}">
                                         edit
                                 </a>
                                 </span>
@@ -106,9 +106,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </p>
 
                     <div class="dis-flex" id="two-btns">
-                        <button onclick="copy('http://5.161.186.15/html/groups/join-group.html?name=${result.data.slug}')"><i class="fa fa-copy"></i> Group Link</button>
+                        <button onclick="copy('http://5.161.186.15/groups/join-group?name=${result.data.slug}')"><i class="fa fa-copy"></i> Group Link</button>
 
-                        <button><a href="http://5.161.186.15/html/groups/add-members.html?groupId=${result.data._id}">+ Members</a></button>
+                        <button><a href="http://5.161.186.15/groups/add-members?groupId=${result.data._id}">+ Members</a></button>
                     </div>
                                 `;
                 }
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 result.relatedGroups.forEach(group => {
                     const html = `
-                       <a href="group-details.html?eventId=${group._id}">
+                       <a href="http://5.161.186.15/groups/group-details?groupId=${group._id}">
                         <div>
                             <h4>${group.name}</h4>
                             <p>${result.data.description}</p>
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             console.log(error);
         }
     } else {
-        window.location.href = "groups.html"
+        window.location.href = "http://5.161.186.15/groups/groups"
     }
 });
 

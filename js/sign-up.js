@@ -42,7 +42,7 @@ document.getElementById("sign-up").addEventListener("submit", async (e) => {
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "verify-account.html"
+            window.location.href = "http://5.161.186.15/verify-account"
         }, 2000)
     } else {
         const keys = Object.keys(data);

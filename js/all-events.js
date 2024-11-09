@@ -2,7 +2,7 @@ async function displayPublicEvents() {
     const token = localStorage.getItem("authToken");
 
     if (!token) {
-        window.location.href = "log-in"
+        window.location.href = "http://5.161.186.15/log-in"
     }
 
     try {
@@ -17,7 +17,7 @@ async function displayPublicEvents() {
 
         if (data.message === "jwt malformed" || data.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "log-in"
+                window.location.href = "http://5.161.186.15/log-in"
             }, 350);
         }
 
@@ -42,7 +42,7 @@ async function displayPublicEvents() {
             });
 
                 texts += `
-                <a href="event-details?eventId=${event._id}">
+                <a href="http://5.161.186.15/event-details?eventId=${event._id}">
                     <div>
                         <h3>${event.name}</h3>
                         <p>${event.description}</p>
@@ -123,7 +123,7 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
     const token = localStorage.getItem("authToken");
 
     if (!token) {
-        window.location.href = "log-in"
+        window.location.href = "http://5.161.186.15/log-in"
     }
     
     try {
@@ -153,7 +153,7 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
                 });
     
                 accum += `
-                    <a href="event-details?eventId=${event._id}">
+                    <a href="http://5.161.186.15/event-details?eventId=${event._id}">
                         <div>
                             <h3>${event.name}</h3>
                             <p>${event.description}</p>

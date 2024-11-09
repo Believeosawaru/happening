@@ -3,7 +3,7 @@ const eventId = urlParams.get("eventId");
 const token = localStorage.getItem("authToken");
 
 if (!token) {
-    window.location.href = "/html/log-in.html"
+    window.location.href = "http://5.161.186.15log-in"
 }
 
 const timeZones = [
@@ -280,7 +280,7 @@ const editEventUrl = `http://5.161.186.15/api/v1/user/edit-event-info/${eventId}
 
 const delBtn = document.getElementById("event-del-link");
 
-delBtn.innerHTML = `<a href="delete-event.html?eventId=${eventId}" class="del-group-a">Delete Event</a>`;
+delBtn.innerHTML = `<a href="http://5.161.186.15/events/delete-event?eventId=${eventId}" class="del-group-a">Delete Event</a>`;
 
 function disableBtn() {
     button.disabled = true;
@@ -331,7 +331,7 @@ if (eventId) {
             button.style.cursor = "wait";
     
             setTimeout(() => {
-                window.location.href = `events.html`
+                window.location.href = `http://5.161.186.15/events`
             }, 1000)
         } else {
             const keys = Object.keys(data);

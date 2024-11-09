@@ -40,7 +40,7 @@ document.getElementById("forgot-password").addEventListener("submit", async (e) 
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "verify-forgot-password.html"
+            window.location.href = "http://5.161.186.15/verify-forgot-password"
         }, 2000)
     } else {
         const keys = Object.keys(data);

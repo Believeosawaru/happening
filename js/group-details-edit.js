@@ -3,7 +3,7 @@ const groupId = urlParams.get("groupId");
 const token = localStorage.getItem("authToken");
 
 if (!token) {
-    window.location.href = "/html/log-in.html"
+    window.location.href = "http://5.161.186.15/log-in"
 }
 
 

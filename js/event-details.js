@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const eventId = urlParams.get("eventId");
 
 if (!token) {
-    window.location.href = "/html/log-in.html";
+    window.location.href = "http://5.161.186.15/log-in.html";
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             if (result.message === "jwt malformed" || result.message === "jwt expired") {
                 setTimeout(() => {
-                    window.location.href = "log-in.html"
+                    window.location.href = "http://5.161.186.15/log-in"
                 }, 350);
             }
 
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         <span class="material-symbols-outlined">
                         person  
                         </span>
-                        <span><a href="../user-profile.html?userId=${result.createdBy._id}">${result.createdBy.firstName} ${result.createdBy.lastName} </a><span id="h2-p">Organizer</span></span>
+                        <span><a href="http://5.161.186.15/user-profile?userId=${result.createdBy._id}">${result.createdBy.firstName} ${result.createdBy.lastName} </a><span id="h2-p">Organizer</span></span>
                      </p>
                     </div>
                 </div>
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                      </p>
 
                      <span class="material-symbols-outlined" id="edit-event-pen">
-                     <a href="event-details-edit.html?eventId=${result.data._id}">
+                     <a href="http://5.161.186.15/events/event-details-edit?eventId=${result.data._id}">
                             edit
                         </a>
                         </span>
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     ${result.data.description.replace(/\n/g, "<br>")}
                     </p>   
                     <button><a href="event-iv-send.html?eventId=${eventId}">Send Email Invitation</a></button>
-                    <button onclick="copy('http://5.161.186.15/html/events/join-event.html?name=${result.data.slug}')"><i class="fa fa-copy"></i> Event Link</button>
+                    <button onclick="copy('http://5.161.186.15/events/join-event?name=${result.data.slug}')"><i class="fa fa-copy"></i> Event Link</button>
                 </div>
 
                 <h3 class="tags-h3">Event Category</h3>
@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     });
 
                     const html = `
-                       <a href="event-details.html?eventId=${event._id}">
+                       <a href="http://5.161.186.15/event-details?eventId=${event._id}">
                         <div>
                             <h4>${event.name}</h4>
                             <p>${event.description}</p>
@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             console.log(error);
         }
     } else {
-        window.location.href = "events.html"
+        window.location.href = "http://5.161.186.15/events"
     }
 });
 

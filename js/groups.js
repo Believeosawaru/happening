@@ -2,7 +2,7 @@ async function displayGroups() {
     const token = localStorage.getItem("authToken");
 
     if (!token) {
-        window.location.href = "log-in.html"
+        window.location.href = "http://5.161.186.15/log-in"
     }
 
     try {
@@ -14,7 +14,7 @@ async function displayGroups() {
         });
 
         if (response.status == 401) {
-            window.location.href = "log-in.html"
+            window.location.href = "http://5.161.186.15/log-in"
         }
 
         const data = await response.json();

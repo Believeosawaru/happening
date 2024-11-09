@@ -32,7 +32,7 @@ document.getElementById("leave-group").addEventListener("click", async () => {
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "groups.html"
+            window.location.href = "http://5.161.186.15/groups/groups"
         }, 2000)
     } else {
         const keys = Object.keys(data);

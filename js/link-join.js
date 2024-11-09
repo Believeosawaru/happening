@@ -4,7 +4,7 @@ async function joinGroup() {
     const groupToken = urlParams.get("groupToken");
 
     if (!token) {
-        window.location.href = "log-in.html"
+        window.location.href = "http://5.161.186.15/log-in"
     }
 
     try {
@@ -21,7 +21,7 @@ async function joinGroup() {
             document.getElementById("success-sign-up").classList.add("success-sign-up")
             document.getElementById("success-sign-up").innerHTML = data.message;
 
-            window.location.href = "groups.html"
+            window.location.href = "http://5.161.186.15/groups/groups"
         } else {
             const keys = Object.keys(data);
     
