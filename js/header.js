@@ -25,7 +25,7 @@ document.querySelector(".user-menu").innerHTML = `
                 event_available
                 </span> <span>Events</span></a></p>
 
-            <p><a class="dis-flex" href="http://5.161.186.15/groups"><span class="material-symbols-outlined">
+            <p><a class="dis-flex" href="http://5.161.186.15/groups/groups"><span class="material-symbols-outlined">
                 groups
                 </span> <span>Groups</span></a></p>
 
