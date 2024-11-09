@@ -342,7 +342,7 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
         console.log(data)
 
         setTimeout(() => {
-            window.location.href = "events.html"
+            window.location.href = "events/events"
         }, 2000)
     } else {
         console.log(data)
