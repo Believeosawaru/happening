@@ -61,10 +61,13 @@ document.getElementById("access-password").addEventListener("submit",async (e) =
         if (response.ok) {
             document.getElementById("access-password").style.display = "none";
             document.getElementById("change-password").style.display = "block";
-            console.log(data)
+            document.getElementById("success-sign-up").style.display = "block";
+            document.getElementById("success-sign-up").innerHTML = "Request Successful";
         } else {
             ableBtn();
-            console.log(data)
+
+            document.getElementById("failed").style.display = "block";
+            document.getElementById("failed").innerHTML = data.message;
         }
     } catch (error) {
         console.log(error);
@@ -108,7 +111,7 @@ document.getElementById("change-password").addEventListener("submit", async (e) 
         } else {
             ableBtnTwo();
             document.getElementById("failed").style.display = "block";
-            document.getElementById("failed").innerHTML = data.data;
+            document.getElementById("failed").innerHTML = data.message;
         }
     } catch (error) {
         console.log(error);
