@@ -42,7 +42,8 @@ document.getElementById("access-password").addEventListener("submit",async (e) =
         const response = await fetch(`http://5.161.186.15/api/v1/user/access-password-change`, {
             method: "POST",
             headers: {
-                "Authorization": `Bearer ${token}`
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json"
             },
             body: JSON.stringify({
                 password
@@ -82,7 +83,8 @@ document.getElementById("change-password").addEventListener("submit", async (e) 
         const response = await fetch(`http://5.161.186.15/api/v1/user/change-password`, {
             method: "POST",
             headers: {
-                "Authorization": `Bearer ${token}`
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json"
             },
             body: JSON.stringify({
                 oldPassword,
