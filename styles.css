@@ -959,9 +959,10 @@ select:hover {
     padding: 5px 10px;
     margin-block: 20px;
     border-radius: 7px;
+    display: none;
 }
 #failed {
-    display: block;
+    display: none;
     background: rgb(240, 240, 240);
     color: black;
     padding: 5px 10px;
