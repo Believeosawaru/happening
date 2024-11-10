@@ -58,8 +58,9 @@ document.getElementById("access-password").addEventListener("submit",async (e) =
         }
 
         if (response.ok) {
-            document.getElementById("access-password").style.display = "none";
-            document.getElementById("change-password").style.display = "block";
+            // document.getElementById("access-password").style.display = "none";
+            // document.getElementById("change-password").style.display = "block";
+            console.log(data)
         } else {
             ableBtn();
             console.log(data)
