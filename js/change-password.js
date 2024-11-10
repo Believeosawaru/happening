@@ -103,6 +103,8 @@ document.getElementById("change-password").addEventListener("submit", async (e) 
         if (response.ok) {
             document.getElementById("success-sign-up").style.display = "block";
             document.getElementById("success-sign-up").innerHTML = "Password Changed Successfully";
+
+            window.location.href = "http://5.161.186.15/home"
         } else {
             ableBtnTwo();
             document.getElementById("failed").style.display = "block";
