@@ -28,9 +28,9 @@ nav {
     display: none;
     border-radius: 8px;
 }
-/* #change-password {
+#change-password {
     display: none;
-} */
+}
 nav span, footer h3 {
     font-family: "Edu AU VIC WA NT Hand", cursive;
     font-weight: bold;
@@ -308,9 +308,6 @@ aside button {
 .open-menu {
     opacity: 1;
     left: 0;
-}
-.success-sign-up, .success, .failed {
-    border-radius: 6px;
 }
 .pc-menu, .pc-btn {
     display: none;
@@ -670,7 +667,7 @@ form button:hover {
 form span {
     text-align: center;
 }
-.success-sign-up, .success {
+#success-sign-up, #success {
     background: rgb(240, 240, 240);
     color: black;
     padding: 5px 10px;
@@ -956,14 +953,14 @@ select:hover {
 .space-bttm {
     margin-bottom: 15px;
 }
-.success-sign-up {
+#success-sign-up {
     background: rgb(240, 240, 240);
     color: black;
     padding: 5px 10px;
     margin-block: 20px;
     border-radius: 7px;
 }
-.failed {
+#failed {
     display: block;
     background: rgb(240, 240, 240);
     color: black;

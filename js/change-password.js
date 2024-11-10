@@ -106,8 +106,7 @@ document.getElementById("change-password").addEventListener("submit", async (e) 
         } else {
             ableBtnTwo();
             document.getElementById("failed").style.display = "block";
-            document.getElementById("failed").innerHTML = data;
-            console.log(data)
+            document.getElementById("failed").innerHTML = data.data;
         }
     } catch (error) {
         console.log(error);
