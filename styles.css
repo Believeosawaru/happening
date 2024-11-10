@@ -28,9 +28,9 @@ nav {
     display: none;
     border-radius: 8px;
 }
-#change-password {
+/* #change-password {
     display: none;
-}
+} */
 nav span, footer h3 {
     font-family: "Edu AU VIC WA NT Hand", cursive;
     font-weight: bold;
