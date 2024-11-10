@@ -63,11 +63,19 @@ document.getElementById("access-password").addEventListener("submit",async (e) =
             document.getElementById("change-password").style.display = "block";
             document.getElementById("success-sign-up").style.display = "block";
             document.getElementById("success-sign-up").innerHTML = "Request Successful";
+
+            setTimeout(() => {
+                document.getElementById("success-sign-up").style.display = "none";
+            }, 2000)
         } else {
             ableBtn();
 
             document.getElementById("failed").style.display = "block";
             document.getElementById("failed").innerHTML = data.message;
+
+            setTimeout(() => {
+                document.getElementById("failed").style.display = "none";
+            }, 2000)
         }
     } catch (error) {
         console.log(error);
@@ -107,11 +115,19 @@ document.getElementById("change-password").addEventListener("submit", async (e) 
             document.getElementById("success-sign-up").style.display = "block";
             document.getElementById("success-sign-up").innerHTML = "Password Changed Successfully";
 
+            setTimeout(() => {
+                document.getElementById("success-sign-up").style.display = "none";
+            }, 2000)
+
             window.location.href = "http://5.161.186.15/home"
         } else {
             ableBtnTwo();
             document.getElementById("failed").style.display = "block";
             document.getElementById("failed").innerHTML = data.message;
+
+            setTimeout(() => {
+                document.getElementById("failed").style.display = "none";
+            }, 2000)
         }
     } catch (error) {
         console.log(error);
