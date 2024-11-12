@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </h1>
 
                      <div class="center">
-                        <img src="../../images/default-event-img.jpg" id="event-img">
+                        <img src="default-event-img.jpg" id="event-img">
                     </div>
     
                     <div id="desc">
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <p>
                     ${result.data.description.replace(/\n/g, "<br>")}
                     </p>   
-                    <button><a href="event-iv-send.html?eventId=${eventId}">Send Email Invitation</a></button>
+                    <button><a href="http://5.161.186.15/events/event-iv-send?eventId=${eventId}">Send Email Invitation</a></button>
                     <button onclick="copy('http://5.161.186.15/events/join-event?name=${result.data.slug}')"><i class="fa fa-copy"></i> Event Link</button>
                 </div>
 
