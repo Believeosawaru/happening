@@ -29,7 +29,7 @@ async function displayGroups() {
             } else {
                 data.message.forEach((group) => {
                     texts += `
-                    <a href="group-details.html?groupId=${group._id}">
+                    <a href="http://5.161.186.15/groups/group-details?groupId=${group._id}">
                     <div id="group-desc-div">
                         <h3>&#x1F465; ${group.name}</h3>
                         <p><i class="fa fa-map loc-i"></i> ${group.location || "None Specified"}</p>

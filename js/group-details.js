@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </div>
 
                     <div class="center">
-                            <img src="../../images/group-image.jpg" id="group-img">
+                            <img src="group-image.jpg" id="group-img">
                             </div>
 
                              <div class="group-info">
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             console.log(error);
         }
     } else {
-        window.location.href = "http://5.161.186.15/groups/groups"
+        window.location.href = "http://5.161.186.15/my-groups"
     }
 });
 

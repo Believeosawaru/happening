@@ -40,7 +40,7 @@ async function displayEvents() {
                 });
 
                 texts += `
-               <a href="event-details.html?eventId=${event._id}">
+               <a href="http://5.161.186.15/events/event-details?eventId=${event._id}">
                     <div id="event-desc-div">
                             <div class="flexo-text">
                                 <h3>&#x1F4C5; ${event.name}</h3>

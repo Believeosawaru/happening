@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </h1>
 
                      <div class="center">
-                        <img src="../../images/default-event-img.jpg" id="event-img">
+                        <img src="default-event-img.jpg" id="event-img">
                     </div>
     
                     <div id="desc">
@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             console.log(error);
         }
     } else {
-        window.location.href = "http://5.161.186.15/events"
+        window.location.href = "http://5.161.186.15/my-events"
     }
 });
 

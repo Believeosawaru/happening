@@ -42,7 +42,7 @@ async function displayPublicEvents() {
             });
 
                 texts += `
-                <a href="http://5.161.186.15/event-details?eventId=${event._id}">
+                <a href="http://5.161.186.15/events/event-details?eventId=${event._id}">
                     <div>
                         <h3>${event.name}</h3>
                         <p>${event.description}</p>
