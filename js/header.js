@@ -43,28 +43,23 @@ document.querySelector(".user-menu").innerHTML = `
             <button class="first-btn"><a href="http://5.161.186.15/log-out">Log Out</a></button>
 `;
 
-document.querySelector(".pc-menu").innerHTML = ` 
-                <a href="http://5.161.186.15/home"><span class="material-symbols-outlined">
-                    home
-                    </span> Home</a>
-                    
-                <a href="http://5.161.186.15/my-events"><span class="material-symbols-outlined">
-                    event_available
-                    </span>  Events</a>
-                    
-                <a href="http://5.161.186.15/my-groups"><span class="material-symbols-outlined">
-                    groups
-                    </span> Groups</a>
-                    
-                <a href="http://5.161.186.15/settings"><span class="material-symbols-outlined">
-                    settings
-                    </span> Settings</a>
-                    
-                <a href="http://5.161.186.15/my-profile"><span class="material-symbols-outlined">
-                    person
-                    </span> My Profile</a>
+document.querySelector("nav").innerHTML = `
+        <span><a href="http://5.161.186.15/home.html">Happening</a></span>
+
+            <div class="pc-menu home-pc-menu">
+                <a href="http://5.161.186.15/home">&#x1F3E0; Home</a>
+                <a href="http://5.161.186.15/my-events">&#x1F4C5; Events</a>
+                <a href="http://5.161.186.15/my-groups">&#x1F465; Groups</a>
+                <a href="http://5.161.186.15/settings">&#x2699; Settings</a>
+                <a href="http://5.161.186.15/tos">&#x1F4DC; Terms Of Service</a>
+                
                 <button class="first-btn"><a href="http://5.161.186.15/log-out">Log Out</a></button>
-`;
+            </div>
+
+            <i class="fa fa-bell" id="bell"><i class="alert"></i></i>
+            
+            <i class="fa fa-bars" id="menu-bar" onclick="openMenu();"></i>
+`
 
 const userToken = localStorage.getItem("authToken");
 
