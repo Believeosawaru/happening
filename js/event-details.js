@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </h1>
 
                      <div class="center">
-                        <img src="default-event-img.jpg" id="event-img">
+                        <img src="/images/default-event-img.jpg" id="event-img">
                     </div>
     
                     <div id="desc">
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </h1>
 
                      <div class="center">
-                        <img src="default-event-img.jpg" id="event-img">
+                        <img src="/images/default-event-img.jpg" id="event-img">
                     </div>
     
                     <div id="desc">
