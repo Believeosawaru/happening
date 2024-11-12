@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 </p>
 
                <div class="center">
-                            <img src="images/group-image.jpg" id="group-img">
+                            <img src="/images/group-image.jpg" id="group-img">
                             </div>
 
                              <div class="group-info">
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </div>
 
                     <div class="center">
-                            <img src="images/group-image.jpg" id="group-img">
+                            <img src="/images/group-image.jpg" id="group-img">
                             </div>
 
                              <div class="group-info">
