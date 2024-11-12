@@ -21,11 +21,11 @@ document.querySelector(".user-menu").innerHTML = `
                 home
                 </span> <span>Home</span></a></p>
                 
-            <p><a class="dis-flex" href="http://5.161.186.15/events/events"><span class="material-symbols-outlined">
+            <p><a class="dis-flex" href="http://5.161.186.15/my-events"><span class="material-symbols-outlined">
                 event_available
                 </span> <span>Events</span></a></p>
 
-            <p><a class="dis-flex" href="http://5.161.186.15/groups/groups"><span class="material-symbols-outlined">
+            <p><a class="dis-flex" href="http://5.161.186.15/my-groups"><span class="material-symbols-outlined">
                 groups
                 </span> <span>Groups</span></a></p>
 
@@ -48,11 +48,11 @@ document.querySelector(".pc-menu").innerHTML = `
                     home
                     </span> Home</a>
                     
-                <a href="http://5.161.186.15/events/events"><span class="material-symbols-outlined">
+                <a href="http://5.161.186.15/my-events"><span class="material-symbols-outlined">
                     event_available
                     </span>  Events</a>
                     
-                <a href="http://5.161.186.15/groups/groups"><span class="material-symbols-outlined">
+                <a href="http://5.161.186.15/my-groups"><span class="material-symbols-outlined">
                     groups
                     </span> Groups</a>
                     
