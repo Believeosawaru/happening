@@ -4,7 +4,7 @@ const token = localStorage.getItem("authToken");
 
 async function userProfile() {
     try {
-        const response = await fetch(`http://5.161.186.15/api/v1/user/user-profile/${userId}`, {
+        const response = await fetch(`https://happening.net/api/v1/user/user-profile/${userId}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -15,7 +15,7 @@ async function userProfile() {
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "http://5.161.186.15/log-in"
+                window.location.href = "https://happening.net/log-in"
             }, 350);
         }
 
@@ -118,7 +118,7 @@ async function followUser() {
         document.querySelector("#follow-btn").style.background = "#FFECB3";
         document.querySelector("#follow-btn").style.color = "black";
 
-        const response = await fetch(`http://5.161.186.15/api/v1/user/follow-user/${userId}`, {
+        const response = await fetch(`https://happening.net/api/v1/user/follow-user/${userId}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -129,7 +129,7 @@ async function followUser() {
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "http://5.161.186.15/log-in"
+                window.location.href = "https://happening.net/log-in"
             }, 350);
         }
 
@@ -154,7 +154,7 @@ async function unfollowUser() {
         document.querySelector("#yellow").style.background = "#FF4500";
         document.querySelector("#yellow").style.color = "white";
 
-        const response = await fetch(`http://5.161.186.15/api/v1/user/unfollow-user/${userId}`, {
+        const response = await fetch(`https://happening.net/api/v1/user/unfollow-user/${userId}`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`

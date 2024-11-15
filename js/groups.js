@@ -2,11 +2,11 @@ async function displayGroups() {
     const token = localStorage.getItem("authToken");
 
     if (!token) {
-        window.location.href = "http://5.161.186.15/log-in"
+        window.location.href = "https://happening.net/log-in"
     }
 
     try {
-        const response = await fetch("http://5.161.186.15/api/v1/user/groups", {
+        const response = await fetch("https://happening.net/api/v1/user/groups", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -14,7 +14,7 @@ async function displayGroups() {
         });
 
         if (response.status == 401) {
-            window.location.href = "http://5.161.186.15/log-in"
+            window.location.href = "https://happening.net/log-in"
         }
 
         const data = await response.json();
@@ -29,7 +29,7 @@ async function displayGroups() {
             } else {
                 data.message.forEach((group) => {
                     texts += `
-                    <a href="http://5.161.186.15/groups/group-details?groupId=${group._id}">
+                    <a href="https://happening.net/groups/group-details?groupId=${group._id}">
                     <div id="group-desc-div">
                         <h3>&#x1F465; ${group.name}</h3>
                         <p><i class="fa fa-map loc-i"></i> ${group.location || "None Specified"}</p>

@@ -2,10 +2,10 @@ const token = localStorage.getItem("authToken");
 const urlParams = new URLSearchParams(window.location.search);
 const eventId = urlParams.get("eventId");
 
-const delEventUrl = `http://5.161.186.15/api/v1/user/delete-event/${eventId}`
+const delEventUrl = `https://happening.net/api/v1/user/delete-event/${eventId}`
 
 if (!token) {
-    window.location.href = "http://5.161.186.15/log-in"
+    window.location.href = "https://happening.net/log-in"
 }
 
 const button = document.getElementById("delete-event-btn");
@@ -36,7 +36,7 @@ document.getElementById("delete-event").addEventListener("submit", async (e) => 
         document.getElementById("success-sign-up").classList.add("success-sign-up");
 
         setTimeout(() => {
-            window.location.href = `http://5.161.186.15/events`
+            window.location.href = `https://happening.net/events`
         }, 1000)
     } else {
         const keys = Object.keys(data);

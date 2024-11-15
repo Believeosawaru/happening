@@ -3,7 +3,7 @@ const eventId = urlParams.get("eventId");
 const token = localStorage.getItem("authToken");
 
 if (!token) {
-    window.location.href = "http://5.161.186.15log-in"
+    window.location.href = "https://happening.net/log-in"
 }
 
 const timeZones = [
@@ -229,7 +229,7 @@ function searchLocations(input) {
 }
 
 const retreiveInfo = async () => {
-    const info = await fetch(`http://5.161.186.15/api/v1/user/event-details/${eventId}`, {
+    const info = await fetch(`https://happening.net/api/v1/user/event-details/${eventId}`, {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${token}`,
@@ -276,11 +276,11 @@ const retreiveInfo = async () => {
     }
 } 
 
-const editEventUrl = `http://5.161.186.15/api/v1/user/edit-event-info/${eventId}`;
+const editEventUrl = `https://happening.net/api/v1/user/edit-event-info/${eventId}`;
 
 const delBtn = document.getElementById("event-del-link");
 
-delBtn.innerHTML = `<a href="http://5.161.186.15/events/delete-event?eventId=${eventId}" class="del-group-a">Delete Event</a>`;
+delBtn.innerHTML = `<a href="https://happening.net/events/delete-event?eventId=${eventId}" class="del-group-a">Delete Event</a>`;
 
 function disableBtn() {
     button.disabled = true;
@@ -331,7 +331,7 @@ if (eventId) {
             button.style.cursor = "wait";
     
             setTimeout(() => {
-                window.location.href = `http://5.161.186.15/events`
+                window.location.href = `https://happening.net/events`
             }, 1000)
         } else {
             const keys = Object.keys(data);

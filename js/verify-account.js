@@ -1,4 +1,4 @@
-const signInUrl = "http://5.161.186.15/api/v1/auth/verify-user";
+const signInUrl = "https://happening.net/api/v1/auth/verify-user";
 
 const button = document.getElementById("fg-pass-btn");
 
@@ -41,7 +41,7 @@ document.getElementById("verify-account").addEventListener("submit", async (e) =
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "http://5.161.186.15/home"
+            window.location.href = "https://happening.net/home"
         }, 2000)
     } else {
         const keys = Object.keys(data);

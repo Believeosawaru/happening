@@ -2,11 +2,11 @@ async function displayEvents() {
     const token = localStorage.getItem("authToken");
 
     if (!token) {
-        window.location.href = "http://5.161.186.15/log-in"
+        window.location.href = "https://happening.net/log-in"
     }
 
     try {
-        const response = await fetch("http://5.161.186.15/api/v1/user/events", {
+        const response = await fetch("https://happening.net/api/v1/user/events", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -40,7 +40,7 @@ async function displayEvents() {
                 });
 
                 texts += `
-               <a href="http://5.161.186.15/events/event-details?eventId=${event._id}">
+               <a href="https://happening.net/events/event-details?eventId=${event._id}">
                     <div id="event-desc-div">
                             <div class="flexo-text">
                                 <h3>&#x1F4C5; ${event.name}</h3>

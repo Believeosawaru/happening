@@ -14,7 +14,7 @@ document.getElementById("join-group").addEventListener("click", async () => {
     disableBtn();
 
     try {
-        const response = await fetch(`http://5.161.186.15/api/v1/user/join-group/${groupId}`, {
+        const response = await fetch(`https://happening.net/api/v1/user/join-group/${groupId}`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -30,7 +30,7 @@ document.getElementById("join-group").addEventListener("click", async () => {
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "http://5.161.186.15/groups/groups"
+            window.location.href = "https://happening.net/groups/groups"
         }, 2000)
     } else {
         const keys = Object.keys(data);

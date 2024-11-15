@@ -3,7 +3,7 @@ const groupId = urlParams.get("groupId");
 const token = localStorage.getItem("authToken");
 
 if (!token) {
-    window.location.href = "http://5.161.186.15/log-in";
+    window.location.href = "https://happening.net/log-in";
 }
 
 const emailInput = document.getElementById("email-input");
@@ -44,7 +44,7 @@ emailInput.addEventListener("keypress", (e) => {
 
 async function sendInvite() {
     try {
-        const response = await fetch(`http://5.161.186.15/api/v1/user/group/${groupId}/send-invite`, {
+        const response = await fetch(`https://happening.net/api/v1/user/group/${groupId}/send-invite`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

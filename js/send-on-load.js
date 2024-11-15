@@ -2,7 +2,7 @@ async function getEmail() {
     const token = localStorage.getItem("authToken");
 
     try {
-        const response = await fetch("http://5.161.186.15/api/v1/auth/send-on-load", {
+        const response = await fetch("https://happening.net/api/v1/auth/send-on-load", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`

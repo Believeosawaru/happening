@@ -3,12 +3,12 @@ const groupId = urlParams.get("groupId");
 const token = localStorage.getItem("authToken");
 
 if (!token) {
-    window.location.href = "http://5.161.186.15/log-in"
+    window.location.href = "https://happening.net/log-in"
 }
 
 
 const retreiveInfo = async () => {
-    const info = await fetch(`http://5.161.186.15/api/v1/user/group-details/${groupId}`, {
+    const info = await fetch(`https://happening.net/api/v1/user/group-details/${groupId}`, {
         method: "GET",
         headers: {
             "Authorization": `Bearer ${token}`,
@@ -33,7 +33,7 @@ const retreiveInfo = async () => {
     }
 } 
 
-const editGroupUrl = `http://5.161.186.15/api/v1/user/edit-group-info/${groupId}`;
+const editGroupUrl = `https://happening.net/api/v1/user/edit-group-info/${groupId}`;
 
 const delBtn = document.getElementById("group-del-link");
 

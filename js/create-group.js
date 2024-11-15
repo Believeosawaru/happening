@@ -1,4 +1,4 @@
-const signUpUrl = "http://5.161.186.15/api/v1/user/create-group";
+const signUpUrl = "https://happening.net/api/v1/user/create-group";
 
 const button = document.getElementById("create-event-btn");
 
@@ -45,7 +45,7 @@ document.getElementById("create-group").addEventListener("submit", async (e) => 
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = `http://5.161.186.15/groups/option?groupId=${data.data}`
+            window.location.href = `https://happening.net/groups/option?groupId=${data.data}`
         }, 2000)
     } else {
         const keys = Object.keys(data);

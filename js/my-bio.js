@@ -2,7 +2,7 @@ const token = localStorage.getItem("authToken");
 
 async function myBio() {
     try {
-        const response = await fetch("http://5.161.186.15/api/v1/user/my-profile", {
+        const response = await fetch("https://happening.net/api/v1/user/my-profile", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -13,7 +13,7 @@ async function myBio() {
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "http://5.161.186.15/log-in"
+                window.location.href = "https://happening.net/log-in"
             }, 350);
         }
 
@@ -37,7 +37,7 @@ function disableBtn() {
     button.innerHTML = "Submitting...."
 }
 
-const bioUrl = "http://5.161.186.15/api/v1/user/my-bio";
+const bioUrl = "https://happening.net/api/v1/user/my-bio";
 
 document.getElementById("update-bio").addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -67,7 +67,7 @@ document.getElementById("update-bio").addEventListener("submit", async (e) => {
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "http://5.161.186.15/my-profile"
+            window.location.href = "https://happening.net/my-profile"
         }, 2000)
     } else {
         const keys = Object.keys(data);

@@ -2,11 +2,11 @@ async function displayPublicEvents() {
     const token = localStorage.getItem("authToken");
 
     if (!token) {
-        window.location.href = "http://5.161.186.15/log-in"
+        window.location.href = "https://happening.net/log-in"
     }
 
     try {
-        const response = await fetch("http://5.161.186.15/api/v1/user/all-events", {
+        const response = await fetch("https://happening.net/api/v1/user/all-events", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -17,7 +17,7 @@ async function displayPublicEvents() {
 
         if (data.message === "jwt malformed" || data.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "http://5.161.186.15/log-in"
+                window.location.href = "https://happening.net/log-in"
             }, 350);
         }
 
@@ -42,7 +42,7 @@ async function displayPublicEvents() {
             });
 
                 texts += `
-                <a href="http://5.161.186.15/events/event-details?eventId=${event._id}">
+                <a href="https://happening.net/events/event-details?eventId=${event._id}">
                     <div>
                         <h3>${event.name}</h3>
                         <p>${event.description}</p>
@@ -123,11 +123,11 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
     const token = localStorage.getItem("authToken");
 
     if (!token) {
-        window.location.href = "http://5.161.186.15/log-in"
+        window.location.href = "https://happening.net/log-in"
     }
     
     try {
-        const response = await fetch(`http://5.161.186.15/api/v1/user/filter-events?${params.toString()}`, {
+        const response = await fetch(`https://happening.net/api/v1/user/filter-events?${params.toString()}`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`,
@@ -153,7 +153,7 @@ document.getElementById("filter-events").addEventListener("submit", async (e) =>
                 });
     
                 accum += `
-                    <a href="http://5.161.186.15/event-details?eventId=${event._id}">
+                    <a href="https://happening.net/event-details?eventId=${event._id}">
                         <div>
                             <h3>${event.name}</h3>
                             <p>${event.description}</p>

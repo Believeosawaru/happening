@@ -1,4 +1,4 @@
-const signInUrl = "http://5.161.186.15/api/v1/auth/forgot-password-code";
+const signInUrl = "https://happening.net/api/v1/auth/forgot-password-code";
 
 const button = document.getElementById("fg-pass-btn");
 
@@ -40,7 +40,7 @@ document.getElementById("forgot-password").addEventListener("submit", async (e) 
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "http://5.161.186.15/verify-forgot-password"
+            window.location.href = "https://happening.net/verify-forgot-password"
         }, 2000)
     } else {
         const keys = Object.keys(data);

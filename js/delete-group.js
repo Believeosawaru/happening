@@ -2,10 +2,10 @@ const token = localStorage.getItem("authToken");
 const urlParams = new URLSearchParams(window.location.search);
 const groupId = urlParams.get("groupId");
 
-const delGroupUrl = `http://5.161.186.15/api/v1/user/delete-group/${groupId}`
+const delGroupUrl = `https://happening.net/api/v1/user/delete-group/${groupId}`
 
 if (!token) {
-    window.location.href = "http://5.161.186.15/log-in"
+    window.location.href = "https://happening.net/log-in"
 }
 
 const button = document.getElementById("delete-group-btn");
@@ -36,7 +36,7 @@ document.getElementById("delete-group").addEventListener("submit", async (e) => 
         document.getElementById("success-sign-up").classList.add("success-sign-up");
 
         setTimeout(() => {
-            window.location.href = `http://5.161.186.15/groups/groups.html`
+            window.location.href = `https://happening.net/groups/groups.html`
         }, 1000)
     } else {
         const keys = Object.keys(data);

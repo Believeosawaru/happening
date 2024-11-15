@@ -1,4 +1,4 @@
-const signInUrl = "http://5.161.186.15/api/v1/auth/recover-password";
+const signInUrl = "https://happening.net/api/v1/auth/recover-password";
 
 const button = document.getElementById("fg-pass-btn");
 
@@ -38,7 +38,7 @@ document.getElementById("recover-password").addEventListener("submit", async (e)
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "http://5.161.186.15/log-in"
+            window.location.href = "https://happening.net/log-in"
         }, 2000)
     } else {
         const keys = Object.keys(data);

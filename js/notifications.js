@@ -2,7 +2,7 @@ const token = localStorage.getItem("authToken");
 
 async function loadNotifications() {
     try {
-        const response = await fetch(`http://5.161.186.15/api/v1/user/my-notifications`, {
+        const response = await fetch(`https://happening.net/api/v1/user/my-notifications`, {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -13,7 +13,7 @@ async function loadNotifications() {
 
         if (data.message === "jwt malformed" || data.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "http://5.161.186.15/log-in"
+                window.location.href = "https://happening.net/log-in"
             }, 3500);
         }
 

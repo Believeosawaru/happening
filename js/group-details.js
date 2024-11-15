@@ -3,17 +3,17 @@ const urlParams = new URLSearchParams(window.location.search);
 const groupId = urlParams.get("groupId");
 
 if (!token) {
-    window.location.href = "http://5.161.186.15/log-in";
+    window.location.href = "https://happening.net/log-in";
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
     if (!token) {
-        window.location.href = "http://5.161.186.15/log-in"
+        window.location.href = "https://happening.net/log-in"
     }
 
     if (groupId) {
         try {
-            const response = await fetch(`http://5.161.186.15/api/v1/user/group/${groupId}`, {
+            const response = await fetch(`https://happening.net/api/v1/user/group/${groupId}`, {
                 method: "GET",
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         <span id="h2-p">Admin</span></span>
                 </p>
 
-                <button><a href="http://5.161.186.15/groups/leave-group?groupId=${result.data._id}">Leave Group</a></button>
+                <button><a href="https://happening.net/groups/leave-group?groupId=${result.data._id}">Leave Group</a></button>
                 `;
                 } else {
                     groupDetailsCon.innerHTML = `
@@ -88,10 +88,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 ${result.data.description.replace(/\n/g, "<br>")}
                                 </p>
 
-                                <button><a href="http://5.161.186.15/groups/group-iv-send?groupId=${groupId}">Send Email Invitation</a></button>
+                                <button><a href="https://happening.net/groups/group-iv-send?groupId=${groupId}">Send Email Invitation</a></button>
 
                                 <span class="material-symbols-outlined" id="edit-group-pen">
-                                <a href="http://5.161.186.15/groups/group-details-edit?groupId=${result.data._id}">
+                                <a href="https://happening.net/groups/group-details-edit?groupId=${result.data._id}">
                                         edit
                                 </a>
                                 </span>
@@ -106,9 +106,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                     </p>
 
                     <div class="dis-flex" id="two-btns">
-                        <button onclick="copy('http://5.161.186.15/groups/join-group?name=${result.data.slug}')"><i class="fa fa-copy"></i> Group Link</button>
+                        <button onclick="copy('https://happening.net/groups/join-group?name=${result.data.slug}')"><i class="fa fa-copy"></i> Group Link</button>
 
-                        <button><a href="http://5.161.186.15/groups/add-members?groupId=${result.data._id}">+ Members</a></button>
+                        <button><a href="https://happening.net/groups/add-members?groupId=${result.data._id}">+ Members</a></button>
                     </div>
                                 `;
                 }
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
                 result.relatedGroups.forEach(group => {
                     const html = `
-                       <a href="http://5.161.186.15/groups/group-details?groupId=${group._id}">
+                       <a href="https://happening.net/groups/group-details?groupId=${group._id}">
                         <div>
                             <h4>${group.name}</h4>
                             <p>${result.data.description}</p>
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             console.log(error);
         }
     } else {
-        window.location.href = "http://5.161.186.15/my-groups"
+        window.location.href = "https://happening.net/my-groups"
     }
 });
 

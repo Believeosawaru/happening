@@ -39,7 +39,7 @@ document.getElementById("access-password").addEventListener("submit",async (e) =
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch(`http://5.161.186.15/api/v1/user/access-password-change`, {
+        const response = await fetch(`https://happening.net/api/v1/user/access-password-change`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`,
@@ -54,7 +54,7 @@ document.getElementById("access-password").addEventListener("submit",async (e) =
 
         if (data.message === "jwt malformed" || data.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "http://5.161.186.15/log-in"
+                window.location.href = "https://happening.net/log-in"
             }, 350);
         }
 
@@ -91,7 +91,7 @@ document.getElementById("change-password").addEventListener("submit", async (e) 
     try {
         disableBtnTwo();
 
-        const response = await fetch(`http://5.161.186.15/api/v1/user/change-password`, {
+        const response = await fetch(`https://happening.net/api/v1/user/change-password`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`,
@@ -107,7 +107,7 @@ document.getElementById("change-password").addEventListener("submit", async (e) 
 
         if (data.message === "jwt malformed" || data.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "http://5.161.186.15/log-in"
+                window.location.href = "https://happening.net/log-in"
             }, 350);
         }
 
@@ -119,7 +119,7 @@ document.getElementById("change-password").addEventListener("submit", async (e) 
                 document.getElementById("success-sign-up").style.display = "none";
             }, 2000)
 
-            window.location.href = "http://5.161.186.15/home"
+            window.location.href = "https://happening.net/home"
         } else {
             ableBtnTwo();
             document.getElementById("failed").style.display = "block";

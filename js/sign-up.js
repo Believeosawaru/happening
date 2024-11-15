@@ -1,4 +1,4 @@
-const signUpUrl = "http://5.161.186.15/api/v1/auth/sign-up";
+const signUpUrl = "https://happening.net/api/v1/auth/sign-up";
 
 const button = document.getElementById("sign-up-btn");
 
@@ -42,7 +42,7 @@ document.getElementById("sign-up").addEventListener("submit", async (e) => {
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "http://5.161.186.15/verify-account"
+            window.location.href = "https://happening.net/verify-account"
         }, 2000)
     } else {
         const keys = Object.keys(data);

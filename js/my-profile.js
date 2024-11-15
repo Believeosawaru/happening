@@ -19,7 +19,7 @@ async function userProfile() {
     const token = localStorage.getItem("authToken");
 
     try {
-        const response = await fetch("http://5.161.186.15/api/v1/user/my-profile", {
+        const response = await fetch("https://happening.net/api/v1/user/my-profile", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -30,7 +30,7 @@ async function userProfile() {
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "http://5.161.186.15/log-in"
+                window.location.href = "https://happening.net/log-in"
             }, 350);
         }
 
@@ -42,7 +42,7 @@ async function userProfile() {
             if (message.data.profilePicture) {
                 const profileImage = document.getElementById("user-image");
 
-                profileImage.src = `http://5.161.186.15:5000/uploads/${message.data.profilePicture}`;
+                profileImage.src = `https://happening.net:5000/uploads/${message.data.profilePicture}`;
             }
 
             document.getElementById("user-name").innerHTML = `${message.data.firstName} ${message.data.lastName}`;
@@ -155,7 +155,7 @@ formInput.addEventListener("change", async (e) => {
     formData.append("profilePicture", file)
 
     try {
-        const response = await fetch("http://5.161.186.15/api/v1/user/upload", {
+        const response = await fetch("https://happening.net/api/v1/user/upload", {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -169,7 +169,7 @@ formInput.addEventListener("change", async (e) => {
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "http://5.161.186.15/log-in"
+                window.location.href = "https://happening.net/log-in"
             }, 350);
         }
 
@@ -181,7 +181,7 @@ formInput.addEventListener("change", async (e) => {
 
             const profileImage = document.getElementById("user-image");
 
-            profileImage.src = `http://5.161.186.15:5000/uploads/${imageUrl}`;
+            profileImage.src = `https://happening.net:5000/uploads/${imageUrl}`;
         }
     } catch (error) {
         console.log(error);

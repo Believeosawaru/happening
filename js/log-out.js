@@ -1,4 +1,4 @@
-const logOutUrl = "http://5.161.186.15/api/v1/auth/log-out";
+const logOutUrl = "https://happening.net/api/v1/auth/log-out";
 
 document.getElementById("log-out").addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -14,7 +14,7 @@ document.getElementById("log-out").addEventListener("submit", async (e) => {
         });
 
     if (!token || response.status === 401) {
-        window.location.href = "http://5.161.186.15/log-in"
+        window.location.href = "https://happening.net/log-in"
     }
 
     const data = await response.json();
@@ -26,7 +26,7 @@ document.getElementById("log-out").addEventListener("submit", async (e) => {
         document.getElementById("success-sign-up").classList.add("success-sign-up");
 
         setTimeout(() => {
-            window.location.href = "http://5.161.186.15/sign-up"
+            window.location.href = "https://happening.net/sign-up"
         }, 1000)
     } else {
         const keys = Object.keys(data);

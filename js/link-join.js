@@ -4,11 +4,11 @@ async function joinGroup() {
     const groupToken = urlParams.get("groupToken");
 
     if (!token) {
-        window.location.href = "http://5.161.186.15/log-in"
+        window.location.href = "https://happening.net/log-in"
     }
 
     try {
-        const response = await fetch(`http://5.161.186.15/api/v1/user/join-group/${groupToken}invite-link`, {
+        const response = await fetch(`https://happening.net/api/v1/user/join-group/${groupToken}invite-link`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -21,7 +21,7 @@ async function joinGroup() {
             document.getElementById("success-sign-up").classList.add("success-sign-up")
             document.getElementById("success-sign-up").innerHTML = data.message;
 
-            window.location.href = "http://5.161.186.15/groups/groups"
+            window.location.href = "https://happening.net/groups/groups"
         } else {
             const keys = Object.keys(data);
     

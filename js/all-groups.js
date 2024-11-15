@@ -2,11 +2,11 @@ async function displayAllGroups() {
     const token = localStorage.getItem("authToken");
 
     if (!token) {
-        window.location.href = "http://5.161.186.15/log-in"
+        window.location.href = "https://happening.net/log-in"
     }
 
     try {
-        const response = await fetch("http://5.161.186.15/api/v1/user/all-groups", {
+        const response = await fetch("https://happening.net/api/v1/user/all-groups", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -14,7 +14,7 @@ async function displayAllGroups() {
         });
 
         if (response.status == 401) {
-            window.location.href = "http://5.161.186.15/log-in"
+            window.location.href = "https://happening.net/log-in"
         }
 
         const data = await response.json();
@@ -35,7 +35,7 @@ async function displayAllGroups() {
                     ">&#x1F465; ${group.name}</h3>
                     <p><span>Description:</span> ${group.description || "None Specified"}</p>
                     <p><i class="fa fa-map loc-i"></i> ${group.location || "None Specified"}</p>
-                    <button class="join-group-btn"><a href="http://5.161.186.15/groups/join-group?groupId=${group._id}">Join Group</a></button>
+                    <button class="join-group-btn"><a href="https://happening.net/groups/join-group?groupId=${group._id}">Join Group</a></button>
                 </div>
                 `
             });

@@ -1,4 +1,4 @@
-const signUpUrl = "http://5.161.186.15/api/v1/user/create-event";
+const signUpUrl = "https://happening.net/api/v1/user/create-event";
 
 const button = document.getElementById("create-event-btn");
 
@@ -342,7 +342,7 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
         console.log(data)
 
         setTimeout(() => {
-            window.location.href = "http://5.161.186.15/events/events"
+            window.location.href = "https://happening.net/events/events"
         }, 2000)
     } else {
         console.log(data)
