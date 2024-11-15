@@ -16,7 +16,7 @@ async function fetchMessage() {
     const token = localStorage.getItem("authToken");
 
     try {
-        const response = await fetch("http://5.161.186.15/api/v1/user/home", {
+        const response = await fetch("https://5.161.186.15/api/v1/user/home", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -34,7 +34,7 @@ async function fetchMessage() {
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "http://5.161.186.15/log-in"
+                window.location.href = "https://happening.net/log-in"
             }, 350);
         }
 
@@ -60,7 +60,7 @@ async function fetchEvent() {
     const token = localStorage.getItem("authToken");
 
     try {
-        const response = await fetch("http://5.161.186.15/api/v1/user/home-events", {
+        const response = await fetch("https://happening.net/api/v1/user/home-events", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -82,14 +82,14 @@ async function fetchEvent() {
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "http://5.161.186.15/log-in"
+                window.location.href = "https://happening.net/log-in"
             }, 350);
         }
 
         if (response.ok) {
             document.querySelector(".latest-events").innerHTML = `
              &#x1F4C5;
-            <a class="del-group-a" href="http://5.161.186.15/events/event-details?eventId=${message.message._id}">${message.message.name}</a>
+            <a class="del-group-a" href="https://happening.net/events/event-details?eventId=${message.message._id}">${message.message.name}</a>
             `
         } else {
             console.log("Bad Network")
@@ -103,7 +103,7 @@ async function fetchGroup() {
     const token = localStorage.getItem("authToken");
 
     try {
-        const response = await fetch("http://5.161.186.15/api/v1/user/home-groups", {
+        const response = await fetch("https://happening.net/api/v1/user/home-groups", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -121,7 +121,7 @@ async function fetchGroup() {
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {
             setTimeout(() => {
-                window.location.href = "http://5.161.186.15/log-in"
+                window.location.href = "https://happening.net/log-in"
             }, 350);
         }
 
@@ -132,7 +132,7 @@ async function fetchGroup() {
             
             document.querySelector(".latest-groups").innerHTML = `
             &#x1F465; 
-            <a class="del-group-a" href="http://5.161.186.15/groups/group-details?groupId=${message.message._id}">${message.message.name}</a>
+            <a class="del-group-a" href="https://happening.net/groups/group-details?groupId=${message.message._id}">${message.message.name}</a>
             `
         } else {
             console.log(message)
