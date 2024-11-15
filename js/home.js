@@ -16,7 +16,7 @@ async function fetchMessage() {
     const token = localStorage.getItem("authToken");
 
     try {
-        const response = await fetch("https://5.161.186.15/api/v1/user/home", {
+        const response = await fetch("https://happening.net/api/v1/user/home", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${token}`
