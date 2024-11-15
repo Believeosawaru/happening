@@ -1,4 +1,4 @@
-const signInUrl = "http://5.161.186.15/api/v1/auth/sign-in";
+const signInUrl = "https://happening.net/api/v1/auth/sign-in";
 
 const button = document.getElementById("sign-in-btn");
 
@@ -33,7 +33,7 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
     }
 
     if (data.message === "User Is Not Verified") {
-         window.location.href = "http://5.161.186.15/verify-account"
+         window.location.href = "https://happening.net/verify-account"
     }
 
     if (response.ok) {
@@ -43,7 +43,7 @@ document.getElementById("sign-in").addEventListener("submit", async (e) => {
         button.style.cursor = "wait";
 
         setTimeout(() => {
-            window.location.href = "http://5.161.186.15/home"
+            window.location.href = "https://happening.net/home"
         }, 2000)
     } else {
         const keys = Object.keys(data);
