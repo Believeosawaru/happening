@@ -1547,4 +1547,7 @@ form textarea {
     #access-password, #change-password {
         margin-inline: 150px;
     }
+    #div-404 img {
+        margin-top: 30px;
+    }
 }
