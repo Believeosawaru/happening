@@ -1318,6 +1318,18 @@ form textarea {
     white-space: pre-wrap;
     font-size: 16px;
 }
+#div-404 {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-family: "Oswald", sans-serif;
+    color: #FF4500;
+}
+#div-404 img {
+    width: 50%;
+    margin-top: 35%;
+    margin-bottom: 10px;
+}
 
 @media screen and (min-width: 900px) {
     .menu {
