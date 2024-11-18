@@ -1335,7 +1335,8 @@ form textarea {
     color: #FF4500;
     border: 3px solid #FF4500;
     padding: 4px 20px;
-    border-top: 10px;
+    margin-top: 10px;
+    font-family: "Oswald", sans-serif;
 }
 
 @media screen and (min-width: 900px) {
