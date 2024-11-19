@@ -933,9 +933,9 @@ select:hover {
     border-radius: 8px;
     margin-inline: 50px;
     margin-block: 15px;
-    position: absolute;
+    position: fixed;
     bottom: 50px;
-    left: 40%;
+    left: 20%;
 }
 #two-btns button:last-child {
     width: 60%;
