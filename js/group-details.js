@@ -157,46 +157,46 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function copy(text) {
-    // navigator.clipboard.writeText(text)
-    //     .then(() => {
-    //         document.querySelector(".copy-s").style.display = "block";
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            document.querySelector(".copy-s").style.display = "block";
 
-    //         setTimeout(() => {
-    //             document.querySelector(".copy-s").style.display = "none";
-    //         }, 1500)
-    //     })
-    //     .catch(err => {
-    //         console.error('Failed to copy text: ', err);
-    //     });
+            setTimeout(() => {
+                document.querySelector(".copy-s").style.display = "none";
+            }, 1500)
+        })
+        .catch(err => {
+            console.error('Failed to copy text: ', err);
+        });
 
-    const textarea = document.createElement("textarea");
-    // textarea.style.display = "none";
-    textarea.value = text;
-    textarea.style.position = "fixed";
-    document.body.appendChild(textarea);
-    textarea.focus();
-    textarea.select();
-    textarea.setSelectionRange(0, textarea.value.length)
+    // const textarea = document.createElement("textarea");
+    // // textarea.style.display = "none";
+    // textarea.value = text;
+    // textarea.style.position = "fixed";
+    // document.body.appendChild(textarea);
+    // textarea.focus();
+    // textarea.select();
+    // textarea.setSelectionRange(0, textarea.value.length)
 
-    try {
-        const success = document.execCommand("copy");
+    // try {
+    //     const success = document.execCommand("copy");
 
-        if (!success) {
-            console.log("Copy Failed")
-        } else {
-            return;
-        }
-    } catch (error) {
-        console.log(error)
-    }
+    //     if (!success) {
+    //         console.log("Copy Failed")
+    //     } else {
+    //         return;
+    //     }
+    // } catch (error) {
+    //     console.log(error)
+    // }
 
-    document.querySelector(".copy-s").style.display = "block";
+    // document.querySelector(".copy-s").style.display = "block";
 
-    setTimeout(() => {
-        document.querySelector(".copy-s").style.display = "none";
-    }, 1500)
+    // setTimeout(() => {
+    //     document.querySelector(".copy-s").style.display = "none";
+    // }, 1500)
 
-    document.body.removeChild(textarea);
+    // document.body.removeChild(textarea);
 }
 
 // <a href="${result.groupLink}">Copy Group Link</a>
