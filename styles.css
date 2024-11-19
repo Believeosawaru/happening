@@ -925,7 +925,7 @@ select:hover {
     cursor: pointer;
 }
 .copy-s {
-    display: block;
+    display: none;
     text-align: center;
     background: #FFECB3;
     color: black;
@@ -935,7 +935,7 @@ select:hover {
     margin-block: 15px;
     position: fixed;
     bottom: 50px;
-    left: 20%;
+    left: 25%;
 }
 #two-btns button:last-child {
     width: 60%;
