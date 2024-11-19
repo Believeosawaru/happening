@@ -232,11 +232,9 @@ function copy(text) {
     navigator.clipboard.writeText(text)
         .then(() => {
             document.querySelector(".copy-s").style.display = "block";
-            console.log(1)
 
             setTimeout(() => {
                 document.querySelector(".copy-s").style.display = "none";
-                console.log(2)
             }, 1500)
         })
         .catch(err => {
