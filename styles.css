@@ -925,7 +925,7 @@ select:hover {
     cursor: pointer;
 }
 .copy-s {
-    display: none;
+    display: block;
     text-align: center;
     background: #FFECB3;
     color: black;
