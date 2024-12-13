@@ -1365,7 +1365,7 @@ form textarea {
 #user-details span {
     font-weight: light;
     font-size: .8rem;
-    margin-bottom: 20px;
+    padding-bottom: -20px;
 }
 
 @media screen and (min-width: 900px) {
