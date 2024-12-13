@@ -9,9 +9,55 @@ function disableBtn() {
     button.innerHTML = "Submitting...."
 }
 
-const postUrl = "https://happening.net/api/v1/blog/edit-post";
+const postUrl = `https://happening.net/api/v1/blog/edit-post/${"6720e6e86a59e7a2def02006"}`;
+const getPostUrl = `https://happening.net/api/v1/blog/load-current-post/${"6720e6e86a59e7a2def02006"}`;
 
-document.getElementById("create-post").addEventListener("submit", async (e) => {
+const retrievePost = async () => {
+    try {
+        const response = await fetch(getPostUrl, {
+            method: "GET",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json"
+            }
+        });
+
+    const data = await response.json();
+
+    if (response.ok) {
+        document.getElementById("post").value = data;
+        console.log(data)
+    } else {
+        const keys = Object.keys(data);
+
+        keys.forEach(key => {
+            const value = data[key]; 
+            
+            document.getElementById("failed").style.display = "block"
+            document.getElementById("failed").innerHTML = value;
+            document.getElementById("failed").classList.add("failed");
+
+            setTimeout(() => {
+                document.getElementById("failed").style.display = "none"
+            }, 3500)
+
+            button.disabled = false;
+          });
+
+        button.style.backgroundColor = "#FF4500";
+        button.style.color = "white";
+        button.innerHTML = "Submit";
+    }
+
+    } catch (error) {
+        document.getElementById("failed").style.display = "block"
+        document.getElementById("failed").innerHTML = "There Was An Error, Please Reload The Page";
+        document.getElementById("failed").classList.add("failed");
+        console.log(error);
+    }
+}
+
+document.getElementById("edit-post").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const post = document.getElementById("post").value;
@@ -70,3 +116,5 @@ document.getElementById("create-post").addEventListener("submit", async (e) => {
         console.log(error);
     }
 });
+
+window.onload = retrievePost;
