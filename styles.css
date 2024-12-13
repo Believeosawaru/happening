@@ -1357,6 +1357,7 @@ form textarea {
     /* border-radius: 50%; */
     clip-path: circle(50%);
     width: 200px;
+    height: 200px;
 }
 
 @media screen and (min-width: 900px) {
