@@ -1354,7 +1354,8 @@ form textarea {
     padding: 10px 0px;
 }
 #my-feed div h3 img {
-    border-radius: 50%;
+    /* border-radius: 50%; */
+    clip-path: circle(50% at 50% 50%);
     width: 50%;
 }
 
