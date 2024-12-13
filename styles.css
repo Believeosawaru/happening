@@ -1341,6 +1341,12 @@ form textarea {
     margin-top: 10px;
     font-family: "Oswald", sans-serif;
 }
+#post {
+    height: 100px;
+}
+#bio-btn {
+    margin-top: -40px;
+}
 
 @media screen and (min-width: 900px) {
     .menu {
