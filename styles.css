@@ -1353,7 +1353,7 @@ form textarea {
     background: white;
     padding: 10px 0px;
 }
-#my-feed div h3 img {
+#my-feed div img {
     /* border-radius: 50%; */
     clip-path: circle(50%);
     width: 200px;
