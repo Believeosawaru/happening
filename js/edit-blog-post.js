@@ -26,7 +26,6 @@ const retrievePost = async () => {
 
     if (response.ok) {
         document.getElementById("post").value = data.data.content;
-        console.log(data)
     } else {
         const keys = Object.keys(data);
 
