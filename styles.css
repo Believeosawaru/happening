@@ -1354,7 +1354,7 @@ form textarea {
     padding: 10px 0px;
 }
 #user-details img {
-    /* border-radius: 50%; */
+    margin-right: 10px;
     clip-path: circle(50%);
     width: 50px;
     height: 50px;
