@@ -12,7 +12,6 @@ const button = document.getElementById("delete-event-btn");
 
 function disableBtn() {
     button.disabled = true;
-    button.style.color = "#000";
     button.innerHTML = "Deleting Post...."
 }
 
@@ -52,7 +51,6 @@ document.getElementById("delete-event").addEventListener("submit", async (e) => 
                 document.getElementById("failed").style.display = "none";
 
                 button.disabled = false;
-                button.style.color = "#FFECB3";
                 button.innerHTML = "Delete Post"
             }, 3500);
           });
