@@ -1360,8 +1360,7 @@ form textarea {
     height: 50px;
 }
 #user-details {
-    display: grid;
-    grid-template-columns: auto auto;
+    display: flex;
 }
 
 @media screen and (min-width: 900px) {
