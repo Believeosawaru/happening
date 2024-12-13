@@ -1347,6 +1347,9 @@ form textarea {
 #bio-btn {
     margin-top: -40px;
 }
+#my-feed {
+    margin-top: -50px;
+}
 #my-feed div {
     margin-block: 10px;
     background: white;
