@@ -1365,7 +1365,9 @@ form textarea {
 #user-details span {
     font-weight: light;
     font-size: .8rem;
-    padding-bottom: -20px;
+}
+#my-feed p {
+    padding-inline: 10px;
 }
 
 @media screen and (min-width: 900px) {
