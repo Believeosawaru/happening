@@ -1351,7 +1351,7 @@ form textarea {
     margin-block: 10px;
     margin-inline: 10px;
     border: rgb(220, 220, 220);
-    border: 1px solid #333;
+    border: 1px solid red;
     padding: 5px 10px;
 }
 
