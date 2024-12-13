@@ -68,14 +68,6 @@ document.querySelector("nav").innerHTML = `
 const userToken = localStorage.getItem("authToken");
 
 async function loadNotifications() {
-    // let link = document.createElement('link');
-    // link.rel = 'stylesheet';
-    // link.type = 'text/css';
-    // link.href = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=captive_portal'; // Replace with your desired fonts
-
-    // Append the link to the head of the document
-    document.head.appendChild(link);
-
     try {
         const response = await fetch(`https://happening.net/api/v1/user/my-notifications`, {
             method: "GET",
