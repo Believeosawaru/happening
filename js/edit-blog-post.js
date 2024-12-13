@@ -9,8 +9,8 @@ function disableBtn() {
     button.innerHTML = "Submitting...."
 }
 
-const postUrl = `https://happening.net/api/v1/blog/edit-post/${"6720e6e86a59e7a2def02006"}`;
-const getPostUrl = `https://happening.net/api/v1/blog/load-current-post/${"6720e6e86a59e7a2def02006"}`;
+const postUrl = `https://happening.net/api/v1/blog/edit-post/${"675c287df618c7f26ab43542"}`;
+const getPostUrl = `https://happening.net/api/v1/blog/load-current-post/${"675c287df618c7f26ab43542"}`;
 
 const retrievePost = async () => {
     try {
