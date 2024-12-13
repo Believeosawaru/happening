@@ -1350,7 +1350,8 @@ form textarea {
 #my-feed div {
     margin-block: 10px;
     margin-inline: 10px;
-    border: rgb(230, 230, 230);
+    border: rgb(220, 220, 220);
+    border: 1px solid #333;
     padding: 5px 10px;
 }
 
