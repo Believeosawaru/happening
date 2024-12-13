@@ -1342,11 +1342,10 @@ form textarea {
     font-family: "Oswald", sans-serif;
 }
 #post {
-    height: 100px;
+    padding-bottom: 100px;
 }
 #bio-btn {
     margin-top: -40px;
-    background: black;
 }
 
 @media screen and (min-width: 900px) {
