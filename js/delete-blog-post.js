@@ -15,7 +15,7 @@ function disableBtn() {
     button.innerHTML = "Deleting Post...."
 }
 
-document.getElementById("delete-event").addEventListener("submit", async (e) => {
+document.getElementById("delete-blog-post").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     disableBtn();
