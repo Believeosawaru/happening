@@ -25,7 +25,7 @@ const retrievePost = async () => {
     const data = await response.json();
 
     if (response.ok) {
-        document.getElementById("post").value = data;
+        document.getElementById("post").value = data.data.content;
         console.log(data)
     } else {
         const keys = Object.keys(data);
