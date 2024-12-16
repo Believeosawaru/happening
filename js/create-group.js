@@ -16,6 +16,7 @@ document.getElementById("create-group").addEventListener("submit", async (e) => 
 
     const name = document.getElementById("event-name").value;
     const description = document.getElementById("event-desc").value;
+    const registrationDeadline = document.getElementById("event-reg-deadline").value;
     const location = document.getElementById("event-location").value;
     const groupType = document.getElementById("event-type").value;
 
@@ -32,7 +33,8 @@ document.getElementById("create-group").addEventListener("submit", async (e) => 
                 name,
                 description,
                 location,
-                groupType
+                groupType, 
+                registrationDeadline
             })
         });
 
@@ -99,7 +101,7 @@ selectElement.addEventListener("change", () => {
         button.style.color = "white"
     }
 });
-    
+
 document.getElementById('search-input').addEventListener('input', () => {
     const input = document.getElementById('search-input').value;
 

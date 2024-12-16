@@ -306,6 +306,7 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
     const name = document.getElementById("event-name").value;
     const description = document.getElementById("event-desc").value;
     const date = document.getElementById("event-date").value;
+    const registrationDeadline = document.getElementById("event-reg-deadline").value;
     const time = document.getElementById("event-time").value;
     const timeZone = document.getElementById("timezone").value;
     const location = document.getElementById("event-location").value;
@@ -324,6 +325,7 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
                 name,
                 description,
                 date,
+                registrationDeadline,
                 time,
                 timeZone,
                 location,
@@ -342,7 +344,7 @@ document.getElementById("create-event").addEventListener("submit", async (e) => 
         console.log(data)
 
         setTimeout(() => {
-            window.location.href = "https://happening.net/events/events"
+            window.location.href = "https://happening.net/events"
         }, 2000)
     } else {
         console.log(data)
