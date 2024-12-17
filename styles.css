@@ -1378,6 +1378,9 @@ form textarea {
     border-radius: 5px;
     margin-block: 10px;
 }
+#create {
+    position: relative;
+}
 #create-icon {
     background: white;
     clip-path: circle(50%);
@@ -1385,7 +1388,7 @@ form textarea {
     height: 30px;
     position: fixed;
     right: 20px;
-    top: 20px;
+    top: 30px;
 }
 
 @media screen and (min-width: 900px) {
