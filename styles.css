@@ -1375,6 +1375,7 @@ form textarea {
     background: rgb(200, 200, 200);
     padding: 8px;
     border-radius: 5px;
+    margin-block: 10px;
 }
 
 @media screen and (min-width: 900px) {
