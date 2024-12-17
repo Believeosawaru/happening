@@ -1631,7 +1631,8 @@ form textarea {
         width: 35%;
     }
     #create {
-        margin-block: 20px;
+        margin-block: 30px;
+        padding-inline: 80px;
     }
     #my-feed {
         padding-inline: 80px;
