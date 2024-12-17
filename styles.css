@@ -1380,6 +1380,7 @@ form textarea {
 }
 #create {
     position: relative;
+    margin-top: 50px;
 }
 #create-icon {
     background: white;
