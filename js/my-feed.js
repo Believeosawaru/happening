@@ -24,6 +24,10 @@ async function myFeed() {
 
             let accum = "";
 
+            if (message.data.author.role === "admin") {
+               document.getElementById("create").innerHTML = `<p id="create-icon"><a href="https://happening.net/blogs/create-blog-post">+</a></p>`;
+            }
+
             message.data.forEach(post => {
                 const postDate = new Date(post.createdAt);
                 const formatter = new Intl.DateTimeFormat("en-us", {
