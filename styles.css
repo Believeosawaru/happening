@@ -1403,7 +1403,7 @@ form textarea {
 #blog-options button {
     color: #FF4500;
 }
-#blog-options button:first-child {
+#blog-options button {
     background-color: #FF4500;
     padding: 7px 10px;
     border: none;
