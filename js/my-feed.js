@@ -39,8 +39,10 @@ async function myFeed() {
                         </div>
                     </a>
                 `
+
+                accum += html;
             });
-            document.getElementById("bio").value = `${message.data.bio}`; 
+            document.getElementById("my-feed").innerHTML = accum; 
         } else {
             console.log(message)
         }
