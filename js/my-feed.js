@@ -35,7 +35,7 @@ async function myFeed() {
                                     <span>Jun 12, 19:08</span>
                                 </section>
                             </div>
-                            <p>I recently stumbled upon this website called happening.net and it's super fast, and i really like it.</p>
+                            <p>${post.content}</p>
                         </div>
                     </a>
                 `
