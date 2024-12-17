@@ -41,7 +41,7 @@ async function myFeed() {
                                 <img src="../../images/event.jpg" alt="User Image">
                                 <section>
                                     <h3>${post.author.firstName} ${post.author.lastName}</h3>
-                                    <span>${formattedDate}, 19:08</span>
+                                    <span>${formattedDate}</span>
                                 </section>
                             </div>
                             <p>${post.content}</p>
