@@ -1,6 +1,4 @@
 const token = localStorage.getItem("authToken");
-// const urlParams = new URLSearchParams(window.location.search);
-// const groupId = urlParams.get("groupId");
 
 async function myFeed() {
     try {
