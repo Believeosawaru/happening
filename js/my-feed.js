@@ -26,12 +26,13 @@ async function myFeed() {
 
             message.data.forEach(post => {
                 const postDate = new Date(post.createdAt);
-                const formattedDate = postDate.toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
+                const formatter = new Intl.DateTimeFormat("en-us", {
+                    dateStyle: "mediumm",
+                    timeStyle: "short",
                     timeZone: "UTC"
                 });
+
+                const formattedDate = formatter.format(postDate);
 
                 const html = `
                      <a href="https://happening.net/blogs/blog-options?id=${post._id}">
