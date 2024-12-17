@@ -37,8 +37,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                     month: "long",
                     day: "numeric"
                 });
-
-                console.log(result.eventRegStatus)
                 
                 if (result.createdBy._id !== result.currentUserId) {
                     eventDetailsCon.innerHTML = `
@@ -90,10 +88,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <h3>About This Event</h3>
                     <p>
                     ${result.data.description.replace(/\n/g, "<br>")}
-                    </p> 
+                    </p>   
                 </div>
-
-                <span id="event-reg-status">${result.eventRegStatus ? "Event Registration Has Been Closed" : ""}</span>
 
                 <h3 class="tags-h3">Event Category</h3>
                 <div class="tags">
