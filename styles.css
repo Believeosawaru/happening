@@ -1397,6 +1397,9 @@ form textarea {
     align-items: center;
     z-index: 10000000;
 }
+#create-icon:hover {
+    cursor: pointer;
+}
 
 @media screen and (min-width: 900px) {
     .menu {
