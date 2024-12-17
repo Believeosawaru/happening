@@ -1389,7 +1389,8 @@ form textarea {
     height: 30px;
     position: fixed;
     right: 20px;
-    top: 30px;
+    top: 50px;
+    text-align: center;
 }
 
 @media screen and (min-width: 900px) {
