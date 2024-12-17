@@ -42,6 +42,7 @@ document.getElementById("create-post").addEventListener("submit", async (e) => {
             window.location.href = "https://happening.net/home"
         }, 2000)
     } else {
+        console.log(data)
         const keys = Object.keys(data);
 
         keys.forEach(key => {
