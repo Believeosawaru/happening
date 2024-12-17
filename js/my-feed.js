@@ -44,3 +44,5 @@ async function myFeed() {
         console.log(error);
     }
 }
+
+window.onload = myFeed;
