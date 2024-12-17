@@ -18,7 +18,7 @@ async function myFeed() {
         }
 
         if (response.ok) {
-            console.log(message.data.author)
+            console.log(message.data[1].author)
 
             let accum = "";
 
