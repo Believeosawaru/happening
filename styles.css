@@ -1383,11 +1383,11 @@ form textarea {
     margin-top: 50px;
 }
 #create-icon {
-    background: white;
+    background: rgba(0, 0, 0, 0.2);
     border: 5px solid rgba(0, 0, 0, 0.2);
     clip-path: circle(50%);
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     position: fixed;
     right: 20px;
     top: 60px;
