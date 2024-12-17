@@ -1630,7 +1630,12 @@ form textarea {
         margin-top: 30px;
         width: 35%;
     }
+    #create {
+        margin-block: 20px;
+    }
     #my-feed {
-        padding-inline: 50px;
+        padding-inline: 80px;
+        margin-block: 20px;
+        border-radius: 10px;
     }
 }
