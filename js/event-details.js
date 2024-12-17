@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const eventId = urlParams.get("eventId");
 
 if (!token) {
-    window.location.href = "https://happening.net/log-in.html";
+    window.location.href = "https://happening.net/log-in";
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
