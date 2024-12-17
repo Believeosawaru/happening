@@ -1,14 +1,14 @@
 async function joinEvent() {
     const token = localStorage.getItem("authToken");
     const urlParams = new URLSearchParams(window.location.search);
-    const eventId = urlParams.get("eventId");
+    const eventSlug = urlParams.get("name");
 
     if (!token) {
         window.location.href = "https://happening.net/log-in"
     }
 
     try {
-        const response = await fetch(`https://happening.net/api/v1/user/join-event/${eventId}`, {
+        const response = await fetch(`https://happening.net/api/v1/user/join-event/${eventSlug}`, {
             method: "POST",
             headers: {
                 "Authorization": `Bearer ${token}`
@@ -22,7 +22,7 @@ async function joinEvent() {
 
             document.getElementById("success-sign-up").innerHTML = data.message;
 
-            window.location.href = "https://happening.net/events/events"
+            window.location.href = "https://happening.net/events"
         } else {
             const keys = Object.keys(data);
     
