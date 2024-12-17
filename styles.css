@@ -1630,4 +1630,7 @@ form textarea {
         margin-top: 30px;
         width: 35%;
     }
+    #my-feed {
+        padding-inline: 50px;
+    }
 }

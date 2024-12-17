@@ -39,7 +39,7 @@ async function myFeed() {
                      <a href="https://happening.net/blogs/blog-options?id=${post._id}">
                         <div>
                             <div id="user-details">
-                                <img src="../../images/event.jpg" alt="User Image">
+                                <img src="../../images/user-profile.svg" alt="User Image">
                                 <section>
                                     <h3>${post.author.firstName} ${post.author.lastName}</h3>
                                     <span>${formattedDate}</span>
