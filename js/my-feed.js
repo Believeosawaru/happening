@@ -34,7 +34,8 @@ async function myFeed() {
 
                 const formattedDate = formatter.format(postDate);
 
-                const html = `
+                if (message.role === "admin") {
+                    const html = `
                      <a href="https://happening.net/blogs/blog-options?id=${post._id}">
                         <div>
                             <div id="user-details">
@@ -48,8 +49,22 @@ async function myFeed() {
                         </div>
                     </a>
                 `
-
                 accum += html;
+                 } else {
+                    const html = `
+                        <div>
+                            <div id="user-details">
+                                <img src="../../images/event.jpg" alt="User Image">
+                                <section>
+                                    <h3>${post.author.firstName} ${post.author.lastName}</h3>
+                                    <span>${formattedDate}</span>
+                                </section>
+                            </div>
+                            <p>${post.content}</p>
+                        </div>
+                    `
+                    accum += html;
+                 }
             });
             document.getElementById("my-feed").innerHTML = accum; 
         } else {
