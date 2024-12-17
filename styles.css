@@ -1400,7 +1400,7 @@ form textarea {
 #create-icon:hover {
     cursor: pointer;
 }
-#delete-event-btn a {
+#blog-options button {
     color: #FF4500;
 }
 
