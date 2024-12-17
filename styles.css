@@ -1371,6 +1371,10 @@ form textarea {
 #my-feed p {
     padding-inline: 10px;
 }
+#event-reg-status {
+    background: #333;
+    padding: 10px;
+}
 
 @media screen and (min-width: 900px) {
     .menu {
