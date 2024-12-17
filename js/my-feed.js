@@ -27,7 +27,7 @@ async function myFeed() {
             message.data.forEach(post => {
                 const postDate = new Date(post.createdAt);
                 const formatter = new Intl.DateTimeFormat("en-us", {
-                    dateStyle: "mediumm",
+                    dateStyle: "medium",
                     timeStyle: "short",
                     timeZone: "UTC"
                 });
