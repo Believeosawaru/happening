@@ -1400,6 +1400,9 @@ form textarea {
 #create-icon:hover {
     cursor: pointer;
 }
+#delete-event-btn a {
+    color: #FF4500;
+}
 
 @media screen and (min-width: 900px) {
     .menu {
