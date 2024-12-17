@@ -29,7 +29,7 @@ async function myFeed() {
                 const formatter = new Intl.DateTimeFormat("en-us", {
                     dateStyle: "medium",
                     timeStyle: "short",
-                    timeZone: "UTC + 1"
+                    timeZone: "Europe/Paris"
                 });
 
                 const formattedDate = formatter.format(postDate);
