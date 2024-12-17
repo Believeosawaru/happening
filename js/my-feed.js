@@ -18,13 +18,11 @@ async function myFeed() {
         }
 
         if (response.ok) {
-            console.log(message.data[1].author)
-
             let accum = "";
 
-            // if (message.data.author.role === "admin") {
-            //    document.getElementById("create").innerHTML = `<p id="create-icon"><a href="https://happening.net/blogs/create-blog-post">+</a></p>`;
-            // }
+            if (message.role === "admin") {
+               document.getElementById("create").innerHTML = `<p id="create-icon"><a href="https://happening.net/blogs/create-blog-post">+</a></p>`;
+            }
 
             message.data.forEach(post => {
                 const postDate = new Date(post.createdAt);
