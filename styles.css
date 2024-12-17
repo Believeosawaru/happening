@@ -1383,9 +1383,9 @@ form textarea {
     clip-path: circle(50%);
     width: 30px;
     height: 30px;
-    position: absolute;
+    position: fixed;
     right: 20px;
-    top: 30px;
+    top: 20px;
 }
 
 @media screen and (min-width: 900px) {
