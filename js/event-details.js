@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <p>
                     ${result.data.description.replace(/\n/g, "<br>")}
                     </p>  
-                    <span id="event-reg-status">${result.data.eventRegStatus === true ? "Event Registration Has Been Closed" : ""}</span> 
+                    <span id="event-reg-status">${result.eventRegStatus ? "Event Registration Has Been Closed" : ""}</span> 
                 </div>
 
                 <h3 class="tags-h3">Event Category</h3>
