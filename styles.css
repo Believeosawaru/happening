@@ -1403,6 +1403,20 @@ form textarea {
 #blog-options button {
     color: #FF4500;
 }
+#blog-options button:first-child {
+    background-color: #FF4500;
+    padding: 7px 10px;
+    border: none;
+    color: white;
+    text-align: center; 
+}
+#blog-options button:last-child {
+    background-color: none;
+    padding: 7px 10px;
+    border: none;
+    text-align: center;
+    color: #FF4500; 
+}
 
 @media screen and (min-width: 900px) {
     .menu {
