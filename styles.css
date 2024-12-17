@@ -1384,7 +1384,7 @@ form textarea {
 }
 #create-icon {
     background: white;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 5px solid rgba(0, 0, 0, 0.2);
     clip-path: circle(50%);
     width: 25px;
     height: 25px;
