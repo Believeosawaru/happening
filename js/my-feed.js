@@ -25,7 +25,7 @@ async function myFeed() {
             let accum = "";
 
             message.data.forEach(post => {
-                const postDate = new Date(post.date);
+                const postDate = new Date(post.createdAt);
                 const formattedDate = postDate.toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
