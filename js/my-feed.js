@@ -25,6 +25,14 @@ async function myFeed() {
             let accum = "";
 
             message.data.forEach(post => {
+                const postDate = new Date(post.date);
+                const formattedDate = postDate.toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                    timeZone: "UTC"
+                });
+
                 const html = `
                      <a href="https://happening.net/blogs/blog-options?id=${post._id}">
                         <div>
@@ -32,7 +40,7 @@ async function myFeed() {
                                 <img src="../../images/event.jpg" alt="User Image">
                                 <section>
                                     <h3>${post.author.firstName} ${post.author.lastName}</h3>
-                                    <span>Jun 12, 19:08</span>
+                                    <span>${formattedDate}, 19:08</span>
                                 </section>
                             </div>
                             <p>${post.content}</p>
