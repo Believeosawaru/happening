@@ -1349,6 +1349,7 @@ form textarea {
 }
 #my-feed {
     margin-top: -50px;
+    position: relative;
 }
 #my-feed div {
     margin-block: 10px;
