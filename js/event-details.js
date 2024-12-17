@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     day: "numeric"
                 });
 
-                console.log(result.data.eventRegStatus)
+                console.log(result.eventRegStatus)
                 
                 if (result.createdBy._id !== result.currentUserId) {
                     eventDetailsCon.innerHTML = `
