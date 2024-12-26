@@ -1405,12 +1405,12 @@ form textarea {
     justify-content: center;
 }
 #blog-img {
-    width: 60%;
-    border: 3px solid rgb(240, 240, 240);
+    width: 75%;
+    border: 5px solid rgb(230, 230, 230);
 }
 #blog-video {
     width: 80%;
-    border: 3px solid rgb(240, 240, 240);
+    border: 5px solid rgb(230, 230, 230);
 }
 
 @media screen and (min-width: 900px) {
