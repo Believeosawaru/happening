@@ -1,5 +1,5 @@
 tinymce.init({
-    selector: "#content",
+    selector: "#post",
     plugins: "advlist autolink lists link image charmap preview anchor",
     toolbar: "undo redo | formatselect | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | removeformat"
 });
