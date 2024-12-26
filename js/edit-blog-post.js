@@ -44,7 +44,7 @@ const retrievePost = async () => {
         //         })
         //     }
         //  })
-        //  document.getElementById("post").value = savedContent;
+         document.getElementById("post").value = savedContent;
     } else {
         const keys = Object.keys(data);
 
