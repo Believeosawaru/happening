@@ -1411,6 +1411,7 @@ form textarea {
 #blog-video {
     width: 80%;
     border: 5px solid rgb(230, 230, 230);
+    height: 300px;
 }
 
 @media screen and (min-width: 900px) {
