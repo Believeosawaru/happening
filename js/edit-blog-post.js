@@ -83,6 +83,8 @@ const retrievePost = async () => {
 document.getElementById("edit-post").addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    tinymce.triggerSave();
+
     const post = document.getElementById("post").value;
     console.log(post)
 
