@@ -42,7 +42,7 @@ async function userProfile() {
             if (message.data.profilePicture) {
                 const profileImage = document.getElementById("user-image");
 
-                profileImage.src = `https://happening.net:5000/uploads/${message.data.profilePicture}`;
+                profileImage.src = `https://happening.net/uploads/${message.data.profilePicture}`;
             }
 
             document.getElementById("user-name").innerHTML = `${message.data.firstName} ${message.data.lastName}`;
