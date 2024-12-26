@@ -26,7 +26,19 @@ const retrievePost = async () => {
     const data = await response.json();
 
     if (response.ok) {
-        document.getElementById("post").value = data.data.content;
+         const savedContent = data.data.content;
+
+        //  tinymce.init({
+        //     selector: "#post",
+        //     plugins: "advlist autolink lists link image charmap preview anchor",
+        //     toolbar: "undo redo | formatselect | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | removeformat",
+        //     setup: function (editor) {
+        //         editor.on("init", function () {
+        //             editor.setContent(savedContent)
+        //         })
+        //     }
+        //  })
+         document.getElementById("post").value = savedContent;
     } else {
         const keys = Object.keys(data);
 
