@@ -31,13 +31,10 @@ const retrievePost = async () => {
            tinymce.init({
                 selector: "#post",
                 plugins: "advlist autolink lists link image charmap preview anchor",
-                toolbar: "undo redo | formatselect | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | removeformat",
-                setup: function (editor) {
-                    editor.on("init", function () {
-                        editor.setContent(savedContent)
-                    })
-                }
+                toolbar: "undo redo | formatselect | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | removeformat"
            })
+
+           document.getElementById("post").value = savedContent;
 
         //  tinymce.init({
         //     selector: "#post",
@@ -83,9 +80,9 @@ const retrievePost = async () => {
 document.getElementById("edit-post").addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    tinymce.triggerSave();
+    // tinymce.triggerSave();
 
-    const post = document.getElementById("post").value;
+    const post = tinymce.get("post").getContent();
     console.log(post)
 
     disableBtn();
