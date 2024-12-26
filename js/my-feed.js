@@ -46,6 +46,9 @@ async function myFeed() {
                                 </section>
                             </div>
                             <p>${post.content}</p>
+                            ${
+                                post.mediaType === "image" ? `<img src="happening.net/uploads/${post.mediaType}s/${post.mediaPath}">` : `<video src="happening.net/uploads/${post.mediaType}s/${post.mediaPath}">`
+                            }
                         </div>
                     </a>
                 `
