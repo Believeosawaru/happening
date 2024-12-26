@@ -1400,6 +1400,13 @@ form textarea {
 #create-icon:hover {
     cursor: pointer;
 }
+#flexy {
+    display: flex;
+    justify-content: center;
+}
+#blog-image, #blog-video {
+    width: 80%;
+}
 
 @media screen and (min-width: 900px) {
     .menu {

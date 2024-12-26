@@ -68,13 +68,15 @@ async function myFeed() {
                                 </section>
                             </div>
                             <p>${post.content}</p>
+                            <div id="flexy">
                             ${
-                                post.mediaType && post.mediaPath ? (post.mediaType && post.mediaType === "image" ? `<img src="https://happening.net/uploads/${post.mediaType}s/${post.mediaPath}">` : 
-                                `<video controls> 
+                                post.mediaType && post.mediaPath ? (post.mediaType && post.mediaType === "image" ? `<img src="https://happening.net/uploads/${post.mediaType}s/${post.mediaPath}" id="blog-img">` : 
+                                `<video controls id="blog-video"> 
                                     <source src="https://happening.net/uploads/${post.mediaType}s/${post.mediaPath}">
                                     Your Browser Does Not Support The Video Tag
                                 </video>`) : ""
                             }
+                            </div>
                         </div>
                     `
                     accum += html;
