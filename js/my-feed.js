@@ -47,7 +47,7 @@ async function myFeed() {
                             </div>
                             <p>${post.content}</p>
                             ${
-                                post.mediaType && post.mediaPath ? (post.mediaType || post.mediaType === "image" ? `<img src="https://happening.net/uploads/${post.mediaType}s/${post.mediaPath}">` : 
+                                post.mediaType && post.mediaPath ? (post.mediaType && post.mediaType === "image" ? `<img src="https://happening.net/uploads/${post.mediaType}s/${post.mediaPath}">` : 
                                 `<video controls> 
                                     <source src="https://happening.net/uploads/${post.mediaType}s/${post.mediaPath}">
                                     Your Browser Does Not Support The Video Tag
