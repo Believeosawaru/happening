@@ -30,8 +30,7 @@ document.getElementById("create-post").addEventListener("submit", async (e) => {
         const response = await fetch(postUrl, {
             method: "POST",
             headers: {
-                "Authorization": `Bearer ${token}`,
-                "Content-Type": "application/json"
+                "Authorization": `Bearer ${token}`
             },
             body: formData
         });
