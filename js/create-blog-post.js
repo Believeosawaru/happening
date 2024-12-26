@@ -14,7 +14,15 @@ const postUrl = "https://happening.net/api/v1/blog/create-post";
 document.getElementById("create-post").addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    const formData = new FormData();
+    const fileInput = document.getElementById("media");
     const post = document.getElementById("post").value;
+
+    formData.append("content", post);
+
+    if (fileInput.files[0]) {
+        formData.append("media", fileInput.files[0]);
+    }
 
     disableBtn();
 
@@ -25,9 +33,7 @@ document.getElementById("create-post").addEventListener("submit", async (e) => {
                 "Authorization": `Bearer ${token}`,
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({
-               content: post
-            })
+            body: formData
         });
 
     const data = await response.json();
