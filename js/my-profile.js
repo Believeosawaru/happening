@@ -177,11 +177,10 @@ formInput.addEventListener("change", async (e) => {
             // console.log(message)
 
             const imageUrl = message.data;
-            console.log(imageUrl)
 
             const profileImage = document.getElementById("user-image");
 
-            profileImage.src = `https://happening.net:5000/uploads/${imageUrl}`;
+            profileImage.src = `https://happening.net/uploads/${imageUrl}`;
         }
     } catch (error) {
         console.log(error);
