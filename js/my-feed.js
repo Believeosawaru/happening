@@ -51,7 +51,7 @@ async function myFeed() {
                                 `<video controls> 
                                     <source src="https://happening.net/uploads/${post.mediaType}s/${post.mediaPath}">
                                     Your Browser Does Not Support The Video Tag
-                                </video>`) : null
+                                </video>`) : ""
                             }
                         </div>
                     </a>
