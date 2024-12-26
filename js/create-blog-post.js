@@ -1,3 +1,9 @@
+tinymce.init({
+    selector: "#content",
+    plugins: "advlist autolink lists link image charmap preview anchor",
+    toolbar: "undo redo | formatselect | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | removeformat"
+});
+
 const token = localStorage.getItem("authToken");
 
 const button = document.getElementById("bio-btn");
