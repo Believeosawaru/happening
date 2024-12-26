@@ -22,7 +22,7 @@ document.getElementById("create-post").addEventListener("submit", async (e) => {
 
     const formData = new FormData();
     const fileInput = document.getElementById("media");
-    const post = document.getElementById("post").value;
+    const post = tinymce.get("post").getContent();
 
     formData.append("content", post);
 
