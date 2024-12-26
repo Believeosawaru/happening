@@ -1404,8 +1404,8 @@ form textarea {
     display: flex;
     justify-content: center;
 }
-#blog-image, #blog-video {
-    width: 80%;
+#blog-img, #blog-video {
+    width: 50%;
 }
 
 @media screen and (min-width: 900px) {
