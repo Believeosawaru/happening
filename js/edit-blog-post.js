@@ -80,64 +80,62 @@ const retrievePost = async () => {
 document.getElementById("edit-post").addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    // tinymce.triggerSave();
-
     const post = tinymce.get("post").getContent();
     console.log(post)
 
     disableBtn();
 
-    // try {
-    //     const response = await fetch(postUrl, {
-    //         method: "POST",
-    //         headers: {
-    //             "Authorization": `Bearer ${token}`,
-    //             "Content-Type": "application/json"
-    //         },
-    //         body: JSON.stringify({
-    //            content: post
-    //         })
-    //     });
+    try {
+        const response = await fetch(postUrl, {
+            method: "POST",
+            headers: {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+               content: post
+            })
+        });
 
-    // const data = await response.json();
+    const data = await response.json();
 
-    // if (response.ok) {
-    //     document.getElementById("success-sign-up").innerHTML = "Update Posted Successfully";
-    //     document.getElementById("success-sign-up").classList.add("success-sign-up");
+    if (response.ok) {
+        document.getElementById("success-sign-up").innerHTML = "Update Posted Successfully";
+        document.getElementById("success-sign-up").classList.add("success-sign-up");
 
-    //     button.style.cursor = "wait";
+        button.style.cursor = "wait";
 
-    //     setTimeout(() => {
-    //         window.location.href = "https://happening.net/home"
-    //     }, 2000)
-    // } else {
-    //     const keys = Object.keys(data);
+        setTimeout(() => {
+            window.location.href = "https://happening.net/home"
+        }, 2000)
+    } else {
+        const keys = Object.keys(data);
 
-    //     keys.forEach(key => {
-    //         const value = data[key]; 
+        keys.forEach(key => {
+            const value = data[key]; 
             
-    //         document.getElementById("failed").style.display = "block"
-    //         document.getElementById("failed").innerHTML = value;
-    //         document.getElementById("failed").classList.add("failed");
+            document.getElementById("failed").style.display = "block"
+            document.getElementById("failed").innerHTML = value;
+            document.getElementById("failed").classList.add("failed");
 
-    //         setTimeout(() => {
-    //             document.getElementById("failed").style.display = "none"
-    //         }, 3500)
+            setTimeout(() => {
+                document.getElementById("failed").style.display = "none"
+            }, 3500)
 
-    //         button.disabled = false;
-    //       });
+            button.disabled = false;
+          });
 
-    //     button.style.backgroundColor = "#FF4500";
-    //     button.style.color = "white";
-    //     button.innerHTML = "Submit";
-    // }
+        button.style.backgroundColor = "#FF4500";
+        button.style.color = "white";
+        button.innerHTML = "Submit";
+    }
 
-    // } catch (error) {
-    //     document.getElementById("failed").style.display = "block"
-    //     document.getElementById("failed").innerHTML = "There Was An Error, Please Reload The Page";
-    //     document.getElementById("failed").classList.add("failed");
-    //     console.log(error);
-    // }
+    } catch (error) {
+        document.getElementById("failed").style.display = "block"
+        document.getElementById("failed").innerHTML = "There Was An Error, Please Reload The Page";
+        document.getElementById("failed").classList.add("failed");
+        console.log(error);
+    }
 });
 
 window.onload = retrievePost;
