@@ -31,10 +31,25 @@ const retrievePost = async () => {
            tinymce.init({
                 selector: "#post",
                 plugins: "advlist autolink lists link image charmap preview anchor",
-                toolbar: "undo redo | formatselect | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | removeformat"
+                toolbar: "undo redo | formatselect | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | removeformat",
+                setup: function (editor) {
+                    editor.on("init", function () {
+                        editor.setContent(savedContent)
+                    })
+                }
            })
 
-         document.getElementById("post").value = savedContent;
+        //  tinymce.init({
+        //     selector: "#post",
+        //     plugins: "advlist autolink lists link image charmap preview anchor",
+        //     toolbar: "undo redo | formatselect | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | removeformat",
+        //     setup: function (editor) {
+        //         editor.on("init", function () {
+        //             editor.setContent(savedContent)
+        //         })
+        //     }
+        //  })
+        //  document.getElementById("post").value = savedContent;
     } else {
         const keys = Object.keys(data);
 
@@ -69,7 +84,6 @@ document.getElementById("edit-post").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const post = document.getElementById("post").value;
-
     console.log(post)
 
     disableBtn();
