@@ -81,7 +81,6 @@ document.getElementById("edit-post").addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const post = tinymce.get("post").getContent();
-    console.log(post)
 
     disableBtn();
 
