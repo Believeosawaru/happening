@@ -28,6 +28,12 @@ const retrievePost = async () => {
     if (response.ok) {
          const savedContent = data.data.content;
 
+           tinymce.init({
+                selector: "#post",
+                plugins: "advlist autolink lists link image charmap preview anchor",
+                toolbar: "undo redo | formatselect | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | removeformat"
+           })
+
         //  tinymce.init({
         //     selector: "#post",
         //     plugins: "advlist autolink lists link image charmap preview anchor",
@@ -38,7 +44,7 @@ const retrievePost = async () => {
         //         })
         //     }
         //  })
-         document.getElementById("post").value = savedContent;
+        //  document.getElementById("post").value = savedContent;
     } else {
         const keys = Object.keys(data);
 
