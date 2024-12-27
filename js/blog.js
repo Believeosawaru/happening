@@ -25,7 +25,7 @@ async function blog() {
                 return formatter.format(postDate);
             }
 
-            function truncateContent(post, wordLimit = 50) {
+            function truncateContent(post, wordLimit = 30) {
                 const div = document.createElement('div');
                 div.textContent = post.content;
                 const content = div.textContent;
