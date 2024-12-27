@@ -1,12 +1,7 @@
-const token = localStorage.getItem("authToken");
-
-async function myFeed() {
+async function blog() {
     try {
-        const response = await fetch("https://happening.net/api/v1/blog/load-posts", {
-            method: "GET",
-            headers: {
-                "Authorization": `Bearer ${token}`
-            }
+        const response = await fetch("https://happening.net/api/v1/blog/public-feed", {
+            method: "GET"
         });
 
         const message = await response.json();
@@ -20,10 +15,6 @@ async function myFeed() {
         if (response.ok) {
             let accum = "";
 
-            if (message.role === "admin") {
-               document.getElementById("create").innerHTML = `<p id="create-icon"><a href="https://happening.net/blogs/create-blog-post">+</a></p>`;
-            }
-
             message.data.forEach(post => {
                 const postDate = new Date(post.createdAt);
                 const formatter = new Intl.DateTimeFormat("en-us", {
@@ -34,32 +25,6 @@ async function myFeed() {
 
                 const formattedDate = formatter.format(postDate);
 
-                if (message.role === "admin") {
-                    const html = `
-                     <a href="https://happening.net/blogs/blog-options?id=${post._id}">
-                        <div>
-                            <div id="user-details">
-                                <img src="../../images/user-profile.svg" alt="User Image">
-                                <section>
-                                    <h3>${post.author.firstName} ${post.author.lastName}</h3>
-                                    <span>${formattedDate}</span>
-                                </section>
-                            </div>
-                            <p>${post.content}</p>
-                           <div id="flexy">
-                            ${
-                                post.mediaType && post.mediaPath ? (post.mediaType && post.mediaType === "image" ? `<img src="https://happening.net/uploads/${post.mediaType}s/${post.mediaPath}" id="blog-img">` : 
-                                `<video controls id="blog-video"> 
-                                    <source src="https://happening.net/uploads/${post.mediaType}s/${post.mediaPath}">
-                                    Your Browser Does Not Support The Video Tag
-                                </video>`) : ""
-                            }
-                            </div>
-                        </div>
-                    </a>
-                `
-                accum += html;
-                 } else {
                     const html = `
                         <div>
                             <div id="user-details">
@@ -82,7 +47,6 @@ async function myFeed() {
                         </div>
                     `
                     accum += html;
-                 }
             });
             document.getElementById("my-feed").innerHTML = accum; 
         } else {
@@ -93,4 +57,4 @@ async function myFeed() {
     }
 }
 
-window.onload = myFeed;
+window.onload = blog;
