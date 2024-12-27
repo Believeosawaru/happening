@@ -50,7 +50,8 @@ async function blog() {
                 const truncatedContent = truncateContent(post);
 
                 return `
-                    <div id="post-card">
+                   <a href="https://happening.net/post-detail/${post._id}">
+                         <div id="post-card">
                         <div id="user-details">
                             <img src="../../images/event.jpg" alt="User Image">
                             <section>
@@ -63,6 +64,7 @@ async function blog() {
                             ${mediaHTML}
                         </div>
                     </div>
+                  </a>
                 `;
             }
 
