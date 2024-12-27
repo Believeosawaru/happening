@@ -20,7 +20,7 @@ async function blog() {
                                 Your Browser Does Not Support The Video Tag
                             </video>`) : "";
 
-                            const postDate = new Date(post.data.date);
+                            const postDate = new Date(post.data.createdAt);
                             const formatter = new Intl.DateTimeFormat("en-us", {
                                 dateStyle: "medium",
                                 timeStyle: "short",
@@ -80,7 +80,7 @@ async function blog() {
                                 Your Browser Does Not Support The Video Tag
                             </video>`) : "";
 
-                            const postDate = new Date(post.data.date);
+                            const postDate = new Date(post.data.createdAt);
                             const formatter = new Intl.DateTimeFormat("en-us", {
                                 dateStyle: "medium",
                                 timeStyle: "short",
