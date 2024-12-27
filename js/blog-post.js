@@ -72,23 +72,25 @@ async function blog() {
                                 day: "numeric"
                             });
             
-                        document.getElementById("my-feed").innerHTML = `
-                        <div id="post-card">
-                            <div id="user-details">
-                                <img src="../../images/event.jpg" alt="User Image">
-                                <section>
-                                    <h3>${post.author.firstName} ${post.author.lastName}</h3>
-                                    <span>${formattedDate}</span>
-                                </section>
-                            </div>
-                                 <p>${post.content}</p>
-                                ${
-                                    post.mediaPath && post.mediaType ? `<div id="flexy">
-                                    ${mediaHTML}
-                                </div>` : ""
-                                }
-                        </div>
-                        `
+                        // document.getElementById("my-feed").innerHTML = `
+                        // <div id="post-card">
+                        //     <div id="user-details">
+                        //         <img src="../../images/event.jpg" alt="User Image">
+                        //         <section>
+                        //             <h3>${post.author.firstName} ${post.author.lastName}</h3>
+                        //             <span>${formattedDate}</span>
+                        //         </section>
+                        //     </div>
+                        //          <p>${post.content}</p>
+                        //         ${
+                        //             post.mediaPath && post.mediaType ? `<div id="flexy">
+                        //             ${mediaHTML}
+                        //         </div>` : ""
+                        //         }
+                        // </div>
+                        // `
+
+                        console.log(post)
                      } else {
                         console.log(message)
                     }
