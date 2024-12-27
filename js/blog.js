@@ -33,7 +33,7 @@ async function blog() {
                 const words = content.split(" ");
                 if (words.length > wordLimit) {
                     const truncated = words.slice(0, wordLimit).join(" ");
-                    return `${truncated}... <br><button><a href="fullpost.html?postId=${post.id}">Read more</a></button>`;
+                    return `${truncated}... <br><button><a href="https://happening.net/blog-post?postId=${post._id}">Read more</a></button>`;
                 }
                 return content;
             }
@@ -58,7 +58,7 @@ async function blog() {
                                 <span>${formattedDate}</span>
                             </section>
                         </div>
-                        <a href="https://happening.net/blog">
+                        <a href="https://happening.net/blog-post?postId=${post._id}">
                              <p>${truncatedContent}</p>
                             ${
                                 post.mediaPath && post.mediaType ? `<div id="flexy">
