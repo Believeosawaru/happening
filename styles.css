@@ -1351,7 +1351,7 @@ form textarea {
     margin-top: -40px;
     position: relative;
 }
-#my-feed div {
+#my-feed > div {
     margin-block: 10px;
     background: white;
     margin-inline: 10px;
