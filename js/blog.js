@@ -26,12 +26,16 @@ async function blog() {
             }
 
             function truncateContent(post, wordLimit = 50) {
-                const words = post.content.split("");
+                const div = document.createElement('div');
+                div.textContent = post.content;
+                const content = div.textContent;
+            
+                const words = content.split(" ");
                 if (words.length > wordLimit) {
                     const truncated = words.slice(0, wordLimit).join(" ");
                     return `${truncated}... <a href="fullpost.html?postId=${post.id}">Read more</a>`;
                 }
-                return post.content;
+                return content;
             }
 
             function generatePostHTML(post, formattedDate) {
