@@ -11,36 +11,37 @@ async function blog() {
             
                     const post = await response.json();
             
-                    if (post.message === "jwt malformed" || post.message === "jwt expired") {
-                        setTimeout(() => {
-                            window.location.href = "https://happening.net/log-in"
-                        }, 350);
-                    }
-            
                     if (response.ok) {
-                        const postDate = new Date(post.date);
-                            const formattedDate = postDate.toLocaleDateString("en-US", {
-                                year: "numeric",
-                                month: "long",
-                                day: "numeric"
-                            });
+                        const mediaHTML = post.data.mediaType && post.data.mediaPath ? 
+                        (post.data.mediaType === "image" ? 
+                            `<img src="https://happening.net/uploads/${post.data.mediaType}s/${post.data.mediaPath}" id="blog-img">` : 
+                            `<video controls id="blog-video"> 
+                                <source src="https://happening.net/uploads/${post.data.mediaType}s/${post.data.mediaPath}">
+                                Your Browser Does Not Support The Video Tag
+                            </video>`) : "";
+
+                            
+                            const formattedDate = formatter.format(postDate);
             
                         document.getElementById("my-feed").innerHTML = `
                         <div id="post-card">
                             <div id="user-details">
                                 <img src="../../images/event.jpg" alt="User Image">
                                 <section>
-                                    <h3>${post.author.firstName} ${post.author.lastName}</h3>
+                                    <h3>${post.data.author.firstName} ${post.data.author.lastName}</h3>
                                     <span>${formattedDate}</span>
                                 </section>
                             </div>
-                                 <p>${post.content}</p>
+                                 <p>${post.data.content}</p>
                                 ${
-                                    post.mediaPath && post.mediaType ? `<div id="flexy">
+                                    post.data.mediaPath && post.data.mediaType ? `<div id="flexy">
                                     ${mediaHTML}
                                 </div>` : ""
                                 }
-                        </div>`
+                        </div>
+                        `
+
+                        console.log(post)
                      } else {
                         console.log(message)
                     }
@@ -74,7 +75,7 @@ async function blog() {
                             </video>`) : "";
 
                             
-                            t formattedDate = formatter.format(postDate);
+                            const formattedDate = formatter.format(postDate);
             
                         document.getElementById("my-feed").innerHTML = `
                         <div id="post-card">
