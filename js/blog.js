@@ -25,13 +25,13 @@ async function blog() {
                 return formatter.format(postDate);
             }
 
-            function truncateContent(content, wordLimit = 50) {
-                const words = content.split(" ");
+            function truncateContent(post, wordLimit = 50) {
+                const words = post.content.split("");
                 if (words.length > wordLimit) {
                     const truncated = words.slice(0, wordLimit).join(" ");
                     return `${truncated}... <a href="fullpost.html?postId=${post.id}">Read more</a>`;
                 }
-                return content;
+                return post.content;
             }
 
             function generatePostHTML(post, formattedDate) {
@@ -43,7 +43,7 @@ async function blog() {
                             Your Browser Does Not Support The Video Tag
                         </video>`) : "";
 
-                const truncatedContent = truncateContent(post.content);
+                const truncatedContent = truncateContent(post);
 
                 return `
                     <div>
