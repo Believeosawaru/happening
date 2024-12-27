@@ -1364,8 +1364,10 @@ form textarea {
 #my-feed button {
     background: #FF4500;
     border: none;
-    padding: 5px 10px;
+    padding: 5px 30px;
     border-radius: 4px;
+    color: white;
+    margin-block: 10px;
 }
 #user-details img {
     margin-right: 10px;
