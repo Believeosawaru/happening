@@ -61,9 +61,9 @@ async function blog() {
                         <a href="https://happening.net/blog">
                              <p>${truncatedContent}</p>
                             ${
-                                post.mediaPath && post.mediaType ? <div id="flexy">
+                                post.mediaPath && post.mediaType ? `<div id="flexy">
                                 ${mediaHTML}
-                            </div> : ""
+                            </div>` : ""
                             }
                         </a>
                     </div>
