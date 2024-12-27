@@ -1361,6 +1361,12 @@ form textarea {
     box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.01);
     margin-inline: 10px;
 }
+#my-feed button {
+    background: #FF4500;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
 #user-details img {
     margin-right: 10px;
     clip-path: circle(50%);
