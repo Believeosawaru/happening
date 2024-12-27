@@ -1,21 +1,10 @@
-const token = localStorage.getItem("authToken");
-
 async function myFeed() {
     try {
         const response = await fetch("https://happening.net/api/v1/blog/load-posts", {
-            method: "GET",
-            headers: {
-                "Authorization": `Bearer ${token}`
-            }
+            method: "GET"
         });
 
         const message = await response.json();
-
-        if (message.message === "jwt malformed" || message.message === "jwt expired") {
-            setTimeout(() => {
-                window.location.href = "https://happening.net/log-in"
-            }, 350);
-        }
 
         if (response.ok) {
             let accum = "";
