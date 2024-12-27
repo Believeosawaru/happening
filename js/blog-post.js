@@ -65,30 +65,39 @@ async function blog() {
                     }
             
                     if (response.ok) {
-                        const postDate = new Date(post.date);
+                        const postDate = new Date(post.data.date);
+
+                        const mediaHTML = post.data.mediaType && post.data.mediaPath ? 
+                        (post.data.mediaType === "image" ? 
+                            `<img src="https://happening.net/uploads/${post.data.mediaType}s/${post.data.mediaPath}" id="blog-img">` : 
+                            `<video controls id="blog-video"> 
+                                <source src="https://happening.net/uploads/${post.data.mediaType}s/${post.data.mediaPath}">
+                                Your Browser Does Not Support The Video Tag
+                            </video>`) : "";
+
                             const formattedDate = postDate.toLocaleDateString("en-US", {
                                 year: "numeric",
                                 month: "long",
                                 day: "numeric"
                             });
             
-                        // document.getElementById("my-feed").innerHTML = `
-                        // <div id="post-card">
-                        //     <div id="user-details">
-                        //         <img src="../../images/event.jpg" alt="User Image">
-                        //         <section>
-                        //             <h3>${post.author.firstName} ${post.author.lastName}</h3>
-                        //             <span>${formattedDate}</span>
-                        //         </section>
-                        //     </div>
-                        //          <p>${post.content}</p>
-                        //         ${
-                        //             post.mediaPath && post.mediaType ? `<div id="flexy">
-                        //             ${mediaHTML}
-                        //         </div>` : ""
-                        //         }
-                        // </div>
-                        // `
+                        document.getElementById("my-feed").innerHTML = `
+                        <div id="post-card">
+                            <div id="user-details">
+                                <img src="../../images/event.jpg" alt="User Image">
+                                <section>
+                                    <h3>${post.data.author.firstName} ${post.data.author.lastName}</h3>
+                                    <span>${formattedDate}</span>
+                                </section>
+                            </div>
+                                 <p>${post.data.content}</p>
+                                ${
+                                    post.data.mediaPath && post.data.mediaType ? `<div id="flexy">
+                                    ${mediaHTML}
+                                </div>` : ""
+                                }
+                        </div>
+                        `
 
                         console.log(post)
                      } else {
