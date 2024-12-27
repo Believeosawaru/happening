@@ -15,60 +15,59 @@ async function blog() {
         if (response.ok) {
             let accum = "";
 
-            // function formatPostDate(dateString) {
-            //     const postDate = new Date(dateString);
-            //     const formatter = new Intl.DateTimeFormat("en-us", {
-            //         dateStyle: "medium",
-            //         timeStyle: "short",
-            //         timeZone: "Europe/Paris"
-            //     });
-            //     return formatter.format(postDate);
-            // }
+            function formatPostDate(dateString) {
+                const postDate = new Date(dateString);
+                const formatter = new Intl.DateTimeFormat("en-us", {
+                    dateStyle: "medium",
+                    timeStyle: "short",
+                    timeZone: "Europe/Paris"
+                });
+                return formatter.format(postDate);
+            }
 
-            // function truncateContent(content, wordLimit = 50) {
-            //     const words = content.split(" ");
-            //     if (words.length > wordLimit) {
-            //         const truncated = words.slice(0, wordLimit).join(" ");
-            //         return `${truncated}... <a href="fullpost.html?postId=${post.id}">Read more</a>`;
-            //     }
-            //     return content;
-            // }
+            function truncateContent(content, wordLimit = 50) {
+                const words = content.split(" ");
+                if (words.length > wordLimit) {
+                    const truncated = words.slice(0, wordLimit).join(" ");
+                    return `${truncated}... <a href="fullpost.html?postId=${post.id}">Read more</a>`;
+                }
+                return content;
+            }
 
-            // function generatePostHTML(post, formattedDate) {
-            //     const mediaHTML = post.mediaType && post.mediaPath ? 
-            //         (post.mediaType === "image" ? 
-            //             `<img src="https://happening.net/uploads/${post.mediaType}s/${post.mediaPath}" id="blog-img">` : 
-            //             `<video controls id="blog-video"> 
-            //                 <source src="https://happening.net/uploads/${post.mediaType}s/${post.mediaPath}">
-            //                 Your Browser Does Not Support The Video Tag
-            //             </video>`) : "";
+            function generatePostHTML(post, formattedDate) {
+                const mediaHTML = post.mediaType && post.mediaPath ? 
+                    (post.mediaType === "image" ? 
+                        `<img src="https://happening.net/uploads/${post.mediaType}s/${post.mediaPath}" id="blog-img">` : 
+                        `<video controls id="blog-video"> 
+                            <source src="https://happening.net/uploads/${post.mediaType}s/${post.mediaPath}">
+                            Your Browser Does Not Support The Video Tag
+                        </video>`) : "";
 
-            //     const truncatedContent = truncateContent(post.content);
+                const truncatedContent = truncateContent(post.content);
 
-            //     return `
-            //         <div>
-            //             <div id="user-details">
-            //                 <img src="../../images/event.jpg" alt="User Image">
-            //                 <section>
-            //                     <h3>${post.author.firstName} ${post.author.lastName}</h3>
-            //                     <span>${formattedDate}</span>
-            //                 </section>
-            //             </div>
-            //             <p>${truncatedContent}</p>
-            //             <div id="flexy">
-            //                 ${mediaHTML}
-            //             </div>
-            //         </div>
-            //     `;
-            // }
+                return `
+                    <div>
+                        <div id="user-details">
+                            <img src="../../images/event.jpg" alt="User Image">
+                            <section>
+                                <h3>${post.author.firstName} ${post.author.lastName}</h3>
+                                <span>${formattedDate}</span>
+                            </section>
+                        </div>
+                        <p>${truncatedContent}</p>
+                        <div id="flexy">
+                            ${mediaHTML}
+                        </div>
+                    </div>
+                `;
+            }
 
-            // message.data.forEach(post => {
-            //     const formattedDate = formatPostDate(post.createdAt);
-            //     const html = generatePostHTML(post, formattedDate);
-            //     accum += html;
-            // });
+            message.data.forEach(post => {
+                const formattedDate = formatPostDate(post.createdAt);
+                const html = generatePostHTML(post, formattedDate);
+                accum += html;
+            });
 
-            console.log(message)
             document.getElementById("my-feed").innerHTML = accum; 
             
         } else {
