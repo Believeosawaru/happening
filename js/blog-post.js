@@ -20,6 +20,12 @@ async function blog() {
                                 Your Browser Does Not Support The Video Tag
                             </video>`) : "";
 
+                            const postDate = new Date(post.data.date);
+                            const formatter = new Intl.DateTimeFormat("en-us", {
+                                dateStyle: "medium",
+                                timeStyle: "short",
+                                timeZone: "Europe/Paris"
+                            });
                             
                             const formattedDate = formatter.format(postDate);
             
@@ -74,6 +80,12 @@ async function blog() {
                                 Your Browser Does Not Support The Video Tag
                             </video>`) : "";
 
+                            const postDate = new Date(post.data.date);
+                            const formatter = new Intl.DateTimeFormat("en-us", {
+                                dateStyle: "medium",
+                                timeStyle: "short",
+                                timeZone: "Europe/Paris"
+                            });
                             
                             const formattedDate = formatter.format(postDate);
             
