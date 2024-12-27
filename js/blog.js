@@ -26,7 +26,7 @@ async function blog() {
             }
 
             function truncateContent(post, wordLimit = 50) {
-                const words = post.content.split("");
+                const words = post.content;
                 if (words.length > wordLimit) {
                     const truncated = words.slice(0, wordLimit).join(" ");
                     return `${truncated}... <a href="fullpost.html?postId=${post.id}">Read more</a>`;
