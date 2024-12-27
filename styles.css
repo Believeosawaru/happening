@@ -1354,6 +1354,7 @@ form textarea {
 #my-feed div {
     margin-block: 10px;
     background: white;
+    margin-inline: 10px;
     padding: 10px 10px;
 }
 #user-details img {
