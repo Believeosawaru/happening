@@ -65,8 +65,6 @@ async function blog() {
                     }
             
                     if (response.ok) {
-                        const postDate = new Date(post.data.date);
-
                         const mediaHTML = post.data.mediaType && post.data.mediaPath ? 
                         (post.data.mediaType === "image" ? 
                             `<img src="https://happening.net/uploads/${post.data.mediaType}s/${post.data.mediaPath}" id="blog-img">` : 
@@ -75,11 +73,8 @@ async function blog() {
                                 Your Browser Does Not Support The Video Tag
                             </video>`) : "";
 
-                            const formattedDate = postDate.toLocaleDateString("en-US", {
-                                year: "numeric",
-                                month: "long",
-                                day: "numeric"
-                            });
+                            
+                            t formattedDate = formatter.format(postDate);
             
                         document.getElementById("my-feed").innerHTML = `
                         <div id="post-card">
