@@ -1365,6 +1365,9 @@ form textarea {
 #user-details {
     display: flex;
 }
+#post-card {
+    margin-inline: 30px
+}
 #user-details span {
     font-weight: light;
     font-size: .8rem;

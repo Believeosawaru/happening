@@ -50,7 +50,7 @@ async function blog() {
                 const truncatedContent = truncateContent(post);
 
                 return `
-                    <div>
+                    <div id="post-card">
                         <div id="user-details">
                             <img src="../../images/event.jpg" alt="User Image">
                             <section>
