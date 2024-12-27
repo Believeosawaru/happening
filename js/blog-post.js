@@ -10,7 +10,7 @@ const response = await fetch(`https://happening.net/api/v1/blog/blog-post/${post
 
         const post = await response.json();
 
-        if (message.message === "jwt malformed" || message.message === "jwt expired") {
+        if (post.message === "jwt malformed" || post.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "https://happening.net/log-in"
             }, 350);
