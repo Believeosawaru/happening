@@ -29,7 +29,7 @@ async function blog() {
                 const words = content.split(" ");
                 if (words.length > wordLimit) {
                     const truncated = words.slice(0, wordLimit).join(" ");
-                    return `${truncated}... <a href="fullpost.html?postId=${post.id}">Read more</a>`;
+                    return `${truncated}... <a href="fullpost.html?postId=d}">Read more</a>`;
                 }
                 return content;
             }
