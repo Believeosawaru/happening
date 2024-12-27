@@ -50,8 +50,7 @@ async function blog() {
                 const truncatedContent = truncateContent(post);
 
                 return `
-                   <a href="https://happening.net/post-detail/${post._id}">
-                         <div id="post-card">
+                    <div id="post-card">
                         <div id="user-details">
                             <img src="../../images/event.jpg" alt="User Image">
                             <section>
@@ -59,12 +58,11 @@ async function blog() {
                                 <span>${formattedDate}</span>
                             </section>
                         </div>
-                        <p>${truncatedContent}</p>
+                        <p><a href="https://happening.net/blog-info/${post._id}">${truncateContent}</a></p>
                         <div id="flexy">
                             ${mediaHTML}
                         </div>
                     </div>
-                  </a>
                 `;
             }
 
