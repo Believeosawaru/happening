@@ -58,10 +58,12 @@ async function blog() {
                                 <span>${formattedDate}</span>
                             </section>
                         </div>
-                        <p><a href="https://happening.net/blog-info/${post._id}">${truncateContent}</a></p>
-                        <div id="flexy">
-                            ${mediaHTML}
-                        </div>
+                        <a href="https://happening.net/blog">
+                             <p>${truncatedContent}</p>
+                            <div id="flexy">
+                                ${mediaHTML}
+                            </div>
+                        </a>
                     </div>
                 `;
             }
