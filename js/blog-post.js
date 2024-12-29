@@ -29,7 +29,30 @@ async function blog() {
                             
                             const formattedDate = formatter.format(postDate);
             
-                        document.getElementById("my-feed").innerHTML = `
+                        document.getElementById("my-feed").innerHTML = 
+                        post.data.author.role === "admin" ?
+                        `
+                        <div id="post-card">
+                        <span class="material-symbols-outlined" id="edit-event-pen">
+                            <a href="https://happening.net/blog/edit-blog-post?id=${post.data._id}">
+                                edit
+                            </a>
+                        </span>
+                            <div id="user-details">
+                                <img src="../../images/event.jpg" alt="User Image">
+                                <section>
+                                    <h3>${post.data.author.firstName} ${post.data.author.lastName}</h3>
+                                    <span>${formattedDate}</span>
+                                </section>
+                            </div>
+                                 <p>${post.data.content}</p>
+                                ${
+                                    post.data.mediaPath && post.data.mediaType ? `<div id="flexy">
+                                    ${mediaHTML}
+                                </div>` : ""
+                                }
+                        </div>
+                        ` : `
                         <div id="post-card">
                             <div id="user-details">
                                 <img src="../../images/event.jpg" alt="User Image">

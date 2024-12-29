@@ -28,6 +28,8 @@ const retrievePost = async () => {
     if (response.ok) {
          const savedContent = data.data.content;
 
+         document.getElementById("del-post").innerHTML = `<a href="https://happening.net/blog/delete-blog-post?id=${data.data._id}"></a>`
+
            tinymce.init({
                 selector: "#post",
                 plugins: "advlist autolink lists link image charmap preview anchor",
