@@ -70,6 +70,8 @@ async function blog() {
                         </div>
                         `
 
+                        console.log("It's Working")
+
                         console.log(post)
                      } else {
                         console.log(message)
