@@ -78,6 +78,10 @@ async function loadNotifications() {
 
         const data = await response.json();
 
+        if (urlParams.pathname === "/blogs/blog-post" && data.message === "jwt malformed" || urlParams.pathname === "/blogs/blog-post" && data.message === "jwt expired") {
+            return;
+        }
+
         if (data.message === "jwt malformed" || data.message === "jwt expired") {
             setTimeout(() => {
                 window.location.href = "https://happening.net/log-in"
