@@ -90,11 +90,11 @@ async function blog() {
             
                     const post = await response.json();
             
-                    if (post.message === "jwt malformed" || post.message === "jwt expired") {
-                        setTimeout(() => {
-                            window.location.href = "https://happening.net/log-in"
-                        }, 350);
-                    }
+                    // if (post.message === "jwt malformed" || post.message === "jwt expired") {
+                    //     setTimeout(() => {
+                    //         window.location.href = "https://happening.net/log-in"
+                    //     }, 350);
+                    // }
             
                     if (response.ok) {
                         const mediaHTML = post.data.mediaType && post.data.mediaPath ? 
