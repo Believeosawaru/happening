@@ -94,4 +94,4 @@ async function loadNotifications() {
     }
 }
 
-loadNotifications();
+// loadNotifications();

@@ -142,4 +142,4 @@ async function blog() {
     }
 }
 
-// window.onload = blog;
+window.onload = blog;
