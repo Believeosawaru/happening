@@ -82,12 +82,6 @@ async function loadNotifications() {
             return;
         }
 
-        if (data.message === "jwt malformed" || data.message === "jwt expired") {
-            setTimeout(() => {
-                window.location.href = "https://happening.net/log-in"
-            }, 350);
-        }
-
         if (response.ok) {
             if (data.data.length > 0) {
                 document.querySelector(".alert").style.visibility = "visible";
