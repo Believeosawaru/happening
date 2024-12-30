@@ -1379,6 +1379,9 @@ form textarea {
 #my-feed > div li {
     margin-left: 30px;
 }
+#my-feed > div p {
+    margin: 10px 5px;
+}
 #my-feed > div section h3 {
     margin-bottom: 0;
     margin-left: 0;
@@ -1451,6 +1454,9 @@ form textarea {
     width: 80%;
     border: 5px solid rgb(230, 230, 230);
     height: 300px;
+}
+.my-feed p {
+    margin: 10px 10px;
 }
 
 @media screen and (min-width: 900px) {
