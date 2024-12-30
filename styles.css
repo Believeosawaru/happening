@@ -1685,8 +1685,12 @@ form textarea {
         margin-block: 20px;
         border-radius: 10px;
         display: grid;
-        grid-template-columns: auto auto;
-        align-items: start;
+        grid-template-columns: repeat(auto-fill, minimax(200px, 1fr));
+        /* grid-template-columns: auto auto;
+        align-items: start; */
+    }
+    #my-feed #post-card {
+        box-sizing: border-box;
     }
     .my-feed {
         display: flex;
