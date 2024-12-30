@@ -256,6 +256,9 @@ footer p {
     text-decoration: underline;
     font-weight: bold;
 }
+#post-details p {
+    margin-top: 10px;
+}
 .loc-i {
     color: #FF4500;
 }

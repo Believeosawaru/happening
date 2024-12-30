@@ -107,7 +107,7 @@ async function blog() {
                                 </div>
                                      <p>${post.data.content}</p>
                                     ${
-                                        post.data.mediaPath && post.data.mediaType ? `<div id="flexy">
+                                        post.data.mediaPath && post.data.mediaType ? `<div class="post-details" id="flexy">
                                         ${mediaHTML}
                                     </div>` : ""
                                     }
@@ -123,7 +123,7 @@ async function blog() {
                                 </div>
                                      <p>${post.data.content}</p>
                                     ${
-                                        post.data.mediaPath && post.data.mediaType ? `<div id="flexy">
+                                        post.data.mediaPath && post.data.mediaType ? `<div class="post-details" id="flexy">
                                         ${mediaHTML}
                                     </div>` : ""
                                     }
