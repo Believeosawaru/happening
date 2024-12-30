@@ -91,7 +91,7 @@ async function blog() {
 
                             console.log(post.data.author.role)
 
-                            const html = post.data.author.role === "admin" ? `
+                            const html = post.user.role === "admin" ? `
                             <div id="post-card">
                             <span class="material-symbols-outlined" id="edit-event-pen">
                                 <a href="https://happening.net/blogs/edit-blog-post?id=${post.data._id}">
