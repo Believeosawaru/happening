@@ -254,6 +254,7 @@ footer p {
 #del-post {
     color: #FF4500;
     text-decoration: underline;
+    font-weight: bold;
 }
 .loc-i {
     color: #FF4500;
