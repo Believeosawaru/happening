@@ -20,10 +20,6 @@ function groupByHeight(containerId) {
     sortedItems.forEach(item => container.appendChild(item));
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    groupByHeight("my-feed")
-})
-
 async function blog() {
     try {
         const response = await fetch("https://happening.net/api/v1/blog/public-feed", {
@@ -103,6 +99,8 @@ async function blog() {
             });
 
             document.getElementById("my-feed").innerHTML = accum; 
+
+            groupByHeight("my-feed")
             
         } else {
             console.log(message)
