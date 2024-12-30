@@ -1679,6 +1679,8 @@ form textarea {
     .my-feed {
         display: flex;
         justify-content: center;
-
+    }
+    .my-feed > div {
+        width: 300px;
     }
 }
