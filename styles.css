@@ -1676,4 +1676,9 @@ form textarea {
         grid-template-columns: auto auto;
         align-items: start;
     }
+    .my-feed {
+        display: flex;
+        justify-content: center;
+
+    }
 }
