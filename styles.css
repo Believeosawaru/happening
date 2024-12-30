@@ -1544,6 +1544,7 @@ form textarea {
     }
     .pc-menu a {
         margin-inline: 10px;
+        font-family: "Oswald", sans-serif;
     }
     nav button {
         margin-right: 200px;
