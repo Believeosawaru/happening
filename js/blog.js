@@ -1,28 +1,3 @@
-function groupByHeight(containerId) {
-    const container = document.getElementById(containerId);
-
-    const items = Array.from(container.children);
-
-    const groups = {};
-    const treshold = 20;
-    
-    items.forEach(item => {
-        const height = item.offsetHeight;
-
-        const key = Math.floor(height / treshold) * treshold;
-
-        if (!groups[key]) groups[key] = [];
-
-        groups[key].push(item);
-    });
-
-    const sortedItems = Object.values(groups).flat();
-
-    container.innerHTML = "";
-
-    sortedItems.forEach(item => container.appendChild(item));
-}
-
 async function blog() {
     try {
         const response = await fetch("https://happening.net/api/v1/blog/public-feed", {
@@ -101,9 +76,7 @@ async function blog() {
                 accum += html;
             });
 
-            document.getElementById("my-feed").innerHTML = accum; 
-
-            groupByHeight("my-feed")
+            document.getElementById("my-feed").innerHTML = accum;
             
         } else {
             console.log(message)

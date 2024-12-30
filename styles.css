@@ -1684,12 +1684,9 @@ form textarea {
         padding-inline: 80px;
         margin-block: 20px;
         border-radius: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        /* display: grid;
-        grid-template-columns: repeat(2, 1fr); */
-        /* grid-template-columns: auto auto;
-        align-items: start; */
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: start;
     }
     #my-feed #post-card {
         flex: 1 1 calc(50% - 10px);
