@@ -47,25 +47,17 @@ document.querySelector(".user-menu").innerHTML = `
             <button class="first-btn"><a href="https://happening.net/log-out">Log Out</a></button>
 `;
 
-document.querySelector(".pc-menu").innerHTML = `
+document.querySelector("nav").innerHTML = `
         <span><a href="https://happening.net/home">Happening</a></span>
 
             <div class="pc-menu home-pc-menu">
-                <a class="dis-flex" href="https://happening.net/home"><span class="material-symbols-outlined">
+                <a href="https://happening.net/home"><span class="material-symbols-outlined">
                 home
-                </span> <span>Home</span></a>
-                <a class="dis-flex" href="https://happening.net/home"><span class="material-symbols-outlined">
-                captive_portal
-                </span> <span>My Feed</span></a>
-                <a class="dis-flex" href="https://happening.net/home"><span class="material-symbols-outlined">
-                events_available
-                </span> <span>Events</span></a>
-                <a class="dis-flex" href="https://happening.net/home"><span class="material-symbols-outlined">
-                groups
-                </span> <span>Groups</span></a>
-                <a class="dis-flex" href="https://happening.net/home"><span class="material-symbols-outlined">
-                settings
-                </span> <span>Settings</span></a>
+                </span>  Home</a>
+                <a href="https://happening.net/my-events">&#x1F4C5; Events</a>
+                <a href="https://happening.net/my-groups">&#x1F465; Groups</a>
+                <a href="https://happening.net/settings">&#x2699; Settings</a>
+                <a href="https://happening.net/tos">&#x1F4DC; Terms Of Service</a>
                 
                 <button class="first-btn"><a href="https://happening.net/log-out">Log Out</a></button>
             </div>
