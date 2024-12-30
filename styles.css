@@ -1538,8 +1538,7 @@ form textarea {
     }
     .pc-menu {
         display: flex;
-        justify-self: center
-        ;
+        justify-self: center;
         margin-left: 200px;
     }
     .pc-menu a {
