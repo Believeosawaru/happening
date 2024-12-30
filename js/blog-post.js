@@ -89,6 +89,8 @@ async function blog() {
                             
                             const formattedDate = formatter.format(postDate);
 
+                            console.log(post.data.author.role)
+
                             const html = post.data.author.role === "admin" ? `
                             <div id="post-card">
                             <span class="material-symbols-outlined" id="edit-event-pen">
