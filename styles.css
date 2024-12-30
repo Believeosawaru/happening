@@ -1134,6 +1134,12 @@ select:hover {
     right: 10px;
     font-size: 1rem;
 }
+#edit-post-pen {
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    font-size: 1rem;
+}
 .slides {
     display: inline-block;
     margin-left: 30px;
