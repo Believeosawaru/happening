@@ -50,7 +50,7 @@ document.querySelector(".user-menu").innerHTML = `
 document.querySelector("nav").innerHTML = `
         <span><a href="https://happening.net/home">Happening</a></span>
 
-            <div class="pc-menu home-pc-menu">
+            <div class="pc-menu home-pc-menu" id="pc-menu">
                  <p><a class="dis-flex" href="https://happening.net/home"><span class="material-symbols-outlined">
                 home
                 </span> <span>Home</span></a></p>
