@@ -51,7 +51,7 @@ document.querySelector("nav").innerHTML = `
         <span><a href="https://happening.net/home">Happening</a></span>
 
             <div class="pc-menu home-pc-menu">
-                <a href="https://happening.net/home"><span class="material-symbols-outlined">
+                <a class="dis-flex" href="https://happening.net/home"><span class="material-symbols-outlined">
                 home
                 </span>  Home</a>
                 <a href="https://happening.net/my-events">&#x1F4C5; Events</a>
