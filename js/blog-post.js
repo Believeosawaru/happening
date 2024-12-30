@@ -90,7 +90,7 @@ async function blog() {
                             const formattedDate = formatter.format(postDate);
 
                             document.getElementById("my-feed").innerHTML = 
-                            post.data.author.role === "admin" ?
+                            (post.data.author.role === "admin") ?
                             `
                             <div id="post-card">
                             <span class="material-symbols-outlined" id="edit-event-pen">
