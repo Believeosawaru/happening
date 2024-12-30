@@ -47,7 +47,7 @@ document.querySelector(".user-menu").innerHTML = `
             <button class="first-btn"><a href="https://happening.net/log-out">Log Out</a></button>
 `;
 
-document.querySelector("nav").innerHTML = `
+document.querySelector(".pc-menu").innerHTML = `
         <span><a href="https://happening.net/home">Happening</a></span>
 
             <div class="pc-menu home-pc-menu">
