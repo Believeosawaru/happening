@@ -89,9 +89,7 @@ async function blog() {
                             
                             const formattedDate = formatter.format(postDate);
 
-                            document.getElementById("my-feed").innerHTML = 
-                            (post.data.author.role === "user") ?
-                            `
+                            const html = post.data.author.role === "admin" ? `
                             <div id="post-card">
                             <span class="material-symbols-outlined" id="edit-event-pen">
                                 <a href="https://happening.net/blogs/edit-blog-post?id=${post.data._id}">
@@ -129,6 +127,8 @@ async function blog() {
                                     }
                             </div>
                             `
+
+                        document.getElementById("my-feed").innerHTML = html;
 
                         console.log(post)
                      } else {
