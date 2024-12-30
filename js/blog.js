@@ -3,17 +3,21 @@ function groupByHeight(containerId) {
 
     const items = Array.from(container.children);
 
-    const heightGroups = {};
+    const groups = {};
+    const treshold = 20;
     
     items.forEach(item => {
         const height = item.offsetHeight;
 
-        if (!heightGroups[height]) heightGroups[height] = [];
+        const key = Math.floor(height / treshold) * treshold;
 
-        heightGroups[height].push(item);
+
+        if (!groups[key]) groups[key] = [];
+
+        groups[key].push(item);
     });
 
-    const sortedItems = Object.values(heightGroups).flat();
+    const sortedItems = Object.values(groups).flat();
 
     container.innerHTML = "";
 
