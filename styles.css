@@ -1037,6 +1037,7 @@ select:hover {
     display: flex;
     align-items: center;
 }
+#dis-flex
 .dis-flex span {
     margin-inline: 1px;
 }
@@ -1536,7 +1537,7 @@ form textarea {
         padding-inline: 30px;
     }
     .pc-menu {
-        display: block;
+        display: flex;
         margin-left: 400px;
     }
     .pc-menu a {
