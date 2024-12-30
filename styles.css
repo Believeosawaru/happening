@@ -1686,7 +1686,7 @@ form textarea {
         border-radius: 10px;
         display: grid;
         grid-template-columns: auto auto;
-        align-items: end;
+        align-items: center;
     }
     #my-feed #post-card {
         flex: 1 1 calc(50% - 10px);
