@@ -1402,6 +1402,7 @@ form textarea {
 }
 #post-card {
     margin-inline: 30px;
+    position: relative;
 }
 #user-details span {
     font-weight: light;
