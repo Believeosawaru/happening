@@ -1676,5 +1676,7 @@ form textarea {
         padding-inline: 80px;
         margin-block: 20px;
         border-radius: 10px;
+        display: grid;
+        grid-template-columns: auto auto;
     }
 }
