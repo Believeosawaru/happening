@@ -94,7 +94,7 @@ async function blog() {
                             `
                             <div id="post-card">
                             <span class="material-symbols-outlined" id="edit-event-pen">
-                                <a href="https://happening.net/blog/edit-blog-post?id=${post.data._id}">
+                                <a href="https://happening.net/blogs/edit-blog-post?id=${post.data._id}">
                                     edit
                                 </a>
                             </span>
