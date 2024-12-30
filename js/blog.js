@@ -11,7 +11,6 @@ function groupByHeight(containerId) {
 
         const key = Math.floor(height / treshold) * treshold;
 
-
         if (!groups[key]) groups[key] = [];
 
         groups[key].push(item);
