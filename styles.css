@@ -1682,7 +1682,8 @@ form textarea {
         justify-content: center;
     }
     .my-feed > div {
-        width: 850px;
+        width: 950px;
+        padding-inline: 40px;
     }
     #edit-post-pen {
         position: absolute;
