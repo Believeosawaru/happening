@@ -28,9 +28,9 @@ const retrievePost = async () => {
     if (response.ok) {
          const savedContent = data.data.content;
 
-         document.getElementById("del-post").innerHTML = `<a href="https://happening.net/blog/delete-blog-post?id=${data.data._id}"></a>`
+         console.log(data)
 
-         document.getElementById("del-post").style.display = "block"
+         document.getElementById("del-post").innerHTML = `<a href="https://happening.net/blog/delete-blog-post?id=${data.data._id}">|Delete Post</a>`
 
            tinymce.init({
                 selector: "#post",
