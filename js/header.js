@@ -78,7 +78,9 @@ async function loadNotifications() {
 
         const data = await response.json();
 
-        if (urlParams.pathname === "/blogs/blog-post" && data.message === "jwt malformed" || urlParams.pathname === "/blogs/blog-post" && data.message === "jwt expired") {
+        const url = new URL(window.location.href);
+
+        if (url.pathname === "/blogs/blog-post" && data.message === "jwt malformed" || url.pathname === "/blogs/blog-post" && data.message === "jwt expired") {
             return;
         }
 
