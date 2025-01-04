@@ -1465,7 +1465,7 @@ form textarea {
     margin: 10px 10px;
 }
 #my-feed-p {
-    visibility: hidden;
+    display: block;
 }
 #margin-topper {
     padding-top: 10px;

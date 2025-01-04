@@ -111,7 +111,8 @@ async function loadNotifications() {
             }
 
             if (data.data.role === "admin") {
-                document.getElementById("my-feed-p").style.visibility = "visible"
+                document.getElementById("my-feed-p").style.display = "block";
+                console.log(data.data)
             } else {
                 return;
             }
