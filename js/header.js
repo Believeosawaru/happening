@@ -88,40 +88,42 @@ document.querySelector("nav").innerHTML = `
 
 const userToken = localStorage.getItem("authToken");
 
-async function loadNotifications() {
-    try {
-        const response = await fetch(`https://happening.net/api/v1/user/my-notifications`, {
-            method: "GET",
-            headers: {
-                "Authorization": `Bearer ${userToken}`
-            }
-        });
+console.log(userToken)
 
-        const data = await response.json();
+// async function loadNotifications() {
+//     try {
+//         const response = await fetch(`https://happening.net/api/v1/user/my-notifications`, {
+//             method: "GET",
+//             headers: {
+//                 "Authorization": `Bearer ${userToken}`
+//             }
+//         });
 
-        const url = new URL(window.location.href);
+//         const data = await response.json();
 
-        if (url.pathname === "/blogs/blog-post" && data.message === "jwt malformed" || url.pathname === "/blogs/blog-post" && data.message === "jwt expired") {
-            return;
-        }
+//         const url = new URL(window.location.href);
 
-        if (response.ok) {
-            if (data.data.notifications.length > 0) {
-                document.querySelector(".alert").style.visibility = "visible";
-            }
+//         if (url.pathname === "/blogs/blog-post" && data.message === "jwt malformed" || url.pathname === "/blogs/blog-post" && data.message === "jwt expired") {
+//             return;
+//         }
 
-            if (data.data.role === "admin") {
-                document.getElementById("my-feed-p").style.display = "block";
-                document.getElementById("create-blog-p").style.display = "block";
-            } else {
-                return;
-            }
-        } else {
-            console.log("Error")
-        }
-    } catch (error) {
-        console.log(error);
-    }
-}
+//         if (response.ok) {
+//             if (data.data.notifications.length > 0) {
+//                 document.querySelector(".alert").style.visibility = "visible";
+//             }
+
+//             if (data.data.role === "admin") {
+//                 document.getElementById("my-feed-p").style.display = "block";
+//                 document.getElementById("create-blog-p").style.display = "block";
+//             } else {
+//                 return;
+//             }
+//         } else {
+//             console.log("Error")
+//         }
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
 
 loadNotifications();
