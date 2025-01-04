@@ -30,6 +30,10 @@ async function fetchMessage() {
             verifyDiv.style.display = "block";
         }
 
+        if (response.status == 401) {
+            window.location.href = "https://happening.net/log-in"
+        }
+
         const message = await response.json();
 
         if (message.message === "jwt malformed" || message.message === "jwt expired") {

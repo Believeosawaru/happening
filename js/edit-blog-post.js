@@ -26,7 +26,8 @@ const retrievePost = async () => {
     const data = await response.json();
 
     if (response.ok) {
-         const savedContent = data.data.content;
+        const title = data.data.title;
+         const content = data.data.content;
 
          console.log(data)
 
@@ -36,9 +37,17 @@ const retrievePost = async () => {
                 selector: "#post",
                 plugins: "advlist autolink lists link image charmap preview anchor",
                 toolbar: "undo redo | formatselect | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | removeformat"
-           })
+           });
 
-           document.getElementById("post").value = savedContent;
+           tinymce.init({
+            selector: "#title",
+            menubar: false,
+            plugins: "wordcount link",
+            toolbar: "undo redo | bold italic underline | alignleft aligncenter alignright | wordcount"
+        });
+           
+           document.getElementById("title").value = title;
+           document.getElementById("post").value = content;
 
         //  tinymce.init({
         //     selector: "#post",
@@ -96,6 +105,7 @@ document.getElementById("edit-post").addEventListener("submit", async (e) => {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
+               title,
                content: post
             })
         });

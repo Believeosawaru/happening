@@ -4,6 +4,13 @@ tinymce.init({
     toolbar: "undo redo | formatselect | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | removeformat"
 });
 
+tinymce.init({
+    selector: "#title",
+    menubar: false,
+    plugins: "wordcount link",
+    toolbar: "undo redo | bold italic underline | alignleft aligncenter alignright | wordcount"
+});
+
 const token = localStorage.getItem("authToken");
 
 const button = document.getElementById("bio-btn");
@@ -22,8 +29,10 @@ document.getElementById("create-post").addEventListener("submit", async (e) => {
 
     const formData = new FormData();
     const fileInput = document.getElementById("media");
+    const title = tinymce.get("title").getContent();
     const post = tinymce.get("post").getContent();
-
+    
+    formData.append("title", title);
     formData.append("content", post);
 
     if (fileInput.files[0]) {

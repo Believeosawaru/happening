@@ -21,7 +21,7 @@ document.querySelector(".user-menu").innerHTML = `
                 home
                 </span> <span>Home</span></a></p>
 
-                <p><a class="dis-flex" href="https://happening.net/blogs/my-feed"><span class="material-symbols-outlined">
+                <p id="my-feed-p"><a class="dis-flex" href="https://happening.net/blogs/my-feed"><span class="material-symbols-outlined">
                  captive_portal
                 </span> <span>My Feed</span></a></p>
                 
@@ -55,7 +55,7 @@ document.querySelector("nav").innerHTML = `
                 home
                 </span> <span>Home</span></a></p>
 
-                <p><a class="dis-flex" href="https://happening.net/blogs/my-feed"><span class="material-symbols-outlined">
+                <p id="my-feed-p"><a class="dis-flex" href="https://happening.net/blogs/my-feed"><span class="material-symbols-outlined">
                  captive_portal
                 </span> <span>My Feed</span></a></p>
                 
@@ -106,8 +106,14 @@ async function loadNotifications() {
         }
 
         if (response.ok) {
-            if (data.data.length > 0) {
+            if (data.data.notifications.length > 0) {
                 document.querySelector(".alert").style.visibility = "visible";
+            }
+
+            if (data.data.role === "admin") {
+                document.getElementById("my-feed-p").style.visibility = "visible"
+            } else {
+                return;
             }
         } else {
             console.log("Error")

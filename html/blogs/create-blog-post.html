@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=0, initial-scale=1.0">
     <title>Happening - Create A Post</title>
 
-    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../styles.css">
 
      <!-- Font awesome CDN -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -57,8 +57,9 @@
 
         <form action="/create-post" id="create-post" method="post">
 
+            <textarea name="title" id="title" placeholder="Name Your Blog Post"></textarea>
             <textarea name="post" id="post" placeholder="What's On Your Mind?"></textarea>
-            <input type="file" name="media" id="media" accept="image/*,video/*">
+            <input type="file" name="media" id="media" accept="image/*,video/*" required>
 
             <button id="bio-btn">Post</button>
         </form>

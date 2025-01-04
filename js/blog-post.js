@@ -30,24 +30,18 @@ async function blog() {
                             const formattedDate = formatter.format(postDate);
 
                             document.getElementById("my-feed").innerHTML = `
-                        <div id="post-card">
-                            <div id="user-details">
-                                <img src="../../images/event.jpg" alt="User Image">
-                                <section>
-                                    <h3>${post.data.author.firstName} ${post.data.author.lastName}</h3>
-                                    <span>${formattedDate}</span>
-                                </section>
+                         <div id="single-post-card">
+                            <div class="center">${mediaHTML}</div>
+                            <div>
+                                <h2>${post.data.title}</h2>
+                                <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
+                                    event_available
+                                    </span> <span>${formattedDate}</span></p>
+                                    <p class="bold-txt">Published By: ${post.data.author.firstName}</p>
+                                <p id="margin-topper">${post.data.content}</p>
                             </div>
-                                 <p>${post.data.content}</p>
-                                ${
-                                    post.data.mediaPath && post.data.mediaType ? `<div id="flexy">
-                                    ${mediaHTML}
-                                </div>` : ""
-                                }
-                        </div>
+                         </div>
                         `
-
-                        console.log(post)
                      } else {
                         console.log(message)
                     }
@@ -92,42 +86,32 @@ async function blog() {
                             console.log(post.data.author.role)
 
                             const html = post.user.role === "admin" ? `
-                            <div id="post-card">
-                            <span class="material-symbols-outlined" id="edit-post-pen">
-                                <a href="https://happening.net/blogs/edit-blog-post?id=${post.data._id}">
-                                    edit
-                                </a>
-                            </span>
-                                <div id="user-details">
-                                    <img src="../../images/event.jpg" alt="User Image">
-                                    <section>
-                                        <h3>${post.data.author.firstName} ${post.data.author.lastName}</h3>
-                                        <span>${formattedDate}</span>
-                                    </section>
+                             <div id="single-post-card">
+                                <span class="material-symbols-outlined" id="edit-post-pen">
+                                        edit
+                                </span>
+                                <div class="center">${mediaHTML}</div>
+                                <div>
+                                    <h2>${post.data.title}</h2>
+                                    <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
+                                        event_available
+                                        </span> <span>${formattedDate}</span></p>
+                                        <p class="bold-txt">Published By: ${post.data.author.firstName}</p>
+                                    <p id="margin-topper">${post.data.content}</p>
                                 </div>
-                                     <p>${post.data.content}</p>
-                                    ${
-                                        post.data.mediaPath && post.data.mediaType ? `<div class="post-details" id="flexy">
-                                        ${mediaHTML}
-                                    </div>` : ""
-                                    }
-                            </div>
+                             </div>
                             ` : `
-                            <div id="post-card">
-                                <div id="user-details">
-                                    <img src="../../images/event.jpg" alt="User Image">
-                                    <section>
-                                        <h3>${post.data.author.firstName} ${post.data.author.lastName}</h3>
-                                        <span>${formattedDate}</span>
-                                    </section>
+                           <div id="single-post-card">
+                                <div class="center">${mediaHTML}</div>
+                                <div>
+                                    <h2>${post.data.title}</h2>
+                                    <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
+                                        event_available
+                                        </span> <span>${formattedDate}</span></p>
+                                        <p class="bold-txt">Published By: ${post.data.author.firstName}</p>
+                                    <p id="margin-topper">${post.data.content}</p>
                                 </div>
-                                     <p>${post.data.content}</p>
-                                    ${
-                                        post.data.mediaPath && post.data.mediaType ? `<div class="post-details" id="flexy">
-                                        ${mediaHTML}
-                                    </div>` : ""
-                                    }
-                            </div>
+                             </div>
                             `
 
                         document.getElementById("my-feed").innerHTML = html;

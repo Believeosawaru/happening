@@ -33,7 +33,7 @@ async function blog() {
                 const words = content.split(" ");
                 if (words.length > wordLimit) {
                     const truncated = words.slice(0, wordLimit).join(" ");
-                    return `${truncated}... <br><button><a href="https://happening.net/blogs/blog-post?postId=${post._id}">Read more</a></button>`;
+                    return `${truncated}... <br><button><a href="https://happening.net/blog/${post.slug}">Read more</a></button>`;
                 }
                 return content;
             }
@@ -52,20 +52,18 @@ async function blog() {
                 return `
                     <div id="post-card">
                         <div id="user-details">
-                            <img src="../../images/event.jpg" alt="User Image">
+                            ${
+                                post.mediaPath && post.mediaType ? `${mediaHTML}` : ""
+                            }
+                    
                             <section>
-                                <h3>${post.author.firstName} ${post.author.lastName}</h3>
-                                <span>${formattedDate}</span>
+                                <a href="https://happening.net/blogs/blog-post?postId=${post._id}">
+                                    <h3>${post.title}</h3>
+                                    <p>${truncatedContent}</p> 
+                                    <span>${formattedDate}</span>      
+                                </a>
                             </section>
                         </div>
-                        <a href="https://happening.net/blogs/blog-post?postId=${post._id}">
-                             <p>${truncatedContent}</p>
-                            ${
-                                post.mediaPath && post.mediaType ? `<div id="flexy">
-                                ${mediaHTML}
-                            </div>` : ""
-                            }
-                        </a>
                     </div>
                 `;
             }

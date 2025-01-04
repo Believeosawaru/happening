@@ -57,20 +57,18 @@ async function myFeed() {
                 return `
                     <div id="post-card">
                         <div id="user-details">
-                            <img src="../../images/event.jpg" alt="User Image">
+                            ${
+                                post.mediaPath && post.mediaType ? `${mediaHTML}` : ""
+                            }
+                    
                             <section>
-                                <h3>${post.author.firstName} ${post.author.lastName}</h3>
-                                <span>${formattedDate}</span>
+                                <a href="https://happening.net/blogs/blog-post?postId=${post._id}">
+                                    <h3>${post.title}</h3>
+                                    <p>${truncatedContent}</p> 
+                                    <span>${formattedDate}</span>      
+                                </a>
                             </section>
                         </div>
-                        <a href="https://happening.net/blogs/blog-post?postId=${post._id}">
-                             <p>${truncatedContent}</p>
-                            ${
-                                post.mediaPath && post.mediaType ? `<div id="flexy">
-                                ${mediaHTML}
-                            </div>` : ""
-                            }
-                        </a>
                     </div>
                 `;
             }
