@@ -126,4 +126,4 @@ console.log(userToken)
 //     }
 // }
 
-loadNotifications();
+// loadNotifications();
