@@ -1447,6 +1447,8 @@ form textarea {
 }
 #blog-img {
     width: 40%;
+    max-width: 40%;
+    height: auto;
     border: 5px solid rgb(230, 230, 230);
     border-radius: 6px;
 }
