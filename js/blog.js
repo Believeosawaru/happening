@@ -57,7 +57,7 @@ async function blog() {
                             }
                     
                             <section>
-                                <a href="https://happening.net/blogs/blog-post?postId=${post._id}">
+                                <a href="https://happening.net/blogs/blog-post/${post.slug}">
                                     <h3>${post.title}</h3>
                                     <p>${truncatedContent}</p> 
                                     <span>${formattedDate}</span>      

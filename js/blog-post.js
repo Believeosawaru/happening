@@ -1,11 +1,11 @@
 const token = localStorage.getItem("authToken");
-const urlParams = new URLSearchParams(window.location.search);
-const postId = urlParams.get("postId");
+const path = window.location.pathname;
+const slug = path.split("/").pop();
 
 async function blog() {
     if (!token) {
         try {
-            const response = await fetch(`https://happening.net/api/v1/blog/public-blog-post/${postId}`, {
+            const response = await fetch(`https://happening.net/api/v1/blog/public-blog-post/${slug}`, {
                         method: "GET"
                     });
             

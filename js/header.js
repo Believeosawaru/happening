@@ -24,6 +24,10 @@ document.querySelector(".user-menu").innerHTML = `
                 <p id="my-feed-p"><a class="dis-flex" href="https://happening.net/blogs/my-feed"><span class="material-symbols-outlined">
                  captive_portal
                 </span> <span>My Feed</span></a></p>
+
+                <p id="create-blog-p"><a class="dis-flex" href="https://happening.net/blogs/my-feed"><span class="material-symbols-outlined">
+                 captive_portal
+                </span> <span>Create Blog Post</span></a></p>
                 
             <p><a class="dis-flex" href="https://happening.net/my-events"><span class="material-symbols-outlined">
                 event_available
@@ -36,10 +40,6 @@ document.querySelector(".user-menu").innerHTML = `
             <p><a class="dis-flex" href="https://happening.net/settings"><span class="material-symbols-outlined">
                 settings
                 </span> <span>Settings</span></a></p>
-
-            <p><a class="dis-flex" href="https://happening.net/tos"><span class="material-symbols-outlined">
-                description
-                </span> <span>Terms Of Service</span></a></p>
 
             <p><a class="dis-flex" href="https://happening.net/my-profile"><span class="material-symbols-outlined">
                 person
@@ -59,6 +59,10 @@ document.querySelector("nav").innerHTML = `
                  captive_portal
                 </span> <span>My Feed</span></a></p>
                 
+                <p id="create-blog-p"><a class="dis-flex" href="https://happening.net/blogs/create-blog-post"><span class="material-symbols-outlined">
+                 captive_portal
+                </span> <span>Create Blog Post</span></a></p>
+                
             <p><a class="dis-flex" href="https://happening.net/my-events"><span class="material-symbols-outlined">
                 event_available
                 </span> <span>Events</span></a></p>
@@ -70,10 +74,6 @@ document.querySelector("nav").innerHTML = `
             <p><a class="dis-flex" href="https://happening.net/settings"><span class="material-symbols-outlined">
                 settings
                 </span> <span>Settings</span></a></p>
-
-            <p><a class="dis-flex" href="https://happening.net/tos"><span class="material-symbols-outlined">
-                description
-                </span> <span>Terms Of Service</span></a></p>
 
             <p><a class="dis-flex" href="https://happening.net/my-profile"><span class="material-symbols-outlined">
                 person
@@ -112,7 +112,7 @@ async function loadNotifications() {
 
             if (data.data.role === "admin") {
                 document.getElementById("my-feed-p").style.display = "block";
-                console.log(data.data)
+                document.getElementById("create-blog-p").style.display = "block";
             } else {
                 return;
             }
