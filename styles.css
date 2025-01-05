@@ -1405,6 +1405,9 @@ form textarea {
 #user-details {
     display: flex;
 }
+#user-details section p div {
+    margin: 00;
+}
 #post-card {
     position: relative;
 }
