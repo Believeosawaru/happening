@@ -1144,7 +1144,9 @@ select:hover {
     position: absolute;
     top: 15px;
     right: 20px;
-    width: 4px;
+}
+#edit-post-pen span {
+    font-size: .4rem;
 }
 .slides {
     display: inline-block;
