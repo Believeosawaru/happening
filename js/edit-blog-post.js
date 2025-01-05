@@ -31,7 +31,7 @@ const retrievePost = async () => {
 
          console.log(data)
 
-         document.getElementById("del-post").innerHTML = `<a href="https://happening.net/blog/delete-blog-post?id=${data.data._id}">Delete Post</a>`
+         document.getElementById("del-post").innerHTML = `<a href="https://happening.net/blogs/delete-blog-post/${data.data._id}">Delete Post</a>`
 
            tinymce.init({
                 selector: "#post",
