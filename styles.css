@@ -1144,7 +1144,6 @@ select:hover {
     position: absolute;
     top: 15px;
     right: 20px;
-    font-size: 5rem;
 }
 .slides {
     display: inline-block;
