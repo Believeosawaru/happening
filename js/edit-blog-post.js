@@ -26,11 +26,10 @@ const retrievePost = async () => {
     const data = await response.json();
 
     if (response.ok) {
-        console.log(data)
-        const title = data.data.title;
+         const title = data.data.title;
          const content = data.data.content;
 
-         console.log(data)
+         console.log(typeof(title))
 
          document.getElementById("del-post").innerHTML = `<a href="https://happening.net/blog/delete-blog-post?id=${data.data._id}">Delete Post</a>`
 
@@ -47,8 +46,8 @@ const retrievePost = async () => {
             toolbar: "undo redo | bold italic underline | alignleft aligncenter alignright | wordcount"
         });
            
-           document.getElementById("title").value = title;
-           document.getElementById("post").value = content;
+           document.getElementById("title").value = String(title);
+           document.getElementById("post").value = String(content);
 
         //  tinymce.init({
         //     selector: "#post",
