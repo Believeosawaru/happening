@@ -33,7 +33,7 @@ async function blog() {
                          <div id="single-post-card">
                             <div class="center">${mediaHTML}</div>
                             <div>
-                                <h2>${post.data.title}</h2>
+                                <h2>${String(post.data.title)}</h2>
                                 <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
                                     event_available
                                     </span> <span>${formattedDate}</span></p>
@@ -91,7 +91,7 @@ async function blog() {
                                 </span></a>
                                 <div class="center">${mediaHTML}</div>
                                 <div>
-                                    <h2>${post.data.title}</h2>
+                                    <h2>${String(post.data.title)}</h2>
                                     <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
                                         event_available
                                         </span> <span>${formattedDate}</span></p>
@@ -103,7 +103,7 @@ async function blog() {
                            <div id="single-post-card">
                                 <div class="center">${mediaHTML}</div>
                                 <div>
-                                    <h2>${post.data.title}</h2>
+                                    <h2>${String(post.data.title)}</h2>
                                     <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
                                         event_available
                                         </span> <span>${formattedDate}</span></p>

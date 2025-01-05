@@ -63,7 +63,7 @@ async function myFeed() {
                     
                             <section>
                                 <a href="https://happening.net/blog/${post.slug}">
-                                    <h3>${post.title}</h3>
+                                    <h3>${String(post.title)}</h3>
                                     <p>${truncatedContent}</p> 
                                     <span>${formattedDate}</span>      
                                 </a>
