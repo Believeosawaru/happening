@@ -1144,7 +1144,7 @@ select:hover {
     position: absolute;
     top: 15px;
     right: 20px;
-    font-size: 1rem;
+    font-size: .7rem;
 }
 .slides {
     display: inline-block;
@@ -1472,7 +1472,7 @@ form textarea {
     margin: 10px 10px;
 }
 #margin-topper {
-    padding-top: 10px;
+    padding-top: 5px;
 }
 .bold-txt {
     font-weight: bold;
