@@ -29,7 +29,7 @@ const retrievePost = async () => {
          const title = data.data.title;
          const content = data.data.content;
 
-         console.log(data)
+         console.log(data.data.slug)
 
          document.getElementById("del-post").innerHTML = `<a href="https://happening.net/blogs/delete-blog-post/${data.data.slug}">Delete Post</a>`
 
