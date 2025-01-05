@@ -1410,6 +1410,7 @@ form textarea {
 }
 #user-details h3 {
     font-family: "Oswald", sans-serif;
+    color: red;
 }
 #post-card {
     position: relative;
