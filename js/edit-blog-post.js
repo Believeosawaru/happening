@@ -29,7 +29,7 @@ const retrievePost = async () => {
          const title = data.data.title;
          const content = data.data.content;
 
-         console.log(typeof(title))
+         console.log(data)
 
          document.getElementById("del-post").innerHTML = `<a href="https://happening.net/blog/delete-blog-post?id=${data.data._id}">Delete Post</a>`
 
@@ -38,16 +38,9 @@ const retrievePost = async () => {
                 plugins: "advlist autolink lists link image charmap preview anchor",
                 toolbar: "undo redo | formatselect | bold italic | alignleft aligncenter alignright | bullist numlist outdent indent | removeformat"
            });
-
-           tinymce.init({
-            selector: "#title",
-            menubar: false,
-            plugins: "wordcount link",
-            toolbar: "undo redo | bold italic underline | alignleft aligncenter alignright | wordcount"
-        });
            
-           document.getElementById("title").value = String(title);
-           document.getElementById("post").value = String(content);
+           document.getElementById("title").value = title;
+           document.getElementById("post").value = content;
 
         //  tinymce.init({
         //     selector: "#post",
