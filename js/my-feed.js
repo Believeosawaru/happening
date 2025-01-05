@@ -30,7 +30,7 @@ async function myFeed() {
                 return formatter.format(postDate);
             }
 
-            function truncateContent(post, wordLimit = 30) {
+            function truncateContent(post, wordLimit = 2) {
                 const div = document.createElement('div');
                 div.textContent = post.content;
                 const content = div.textContent;
