@@ -169,6 +169,7 @@ if (userToken) {
     
                 if (data.data.role === "user") {
                     removeAdminLinks();
+                    alert("done")
                 }
             } else {
                 console.log("Error")
