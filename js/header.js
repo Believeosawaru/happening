@@ -115,7 +115,7 @@ if (userToken) {
                     setTimeout(() => {
                         document.getElementById("my-feed-p").style.color = "red";
                         document.getElementById("create-blog-p").style.display = "none";
-                    }, 350)
+                    }, 3000)
                 } else {
                     return;
                 }
