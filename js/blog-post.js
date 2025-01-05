@@ -50,7 +50,7 @@ async function blog() {
                 }
     } else {
         try {
-            const response = await fetch(`https://happening.net/api/v1/blog/blog-post/${postId}`, {
+            const response = await fetch(`https://happening.net/api/v1/blog/blog-post/${slug}`, {
                         method: "GET", 
                         headers: {
                             "Authorization": `Bearer ${token}`
