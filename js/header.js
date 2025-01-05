@@ -86,6 +86,62 @@ document.querySelector("nav").innerHTML = `
             <i class="fa fa-bars" id="menu-bar" onclick="openMenu();"></i>
 `
 
+function removeAdminLinks() {
+    document.querySelector(".user-menu").innerHTML = `
+            <p><a class="dis-flex" href="https://happening.net/home"><span class="material-symbols-outlined">
+                home
+                </span> <span>Home</span></a></p>
+                
+            <p><a class="dis-flex" href="https://happening.net/my-events"><span class="material-symbols-outlined">
+                event_available
+                </span> <span>Events</span></a></p>
+
+            <p><a class="dis-flex" href="https://happening.net/my-groups"><span class="material-symbols-outlined">
+                groups
+                </span> <span>Groups</span></a></p>
+
+            <p><a class="dis-flex" href="https://happening.net/settings"><span class="material-symbols-outlined">
+                settings
+                </span> <span>Settings</span></a></p>
+
+            <p><a class="dis-flex" href="https://happening.net/my-profile"><span class="material-symbols-outlined">
+                person
+                </span> <span>My Profile</span></a></p>
+            <button class="first-btn"><a href="https://happening.net/log-out">Log Out</a></button>
+`;
+
+document.querySelector("nav").innerHTML = `
+        <span><a href="https://happening.net/home">Happening</a></span>
+
+            <div class="pc-menu home-pc-menu" id="pc-menu">
+                 <p><a class="dis-flex" href="https://happening.net/home"><span class="material-symbols-outlined">
+                home
+                </span> <span>Home</span></a></p>
+                
+            <p><a class="dis-flex" href="https://happening.net/my-events"><span class="material-symbols-outlined">
+                event_available
+                </span> <span>Events</span></a></p>
+
+            <p><a class="dis-flex" href="https://happening.net/my-groups"><span class="material-symbols-outlined">
+                groups
+                </span> <span>Groups</span></a></p>
+
+            <p><a class="dis-flex" href="https://happening.net/settings"><span class="material-symbols-outlined">
+                settings
+                </span> <span>Settings</span></a></p>
+
+            <p><a class="dis-flex" href="https://happening.net/my-profile"><span class="material-symbols-outlined">
+                person
+                </span> <span>My Profile</span></a></p>
+            <button class="first-btn"><a href="https://happening.net/log-out">Log Out</a></button>
+            </div>
+
+            <i class="fa fa-bell" id="bell"><i class="alert"></i></i>
+            
+            <i class="fa fa-bars" id="menu-bar" onclick="openMenu();"></i>
+`
+}
+
 const userToken = localStorage.getItem("authToken");
 
 if (userToken) {
@@ -112,12 +168,7 @@ if (userToken) {
                 }
     
                 if (data.data.role === "user") {
-                    setTimeout(() => {
-                        document.getElementById("my-feed-p").innerHTML = "red";
-                        document.getElementById("create-blog-p").innerHTML = "none";
-                    }, 3000)
-                } else {
-                    return;
+                    removeAdminLinks();
                 }
             } else {
                 console.log("Error")
