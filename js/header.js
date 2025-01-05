@@ -111,7 +111,7 @@ if (userToken) {
                     document.querySelector(".alert").style.visibility = "visible";
                 }
     
-                if (data.data.role !== "admin") {
+                if (data.data.role === "user") {
                     document.getElementById("my-feed-p").style.display = "none";
                     document.getElementById("create-blog-p").style.display = "none";
                 } else {
