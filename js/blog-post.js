@@ -14,7 +14,7 @@ async function blog() {
                     if (response.ok) {
                         const mediaHTML = post.data.mediaType && post.data.mediaPath ? 
                         (post.data.mediaType === "image" ? 
-                            `<img src="https://happening.net/uploads/${post.data.mediaType}s/${post.data.mediaPath}" id="single-blog-post-img">` : 
+                            `<img src="https://happening.net/uploads/${post.data.mediaType}s/${post.data.mediaPath}" id="blog-post-img">` : 
                             `<video controls id="blog-video"> 
                                 <source src="https://happening.net/uploads/${post.data.mediaType}s/${post.data.mediaPath}">
                                 Your Browser Does Not Support The Video Tag
