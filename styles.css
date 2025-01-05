@@ -1465,12 +1465,6 @@ form textarea {
 .my-feed p {
     margin: 10px 10px;
 }
-#my-feed-p {
-    visibility: hidden;
-}
-#create-blog-p {
-    visibility: hidden;
-}
 #margin-topper {
     padding-top: 10px;
 }
