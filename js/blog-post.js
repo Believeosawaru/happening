@@ -83,8 +83,6 @@ async function blog() {
                             
                             const formattedDate = formatter.format(postDate);
 
-                            console.log(post.data.author.role)
-
                             const html = post.user.role === "admin" ? `
                              <div id="single-post-card">
                                 <a href="https://happening.net/blogs/edit-blog-post/${post.data.slug}" id="edit-post-pen">
