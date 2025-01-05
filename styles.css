@@ -1408,10 +1408,9 @@ form textarea {
 #user-details section p div {
     margin: 0;
 }
-#user-details h3 {
+/* #user-details h3 {
     font-family: "Oswald", sans-serif;
-    color: red;
-}
+} */
 #post-card {
     position: relative;
 }
