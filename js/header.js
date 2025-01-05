@@ -88,42 +88,85 @@ document.querySelector("nav").innerHTML = `
 
 const userToken = localStorage.getItem("authToken");
 
-console.log(userToken)
+if (userToken) {
+    async function loadNotifications() {
+        try {
+            const response = await fetch(`https://happening.net/api/v1/user/my-notifications`, {
+                method: "GET",
+                headers: {
+                    "Authorization": `Bearer ${userToken}`
+                }
+            });
+    
+            const data = await response.json();
+    
+            const url = new URL(window.location.href);
+    
+            if (url.pathname === "/blogs/blog-post" && data.message === "jwt malformed" || url.pathname === "/blogs/blog-post" && data.message === "jwt expired") {
+                return;
+            }
+    
+            if (response.ok) {
+                if (data.data.notifications.length > 0) {
+                    document.querySelector(".alert").style.visibility = "visible";
+                }
+    
+                if (data.data.role === "admin") {
+                    document.getElementById("my-feed-p").style.display = "block";
+                    document.getElementById("create-blog-p").style.display = "block";
+                } else {
+                    return;
+                }
+            } else {
+                console.log("Error")
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    
+    loadNotifications();
+} else {
+    document.querySelector(".user-menu").innerHTML = `
+            <p><a class="dis-flex" href="https://happening.net/home"><span class="material-symbols-outlined">
+                home
+                </span> <span>Home</span></a></p>
 
-// async function loadNotifications() {
-//     try {
-//         const response = await fetch(`https://happening.net/api/v1/user/my-notifications`, {
-//             method: "GET",
-//             headers: {
-//                 "Authorization": `Bearer ${userToken}`
-//             }
-//         });
+                <p id="my-feed-p"><a class="dis-flex" href="https://happening.net/blog"><span class="material-symbols-outlined">
+                 captive_portal
+                </span> <span>Blog</span></a></p>
+                
+            <p><a class="dis-flex" href="https://happening.net/events"><span class="material-symbols-outlined">
+                event_available
+                </span> <span>Events</span></a></p>
 
-//         const data = await response.json();
+            <p><a class="dis-flex" href="https://happening.net/groups"><span class="material-symbols-outlined">
+                groups
+                </span> <span>Groups</span></a></p>
 
-//         const url = new URL(window.location.href);
+            <button class="first-btn"><a href="https://happening.net/log-out">Log Out</a></button>
+`;
 
-//         if (url.pathname === "/blogs/blog-post" && data.message === "jwt malformed" || url.pathname === "/blogs/blog-post" && data.message === "jwt expired") {
-//             return;
-//         }
+document.querySelector("nav").innerHTML = `
+        <span><a href="https://happening.net/home">Happening</a></span>
 
-//         if (response.ok) {
-//             if (data.data.notifications.length > 0) {
-//                 document.querySelector(".alert").style.visibility = "visible";
-//             }
+            <div class="pc-menu home-pc-menu" id="pc-menu">
+                 <p><a class="dis-flex" href="https://happening.net/home"><span class="material-symbols-outlined">
+                home
+                </span> <span>Home</span></a></p>
 
-//             if (data.data.role === "admin") {
-//                 document.getElementById("my-feed-p").style.display = "block";
-//                 document.getElementById("create-blog-p").style.display = "block";
-//             } else {
-//                 return;
-//             }
-//         } else {
-//             console.log("Error")
-//         }
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+                <p id="my-feed-p"><a class="dis-flex" href="https://happening.net/blog"><span class="material-symbols-outlined">
+                 captive_portal
+                </span> <span>Blog</span></a></p>
+                
+            <p><a class="dis-flex" href="https://happening.net/events"><span class="material-symbols-outlined">
+                event_available
+                </span> <span>Events</span></a></p>
 
-// loadNotifications();
+            <p><a class="dis-flex" href="https://happening.net/groups"><span class="material-symbols-outlined">
+                groups
+                </span> <span>Groups</span></a></p>
+            
+            <i class="fa fa-bars" id="menu-bar" onclick="openMenu();"></i>
+`
+}
