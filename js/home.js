@@ -24,10 +24,7 @@ async function fetchMessage() {
         });
 
         if (response.status == 403) {
-            pcMenu.style.display = "none";
-            userDashboard.style.display = "none";
-            menu.style.display = "none";
-            verifyDiv.style.display = "block";
+            window.location.href = "https://happening.net/log-in"
         }
 
         if (response.status == 401) {
