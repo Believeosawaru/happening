@@ -112,8 +112,9 @@ if (userToken) {
                 }
     
                 if (data.data.role === "admin") {
-                    document.getElementById("my-feed-p").style.display = "block";
-                    document.getElementById("create-blog-p").style.display = "block";
+                    document.getElementById("my-feed-p").style.visibility = "visible";
+                    document.getElementById("create-blog-p").style.visibility = "visible";
+                    console.log("done")
                 } else {
                     return;
                 }
