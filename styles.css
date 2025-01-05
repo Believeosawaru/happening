@@ -1406,7 +1406,10 @@ form textarea {
     display: flex;
 }
 #user-details section p div {
-    margin: 00;
+    margin: 0;
+}
+#user-details h3 {
+    font-family: "Oswald", sans-serif;
 }
 #post-card {
     position: relative;
