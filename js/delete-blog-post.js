@@ -1,8 +1,8 @@
 const token = localStorage.getItem("authToken");
-const urlParams = new URLSearchParams(window.location.search);
-const postId = urlParams.get("id");
+const path = window.location.pathname;
+const slug = path.split("/").pop();
 
-const delEventUrl = `https://happening.net/api/v1/blog/delete-post/${postId}`
+const delEventUrl = `https://happening.net/api/v1/blog/delete-post/${slug}`
 
 if (!token) {
     window.location.href = "https://happening.net/log-in"

@@ -1,6 +1,6 @@
 const token = localStorage.getItem("authToken");
-const urlParams = new URLSearchParams(window.location.search);
-const postId = urlParams.get("id");
+const path = window.location.pathname;
+const slug = path.split("/").pop();
 const button = document.getElementById("bio-btn");
 
 function disableBtn() {
@@ -10,8 +10,8 @@ function disableBtn() {
     button.innerHTML = "Submitting...."
 }
 
-const postUrl = `https://happening.net/api/v1/blog/edit-post/${postId}`;
-const getPostUrl = `https://happening.net/api/v1/blog/load-current-post/${postId}`;
+const postUrl = `https://happening.net/api/v1/blog/edit-post/${slug}`;
+const getPostUrl = `https://happening.net/api/v1/blog/load-current-post/${slug}`;
 
 const retrievePost = async () => {
     try {

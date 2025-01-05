@@ -87,9 +87,10 @@ async function blog() {
 
                             const html = post.user.role === "admin" ? `
                              <div id="single-post-card">
-                                <span class="material-symbols-outlined" id="edit-post-pen">
+                                <a href="https://happening.net/blogs/edit-blog-post/${post.data.slug}" id="edit-post-pen">
+                                <span class="material-symbols-outlined">
                                         edit
-                                </span>
+                                </span></a>
                                 <div class="center">${mediaHTML}</div>
                                 <div>
                                     <h2>${post.data.title}</h2>
