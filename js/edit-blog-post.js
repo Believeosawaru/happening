@@ -26,6 +26,7 @@ const retrievePost = async () => {
     const data = await response.json();
 
     if (response.ok) {
+        console.log(data)
         const title = data.data.title;
          const content = data.data.content;
 
