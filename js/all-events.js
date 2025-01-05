@@ -20,6 +20,10 @@ async function displayPublicEvents() {
                         document.querySelector(".pre-loader").style.display = "none";
                     }, 350);
                 }
+
+                setTimeout(() => {
+                    document.querySelector(".pre-loader").style.display = "none";
+                }, 350);
     
                 data.message.forEach((event) => {
                 const eventDate = new Date(event.date);
