@@ -116,8 +116,6 @@ async function blog() {
                             `
 
                         document.getElementById("my-feed").innerHTML = html;
-
-                        console.log(post)
                      } else {
                         console.log(message)
                     }

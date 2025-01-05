@@ -1471,7 +1471,7 @@ form textarea {
     margin: 10px 10px;
 }
 #margin-topper {
-    padding-top: 5px;
+    padding-top: 0;
 }
 .bold-txt {
     font-weight: bold;
