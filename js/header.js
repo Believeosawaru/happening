@@ -112,8 +112,7 @@ if (userToken) {
                 }
     
                 if (data.data.role === "user") {
-                    document.getElementById("my-feed-p").style.color = "red";
-                    document.getElementById("create-blog-p").style.display = "none";
+                    alert(data.data.role)
                 } else {
                     return;
                 }
