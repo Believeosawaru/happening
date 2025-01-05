@@ -25,7 +25,7 @@ document.querySelector(".user-menu").innerHTML = `
                  captive_portal
                 </span> <span>My Feed</span></a></p>
 
-                <p id="create-blog-p"><a class="dis-flex" href="https://happening.net/blogs/my-feed"><span class="material-symbols-outlined">
+                <p id="create-blog-p"><a class="dis-flex" href="https://happening.net/blogs/create-blog-post"><span class="material-symbols-outlined">
                  captive_portal
                 </span> <span>Create Blog Post</span></a></p>
                 
@@ -180,48 +180,5 @@ if (userToken) {
     
     loadNotifications();
 } else {
-    document.querySelector(".user-menu").innerHTML = `
-            <p><a class="dis-flex" href="https://happening.net/home"><span class="material-symbols-outlined">
-                home
-                </span> <span>Home</span></a></p>
-
-                <p id="my-feed-p"><a class="dis-flex" href="https://happening.net/blog"><span class="material-symbols-outlined">
-                 captive_portal
-                </span> <span>Blog</span></a></p>
-                
-            <p><a class="dis-flex" href="https://happening.net/events"><span class="material-symbols-outlined">
-                event_available
-                </span> <span>Events</span></a></p>
-
-            <p><a class="dis-flex" href="https://happening.net/groups"><span class="material-symbols-outlined">
-                groups
-                </span> <span>Groups</span></a></p>
-
-            <button class="first-btn"><a href="https://happening.net/log-out">Log Out</a></button>
-`;
-
-document.querySelector("nav").innerHTML = `
-        <span><a href="https://happening.net/home">Happening</a></span>
-
-            <div class="pc-menu home-pc-menu" id="pc-menu">
-                 <p><a class="dis-flex" href="https://happening.net/home"><span class="material-symbols-outlined">
-                home
-                </span> <span>Home</span></a></p>
-
-                <p id="my-feed-p"><a class="dis-flex" href="https://happening.net/blog"><span class="material-symbols-outlined">
-                 captive_portal
-                </span> <span>Blog</span></a></p>
-                
-            <p><a class="dis-flex" href="https://happening.net/events"><span class="material-symbols-outlined">
-                event_available
-                </span> <span>Events</span></a></p>
-
-            <p><a class="dis-flex" href="https://happening.net/groups"><span class="material-symbols-outlined">
-                groups
-                </span> <span>Groups</span></a></p>
-            
-            <i class="fa fa-bell" id="bell"><i class="alert"></i></i>
-            
-            <i class="fa fa-bars" id="menu-bar" onclick="openMenu();"></i>
-`
+   removeAdminLinks();
 }
