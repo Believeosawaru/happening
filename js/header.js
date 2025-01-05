@@ -112,7 +112,10 @@ if (userToken) {
                 }
     
                 if (data.data.role === "user") {
-                    alert(data.data.role)
+                    setTimeout(() => {
+                        document.getElementById("my-feed-p").style.color = "red";
+                        document.getElementById("create-blog-p").style.display = "none";
+                    }, 350)
                 } else {
                     return;
                 }
