@@ -111,10 +111,9 @@ if (userToken) {
                     document.querySelector(".alert").style.visibility = "visible";
                 }
     
-                if (data.data.role === "admin") {
-                    document.getElementById("my-feed-p").style.visibility = "visible";
-                    document.getElementById("create-blog-p").style.visibility = "visible";
-                    console.log("done")
+                if (data.data.role !== "admin") {
+                    document.getElementById("my-feed-p").style.display = "none";
+                    document.getElementById("create-blog-p").style.display = "none";
                 } else {
                     return;
                 }
