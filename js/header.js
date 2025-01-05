@@ -113,8 +113,8 @@ if (userToken) {
     
                 if (data.data.role === "user") {
                     setTimeout(() => {
-                        document.getElementById("my-feed-p").style.color = "red";
-                        document.getElementById("create-blog-p").style.display = "none";
+                        document.getElementById("my-feed-p").innerHTML = "red";
+                        document.getElementById("create-blog-p").innerHTML = "none";
                     }, 3000)
                 } else {
                     return;
