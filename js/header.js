@@ -154,6 +154,8 @@ document.querySelector("nav").innerHTML = `
         <p><a class="dis-flex" href="https://happening.net/groups"><span class="material-symbols-outlined">
             groups
             </span> <span>Groups</span></a></p>
+
+        <button class="first-btn"><a href="https://happening.net/log-in">Log In</a></button>
         `;
 
         document.querySelector("nav").innerHTML = `
@@ -171,6 +173,8 @@ document.querySelector("nav").innerHTML = `
             <p><a class="dis-flex" href="https://happening.net/groups"><span class="material-symbols-outlined">
                 groups
                 </span> <span>Groups</span></a></p>
+
+                <button class="first-btn"><a href="https://happening.net/log-in">Log In</a></button>
             </div>
             <i class="fa fa-bars" id="menu-bar" onclick="openMenu();"></i>
         `;
