@@ -86,6 +86,7 @@ const retrievePost = async () => {
 document.getElementById("edit-post").addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    const title = document.getElementById("title").value;
     const post = tinymce.get("post").getContent();
 
     disableBtn();
