@@ -14,7 +14,8 @@ async function displayPublicEvents() {
                 document.getElementById("events-list")
     
                 texts = "";
-                console.log(data)
+                document.querySelector(".filter-events-p").style.display = "none";
+                document.querySelector(".choose-category").style.display = "none";
     
                 if (data.message.length < 1) {
                     return setTimeout(() => {
