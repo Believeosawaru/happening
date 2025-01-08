@@ -1486,6 +1486,9 @@ form textarea {
 .bold-txt {
     font-weight: bold;
 }
+#publish-by {
+    margin-top: 0;
+}
 
 @media screen and (min-width: 900px) {
     .menu {

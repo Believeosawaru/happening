@@ -26,7 +26,7 @@ document.querySelector(".user-menu").innerHTML = `
                 </span> <span>My Feed</span></a></p>
 
                 <p id="create-blog-p"><a class="dis-flex" href="https://happening.net/blogs/create-blog-post"><span class="material-symbols-outlined">
-                 captive_portal
+                 edit_document
                 </span> <span>Create Blog Post</span></a></p>
                 
             <p><a class="dis-flex" href="https://happening.net/my-events"><span class="material-symbols-outlined">
@@ -60,7 +60,7 @@ document.querySelector("nav").innerHTML = `
                 </span> <span>My Feed</span></a></p>
                 
                 <p id="create-blog-p"><a class="dis-flex" href="https://happening.net/blogs/create-blog-post"><span class="material-symbols-outlined">
-                 captive_portal
+                 edit_document
                 </span> <span>Create Blog Post</span></a></p>
                 
             <p><a class="dis-flex" href="https://happening.net/my-events"><span class="material-symbols-outlined">

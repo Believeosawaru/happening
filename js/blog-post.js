@@ -37,7 +37,12 @@ async function blog() {
                                 <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
                                     event_available
                                     </span> <span>${formattedDate}</span></p>
-                                    <p class="bold-txt">Published By: ${post.data.author.firstName}</p>
+
+                                    <p class="bold-txt dis-flex" id="publish-by">
+                                    <span class="material-symbols-outlined">
+                                    edit_square
+                                    </span> <span> Published By: </span> <span>${post.data.author.firstName}</span></p>
+
                                 <p id="margin-topper">${post.data.content}</p>
                             </div>
                          </div>
@@ -95,7 +100,12 @@ async function blog() {
                                     <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
                                         event_available
                                         </span> <span>${formattedDate}</span></p>
-                                        <p class="bold-txt">Published By: ${post.data.author.firstName}</p>
+                                        
+                                        <p class="bold-txt dis-flex" id="publish-by">
+                                        <span class="material-symbols-outlined">
+                                        edit_square
+                                        </span> <span> Published By: </span> <span>${post.data.author.firstName}</span></p>
+
                                     <p id="margin-topper">${post.data.content}</p>
                                 </div>
                              </div>
@@ -107,8 +117,13 @@ async function blog() {
                                     <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
                                         event_available
                                         </span> <span>${formattedDate}</span></p>
-                                        <p class="bold-txt">Published By: ${post.data.author.firstName}</p>
-                                    <p id="margin-topper">${post.data.content}</p>
+
+                                        <p class="bold-txt dis-flex" id="publish-by">
+                                        <span class="material-symbols-outlined">
+                                        edit_square
+                                        </span> <span> Published By: </span> <span>${post.data.author.firstName}</span></p>
+
+                                        <p id="margin-topper">${post.data.content}</p>
                                 </div>
                              </div>
                             `
