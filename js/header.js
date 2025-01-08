@@ -159,8 +159,7 @@ document.querySelector("nav").innerHTML = `
             groups
             </span> <span>Groups</span></a></p>
 
-            <button><a href="https://happening.net/sign-up">Sign Up</a></button>
-            <button class="pc-btn"><a href="https://happening.net/log-in">Sign In</a></button>
+        <button class="first-btn"><a href="https://happening.net/log-in">Log In</a></button>
         `;
 
         document.querySelector("nav").innerHTML = `
@@ -183,10 +182,11 @@ document.querySelector("nav").innerHTML = `
                 groups
                 </span> <span>Groups</span></a></p>
 
+                <button class="first-btn"><a href="https://happening.net/log-in">Log In</a></button>
+            </div>
+
             <button><a href="https://happening.net/sign-up">Sign Up</a></button>
             <button class="pc-btn"><a href="https://happening.net/log-in">Sign In</a></button>
-            
-            </div>
             <i class="fa fa-bars" id="menu-bar" onclick="openMenu();"></i>
         `;
    } else {
