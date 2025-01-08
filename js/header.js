@@ -181,8 +181,6 @@ document.querySelector("nav").innerHTML = `
             <p><a class="dis-flex" href="https://happening.net/groups"><span class="material-symbols-outlined">
                 groups
                 </span> <span>Groups</span></a></p>
-
-                <button class="first-btn"><a href="https://happening.net/log-in">Log In</a></button>
             </div>
 
             <button><a href="https://happening.net/sign-up">Sign Up</a></button>
