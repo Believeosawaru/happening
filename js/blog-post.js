@@ -43,7 +43,7 @@ async function blog() {
                                         <p class="bold-txt dis-flex">
                                         <span class="material-symbols-outlined">
                                         edit_square
-                                        </span> <span> Published By: </span> <span>${post.data.author.firstName}</span></p>
+                                        </span> <span> Published By: </span> <span> ${post.data.author.firstName} ${post.data.author.lastName} </span></p>
                                 </div>
 
                                 <p id="margin-topper">${post.data.content}</p>
@@ -100,7 +100,7 @@ async function blog() {
                                 <div class="center">${mediaHTML}</div>
                                 <div>
                                     <h2>${String(post.data.title)}</h2>
-                                    
+
                                    <div id="date-author">
                                          <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
                                         event_available
@@ -109,7 +109,7 @@ async function blog() {
                                         <p class="bold-txt dis-flex">
                                         <span class="material-symbols-outlined">
                                         edit_square
-                                        </span> <span> Published By: </span> <span>${post.data.author.firstName}</span></p>
+                                        </span> <span> Published By: </span> <span> ${post.data.author.firstName} ${post.data.author.lastName} </span></p>
                                     </div>
 
                                     <p id="margin-topper">${post.data.content}</p>
@@ -129,7 +129,7 @@ async function blog() {
                                         <p class="bold-txt dis-flex">
                                         <span class="material-symbols-outlined">
                                         edit_square
-                                        </span> <span> Published By: </span> <span>${post.data.author.firstName}</span></p>
+                                        </span> <span> Published By: </span> <span> ${post.data.author.firstName} ${post.data.author.lastName} </span></p>
                                     </div>
 
                                     <p id="margin-topper">${post.data.content}</p>
