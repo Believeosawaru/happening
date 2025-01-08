@@ -1487,8 +1487,11 @@ form textarea {
     font-weight: bold;
 }
 #date-author {
-    margin-block: 30px;
+    margin-block: 20px;
     line-height: 1;
+}
+#date-author p {
+    padding-top: -10px;
 }
 
 @media screen and (min-width: 900px) {
