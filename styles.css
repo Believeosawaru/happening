@@ -31,10 +31,13 @@ nav {
 #change-password {
     display: none;
 }
-nav span, nav a, footer h3 {
+nav span, nav a {
     /* font-family: "Edu AU VIC WA NT Hand", cursive; */
     font-family: "Poppins", sans-serif;
     font-weight: bold;
+}
+footer h3 {
+    font-family: "Edu AU VIC WA NT Hand", cursive;
 }
 #follow-btn, #yellow {
     background: #FF4500;
