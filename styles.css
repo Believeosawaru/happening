@@ -32,7 +32,8 @@ nav {
     display: none;
 }
 nav span, nav a, footer h3 {
-    font-family: "Edu AU VIC WA NT Hand", cursive;
+    /* font-family: "Edu AU VIC WA NT Hand", cursive; */
+    font-family: "Poppins", sans-serif;
     font-weight: bold;
 }
 #follow-btn, #yellow {
