@@ -31,7 +31,7 @@ nav {
 #change-password {
     display: none;
 }
-nav span, footer h3 {
+nav span, nav a, footer h3 {
     font-family: "Edu AU VIC WA NT Hand", cursive;
     font-weight: bold;
 }
@@ -1735,6 +1735,6 @@ form textarea {
         border-radius: 6px;
     }
     nav {
-        height: 200px;
+        height: 70px;
     }
 }
