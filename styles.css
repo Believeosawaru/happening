@@ -1487,7 +1487,7 @@ form textarea {
     font-weight: bold;
 }
 #date-author {
-    /* margin-block: 10px; */
+    padding-block: 0px;
     border: 1px solid black;
     margin-left: -10px;
     color: #333;
