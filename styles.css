@@ -1490,9 +1490,6 @@ form textarea {
     margin-left: -10px;
     color: #333;
 }
-#date-author p {
-    padding: 0;
-}
 #date-author p:last-child {
     margin-top: -8px;
 }
