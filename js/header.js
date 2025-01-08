@@ -146,6 +146,10 @@ document.querySelector("nav").innerHTML = `
         <p><a class="dis-flex" href="https://happening.net"><span class="material-symbols-outlined">
             home
             </span> <span>Home</span></a></p>
+
+        <p><a class="dis-flex" href="https://happening.net/blog"><span class="material-symbols-outlined">
+            captive_portal
+            </span> <span>Blog</span></a></p>
             
         <p><a class="dis-flex" href="https://happening.net/events"><span class="material-symbols-outlined">
             event_available
@@ -159,12 +163,16 @@ document.querySelector("nav").innerHTML = `
         `;
 
         document.querySelector("nav").innerHTML = `
-        <span><a href="https://happening.net/home">Happening</a></span>
+        <span><a href="https://happening.net">Happening</a></span>
 
             <div class="pc-menu home-pc-menu" id="pc-menu">
                 <p><a class="dis-flex" href="https://happening.net"><span class="material-symbols-outlined">
                 home
                 </span> <span>Home</span></a></p>
+
+                <p><a class="dis-flex" href="https://happening.net/blog"><span class="material-symbols-outlined">
+                captive_portal
+                </span> <span>Blog</span></a></p>
                 
             <p><a class="dis-flex" href="https://happening.net/events"><span class="material-symbols-outlined">
                 event_available

@@ -1734,4 +1734,7 @@ form textarea {
         border: 5px solid rgb(230, 230, 230);
         border-radius: 6px;
     }
+    nav {
+        height: 200px;
+    }
 }
