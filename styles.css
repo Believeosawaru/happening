@@ -1487,8 +1487,8 @@ form textarea {
     font-weight: bold;
 }
 #date-author {
-    margin-block: 20px;
-    margin-left: 0px;
+    margin-block: 10px;
+    margin-left: -10px;
 }
 #date-author p:last-child {
     margin-top: -8px;
