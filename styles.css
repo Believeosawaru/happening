@@ -1491,8 +1491,7 @@ form textarea {
     line-height: 1;
 }
 #date-author p:last-child {
-    margin-top: -10px;
-    color: red;
+    margin-top: -8px;
 }
 
 @media screen and (min-width: 900px) {
