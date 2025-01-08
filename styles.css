@@ -1490,7 +1490,7 @@ form textarea {
     margin-block: 20px;
     line-height: 1;
 }
-#date-author p {
+#date-author p:last-child {
     margin-top: -10px;
     color: red;
 }
