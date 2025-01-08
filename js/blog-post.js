@@ -114,7 +114,8 @@ async function blog() {
                                 <div class="center">${mediaHTML}</div>
                                 <div>
                                     <h2>${String(post.data.title)}</h2>
-                                    <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
+
+                                        <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
                                         event_available
                                         </span> <span>${formattedDate}</span></p>
 
