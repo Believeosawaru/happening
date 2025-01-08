@@ -1487,7 +1487,7 @@ form textarea {
     font-weight: bold;
 }
 #publish-by {
-    margin-top: -10px;
+    padding-top: -20px;
 }
 
 @media screen and (min-width: 900px) {
