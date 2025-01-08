@@ -1488,7 +1488,7 @@ form textarea {
 }
 #date-author {
     margin-block: 30px;
-    line-height: 0;
+    line-height: 1;
 }
 
 @media screen and (min-width: 900px) {
