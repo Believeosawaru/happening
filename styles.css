@@ -36,6 +36,9 @@ nav span, nav a {
     font-family: "Poppins", sans-serif;
     font-weight: bold;
 }
+nav button {
+    font-family: sans-serif;
+}
 footer h3, nav span a {
     font-family: "Edu AU VIC WA NT Hand", cursive;
 }
