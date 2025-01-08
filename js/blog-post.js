@@ -43,7 +43,8 @@ async function blog() {
                                         <p class="bold-txt dis-flex">
                                         <span class="material-symbols-outlined">
                                         edit_square
-                                        </span> <span> Published By: </span> <span> ${post.data.author.firstName} ${post.data.author.lastName} </span></p>
+                                        </span> <span> Published By: &nbsp;
+                                        </span> <span> ${post.data.author.firstName} ${post.data.author.lastName} </span></p>
                                 </div>
 
                                 <p id="margin-topper">${post.data.content}</p>
@@ -109,7 +110,7 @@ async function blog() {
                                         <p class="bold-txt dis-flex">
                                         <span class="material-symbols-outlined">
                                         edit_square
-                                        </span> <span> Published By: </span> <span> ${post.data.author.firstName} ${post.data.author.lastName} </span></p>
+                                        </span> <span> Published By: &nbsp; </span> <span> ${post.data.author.firstName} ${post.data.author.lastName} </span></p>
                                     </div>
 
                                     <p id="margin-topper">${post.data.content}</p>
@@ -129,7 +130,7 @@ async function blog() {
                                         <p class="bold-txt dis-flex">
                                         <span class="material-symbols-outlined">
                                         edit_square
-                                        </span> <span> Published By: </span> <span> ${post.data.author.firstName} ${post.data.author.lastName} </span></p>
+                                        </span> <span> Published By: &nbsp; </span> <span> ${post.data.author.firstName} ${post.data.author.lastName} </span></p>
                                     </div>
 
                                     <p id="margin-topper">${post.data.content}</p>
