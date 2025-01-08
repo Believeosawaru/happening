@@ -159,7 +159,8 @@ document.querySelector("nav").innerHTML = `
             groups
             </span> <span>Groups</span></a></p>
 
-        <button class="first-btn"><a href="https://happening.net/log-in">Log In</a></button>
+         <button class="first-btn"><a href="https://happening.net/sign-up">Sign Up</a></button>
+        <button><a href="https://happening.net/log-in">Sign In</a></button>
         `;
 
         document.querySelector("nav").innerHTML = `
