@@ -34,14 +34,17 @@ async function blog() {
                             <div class="center">${mediaHTML}</div>
                             <div>
                                 <h2>${String(post.data.title)}</h2>
-                                <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
-                                    event_available
-                                    </span> <span>${formattedDate}</span></p>
+                                
+                                <div id="date-author">
+                                         <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
+                                        event_available
+                                        </span> <span>${formattedDate}</span></p>
 
-                                    <p class="bold-txt dis-flex" id="publish-by">
-                                    <span class="material-symbols-outlined">
-                                    edit_square
-                                    </span> <span> Published By: </span> <span>${post.data.author.firstName}</span></p>
+                                        <p class="bold-txt dis-flex">
+                                        <span class="material-symbols-outlined">
+                                        edit_square
+                                        </span> <span> Published By: </span> <span>${post.data.author.firstName}</span></p>
+                                </div>
 
                                 <p id="margin-topper">${post.data.content}</p>
                             </div>
@@ -97,14 +100,17 @@ async function blog() {
                                 <div class="center">${mediaHTML}</div>
                                 <div>
                                     <h2>${String(post.data.title)}</h2>
-                                    <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
+                                    
+                                   <div id="date-author">
+                                         <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
                                         event_available
                                         </span> <span>${formattedDate}</span></p>
-                                        
-                                        <p class="bold-txt dis-flex" id="publish-by">
+
+                                        <p class="bold-txt dis-flex">
                                         <span class="material-symbols-outlined">
                                         edit_square
                                         </span> <span> Published By: </span> <span>${post.data.author.firstName}</span></p>
+                                    </div>
 
                                     <p id="margin-topper">${post.data.content}</p>
                                 </div>
@@ -115,16 +121,18 @@ async function blog() {
                                 <div>
                                     <h2>${String(post.data.title)}</h2>
 
-                                        <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
+                                    <div id="date-author">
+                                         <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
                                         event_available
                                         </span> <span>${formattedDate}</span></p>
 
-                                        <p class="bold-txt dis-flex" id="publish-by">
+                                        <p class="bold-txt dis-flex">
                                         <span class="material-symbols-outlined">
                                         edit_square
                                         </span> <span> Published By: </span> <span>${post.data.author.firstName}</span></p>
+                                    </div>
 
-                                        <p id="margin-topper">${post.data.content}</p>
+                                    <p id="margin-topper">${post.data.content}</p>
                                 </div>
                              </div>
                             `

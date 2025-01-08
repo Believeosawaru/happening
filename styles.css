@@ -1486,8 +1486,9 @@ form textarea {
 .bold-txt {
     font-weight: bold;
 }
-#publish-by {
-    padding-top: -20px;
+#date-author {
+    margin-block: 30px;
+    line-height: 0;
 }
 
 @media screen and (min-width: 900px) {
