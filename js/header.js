@@ -31,11 +31,11 @@ document.querySelector(".user-menu").innerHTML = `
                 
             <p><a class="dis-flex" href="https://happening.net/my-events"><span class="material-symbols-outlined">
                 event_available
-                </span> <span>Events</span></a></p>
+                </span> <span>My Events</span></a></p>
 
             <p><a class="dis-flex" href="https://happening.net/my-groups"><span class="material-symbols-outlined">
                 groups
-                </span> <span>Groups</span></a></p>
+                </span> <span>My Groups</span></a></p>
 
             <p><a class="dis-flex" href="https://happening.net/settings"><span class="material-symbols-outlined">
                 settings
@@ -65,11 +65,11 @@ document.querySelector("nav").innerHTML = `
                 
             <p><a class="dis-flex" href="https://happening.net/my-events"><span class="material-symbols-outlined">
                 event_available
-                </span> <span>Events</span></a></p>
+                </span> <span>My Events</span></a></p>
 
             <p><a class="dis-flex" href="https://happening.net/my-groups"><span class="material-symbols-outlined">
                 groups
-                </span> <span>Groups</span></a></p>
+                </span> <span>My Groups</span></a></p>
 
             <p><a class="dis-flex" href="https://happening.net/settings"><span class="material-symbols-outlined">
                 settings
@@ -95,11 +95,11 @@ function removeAdminLinks(role) {
         
     <p><a class="dis-flex" href="https://happening.net/my-events"><span class="material-symbols-outlined">
         event_available
-        </span> <span>Events</span></a></p>
+        </span> <span>My Events</span></a></p>
 
     <p><a class="dis-flex" href="https://happening.net/my-groups"><span class="material-symbols-outlined">
         groups
-        </span> <span>Groups</span></a></p>
+        </span> <span>My Groups</span></a></p>
 
     <p><a class="dis-flex" href="https://happening.net/settings"><span class="material-symbols-outlined">
         settings
