@@ -146,10 +146,6 @@ document.querySelector("nav").innerHTML = `
         <p><a class="dis-flex" href="https://happening.net"><span class="material-symbols-outlined">
             home
             </span> <span>Home</span></a></p>
-
-        <p><a class="dis-flex" href="https://happening.net/blog"><span class="material-symbols-outlined">
-            captive_portal
-            </span> <span>Blog</span></a></p>
             
         <p><a class="dis-flex" href="https://happening.net/events"><span class="material-symbols-outlined">
             event_available
@@ -158,6 +154,10 @@ document.querySelector("nav").innerHTML = `
         <p><a class="dis-flex" href="https://happening.net/groups"><span class="material-symbols-outlined">
             groups
             </span> <span>Groups</span></a></p>
+
+        <p><a class="dis-flex" href="https://happening.net/blog"><span class="material-symbols-outlined">
+            captive_portal
+            </span> <span>Blog</span></a></p>
 
          <button class="first-btn"><a href="https://happening.net/sign-up">Sign Up</a></button>
         <button><a href="https://happening.net/log-in">Sign In</a></button>
@@ -170,10 +170,6 @@ document.querySelector("nav").innerHTML = `
                 <p><a class="dis-flex" href="https://happening.net"><span class="material-symbols-outlined">
                 home
                 </span> <span>Home</span></a></p>
-
-                <p><a class="dis-flex" href="https://happening.net/blog"><span class="material-symbols-outlined">
-                captive_portal
-                </span> <span>Blog</span></a></p>
                 
             <p><a class="dis-flex" href="https://happening.net/events"><span class="material-symbols-outlined">
                 event_available
@@ -182,6 +178,10 @@ document.querySelector("nav").innerHTML = `
             <p><a class="dis-flex" href="https://happening.net/groups"><span class="material-symbols-outlined">
                 groups
                 </span> <span>Groups</span></a></p>
+
+             <p><a class="dis-flex" href="https://happening.net/blog"><span class="material-symbols-outlined">
+                captive_portal
+                </span> <span>Blog</span></a></p>
             </div>
 
             <button><a href="https://happening.net/sign-up">Sign Up</a></button>
