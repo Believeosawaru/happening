@@ -655,7 +655,7 @@ form {
 }
 form input, form textarea, form select {
     margin: 10px 0px 25px 0px;
-    width: 95%;
+    width: 100%;
     padding: 10px;
     border-radius: 8px;
     outline: none;
