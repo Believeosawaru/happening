@@ -1505,11 +1505,12 @@ form textarea {
     width: 500px;
 }
 #category {
-    outline: 1px solid #FF4500;
+    outline: 2px solid #ceb6ad;
 }
 #category-links {
     display: flex;
     justify-content: center;
+    margin-block: 15px;
 }
 #category-links a {
     background: #FFECB3;
