@@ -1497,11 +1497,6 @@ form textarea {
     display: flex;
     width: 90vw;
     overflow: auto;
-    height: 250px;
-}
-#related-posts #post-card {
-    width: 500px;
-    background: red;
 }
 
 @media screen and (min-width: 900px) {
