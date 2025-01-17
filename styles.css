@@ -1421,7 +1421,7 @@ form textarea {
     font-family: "Oswald", sans-serif;
 } */
 #post-card {
-    position: relative;
+    /* position: relative; */
 }
 #user-details span {
     font-weight: light;
