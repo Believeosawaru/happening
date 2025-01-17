@@ -1504,6 +1504,12 @@ form textarea {
 #related-posts #user-details {
     width: 500px;
 }
+#category-links a {
+    background: #FFECB3;
+    border-radius: 6px;
+    padding: 5px 20px;
+    margin-inline: 5px;
+}
 
 @media screen and (min-width: 900px) {
     .menu {

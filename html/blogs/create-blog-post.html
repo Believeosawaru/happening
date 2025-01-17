@@ -59,7 +59,18 @@
 
             <!-- <textarea name="title" id="title" placeholder="Name Your Blog Post"></textarea> -->
             <input type="text" name="title" id="title" placeholder="Name Your Blog Post">
+
+            <select name="category" id="category">
+                <option value="tech">Tech</option>
+                <option value="food">Food</option>
+            </select>
+            
+            <div id="category-links">
+                <a href="https://happening.net/blogs/add-category">Add Category</a> <a href="https://happening.net/blogs/edit-category">Edit Category</a>
+            </div>
+            
             <textarea name="post" id="post" placeholder="What's On Your Mind?"></textarea>
+
             <input type="file" name="media" id="media" accept="image/*,video/*" required>
 
             <button id="bio-btn">Post</button>
