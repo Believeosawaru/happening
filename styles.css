@@ -1499,6 +1499,9 @@ form textarea {
     overflow: auto;
     height: 250px;
 }
+#related-posts #post-card {
+    width: 100%;
+}
 
 @media screen and (min-width: 900px) {
     .menu {
