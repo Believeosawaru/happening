@@ -1515,6 +1515,7 @@ form textarea {
 }
 #category-links a {
     background: #FFECB3;
+    border: 1px solid #FF4500;
     border-radius: 6px;
     padding: 5px 20px;
     margin-inline: 5px;
