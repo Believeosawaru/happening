@@ -1495,7 +1495,7 @@ form textarea {
 }
 #related-posts {
     display: flex;
-    width: 500px;
+    width: 50vw;
     overflow: auto;
     height: 250px;
 }
