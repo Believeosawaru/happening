@@ -1493,7 +1493,12 @@ form textarea {
 #date-author p:last-child {
     margin-top: -8px;
 }
-
+#related-posts {
+    display: flex;
+    width: 90%;
+    overflow: auto;
+    height: 250px;
+}
 @media screen and (min-width: 900px) {
     .menu {
         display: none;
