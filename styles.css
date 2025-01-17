@@ -1504,6 +1504,13 @@ form textarea {
 #related-posts #user-details {
     width: 500px;
 }
+#category {
+    outline: 1px solid #FF4500;
+}
+#category-links {
+    display: flex;
+    justify-content: center;
+}
 #category-links a {
     background: #FFECB3;
     border-radius: 6px;
