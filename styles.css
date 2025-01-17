@@ -1413,7 +1413,6 @@ form textarea {
 }
 #user-details {
     display: flex;
-    width: 500px;
 }
 #user-details section p div {
     margin: 0;
@@ -1498,6 +1497,9 @@ form textarea {
     display: flex;
     width: 90vw;
     overflow: auto;
+}
+#related-posts #user-details {
+    width: 100%;
 }
 
 @media screen and (min-width: 900px) {
