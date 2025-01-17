@@ -1501,6 +1501,7 @@ form textarea {
 }
 #related-posts #post-card {
     width: 100%;
+    background: red;
 }
 
 @media screen and (min-width: 900px) {
