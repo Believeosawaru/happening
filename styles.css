@@ -1499,6 +1499,7 @@ form textarea {
     overflow: auto;
     height: 250px;
 }
+
 @media screen and (min-width: 900px) {
     .menu {
         display: none;
