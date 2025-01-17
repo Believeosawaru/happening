@@ -1506,6 +1506,7 @@ form textarea {
 }
 #category {
     background: white; /* ceb6ad */
+    width: 100%;
 }
 #category-links {
     display: flex;
