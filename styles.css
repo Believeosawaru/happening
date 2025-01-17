@@ -1389,8 +1389,11 @@ form textarea {
 }
 #my-feed > div li, #related-posts > div li {
     margin: 15px 5px 15px 30px;
+}p
+#my-feed > div p {
+    margin: 15px 5px;
 }
-#my-feed > div p, #related-posts > div p {
+#related-posts > div p {
     margin: 15px;
 }
 #my-feed > div section h3, #related-posts > div section h3 {
