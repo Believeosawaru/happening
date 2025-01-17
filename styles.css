@@ -1387,23 +1387,23 @@ form textarea {
     margin-left: 10px;
     font-family: "Oswald", sans-serif;
 }
-#my-feed > div li {
+#my-feed > div li, #related-posts > div li {
     margin: 15px 5px 15px 30px;
 }
-#my-feed > div p {
+#my-feed > div p, #related-posts > div p {
     margin: 15px 5px;
 }
-#my-feed > div section h3 {
+#my-feed > div section h3, #related-posts > div section h3 {
     margin-bottom: 0;
     margin-left: 15px;
 }
-#my-feed > div section span {
+#my-feed > div section span, #related-posts > div section span {
     position: absolute;
     right: 15px;
     bottom: 15px;
     font-weight: bold;
 }
-#my-feed button {
+#my-feed button, #related-posts button  {
     background: #FF4500;
     border: none;
     padding: 5px 30px;
