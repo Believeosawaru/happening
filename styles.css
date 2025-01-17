@@ -653,7 +653,7 @@ form {
     padding: 0px;
     margin-block: 20px;
 }
-form input, textarea {
+form input, form textarea, form select {
     margin: 10px 0px 25px 0px;
     width: 95%;
     padding: 10px;
@@ -661,7 +661,7 @@ form input, textarea {
     outline: none;
     border: 1px solid rgb(240, 240, 240);
 }
-form input:focus, form textarea:focus {
+form input:focus, form textarea:focus, form select:focus {
     border: 2px solid #FF4500;
 }
 form button {
