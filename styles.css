@@ -1413,6 +1413,7 @@ form textarea {
 }
 #user-details {
     display: flex;
+    width: 500px;
 }
 #user-details section p div {
     margin: 0;
@@ -1421,7 +1422,7 @@ form textarea {
     font-family: "Oswald", sans-serif;
 } */
 #post-card {
-    /* position: relative; */
+    position: relative;
 }
 #user-details span {
     font-weight: light;
