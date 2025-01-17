@@ -1372,7 +1372,7 @@ form textarea {
     margin-top: -40px;
     position: relative;
 }
-#my-feed div {
+#my-feed div, #related-posts {
     margin-block: 10px;
     background: white;
     padding: 10px 10px 15px 10px;
@@ -1417,9 +1417,9 @@ form textarea {
 #user-details section p div {
     margin: 0;
 }
-/* #user-details h3 {
+#user-details h3 {
     font-family: "Oswald", sans-serif;
-} */
+}
 #post-card {
     position: relative;
 }
