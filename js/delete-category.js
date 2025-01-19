@@ -78,9 +78,7 @@ const deleteCategory = async (id) => {
         document.getElementById("success-sign-up").innerHTML = "Category Deleted Successfully";
         document.getElementById("success-sign-up").classList.add("success-sign-up");
 
-        setTimeout(() => {
-            window.location.href = `https://happening.net/home`
-        }, 1000)
+        displayCategories();
     } else {
         const keys = Object.keys(data);
 
