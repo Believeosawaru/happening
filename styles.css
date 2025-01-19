@@ -1520,7 +1520,7 @@ form textarea {
     padding: 5px 20px;
     margin-inline: 5px;
 }
-#category-edit {
+#category-edit-div {
     display: flex;
     padding: 5px 15px;
     justify-content: space-between;
