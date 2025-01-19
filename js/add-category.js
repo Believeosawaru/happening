@@ -1,5 +1,3 @@
-const urlParams = new URLSearchParams(window.location.search);
-const eventId = urlParams.get("eventId");
 const token = localStorage.getItem("authToken");
 
 if (!token) {
@@ -9,7 +7,7 @@ if (!token) {
 document.getElementById("create-category").addEventListener("submit", async (e) => {
     try {
         e.preventDefault();
-        
+
         const category = document.getElementById("category");
         
         const response = await fetch(`https://happening.net/api/v1/blog/create-category`, {
