@@ -9,9 +9,6 @@ document.getElementById("create-category").addEventListener("submit", async (e) 
         e.preventDefault();
 
         const category = document.getElementById("category").value;
-
-        document.querySelector("button").style.backgroundColor = "#FFF8E1"
-        document.querySelector("button").disabled = true;
         
         const response = await fetch(`https://happening.net/api/v1/blog/create-category`, {
             method: "POST",
@@ -32,9 +29,6 @@ document.getElementById("create-category").addEventListener("submit", async (e) 
         document.getElementById("success-sign-up").innerHTML = result.message;
 
         document.getElementById("success-sign-up").classList.add("success-sign-up");
-        } else {
-            document.querySelector("button").style.backgroundColor = "#FF4500"
-            document.querySelector("button").disabled = false;
         }
 
         setTimeout(() => {
