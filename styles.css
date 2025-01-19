@@ -1524,7 +1524,9 @@ form textarea {
     display: flex;
     padding: 5px 15px;
     justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid #333;
+    margin-top: 10px;
 }
 
 @media screen and (min-width: 900px) {
