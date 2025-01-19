@@ -6,8 +6,10 @@ if (!token) {
     window.location.href = "https://happening.net/log-in";
 }
 
-document.getElementById("create-category").addEventListener("submit", async () => {
+document.getElementById("create-category").addEventListener("submit", async (e) => {
     try {
+        e.preventDefault();
+        
         const category = document.getElementById("category");
         
         const response = await fetch(`https://happening.net/api/v1/blog/create-category`, {
