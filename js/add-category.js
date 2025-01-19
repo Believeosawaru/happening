@@ -8,7 +8,7 @@ document.getElementById("create-category").addEventListener("submit", async (e) 
     try {
         e.preventDefault();
 
-        const category = document.getElementById("category");
+        const category = document.getElementById("category").value;
         
         const response = await fetch(`https://happening.net/api/v1/blog/create-category`, {
             method: "POST",
