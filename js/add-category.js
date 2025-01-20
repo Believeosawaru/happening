@@ -33,6 +33,7 @@ document.getElementById("create-category").addEventListener("submit", async (e) 
 
         setTimeout(() => {
             document.getElementById("success-sign-up").style.display = "none";
+            window.location.href = "https://happening.net/blogs/create-blog-post"
         }, 2000)
     } catch (error) {
         console.log(error);
