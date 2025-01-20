@@ -1660,6 +1660,9 @@ form textarea {
     #add-members input, #search-results {
         width: 75%;
     }
+    #add-members button {
+        width: 75%;
+    }
     #search-results {
         margin-inline: 165px;
     }
