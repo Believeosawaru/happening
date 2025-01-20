@@ -59,21 +59,23 @@ async function blog() {
                 } else {
                     post.relatedPosts.forEach(post => {
                         const html = `
-                             <div id="post-card">
-                             <div id="user-details">
-                                 ${
-                                     post.mediaPath && post.mediaType ? `${mediaHTML}` : ""
-                                 }
-                         
-                                 <section>
-                                     <a href="https://happening.net/blog/${post.slug}">
-                                         <h3>${String(post.title)}</h3>
-                                         <p>${truncatedContent}</p> 
-                                         <span>${formattedDate}</span>      
-                                     </a>
-                                 </section>
-                                 </div>
-                             </div>
+                             <a href="https://happening.net/blog/${post.slug}">
+                                <div id="post-card">
+                                <div id="user-details">
+                                    ${
+                                        post.mediaPath && post.mediaType ? `${mediaHTML}` : ""
+                                    }
+                            
+                                    <section>
+                                        <a href="https://happening.net/blog/${post.slug}">
+                                            <h3>${String(post.title)}</h3>
+                                            <p>${truncatedContent}</p> 
+                                            <span>${formattedDate}</span>      
+                                        </a>
+                                    </section>
+                                    </div>
+                                </div>
+                             </a>
                         ` 
                         accum += html;
                      });
@@ -113,16 +115,16 @@ async function blog() {
                                 Your Browser Does Not Support The Video Tag
                             </video>`) : "";
 
-                            const postDate = new Date(post.data.createdAt);
-                            const formatter = new Intl.DateTimeFormat("en-us", {
-                                dateStyle: "medium",
-                                timeStyle: "short",
-                                timeZone: "Europe/Paris"
-                            });
-                            
-                            const formattedDate = formatter.format(postDate);
+                        const postDate = new Date(post.data.createdAt);
+                        const formatter = new Intl.DateTimeFormat("en-us", {
+                            dateStyle: "medium",
+                            timeStyle: "short",
+                            timeZone: "Europe/Paris"
+                        });
+                        
+                        const formattedDate = formatter.format(postDate);
 
-                            const html = post.user.role === "admin" ? `
+                        const html = post.user.role === "admin" ? `
                              <div id="single-post-card">
                                 <a href="https://happening.net/blogs/edit-blog-post/${post.data.slug}" id="edit-post-pen">
                                 <span class="material-symbols-outlined">
@@ -169,6 +171,35 @@ async function blog() {
                             `
 
                         document.getElementById("my-feed").innerHTML = html;
+
+                        if (post.relatedPosts > 1) {
+                            document.getElementById("related-posts").innerHTML = `<p>No Related Posts</p>`
+                        } else {
+                            post.relatedPosts.forEach(post => {
+                                const html = `
+                                     <a href="https://happening.net/blog/${post.slug}">
+                                        <div id="post-card">
+                                        <div id="user-details">
+                                            ${
+                                                post.mediaPath && post.mediaType ? `${mediaHTML}` : ""
+                                            }
+                                    
+                                            <section>
+                                                <a href="https://happening.net/blog/${post.slug}">
+                                                    <h3>${String(post.title)}</h3>
+                                                    <p>${truncatedContent}</p> 
+                                                    <span>${formattedDate}</span>      
+                                                </a>
+                                            </section>
+                                            </div>
+                                        </div>
+                                     </a>
+                                ` 
+                                accum += html;
+                             });
+             
+                             document.getElementById("related-posts").innerHTML = accum;
+                        }
                      } else {
                         console.log(message)
                     }
