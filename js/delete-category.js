@@ -36,7 +36,7 @@ async function displayCategories() {
                 texts += `
                 <div id="category-edit-div">
                     <p>${cat.title}</p>
-                    <button id="cat-${index}" onclick="deleteCategory('${cat._id}, ${index}')">Delete</button>
+                    <button id="cat-${index}" onclick="deleteCategory('${cat._id}', '${index}')">Delete</button>
                 </div>
                 `
             });
