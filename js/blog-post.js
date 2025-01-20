@@ -7,56 +7,86 @@ async function blog() {
         try {
             const response = await fetch(`https://happening.net/api/v1/blog/public-blog-post/${slug}`, {
                         method: "GET"
-                    });
+            });
             
-                    const post = await response.json();
-            
-                    if (response.ok) {
-                        const mediaHTML = post.data.mediaType && post.data.mediaPath ? 
-                        (post.data.mediaType === "image" ? 
-                            `<img src="https://happening.net/uploads/${post.data.mediaType}s/${post.data.mediaPath}" id="blog-post-img">` : 
-                            `<video controls id="blog-video"> 
-                                <source src="https://happening.net/uploads/${post.data.mediaType}s/${post.data.mediaPath}">
-                                Your Browser Does Not Support The Video Tag
-                            </video>`) : "";
+            const post = await response.json();
+    
+            if (response.ok) {
+                const mediaHTML = post.data.mediaType && post.data.mediaPath ? 
+                (post.data.mediaType === "image" ? 
+                    `<img src="https://happening.net/uploads/${post.data.mediaType}s/${post.data.mediaPath}" id="blog-post-img">` : 
+                    `<video controls id="blog-video"> 
+                        <source src="https://happening.net/uploads/${post.data.mediaType}s/${post.data.mediaPath}">
+                        Your Browser Does Not Support The Video Tag
+                    </video>`) : "";
 
-                            const postDate = new Date(post.data.createdAt);
-                            const formatter = new Intl.DateTimeFormat("en-us", {
-                                dateStyle: "medium",
-                                timeStyle: "short",
-                                timeZone: "Europe/Paris"
-                            });
-                            
-                            const formattedDate = formatter.format(postDate);
+                const postDate = new Date(post.data.createdAt);
+                const formatter = new Intl.DateTimeFormat("en-us", {
+                    dateStyle: "medium",
+                    timeStyle: "short",
+                    timeZone: "Europe/Paris"
+                });
+                
+                const formattedDate = formatter.format(postDate);
 
-                            document.getElementById("my-feed").innerHTML = `
-                         <div id="single-post-card">
-                            <div class="center">${mediaHTML}</div>
-                            <div>
-                                <h2>${String(post.data.title)}</h2>
-                                
-                                <div id="date-author">
-                                         <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
-                                        event_available
-                                        </span> <span>${formattedDate}</span></p>
+                document.getElementById("my-feed").innerHTML = `
+                <div id="single-post-card">
+                <div class="center">${mediaHTML}</div>
+                <div>
+                    <h2>${String(post.data.title)}</h2>
+                    
+                    <div id="date-author">
+                            <p class="bold-txt dis-flex"><span class="material-symbols-outlined">
+                            event_available
+                            </span> <span>${formattedDate}</span></p>
 
-                                        <p class="bold-txt dis-flex">
-                                        <span class="material-symbols-outlined">
-                                        edit_square
-                                        </span> <span> Published By: &nbsp;
-                                        </span> <span> ${post.data.author.firstName} ${post.data.author.lastName} </span></p>
-                                </div>
+                            <p class="bold-txt dis-flex">
+                            <span class="material-symbols-outlined">
+                            edit_square
+                            </span> <span> Published By: &nbsp;
+                            </span> <span> ${post.data.author.firstName} ${post.data.author.lastName} </span></p>
+                    </div>
 
-                                <p id="margin-topper">${post.data.content}</p>
-                            </div>
-                         </div>
-                        `
-                     } else {
-                        console.log(message)
-                    }
-                } catch (error) {
-                    console.log(error);
+                    <p id="margin-topper">${post.data.content}</p>
+                </div>
+                </div>
+                `
+
+                let accum = "";
+
+                if (post.relatedPosts > 1) {
+                    document.getElementById("related-posts").innerHTML = `<p>No Related Posts</p>`
+                } else {
+                    post.relatedPosts.forEach(post => {
+                        const html = `
+                             <div id="post-card">
+                             <div id="user-details">
+                                 ${
+                                     post.mediaPath && post.mediaType ? `${mediaHTML}` : ""
+                                 }
+                         
+                                 <section>
+                                     <a href="https://happening.net/blog/${post.slug}">
+                                         <h3>${String(post.title)}</h3>
+                                         <p>${truncatedContent}</p> 
+                                         <span>${formattedDate}</span>      
+                                     </a>
+                                 </section>
+                                 </div>
+                             </div>
+                        ` 
+                        accum += html;
+                     });
+     
+                     document.getElementById("related-posts").innerHTML = accum;
                 }
+
+                } else {
+                console.log(message)
+            }
+        } catch (error) {
+            console.log(error);
+        }
     } else {
         try {
             const response = await fetch(`https://happening.net/api/v1/blog/blog-post/${slug}`, {
