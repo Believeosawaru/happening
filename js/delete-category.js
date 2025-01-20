@@ -29,6 +29,7 @@ async function displayCategories() {
             // }, 350);
 
             if (data.data.length < 1) {
+                eventContainer.innerHTML = "<p>No Category Added</p>"
                 return;
             } else {
             data.data.forEach((cat) => {
@@ -65,7 +66,6 @@ async function displayCategories() {
 
 const deleteCategory = async (id) => {
     try {
-        console.log(id)
         const token = localStorage.getItem("authToken");
 
         const response = await fetch(`https://happening.net/api/v1/blog/delete-category/${id}`, {
