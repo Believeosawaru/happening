@@ -66,8 +66,7 @@ async function displayCategories() {
 
 const deleteCategory = async (id, index) => {
     try {
-        document.getElementById(`cat-${index}`).style.background = "white"
-        document.getElementById(`cat-${index}`).style.color = "black"
+        document.getElementById(`cat-${index}`).style.background = "black"
 
         const token = localStorage.getItem("authToken");
 
