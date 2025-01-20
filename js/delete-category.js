@@ -35,7 +35,7 @@ async function displayCategories() {
                 texts += `
                 <div id="category-edit-div">
                     <p>${cat.title}</p>
-                    <button onclick="deleteCategory(${String(cat._id)})">Delete</button>
+                    <button onclick="deleteCategory(${console.log(cat._id, typeof(cat._id))})">Delete</button>
                 </div>
                 `
             });
@@ -63,47 +63,47 @@ async function displayCategories() {
     }
 }
 
-const deleteCategory = async (id) => {
-    try {
-        const response = await fetch(`https://happening.net/api/v1/blog/delete-category/${id}`, {
-            method: "DELETE",
-            headers: {
-                "Authorization": `Bearer ${token}`
-            }
-        });
+// const deleteCategory = async (id) => {
+//     try {
+//         const response = await fetch(`https://happening.net/api/v1/blog/delete-category/${id}`, {
+//             method: "DELETE",
+//             headers: {
+//                 "Authorization": `Bearer ${token}`
+//             }
+//         });
 
-    const data = await response.json();
+//     const data = await response.json();
 
-    if (response.ok) {
-        document.getElementById("success-sign-up").innerHTML = "Category Deleted Successfully";
-        document.getElementById("success-sign-up").classList.add("success-sign-up");
+//     if (response.ok) {
+//         document.getElementById("success-sign-up").innerHTML = "Category Deleted Successfully";
+//         document.getElementById("success-sign-up").classList.add("success-sign-up");
 
-        displayCategories();
-    } else {
-        const keys = Object.keys(data);
+//         displayCategories();
+//     } else {
+//         const keys = Object.keys(data);
 
-        keys.forEach(key => {
-            const value = data[key]; 
+//         keys.forEach(key => {
+//             const value = data[key]; 
             
-            document.getElementById("failed").style.display = "block"
-            document.getElementById("failed").innerHTML = value;
-            document.getElementById("failed").classList.add("failed");
+//             document.getElementById("failed").style.display = "block"
+//             document.getElementById("failed").innerHTML = value;
+//             document.getElementById("failed").classList.add("failed");
 
-            setTimeout(() => {
-                document.getElementById("failed").style.display = "none";
+//             setTimeout(() => {
+//                 document.getElementById("failed").style.display = "none";
 
-                button.disabled = false;
-                button.innerHTML = "Delete Post"
-            }, 3500);
-          });
-    }
+//                 button.disabled = false;
+//                 button.innerHTML = "Delete Post"
+//             }, 3500);
+//           });
+//     }
 
-    } catch (error) {
-        document.getElementById("failed").style.display = "block"
-        document.getElementById("failed").innerHTML = "There Was An Error, Please Reload The Page";
-        document.getElementById("failed").classList.add("failed");
-        console.log(error);
-    }
-}
+//     } catch (error) {
+//         document.getElementById("failed").style.display = "block"
+//         document.getElementById("failed").innerHTML = "There Was An Error, Please Reload The Page";
+//         document.getElementById("failed").classList.add("failed");
+//         console.log(error);
+//     }
+// }
 
 window.onload = displayCategories;
