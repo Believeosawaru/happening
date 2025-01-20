@@ -44,7 +44,6 @@ document.querySelector(".user-menu").innerHTML = `
             <p><a class="dis-flex" href="https://happening.net/my-profile"><span class="material-symbols-outlined">
                 person
                 </span> <span>My Profile</span></a></p>
-            <button class="first-btn"><a href="https://happening.net/log-out">Log Out</a></button>
 `;
 
 document.querySelector("nav").innerHTML = `
