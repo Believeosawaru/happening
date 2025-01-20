@@ -66,6 +66,9 @@ async function displayCategories() {
 
 const deleteCategory = async (id, index) => {
     try {
+        document.getElementById(`cat-${index}`).style.background = "white"
+        document.getElementById(`cat-${index}`).style.color = "black"
+
         const token = localStorage.getItem("authToken");
 
         const response = await fetch(`https://happening.net/api/v1/blog/delete-category/${id}`, {
@@ -74,8 +77,6 @@ const deleteCategory = async (id, index) => {
                 "Authorization": `Bearer ${token}`
             }
         });
-
-        document.getElementById(`cat-${index}`).style.background = "white"
 
     const data = await response.json();
 
