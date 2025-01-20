@@ -77,11 +77,10 @@ async function blog() {
                              <a href="https://happening.net/blog/${post.slug}">
                                 <div id="post-card">
                                 <div id="user-details">
-                                    ${
-                                        post.mediaPath && post.mediaType ? `${mediaHTML}` : ""
-                                    }
-                            
                                     <section>
+                                        ${
+                                        post.mediaPath && post.mediaType ? `${mediaHTML}` : ""
+                                        }
                                         <a href="https://happening.net/blog/${post.slug}">
                                             <h3>${String(post.title)}</h3>
                                             <p>${truncatedContent}</p> 
@@ -212,11 +211,10 @@ async function blog() {
                                      <a href="https://happening.net/blog/${post.slug}">
                                         <div id="post-card">
                                         <div id="user-details">
-                                            ${
-                                                post.mediaPath && post.mediaType ? `${mediaHTML}` : ""
-                                            }
-                                    
                                             <section>
+                                                 ${
+                                                post.mediaPath && post.mediaType ? `${mediaHTML}` : ""
+                                                }
                                                 <a href="https://happening.net/blog/${post.slug}">
                                                     <h3>${String(post.title)}</h3>
                                                     <p>${truncatedContent}</p> 
