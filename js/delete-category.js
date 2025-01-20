@@ -65,8 +65,9 @@ async function displayCategories() {
 
 const deleteCategory = async (id) => {
     try {
+        console.log(id)
         const token = localStorage.getItem("authToken");
-        
+
         const response = await fetch(`https://happening.net/api/v1/blog/delete-category/${id}`, {
             method: "DELETE",
             headers: {
