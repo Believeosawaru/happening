@@ -44,14 +44,6 @@ async function displayCategories() {
         const data = await response.json();
 
         if (response.ok) {
-            const eventContainer = document.getElementById("hero");
-
-            texts = "";
-
-            // setTimeout(() => {
-            //     document.querySelector(".pre-loader").style.display = "none";
-            // }, 350);
-
             if (data.data.length < 1) {
                 return;
             } else {
@@ -85,16 +77,6 @@ async function displayCategories() {
         console.log(error);
     }
 }
-
-const select = document.getElementById("category");
-
-categories.forEach((category) => {
-    const option = document.createElement("option");
-    option.value = category;
-    option.text = category;
-
-    select.appendChild(option);
-});
 
 const postUrl = "https://happening.net/api/v1/blog/create-post";
 
