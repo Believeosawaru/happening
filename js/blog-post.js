@@ -66,7 +66,7 @@ async function blog() {
                             const words = content.split(" ");
                             if (words.length > wordLimit) {
                                 const truncated = words.slice(0, wordLimit).join(" ");
-                            return `${truncated}... <br><button style="margin: 0;"><a href="https://happening.net/blog/${post.slug}">Read more</a></button>`;
+                            return `${truncated}... <br><button style="margin: 5px 0;"><a href="https://happening.net/blog/${post.slug}">Read more</a></button>`;
                             }
                             return content;
                         }
@@ -200,7 +200,7 @@ async function blog() {
                                     const words = content.split(" ");
                                     if (words.length > wordLimit) {
                                         const truncated = words.slice(0, wordLimit).join(" ");
-                                        return `${truncated}... <br><button style="margin: 0;"><a href="https://happening.net/blog/${post.slug}">Read more</a></button>`;
+                                        return `${truncated}... <br><button style="margin: 5px 0;"><a href="https://happening.net/blog/${post.slug}">Read more</a></button>`;
                                     }
                                     return content;
                                 }
