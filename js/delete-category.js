@@ -32,11 +32,11 @@ async function displayCategories() {
                 eventContainer.innerHTML = "<p>No Category Added</p>"
                 return;
             } else {
-            data.data.forEach((cat) => {
+            data.data.forEach((cat, index) => {
                 texts += `
                 <div id="category-edit-div">
                     <p>${cat.title}</p>
-                    <button onclick="deleteCategory('${cat._id}')">Delete</button>
+                    <button id="cat-${index}" onclick="deleteCategory('${cat._id}, ${index}')">Delete</button>
                 </div>
                 `
             });
@@ -64,7 +64,7 @@ async function displayCategories() {
     }
 }
 
-const deleteCategory = async (id) => {
+const deleteCategory = async (id, index) => {
     try {
         const token = localStorage.getItem("authToken");
 
@@ -74,6 +74,8 @@ const deleteCategory = async (id) => {
                 "Authorization": `Bearer ${token}`
             }
         });
+
+        document.getElementById(`cat-${index}`).style.background = "white"
 
     const data = await response.json();
 
