@@ -498,13 +498,6 @@ aside button {
     padding-block: 10px;
     border-radius: 8px;
 }
-#category {
-    margin-top: 10px;
-    width: 98%;
-    padding-block: 10px;
-    border: none;
-    background: rgb(240, 240, 240);
-}
 .user-profile h3 {
     font-family: "Oswald", sans-serif;
 }
@@ -1503,10 +1496,6 @@ form textarea {
 }
 #related-posts #user-details {
     width: 500px;
-}
-#category {
-    background: white; /* ceb6ad */
-    width: 100%;
 }
 #category-links {
     display: flex;
