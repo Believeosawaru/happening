@@ -58,6 +58,21 @@ async function blog() {
                     document.getElementById("related-posts").innerHTML = `<p>No Related Posts</p>`
                 } else {
                     post.relatedPosts.forEach(post => {
+                        function truncateContent(post, wordLimit = 15) {
+                            const div = document.createElement('div');
+                            div.textContent = post.content;
+                            const content = div.textContent;
+                        
+                            const words = content.split(" ");
+                            if (words.length > wordLimit) {
+                                const truncated = words.slice(0, wordLimit).join(" ");
+                                return `${truncated}... <br><button><a href="https://happening.net/blogs/blog-post?postId=${post._id}">Read more</a></button>`;
+                            }
+                            return content;
+                        }
+
+                        const truncatedContent = truncateContent(post)
+
                         const html = `
                              <a href="https://happening.net/blog/${post.slug}">
                                 <div id="post-card">
@@ -78,7 +93,7 @@ async function blog() {
                              </a>
                         ` 
                         accum += html;
-                     });
+                    });
      
                      document.getElementById("related-posts").innerHTML = accum;
                 }
@@ -176,6 +191,21 @@ async function blog() {
                             document.getElementById("related-posts").innerHTML = `<p>No Related Posts</p>`
                         } else {
                             post.relatedPosts.forEach(post => {
+                                function truncateContent(post, wordLimit = 15) {
+                                    const div = document.createElement('div');
+                                    div.textContent = post.content;
+                                    const content = div.textContent;
+                                
+                                    const words = content.split(" ");
+                                    if (words.length > wordLimit) {
+                                        const truncated = words.slice(0, wordLimit).join(" ");
+                                        return `${truncated}... <br><button><a href="https://happening.net/blogs/blog-post?postId=${post._id}">Read more</a></button>`;
+                                    }
+                                    return content;
+                                }
+        
+                                const truncatedContent = truncateContent(post)
+        
                                 const html = `
                                      <a href="https://happening.net/blog/${post.slug}">
                                         <div id="post-card">
@@ -196,7 +226,7 @@ async function blog() {
                                      </a>
                                 ` 
                                 accum += html;
-                             });
+                            });
              
                              document.getElementById("related-posts").innerHTML = accum;
                         }

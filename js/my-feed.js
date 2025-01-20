@@ -19,7 +19,6 @@ async function myFeed() {
 
         if (response.ok) {
             let accum = "";
-            let accumTwo = "";
 
             function formatPostDate(dateString) {
                 const postDate = new Date(dateString);
@@ -80,14 +79,7 @@ async function myFeed() {
                 accum += html;
             }) : document.getElementById("my-feed").innerHTML = `<p>No Posts</p>`; 
 
-            message.relatedPosts ? message.relatedPosts.forEach(post => {
-                const formattedDate = formatPostDate(post.createdAt);
-                const html = generatePostHTML(post, formattedDate);
-                accumTwo += html;
-            }) : document.getElementById("related-posts").innerHTML = `<p>No Related Posts</p>`
-
             document.getElementById("my-feed").innerHTML = accum; 
-            document.getElementById("related-posts").innerHTML = accumTwo; 
             
         } else {
             console.log(message)
