@@ -1789,4 +1789,10 @@ form textarea {
     nav {
         height: 70px;
     }
+    #related-posts {
+        margin-inline: 200px;
+    }
+    #h3-1 {
+
+    }
 }
