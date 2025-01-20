@@ -190,9 +190,9 @@ async function blog() {
                         if (post.relatedPosts > 1) {
                             document.getElementById("related-posts").innerHTML = `<p>No Related Posts</p>`
                         } else {
+                            let accum = "";
+                            
                             post.relatedPosts.forEach(post => {
-                                let accum = "";
-
                                 function truncateContent(post, wordLimit = 15) {
                                     const div = document.createElement('div');
                                     div.textContent = post.content;
