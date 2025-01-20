@@ -1793,6 +1793,9 @@ form textarea {
         margin-inline: 200px;
     }
     #h3-1 {
-
+        margin-left: 60px;
+    }
+    #related-posts #user-details {
+        width: 350px;
     }
 }
