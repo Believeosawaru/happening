@@ -1413,11 +1413,11 @@ form textarea {
 #user-details section p div {
     margin: 0;
 }
+#user-details section p {
+    margin: 20px;
+}
 #user-details h3 {
     font-family: "Oswald", sans-serif;
-}
-#user-details p {
-    margin: 10px 0px 20px 0px;
 }
 #post-card {
     position: relative;
