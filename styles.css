@@ -1524,6 +1524,10 @@ form textarea {
 #category-edit-div button {
     margin-top: 15px;
 }
+#h3-1 {
+    font-family: "Oswald", sans-serif;
+    margin: 20px 0px 20px 15px;
+}
 
 @media screen and (min-width: 900px) {
     .menu {
