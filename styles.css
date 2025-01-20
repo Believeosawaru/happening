@@ -1495,7 +1495,7 @@ form textarea {
     overflow: auto;
 }
 #related-posts #user-details {
-    width: 500px;
+    width: 200px;
 }
 #category-links {
     display: flex;
