@@ -86,9 +86,11 @@ document.getElementById("create-post").addEventListener("submit", async (e) => {
     const formData = new FormData();
     const fileInput = document.getElementById("media");
     const title = document.getElementById("title").value;
+    const category = document.getElementById("category").value;
     const post = tinymce.get("post").getContent();
     
     formData.append("title", title);
+    formData.append("category", category);
     formData.append("content", post);
 
     if (fileInput.files[0]) {
