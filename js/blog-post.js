@@ -58,7 +58,7 @@ async function blog() {
                     document.getElementById("related-posts").innerHTML = `<p>No Related Posts</p>`
                 } else {
                     post.relatedPosts.forEach(post => {
-                        function truncateContent(post, wordLimit = 15) {
+                        function truncateContent(post, wordLimit = 5) {
                             const div = document.createElement('div');
                             div.textContent = post.content;
                             const content = div.textContent;
@@ -191,9 +191,9 @@ async function blog() {
                             document.getElementById("related-posts").innerHTML = `<p>No Related Posts</p>`
                         } else {
                             let accum = "";
-                            
+
                             post.relatedPosts.forEach(post => {
-                                function truncateContent(post, wordLimit = 15) {
+                                function truncateContent(post, wordLimit = 5) {
                                     const div = document.createElement('div');
                                     div.textContent = post.content;
                                     const content = div.textContent;
