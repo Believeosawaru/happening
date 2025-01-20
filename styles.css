@@ -1416,6 +1416,9 @@ form textarea {
 #user-details h3 {
     font-family: "Oswald", sans-serif;
 }
+#user-details p {
+    margin: 10px 0px 5px 0px;
+}
 #post-card {
     position: relative;
 }
