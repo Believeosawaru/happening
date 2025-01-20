@@ -35,7 +35,7 @@ async function displayCategories() {
                 texts += `
                 <div id="category-edit-div">
                     <p>${cat.title}</p>
-                    <button onclick="deleteCategory(${console.log(cat._id, typeof(cat._id))})">Delete</button>
+                    <button onclick="deleteCategory(${cat._id})">Delete</button>
                 </div>
                 `
             });
